@@ -26,9 +26,23 @@
     const nav = document.querySelector('#new-pause [data-panel="abc"]');
     if (nav) nav.textContent = 'ABC / M1 비교';
 
+    if(d.subset550_evaluation){
+      const a=d.subset550_evaluation, section=add('section','');section.id='subset550-evaluation-section';
+      add('h3','현재 평가 / A·C·M1 고정 K4 subset 550',section);
+      note(`집계 ${stamp(a.snapshot_utc)}. 각 모델 같은550case, 11task×5suite×각10case입니다. ID는1초5+2초5, OOD는8초5+16초5이며 성능과 무관한 scene 정렬로 고정했습니다.`,section);
+      note('이전 Full2200 실행은 사용자 요청으로 중단하고 저장 결과를 보존했습니다. 선택된 완료 case를 재사용하며 미완료 선택 case만 task별 GPU로 실행합니다. H32 예측/앞4 실행, 기존 checkpoint·Partner A·물리·목표를 유지합니다. 아래 이전 표의 실행 상태는 각 표에 적힌 당시 스냅샷입니다.',section);
+      const label=m=>`${a.model_metadata[m].model_name} ${a.model_metadata[m].checkpoint_update/1000}k`;
+      const progress=table(section,'subset550 원시 진행 / 완료 구성이 다르므로 순위 비교 불가',['모델','checkpoint','K','활성GPU','완료/계획','성공','완료분SR','상태']);
+      for(const m of a.display_models){const r=a.raw[m].TOTAL,meta=a.model_metadata[m],tr=add('tr','',progress);add('th',label(m),tr).scope='row';add('td',meta.checkpoint_update.toLocaleString(),tr);add('td','4',tr);add('td',meta.active_gpus,tr);add('td',`${r.completed}/550`,tr);add('td',r.correct,tr);add('td',r.completed?(100*r.correct/r.completed).toFixed(1)+'%':'미집계',tr);add('td',meta.status==='running'?'실행 중':meta.status==='completed'?'완료':meta.status,tr);}
+      const matched=table(section,`세 모델 같은 ${a.K4_matched_n}case 비교`,['Suite','공통n',...a.display_models.map(label)]);
+      for(const suite of [...d.suites,{id:'TOTAL',label:'합계'}]){const tr=add('tr','',matched);add('th',suite.label,tr).scope='row';add('td',a.K4_matched[a.display_models[0]][suite.id].completed,tr);for(const m of a.display_models){const r=a.K4_matched[m][suite.id];add('td',r.completed?value({correct:r.correct,n:r.completed}):'공통 완료 대기',tr);}if(suite.id==='Pause-OOD')tr.className='pause-ood';}
+      note('공통 범위: '+Object.entries(a.K4_matched_by_task).map(([id,n])=>`${d.tasks.find(t=>t.id===id)?.label||id} ${n}건`).join(', ')+'. 공통n은 완료 교집합이며 각 run의550계획을 바꾼 것이 아닙니다.',section);
+      for(const m of a.display_models){const detail=add('details','',section);add('summary',label(m)+' task별 결과',detail);const body=table(detail,'각 칸 성공/완료와 SR / 계획 task50, suite각10',['Task','완료/계획',...d.suites.map(s=>s.label)]);for(const task of d.tasks){const item=a.task_breakdown[m][task.id],tr=add('tr','',body);add('th',task.label,tr).scope='row';add('td',`${item.TOTAL.completed}/50`,tr);for(const suite of d.suites){const r=item[suite.id];add('td',r.completed?value({correct:r.correct,n:r.completed}):'미집계',tr);}}}
+    }
+
     if(d.current_run_progress){
       const a=d.current_run_progress,section=add('section','');section.id='current-saved-progress-section';
-      add('h3','현재 저장 진행 / 모델별 완료 구성은 서로 다름',section);
+      add('h3','이전 Full2200 저장 스냅샷',section);
       const body=table(section,`집계 ${stamp(a.snapshot_utc)}`,['Run','Checkpoint','활성 GPU','완료 / 계획','성공','완료분 SR','저장 오류','마지막 저장 UTC','상태']);
       for(const r of a.models){const tr=add('tr','',body);add('th',r.label,tr).scope='row';add('td',r.checkpoint_update.toLocaleString(),tr);add('td',r.active_gpu,tr);add('td',`${r.completed}/${r.planned}`,tr);add('td',r.correct,tr);add('td',r.completed?(100*r.correct/r.completed).toFixed(1)+'%':'집계 대기',tr);add('td',r.errors,tr);add('td',stamp(r.last_saved_utc),tr);add('td',stateLabel(r.state),tr);}
       note('각 모델의 완료 task 구성이 다르므로 이 원시 진행 표로 성능 순위를 비교하지 않습니다. 아래 공통 case 표를 사용합니다. 각 run의 평가 계획은 같은2,200건입니다.',section);
@@ -38,7 +52,7 @@
 
     if(d.active_evaluation){
       const a=d.active_evaluation;const section=add('section','');section.id='active10k-execution-section';
-      add('h3','현재 실행 / M1 10k fixed 대 adaptive',section);
+      add('h3','이전 Full2200 / M1 10k fixed 대 adaptive',section);
       note(`집계 ${stamp(a.snapshot_utc)}. Adaptive 저장 완료 ${a.completed}/2,200건, 성공 ${a.correct}건. 현재 활성 GPU ${a.gpu}장입니다. GPU당16환경·batch상한16을 사용했습니다.`,section);
       note('평가 계획은 각 run 동일 2,200건으로 고정돼 있습니다. 아래 비교표 n은 fixed와 adaptive가 모두 완료한 공통 장면 수이며, 계획 건수가 달라진 것이 아닙니다. Fixed10k는 사용자 요청으로 중단한 저장1,642건만 재사용합니다.',section);
       const matched=table(section,`같은 ${a.matched_n}case / 성공·완료와 SR`,['Suite','공통 n','M1 10k fixed K32','M1 10k adaptive']);

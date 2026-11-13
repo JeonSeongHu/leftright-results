@@ -1,0 +1,1954 @@
+{
+  "dataset_version": "k4-subset550-20261113",
+  "snapshot_utc": "2026-11-13T09:04:50.030990+00:00",
+  "planned_per_run": 550,
+  "display_models": [
+    "A20kK4",
+    "C20kK4",
+    "fixedK4"
+  ],
+  "K4_matched": {
+    "A20kK4": {
+      "Demo": {
+        "completed": 43,
+        "correct": 25,
+        "sr_percent": 58.14
+      },
+      "Pause-ID": {
+        "completed": 10,
+        "correct": 5,
+        "sr_percent": 50.0
+      },
+      "Pause-OOD": {
+        "completed": 1,
+        "correct": 1,
+        "sr_percent": 100.0
+      },
+      "Speed0.5": {
+        "completed": 0,
+        "correct": 0,
+        "sr_percent": null
+      },
+      "Speed1.5": {
+        "completed": 0,
+        "correct": 0,
+        "sr_percent": null
+      },
+      "TOTAL": {
+        "completed": 54,
+        "correct": 31,
+        "sr_percent": 57.407
+      }
+    },
+    "C20kK4": {
+      "Demo": {
+        "completed": 43,
+        "correct": 23,
+        "sr_percent": 53.488
+      },
+      "Pause-ID": {
+        "completed": 10,
+        "correct": 3,
+        "sr_percent": 30.0
+      },
+      "Pause-OOD": {
+        "completed": 1,
+        "correct": 1,
+        "sr_percent": 100.0
+      },
+      "Speed0.5": {
+        "completed": 0,
+        "correct": 0,
+        "sr_percent": null
+      },
+      "Speed1.5": {
+        "completed": 0,
+        "correct": 0,
+        "sr_percent": null
+      },
+      "TOTAL": {
+        "completed": 54,
+        "correct": 27,
+        "sr_percent": 50.0
+      }
+    },
+    "fixedK4": {
+      "Demo": {
+        "completed": 43,
+        "correct": 19,
+        "sr_percent": 44.186
+      },
+      "Pause-ID": {
+        "completed": 10,
+        "correct": 2,
+        "sr_percent": 20.0
+      },
+      "Pause-OOD": {
+        "completed": 1,
+        "correct": 0,
+        "sr_percent": 0.0
+      },
+      "Speed0.5": {
+        "completed": 0,
+        "correct": 0,
+        "sr_percent": null
+      },
+      "Speed1.5": {
+        "completed": 0,
+        "correct": 0,
+        "sr_percent": null
+      },
+      "TOTAL": {
+        "completed": 54,
+        "correct": 21,
+        "sr_percent": 38.889
+      }
+    }
+  },
+  "K4_matched_n": 54,
+  "K4_matched_by_task": {
+    "handover_mic": 16,
+    "handover_block": 2,
+    "place_object_basket": 4,
+    "put_bottles_dustbin": 7,
+    "grab_roller": 10,
+    "fabrica_beam": 15
+  },
+  "K4_matched_by_suite_task": {
+    "Demo": {
+      "handover_mic": 10,
+      "handover_block": 2,
+      "place_object_basket": 4,
+      "put_bottles_dustbin": 7,
+      "grab_roller": 10,
+      "fabrica_beam": 10
+    },
+    "Pause-ID": {
+      "handover_mic": 5,
+      "fabrica_beam": 5
+    },
+    "Pause-OOD": {
+      "handover_mic": 1
+    },
+    "Speed0.5": {},
+    "Speed1.5": {}
+  },
+  "raw": {
+    "A20kK4": {
+      "Demo": {
+        "completed": 71,
+        "correct": 36,
+        "sr_percent": 50.704
+      },
+      "Pause-ID": {
+        "completed": 25,
+        "correct": 11,
+        "sr_percent": 44.0
+      },
+      "Pause-OOD": {
+        "completed": 15,
+        "correct": 6,
+        "sr_percent": 40.0
+      },
+      "Speed0.5": {
+        "completed": 10,
+        "correct": 8,
+        "sr_percent": 80.0
+      },
+      "Speed1.5": {
+        "completed": 3,
+        "correct": 3,
+        "sr_percent": 100.0
+      },
+      "TOTAL": {
+        "completed": 124,
+        "correct": 64,
+        "sr_percent": 51.613
+      }
+    },
+    "C20kK4": {
+      "Demo": {
+        "completed": 60,
+        "correct": 36,
+        "sr_percent": 60.0
+      },
+      "Pause-ID": {
+        "completed": 10,
+        "correct": 3,
+        "sr_percent": 30.0
+      },
+      "Pause-OOD": {
+        "completed": 1,
+        "correct": 1,
+        "sr_percent": 100.0
+      },
+      "Speed0.5": {
+        "completed": 0,
+        "correct": 0,
+        "sr_percent": null
+      },
+      "Speed1.5": {
+        "completed": 0,
+        "correct": 0,
+        "sr_percent": null
+      },
+      "TOTAL": {
+        "completed": 71,
+        "correct": 40,
+        "sr_percent": 56.338
+      }
+    },
+    "fixedK4": {
+      "Demo": {
+        "completed": 62,
+        "correct": 25,
+        "sr_percent": 40.323
+      },
+      "Pause-ID": {
+        "completed": 25,
+        "correct": 3,
+        "sr_percent": 12.0
+      },
+      "Pause-OOD": {
+        "completed": 22,
+        "correct": 6,
+        "sr_percent": 27.273
+      },
+      "Speed0.5": {
+        "completed": 10,
+        "correct": 9,
+        "sr_percent": 90.0
+      },
+      "Speed1.5": {
+        "completed": 10,
+        "correct": 4,
+        "sr_percent": 40.0
+      },
+      "TOTAL": {
+        "completed": 129,
+        "correct": 47,
+        "sr_percent": 36.434
+      }
+    }
+  },
+  "model_metadata": {
+    "A20kK4": {
+      "model_key": "A20kK4",
+      "model_name": "A",
+      "checkpoint_update": 20000,
+      "model_horizon": 32,
+      "execution_mode": "fixed",
+      "execute_steps": 4,
+      "wait_execute_steps": 4,
+      "motion_execute_steps": 4,
+      "status": "running",
+      "active_gpus": 11,
+      "planned": 550,
+      "errors": 0,
+      "dataset_version": "k4-subset550-20261113",
+      "current_evaluation": true,
+      "result_read_utc": "2026-11-13T09:04:49.879782+00:00",
+      "result_snapshot_utc": "2026-11-13T09:04:50.030990+00:00",
+      "status_utc": "2026-11-13T09:04:50.030990+00:00",
+      "last_saved_utc": "2026-11-13T09:04:49.225287+00:00"
+    },
+    "C20kK4": {
+      "model_key": "C20kK4",
+      "model_name": "C",
+      "checkpoint_update": 20000,
+      "model_horizon": 32,
+      "execution_mode": "fixed",
+      "execute_steps": 4,
+      "wait_execute_steps": 4,
+      "motion_execute_steps": 4,
+      "status": "running",
+      "active_gpus": 11,
+      "planned": 550,
+      "errors": 0,
+      "dataset_version": "k4-subset550-20261113",
+      "current_evaluation": true,
+      "result_read_utc": "2026-11-13T09:04:50.015683+00:00",
+      "result_snapshot_utc": "2026-11-13T09:04:50.030990+00:00",
+      "status_utc": "2026-11-13T09:04:50.030990+00:00",
+      "last_saved_utc": "2026-11-13T09:04:48.926508+00:00"
+    },
+    "fixedK4": {
+      "model_key": "fixedK4",
+      "model_name": "M1",
+      "checkpoint_update": 10000,
+      "model_horizon": 32,
+      "execution_mode": "fixed",
+      "execute_steps": 4,
+      "wait_execute_steps": 4,
+      "motion_execute_steps": 4,
+      "status": "running",
+      "active_gpus": 10,
+      "planned": 550,
+      "errors": 0,
+      "dataset_version": "k4-subset550-20261113",
+      "current_evaluation": true,
+      "result_read_utc": "2026-11-13T09:04:49.614150+00:00",
+      "result_snapshot_utc": "2026-11-13T09:04:50.030990+00:00",
+      "status_utc": "2026-11-13T09:04:50.030990+00:00",
+      "last_saved_utc": "2026-11-13T09:04:49.094177+00:00"
+    }
+  },
+  "task_breakdown": {
+    "A20kK4": {
+      "handover_mic": {
+        "Demo": {
+          "completed": 10,
+          "correct": 10,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": 100.0,
+          "last_saved_utc": "2026-11-13T07:36:14.812284+00:00"
+        },
+        "Pause-ID": {
+          "completed": 10,
+          "correct": 8,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": 80.0,
+          "last_saved_utc": "2026-11-13T08:19:27.228336+00:00"
+        },
+        "Pause-OOD": {
+          "completed": 10,
+          "correct": 6,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": 60.0,
+          "last_saved_utc": "2026-11-13T08:36:56.556462+00:00"
+        },
+        "Speed0.5": {
+          "completed": 10,
+          "correct": 8,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": 80.0,
+          "last_saved_utc": "2026-11-13T08:51:29.340156+00:00"
+        },
+        "Speed1.5": {
+          "completed": 3,
+          "correct": 3,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": 100.0,
+          "last_saved_utc": "2026-11-13T09:04:48.365243+00:00"
+        },
+        "TOTAL": {
+          "completed": 43,
+          "correct": 35,
+          "errors": 0,
+          "planned": 50,
+          "sr_percent": 81.395,
+          "last_saved_utc": "2026-11-13T09:04:48.365243+00:00"
+        }
+      },
+      "handover_block": {
+        "Demo": {
+          "completed": 2,
+          "correct": 2,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": 100.0,
+          "last_saved_utc": "2026-11-13T09:04:48.745522+00:00"
+        },
+        "Pause-ID": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "Pause-OOD": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "Speed0.5": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "Speed1.5": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "TOTAL": {
+          "completed": 2,
+          "correct": 2,
+          "errors": 0,
+          "planned": 50,
+          "sr_percent": 100.0,
+          "last_saved_utc": "2026-11-13T09:04:48.745522+00:00"
+        }
+      },
+      "place_object_basket": {
+        "Demo": {
+          "completed": 6,
+          "correct": 6,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": 100.0,
+          "last_saved_utc": "2026-11-13T09:04:48.897510+00:00"
+        },
+        "Pause-ID": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "Pause-OOD": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "Speed0.5": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "Speed1.5": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "TOTAL": {
+          "completed": 6,
+          "correct": 6,
+          "errors": 0,
+          "planned": 50,
+          "sr_percent": 100.0,
+          "last_saved_utc": "2026-11-13T09:04:48.897510+00:00"
+        }
+      },
+      "stack_blocks_three": {
+        "Demo": {
+          "completed": 3,
+          "correct": 3,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": 100.0,
+          "last_saved_utc": "2026-11-13T09:04:48.552761+00:00"
+        },
+        "Pause-ID": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "Pause-OOD": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "Speed0.5": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "Speed1.5": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "TOTAL": {
+          "completed": 3,
+          "correct": 3,
+          "errors": 0,
+          "planned": 50,
+          "sr_percent": 100.0,
+          "last_saved_utc": "2026-11-13T09:04:48.552761+00:00"
+        }
+      },
+      "put_bottles_dustbin": {
+        "Demo": {
+          "completed": 10,
+          "correct": 4,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": 40.0,
+          "last_saved_utc": "2026-11-13T08:17:56.119699+00:00"
+        },
+        "Pause-ID": {
+          "completed": 5,
+          "correct": 3,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": 60.0,
+          "last_saved_utc": "2026-11-13T09:02:54.357504+00:00"
+        },
+        "Pause-OOD": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "Speed0.5": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "Speed1.5": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "TOTAL": {
+          "completed": 15,
+          "correct": 7,
+          "errors": 0,
+          "planned": 50,
+          "sr_percent": 46.667,
+          "last_saved_utc": "2026-11-13T09:02:54.357504+00:00"
+        }
+      },
+      "hanging_mug": {
+        "Demo": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "Pause-ID": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "Pause-OOD": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "Speed0.5": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "Speed1.5": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "TOTAL": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 50,
+          "sr_percent": null,
+          "last_saved_utc": null
+        }
+      },
+      "lift_pot": {
+        "Demo": {
+          "completed": 10,
+          "correct": 4,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": 40.0,
+          "last_saved_utc": "2026-11-13T09:03:44.005799+00:00"
+        },
+        "Pause-ID": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "Pause-OOD": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "Speed0.5": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "Speed1.5": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "TOTAL": {
+          "completed": 10,
+          "correct": 4,
+          "errors": 0,
+          "planned": 50,
+          "sr_percent": 40.0,
+          "last_saved_utc": "2026-11-13T09:03:44.005799+00:00"
+        }
+      },
+      "grab_roller": {
+        "Demo": {
+          "completed": 10,
+          "correct": 6,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": 60.0,
+          "last_saved_utc": "2026-11-13T09:02:43.777456+00:00"
+        },
+        "Pause-ID": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "Pause-OOD": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "Speed0.5": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "Speed1.5": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "TOTAL": {
+          "completed": 10,
+          "correct": 6,
+          "errors": 0,
+          "planned": 50,
+          "sr_percent": 60.0,
+          "last_saved_utc": "2026-11-13T09:02:43.777456+00:00"
+        }
+      },
+      "fabrica_beam": {
+        "Demo": {
+          "completed": 10,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": 0.0,
+          "last_saved_utc": "2026-11-13T07:57:23.335596+00:00"
+        },
+        "Pause-ID": {
+          "completed": 10,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": 0.0,
+          "last_saved_utc": "2026-11-13T09:04:49.225287+00:00"
+        },
+        "Pause-OOD": {
+          "completed": 5,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": 0.0,
+          "last_saved_utc": "2026-11-13T08:46:26.537460+00:00"
+        },
+        "Speed0.5": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "Speed1.5": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "TOTAL": {
+          "completed": 25,
+          "correct": 0,
+          "errors": 0,
+          "planned": 50,
+          "sr_percent": 0.0,
+          "last_saved_utc": "2026-11-13T09:04:49.225287+00:00"
+        }
+      },
+      "fabrica_stool": {
+        "Demo": {
+          "completed": 10,
+          "correct": 1,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": 10.0,
+          "last_saved_utc": "2026-11-13T09:04:39.369177+00:00"
+        },
+        "Pause-ID": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "Pause-OOD": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "Speed0.5": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "Speed1.5": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "TOTAL": {
+          "completed": 10,
+          "correct": 1,
+          "errors": 0,
+          "planned": 50,
+          "sr_percent": 10.0,
+          "last_saved_utc": "2026-11-13T09:04:39.369177+00:00"
+        }
+      },
+      "fabrica_plumbers_block": {
+        "Demo": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "Pause-ID": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "Pause-OOD": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "Speed0.5": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "Speed1.5": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "TOTAL": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 50,
+          "sr_percent": null,
+          "last_saved_utc": null
+        }
+      }
+    },
+    "C20kK4": {
+      "handover_mic": {
+        "Demo": {
+          "completed": 10,
+          "correct": 7,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": 70.0,
+          "last_saved_utc": "2026-11-13T08:26:51.434199+00:00"
+        },
+        "Pause-ID": {
+          "completed": 5,
+          "correct": 3,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": 60.0,
+          "last_saved_utc": "2026-11-13T08:38:19.498486+00:00"
+        },
+        "Pause-OOD": {
+          "completed": 1,
+          "correct": 1,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": 100.0,
+          "last_saved_utc": "2026-11-13T09:04:48.106388+00:00"
+        },
+        "Speed0.5": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "Speed1.5": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "TOTAL": {
+          "completed": 16,
+          "correct": 11,
+          "errors": 0,
+          "planned": 50,
+          "sr_percent": 68.75,
+          "last_saved_utc": "2026-11-13T09:04:48.106388+00:00"
+        }
+      },
+      "handover_block": {
+        "Demo": {
+          "completed": 2,
+          "correct": 2,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": 100.0,
+          "last_saved_utc": "2026-11-13T09:04:48.926508+00:00"
+        },
+        "Pause-ID": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "Pause-OOD": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "Speed0.5": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "Speed1.5": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "TOTAL": {
+          "completed": 2,
+          "correct": 2,
+          "errors": 0,
+          "planned": 50,
+          "sr_percent": 100.0,
+          "last_saved_utc": "2026-11-13T09:04:48.926508+00:00"
+        }
+      },
+      "place_object_basket": {
+        "Demo": {
+          "completed": 7,
+          "correct": 7,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": 100.0,
+          "last_saved_utc": "2026-11-13T09:04:48.653347+00:00"
+        },
+        "Pause-ID": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "Pause-OOD": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "Speed0.5": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "Speed1.5": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "TOTAL": {
+          "completed": 7,
+          "correct": 7,
+          "errors": 0,
+          "planned": 50,
+          "sr_percent": 100.0,
+          "last_saved_utc": "2026-11-13T09:04:48.653347+00:00"
+        }
+      },
+      "stack_blocks_three": {
+        "Demo": {
+          "completed": 4,
+          "correct": 4,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": 100.0,
+          "last_saved_utc": "2026-11-13T09:04:48.020802+00:00"
+        },
+        "Pause-ID": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "Pause-OOD": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "Speed0.5": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "Speed1.5": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "TOTAL": {
+          "completed": 4,
+          "correct": 4,
+          "errors": 0,
+          "planned": 50,
+          "sr_percent": 100.0,
+          "last_saved_utc": "2026-11-13T09:04:48.020802+00:00"
+        }
+      },
+      "put_bottles_dustbin": {
+        "Demo": {
+          "completed": 7,
+          "correct": 4,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": 57.143,
+          "last_saved_utc": "2026-11-13T09:04:48.552761+00:00"
+        },
+        "Pause-ID": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "Pause-OOD": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "Speed0.5": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "Speed1.5": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "TOTAL": {
+          "completed": 7,
+          "correct": 4,
+          "errors": 0,
+          "planned": 50,
+          "sr_percent": 57.143,
+          "last_saved_utc": "2026-11-13T09:04:48.552761+00:00"
+        }
+      },
+      "hanging_mug": {
+        "Demo": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "Pause-ID": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "Pause-OOD": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "Speed0.5": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "Speed1.5": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "TOTAL": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 50,
+          "sr_percent": null,
+          "last_saved_utc": null
+        }
+      },
+      "lift_pot": {
+        "Demo": {
+          "completed": 10,
+          "correct": 6,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": 60.0,
+          "last_saved_utc": "2026-11-13T09:03:55.073040+00:00"
+        },
+        "Pause-ID": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "Pause-OOD": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "Speed0.5": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "Speed1.5": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "TOTAL": {
+          "completed": 10,
+          "correct": 6,
+          "errors": 0,
+          "planned": 50,
+          "sr_percent": 60.0,
+          "last_saved_utc": "2026-11-13T09:03:55.073040+00:00"
+        }
+      },
+      "grab_roller": {
+        "Demo": {
+          "completed": 10,
+          "correct": 6,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": 60.0,
+          "last_saved_utc": "2026-11-13T09:03:16.058693+00:00"
+        },
+        "Pause-ID": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "Pause-OOD": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "Speed0.5": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "Speed1.5": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "TOTAL": {
+          "completed": 10,
+          "correct": 6,
+          "errors": 0,
+          "planned": 50,
+          "sr_percent": 60.0,
+          "last_saved_utc": "2026-11-13T09:03:16.058693+00:00"
+        }
+      },
+      "fabrica_beam": {
+        "Demo": {
+          "completed": 10,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": 0.0,
+          "last_saved_utc": "2026-11-13T08:42:14.817918+00:00"
+        },
+        "Pause-ID": {
+          "completed": 5,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": 0.0,
+          "last_saved_utc": "2026-11-13T09:03:44.892718+00:00"
+        },
+        "Pause-OOD": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "Speed0.5": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "Speed1.5": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "TOTAL": {
+          "completed": 15,
+          "correct": 0,
+          "errors": 0,
+          "planned": 50,
+          "sr_percent": 0.0,
+          "last_saved_utc": "2026-11-13T09:03:44.892718+00:00"
+        }
+      },
+      "fabrica_stool": {
+        "Demo": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "Pause-ID": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "Pause-OOD": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "Speed0.5": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "Speed1.5": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "TOTAL": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 50,
+          "sr_percent": null,
+          "last_saved_utc": null
+        }
+      },
+      "fabrica_plumbers_block": {
+        "Demo": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "Pause-ID": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "Pause-OOD": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "Speed0.5": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "Speed1.5": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "TOTAL": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 50,
+          "sr_percent": null,
+          "last_saved_utc": null
+        }
+      }
+    },
+    "fixedK4": {
+      "handover_mic": {
+        "Demo": {
+          "completed": 10,
+          "correct": 7,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": 70.0,
+          "last_saved_utc": "2026-11-13T07:05:09.483242+00:00"
+        },
+        "Pause-ID": {
+          "completed": 10,
+          "correct": 3,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": 30.0,
+          "last_saved_utc": "2026-11-13T07:53:37.977649+00:00"
+        },
+        "Pause-OOD": {
+          "completed": 10,
+          "correct": 4,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": 40.0,
+          "last_saved_utc": "2026-11-13T08:12:53.781338+00:00"
+        },
+        "Speed0.5": {
+          "completed": 10,
+          "correct": 9,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": 90.0,
+          "last_saved_utc": "2026-11-13T08:28:06.088481+00:00"
+        },
+        "Speed1.5": {
+          "completed": 10,
+          "correct": 4,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": 40.0,
+          "last_saved_utc": "2026-11-13T08:42:18.460178+00:00"
+        },
+        "TOTAL": {
+          "completed": 50,
+          "correct": 27,
+          "errors": 0,
+          "planned": 50,
+          "sr_percent": 54.0,
+          "last_saved_utc": "2026-11-13T08:42:18.460178+00:00"
+        }
+      },
+      "handover_block": {
+        "Demo": {
+          "completed": 4,
+          "correct": 4,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": 100.0,
+          "last_saved_utc": "2026-11-13T09:04:48.854513+00:00"
+        },
+        "Pause-ID": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "Pause-OOD": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "Speed0.5": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "Speed1.5": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "TOTAL": {
+          "completed": 4,
+          "correct": 4,
+          "errors": 0,
+          "planned": 50,
+          "sr_percent": 100.0,
+          "last_saved_utc": "2026-11-13T09:04:48.854513+00:00"
+        }
+      },
+      "place_object_basket": {
+        "Demo": {
+          "completed": 6,
+          "correct": 6,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": 100.0,
+          "last_saved_utc": "2026-11-13T09:04:48.648347+00:00"
+        },
+        "Pause-ID": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "Pause-OOD": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "Speed0.5": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "Speed1.5": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "TOTAL": {
+          "completed": 6,
+          "correct": 6,
+          "errors": 0,
+          "planned": 50,
+          "sr_percent": 100.0,
+          "last_saved_utc": "2026-11-13T09:04:48.648347+00:00"
+        }
+      },
+      "stack_blocks_three": {
+        "Demo": {
+          "completed": 1,
+          "correct": 1,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": 100.0,
+          "last_saved_utc": "2026-11-13T09:04:48.548761+00:00"
+        },
+        "Pause-ID": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "Pause-OOD": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "Speed0.5": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "Speed1.5": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "TOTAL": {
+          "completed": 1,
+          "correct": 1,
+          "errors": 0,
+          "planned": 50,
+          "sr_percent": 100.0,
+          "last_saved_utc": "2026-11-13T09:04:48.548761+00:00"
+        }
+      },
+      "put_bottles_dustbin": {
+        "Demo": {
+          "completed": 10,
+          "correct": 1,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": 10.0,
+          "last_saved_utc": "2026-11-13T07:56:20.411525+00:00"
+        },
+        "Pause-ID": {
+          "completed": 5,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": 0.0,
+          "last_saved_utc": "2026-11-13T08:36:16.753890+00:00"
+        },
+        "Pause-OOD": {
+          "completed": 2,
+          "correct": 2,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": 100.0,
+          "last_saved_utc": "2026-11-13T09:04:47.657606+00:00"
+        },
+        "Speed0.5": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "Speed1.5": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "TOTAL": {
+          "completed": 17,
+          "correct": 3,
+          "errors": 0,
+          "planned": 50,
+          "sr_percent": 17.647,
+          "last_saved_utc": "2026-11-13T09:04:47.657606+00:00"
+        }
+      },
+      "hanging_mug": {
+        "Demo": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "Pause-ID": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "Pause-OOD": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "Speed0.5": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "Speed1.5": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "TOTAL": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 50,
+          "sr_percent": null,
+          "last_saved_utc": null
+        }
+      },
+      "lift_pot": {
+        "Demo": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "Pause-ID": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "Pause-OOD": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "Speed0.5": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "Speed1.5": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "TOTAL": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 50,
+          "sr_percent": null,
+          "last_saved_utc": null
+        }
+      },
+      "grab_roller": {
+        "Demo": {
+          "completed": 10,
+          "correct": 6,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": 60.0,
+          "last_saved_utc": "2026-11-13T09:03:10.090088+00:00"
+        },
+        "Pause-ID": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "Pause-OOD": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "Speed0.5": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "Speed1.5": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "TOTAL": {
+          "completed": 10,
+          "correct": 6,
+          "errors": 0,
+          "planned": 50,
+          "sr_percent": 60.0,
+          "last_saved_utc": "2026-11-13T09:03:10.090088+00:00"
+        }
+      },
+      "fabrica_beam": {
+        "Demo": {
+          "completed": 10,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": 0.0,
+          "last_saved_utc": "2026-11-13T07:18:32.624519+00:00"
+        },
+        "Pause-ID": {
+          "completed": 10,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": 0.0,
+          "last_saved_utc": "2026-11-13T08:20:08.203692+00:00"
+        },
+        "Pause-OOD": {
+          "completed": 10,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": 0.0,
+          "last_saved_utc": "2026-11-13T08:41:36.861904+00:00"
+        },
+        "Speed0.5": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "Speed1.5": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "TOTAL": {
+          "completed": 30,
+          "correct": 0,
+          "errors": 0,
+          "planned": 50,
+          "sr_percent": 0.0,
+          "last_saved_utc": "2026-11-13T08:41:36.861904+00:00"
+        }
+      },
+      "fabrica_stool": {
+        "Demo": {
+          "completed": 10,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": 0.0,
+          "last_saved_utc": "2026-11-13T09:04:21.424796+00:00"
+        },
+        "Pause-ID": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "Pause-OOD": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "Speed0.5": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "Speed1.5": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "TOTAL": {
+          "completed": 10,
+          "correct": 0,
+          "errors": 0,
+          "planned": 50,
+          "sr_percent": 0.0,
+          "last_saved_utc": "2026-11-13T09:04:21.424796+00:00"
+        }
+      },
+      "fabrica_plumbers_block": {
+        "Demo": {
+          "completed": 1,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": 0.0,
+          "last_saved_utc": "2026-11-13T09:04:49.094177+00:00"
+        },
+        "Pause-ID": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "Pause-OOD": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "Speed0.5": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "Speed1.5": {
+          "completed": 0,
+          "correct": 0,
+          "errors": 0,
+          "planned": 10,
+          "sr_percent": null,
+          "last_saved_utc": null
+        },
+        "TOTAL": {
+          "completed": 1,
+          "correct": 0,
+          "errors": 0,
+          "planned": 50,
+          "sr_percent": 0.0,
+          "last_saved_utc": "2026-11-13T09:04:49.094177+00:00"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,940 @@
+{
+  "schema_version": 1,
+  "updated_utc": "2026-11-13T14:29:09.527Z",
+  "evaluation": {
+    "model_id": "M1Adaptive10kSubset",
+    "checkpoint_update": 10000,
+    "model_horizon": 32,
+    "execute_steps": [
+      4,
+      32
+    ],
+    "scope": "subset550",
+    "manifest_sha256": "af9601a0eb612e1a550b4fed604af7c76e5461afd076dad8d0b0a63b8f433e55",
+    "completed": 550,
+    "correct": 145,
+    "partner": "A-recorded-expert"
+  },
+  "tasks": [
+    {
+      "id": "place_object_basket",
+      "label": "Basket"
+    },
+    {
+      "id": "stack_blocks_three",
+      "label": "Stack"
+    },
+    {
+      "id": "handover_block",
+      "label": "Block"
+    },
+    {
+      "id": "hanging_mug",
+      "label": "Mug"
+    },
+    {
+      "id": "handover_mic",
+      "label": "Mic"
+    },
+    {
+      "id": "grab_roller",
+      "label": "Grab Roller"
+    },
+    {
+      "id": "put_bottles_dustbin",
+      "label": "Bottles"
+    },
+    {
+      "id": "lift_pot",
+      "label": "Lift Pot"
+    },
+    {
+      "id": "fabrica_beam",
+      "label": "Fabrica Beam"
+    },
+    {
+      "id": "fabrica_plumbers_block",
+      "label": "Fabrica Plumber"
+    },
+    {
+      "id": "fabrica_stool",
+      "label": "Fabrica Stool"
+    }
+  ],
+  "suites": [
+    {
+      "id": "Demo",
+      "label": "Demo",
+      "planned": 550
+    },
+    {
+      "id": "Pause-ID",
+      "label": "Pause-ID / 1/2초",
+      "planned": 550
+    },
+    {
+      "id": "Pause-OOD",
+      "label": "Pause-OOD / 8/16초",
+      "planned": 550
+    },
+    {
+      "id": "Speed0.5",
+      "label": "Speed 0.5×",
+      "planned": 275
+    },
+    {
+      "id": "Speed1.5",
+      "label": "Speed 1.5×",
+      "planned": 275
+    }
+  ],
+  "task_breakdown": {
+    "fabrica_beam": {
+      "Demo": {
+        "completed": 10,
+        "correct": 0,
+        "n": 10,
+        "n_correct": 0,
+        "planned": 10,
+        "expected": 10,
+        "aggregated": true,
+        "errors": 0,
+        "sr_percent": 0,
+        "last_saved_utc": "2026-11-13T06:26:50.315300+00:00"
+      },
+      "Pause-ID": {
+        "completed": 10,
+        "correct": 0,
+        "n": 10,
+        "n_correct": 0,
+        "planned": 10,
+        "expected": 10,
+        "aggregated": true,
+        "errors": 0,
+        "sr_percent": 0,
+        "last_saved_utc": "2026-11-13T06:44:17.713658+00:00"
+      },
+      "Pause-OOD": {
+        "completed": 10,
+        "correct": 0,
+        "n": 10,
+        "n_correct": 0,
+        "planned": 10,
+        "expected": 10,
+        "aggregated": true,
+        "errors": 0,
+        "sr_percent": 0,
+        "last_saved_utc": "2026-11-13T06:50:11.179432+00:00"
+      },
+      "Speed0.5": {
+        "completed": 10,
+        "correct": 0,
+        "n": 10,
+        "n_correct": 0,
+        "planned": 10,
+        "expected": 10,
+        "aggregated": true,
+        "errors": 0,
+        "sr_percent": 0,
+        "last_saved_utc": "2026-11-13T06:57:55.126696+00:00"
+      },
+      "Speed1.5": {
+        "completed": 10,
+        "correct": 0,
+        "n": 10,
+        "n_correct": 0,
+        "planned": 10,
+        "expected": 10,
+        "aggregated": true,
+        "errors": 0,
+        "sr_percent": 0,
+        "last_saved_utc": "2026-11-13T07:03:10.508405+00:00"
+      },
+      "TOTAL": {
+        "completed": 50,
+        "correct": 0,
+        "n": 50,
+        "n_correct": 0,
+        "planned": 50,
+        "expected": 50,
+        "aggregated": true,
+        "errors": 0,
+        "sr_percent": 0,
+        "last_saved_utc": "2026-11-13T07:03:10.508405+00:00"
+      }
+    },
+    "fabrica_plumbers_block": {
+      "Demo": {
+        "completed": 10,
+        "correct": 0,
+        "n": 10,
+        "n_correct": 0,
+        "planned": 10,
+        "expected": 10,
+        "aggregated": true,
+        "errors": 0,
+        "sr_percent": 0,
+        "last_saved_utc": "2026-11-13T06:28:15.144769+00:00"
+      },
+      "Pause-ID": {
+        "completed": 10,
+        "correct": 0,
+        "n": 10,
+        "n_correct": 0,
+        "planned": 10,
+        "expected": 10,
+        "aggregated": true,
+        "errors": 0,
+        "sr_percent": 0,
+        "last_saved_utc": "2026-11-13T06:47:30.587802+00:00"
+      },
+      "Pause-OOD": {
+        "completed": 10,
+        "correct": 0,
+        "n": 10,
+        "n_correct": 0,
+        "planned": 10,
+        "expected": 10,
+        "aggregated": true,
+        "errors": 0,
+        "sr_percent": 0,
+        "last_saved_utc": "2026-11-13T06:54:26.264784+00:00"
+      },
+      "Speed0.5": {
+        "completed": 10,
+        "correct": 0,
+        "n": 10,
+        "n_correct": 0,
+        "planned": 10,
+        "expected": 10,
+        "aggregated": true,
+        "errors": 0,
+        "sr_percent": 0,
+        "last_saved_utc": "2026-11-13T07:03:48.636468+00:00"
+      },
+      "Speed1.5": {
+        "completed": 10,
+        "correct": 0,
+        "n": 10,
+        "n_correct": 0,
+        "planned": 10,
+        "expected": 10,
+        "aggregated": true,
+        "errors": 0,
+        "sr_percent": 0,
+        "last_saved_utc": "2026-11-13T07:09:32.207007+00:00"
+      },
+      "TOTAL": {
+        "completed": 50,
+        "correct": 0,
+        "n": 50,
+        "n_correct": 0,
+        "planned": 50,
+        "expected": 50,
+        "aggregated": true,
+        "errors": 0,
+        "sr_percent": 0,
+        "last_saved_utc": "2026-11-13T07:09:32.207007+00:00"
+      }
+    },
+    "fabrica_stool": {
+      "Demo": {
+        "completed": 10,
+        "correct": 1,
+        "n": 10,
+        "n_correct": 1,
+        "planned": 10,
+        "expected": 10,
+        "aggregated": true,
+        "errors": 0,
+        "sr_percent": 10,
+        "last_saved_utc": "2026-11-13T07:12:19.182147+00:00"
+      },
+      "Pause-ID": {
+        "completed": 10,
+        "correct": 0,
+        "n": 10,
+        "n_correct": 0,
+        "planned": 10,
+        "expected": 10,
+        "aggregated": true,
+        "errors": 0,
+        "sr_percent": 0,
+        "last_saved_utc": "2026-11-13T07:32:54.299049+00:00"
+      },
+      "Pause-OOD": {
+        "completed": 10,
+        "correct": 0,
+        "n": 10,
+        "n_correct": 0,
+        "planned": 10,
+        "expected": 10,
+        "aggregated": true,
+        "errors": 0,
+        "sr_percent": 0,
+        "last_saved_utc": "2026-11-13T07:40:02.126167+00:00"
+      },
+      "Speed0.5": {
+        "completed": 10,
+        "correct": 0,
+        "n": 10,
+        "n_correct": 0,
+        "planned": 10,
+        "expected": 10,
+        "aggregated": true,
+        "errors": 0,
+        "sr_percent": 0,
+        "last_saved_utc": "2026-11-13T07:49:22.332151+00:00"
+      },
+      "Speed1.5": {
+        "completed": 10,
+        "correct": 0,
+        "n": 10,
+        "n_correct": 0,
+        "planned": 10,
+        "expected": 10,
+        "aggregated": true,
+        "errors": 0,
+        "sr_percent": 0,
+        "last_saved_utc": "2026-11-13T07:55:11.731651+00:00"
+      },
+      "TOTAL": {
+        "completed": 50,
+        "correct": 1,
+        "n": 50,
+        "n_correct": 1,
+        "planned": 50,
+        "expected": 50,
+        "aggregated": true,
+        "errors": 0,
+        "sr_percent": 2,
+        "last_saved_utc": "2026-11-13T07:55:11.731651+00:00"
+      }
+    },
+    "grab_roller": {
+      "Demo": {
+        "completed": 10,
+        "correct": 8,
+        "n": 10,
+        "n_correct": 8,
+        "planned": 10,
+        "expected": 10,
+        "aggregated": true,
+        "errors": 0,
+        "sr_percent": 80,
+        "last_saved_utc": "2026-11-13T06:57:36.638120+00:00"
+      },
+      "Pause-ID": {
+        "completed": 10,
+        "correct": 7,
+        "n": 10,
+        "n_correct": 7,
+        "planned": 10,
+        "expected": 10,
+        "aggregated": true,
+        "errors": 0,
+        "sr_percent": 70,
+        "last_saved_utc": "2026-11-13T07:09:16.391225+00:00"
+      },
+      "Pause-OOD": {
+        "completed": 10,
+        "correct": 5,
+        "n": 10,
+        "n_correct": 5,
+        "planned": 10,
+        "expected": 10,
+        "aggregated": true,
+        "errors": 0,
+        "sr_percent": 50,
+        "last_saved_utc": "2026-11-13T07:13:13.681949+00:00"
+      },
+      "Speed0.5": {
+        "completed": 10,
+        "correct": 6,
+        "n": 10,
+        "n_correct": 6,
+        "planned": 10,
+        "expected": 10,
+        "aggregated": true,
+        "errors": 0,
+        "sr_percent": 60,
+        "last_saved_utc": "2026-11-13T07:17:06.885988+00:00"
+      },
+      "Speed1.5": {
+        "completed": 10,
+        "correct": 5,
+        "n": 10,
+        "n_correct": 5,
+        "planned": 10,
+        "expected": 10,
+        "aggregated": true,
+        "errors": 0,
+        "sr_percent": 50,
+        "last_saved_utc": "2026-11-13T07:20:32.096188+00:00"
+      },
+      "TOTAL": {
+        "completed": 50,
+        "correct": 31,
+        "n": 50,
+        "n_correct": 31,
+        "planned": 50,
+        "expected": 50,
+        "aggregated": true,
+        "errors": 0,
+        "sr_percent": 62,
+        "last_saved_utc": "2026-11-13T07:20:32.096188+00:00"
+      }
+    },
+    "handover_block": {
+      "Demo": {
+        "completed": 10,
+        "correct": 4,
+        "n": 10,
+        "n_correct": 4,
+        "planned": 10,
+        "expected": 10,
+        "aggregated": true,
+        "errors": 0,
+        "sr_percent": 40,
+        "last_saved_utc": "2026-11-13T06:59:24.502836+00:00"
+      },
+      "Pause-ID": {
+        "completed": 10,
+        "correct": 2,
+        "n": 10,
+        "n_correct": 2,
+        "planned": 10,
+        "expected": 10,
+        "aggregated": true,
+        "errors": 0,
+        "sr_percent": 20,
+        "last_saved_utc": "2026-11-13T07:14:18.612849+00:00"
+      },
+      "Pause-OOD": {
+        "completed": 10,
+        "correct": 2,
+        "n": 10,
+        "n_correct": 2,
+        "planned": 10,
+        "expected": 10,
+        "aggregated": true,
+        "errors": 0,
+        "sr_percent": 20,
+        "last_saved_utc": "2026-11-13T07:19:17.987734+00:00"
+      },
+      "Speed0.5": {
+        "completed": 10,
+        "correct": 3,
+        "n": 10,
+        "n_correct": 3,
+        "planned": 10,
+        "expected": 10,
+        "aggregated": true,
+        "errors": 0,
+        "sr_percent": 30,
+        "last_saved_utc": "2026-11-13T07:24:23.450155+00:00"
+      },
+      "Speed1.5": {
+        "completed": 10,
+        "correct": 0,
+        "n": 10,
+        "n_correct": 0,
+        "planned": 10,
+        "expected": 10,
+        "aggregated": true,
+        "errors": 0,
+        "sr_percent": 0,
+        "last_saved_utc": "2026-11-13T07:28:58.777918+00:00"
+      },
+      "TOTAL": {
+        "completed": 50,
+        "correct": 11,
+        "n": 50,
+        "n_correct": 11,
+        "planned": 50,
+        "expected": 50,
+        "aggregated": true,
+        "errors": 0,
+        "sr_percent": 22,
+        "last_saved_utc": "2026-11-13T07:28:58.777918+00:00"
+      }
+    },
+    "handover_mic": {
+      "Demo": {
+        "completed": 10,
+        "correct": 3,
+        "n": 10,
+        "n_correct": 3,
+        "planned": 10,
+        "expected": 10,
+        "aggregated": true,
+        "errors": 0,
+        "sr_percent": 30,
+        "last_saved_utc": "2026-11-13T06:23:44.850670+00:00"
+      },
+      "Pause-ID": {
+        "completed": 10,
+        "correct": 2,
+        "n": 10,
+        "n_correct": 2,
+        "planned": 10,
+        "expected": 10,
+        "aggregated": true,
+        "errors": 0,
+        "sr_percent": 20,
+        "last_saved_utc": "2026-11-13T06:38:39.019772+00:00"
+      },
+      "Pause-OOD": {
+        "completed": 10,
+        "correct": 2,
+        "n": 10,
+        "n_correct": 2,
+        "planned": 10,
+        "expected": 10,
+        "aggregated": true,
+        "errors": 0,
+        "sr_percent": 20,
+        "last_saved_utc": "2026-11-13T06:43:45.090213+00:00"
+      },
+      "Speed0.5": {
+        "completed": 10,
+        "correct": 4,
+        "n": 10,
+        "n_correct": 4,
+        "planned": 10,
+        "expected": 10,
+        "aggregated": true,
+        "errors": 0,
+        "sr_percent": 40,
+        "last_saved_utc": "2026-11-13T06:48:18.352180+00:00"
+      },
+      "Speed1.5": {
+        "completed": 10,
+        "correct": 1,
+        "n": 10,
+        "n_correct": 1,
+        "planned": 10,
+        "expected": 10,
+        "aggregated": true,
+        "errors": 0,
+        "sr_percent": 10,
+        "last_saved_utc": "2026-11-13T06:52:47.639425+00:00"
+      },
+      "TOTAL": {
+        "completed": 50,
+        "correct": 12,
+        "n": 50,
+        "n_correct": 12,
+        "planned": 50,
+        "expected": 50,
+        "aggregated": true,
+        "errors": 0,
+        "sr_percent": 24,
+        "last_saved_utc": "2026-11-13T06:52:47.639425+00:00"
+      }
+    },
+    "hanging_mug": {
+      "Demo": {
+        "completed": 10,
+        "correct": 1,
+        "n": 10,
+        "n_correct": 1,
+        "planned": 10,
+        "expected": 10,
+        "aggregated": true,
+        "errors": 0,
+        "sr_percent": 10,
+        "last_saved_utc": "2026-11-13T07:25:00.723626+00:00"
+      },
+      "Pause-ID": {
+        "completed": 10,
+        "correct": 0,
+        "n": 10,
+        "n_correct": 0,
+        "planned": 10,
+        "expected": 10,
+        "aggregated": true,
+        "errors": 0,
+        "sr_percent": 0,
+        "last_saved_utc": "2026-11-13T07:43:40.732361+00:00"
+      },
+      "Pause-OOD": {
+        "completed": 10,
+        "correct": 0,
+        "n": 10,
+        "n_correct": 0,
+        "planned": 10,
+        "expected": 10,
+        "aggregated": true,
+        "errors": 0,
+        "sr_percent": 0,
+        "last_saved_utc": "2026-11-13T07:49:41.299441+00:00"
+      },
+      "Speed0.5": {
+        "completed": 10,
+        "correct": 0,
+        "n": 10,
+        "n_correct": 0,
+        "planned": 10,
+        "expected": 10,
+        "aggregated": true,
+        "errors": 0,
+        "sr_percent": 0,
+        "last_saved_utc": "2026-11-13T07:59:01.159328+00:00"
+      },
+      "Speed1.5": {
+        "completed": 10,
+        "correct": 0,
+        "n": 10,
+        "n_correct": 0,
+        "planned": 10,
+        "expected": 10,
+        "aggregated": true,
+        "errors": 0,
+        "sr_percent": 0,
+        "last_saved_utc": "2026-11-13T08:04:15.285650+00:00"
+      },
+      "TOTAL": {
+        "completed": 50,
+        "correct": 1,
+        "n": 50,
+        "n_correct": 1,
+        "planned": 50,
+        "expected": 50,
+        "aggregated": true,
+        "errors": 0,
+        "sr_percent": 2,
+        "last_saved_utc": "2026-11-13T08:04:15.285650+00:00"
+      }
+    },
+    "lift_pot": {
+      "Demo": {
+        "completed": 10,
+        "correct": 2,
+        "n": 10,
+        "n_correct": 2,
+        "planned": 10,
+        "expected": 10,
+        "aggregated": true,
+        "errors": 0,
+        "sr_percent": 20,
+        "last_saved_utc": "2026-11-13T06:24:50.943482+00:00"
+      },
+      "Pause-ID": {
+        "completed": 10,
+        "correct": 1,
+        "n": 10,
+        "n_correct": 1,
+        "planned": 10,
+        "expected": 10,
+        "aggregated": true,
+        "errors": 0,
+        "sr_percent": 10,
+        "last_saved_utc": "2026-11-13T06:39:28.771905+00:00"
+      },
+      "Pause-OOD": {
+        "completed": 10,
+        "correct": 2,
+        "n": 10,
+        "n_correct": 2,
+        "planned": 10,
+        "expected": 10,
+        "aggregated": true,
+        "errors": 0,
+        "sr_percent": 20,
+        "last_saved_utc": "2026-11-13T06:44:26.025017+00:00"
+      },
+      "Speed0.5": {
+        "completed": 10,
+        "correct": 0,
+        "n": 10,
+        "n_correct": 0,
+        "planned": 10,
+        "expected": 10,
+        "aggregated": true,
+        "errors": 0,
+        "sr_percent": 0,
+        "last_saved_utc": "2026-11-13T06:48:55.187285+00:00"
+      },
+      "Speed1.5": {
+        "completed": 10,
+        "correct": 0,
+        "n": 10,
+        "n_correct": 0,
+        "planned": 10,
+        "expected": 10,
+        "aggregated": true,
+        "errors": 0,
+        "sr_percent": 0,
+        "last_saved_utc": "2026-11-13T06:53:26.303402+00:00"
+      },
+      "TOTAL": {
+        "completed": 50,
+        "correct": 5,
+        "n": 50,
+        "n_correct": 5,
+        "planned": 50,
+        "expected": 50,
+        "aggregated": true,
+        "errors": 0,
+        "sr_percent": 10,
+        "last_saved_utc": "2026-11-13T06:53:26.303402+00:00"
+      }
+    },
+    "place_object_basket": {
+      "Demo": {
+        "completed": 10,
+        "correct": 6,
+        "n": 10,
+        "n_correct": 6,
+        "planned": 10,
+        "expected": 10,
+        "aggregated": true,
+        "errors": 0,
+        "sr_percent": 60,
+        "last_saved_utc": "2026-11-13T06:28:06.109518+00:00"
+      },
+      "Pause-ID": {
+        "completed": 10,
+        "correct": 4,
+        "n": 10,
+        "n_correct": 4,
+        "planned": 10,
+        "expected": 10,
+        "aggregated": true,
+        "errors": 0,
+        "sr_percent": 40,
+        "last_saved_utc": "2026-11-13T06:49:53.454850+00:00"
+      },
+      "Pause-OOD": {
+        "completed": 10,
+        "correct": 6,
+        "n": 10,
+        "n_correct": 6,
+        "planned": 10,
+        "expected": 10,
+        "aggregated": true,
+        "errors": 0,
+        "sr_percent": 60,
+        "last_saved_utc": "2026-11-13T06:57:23.291178+00:00"
+      },
+      "Speed0.5": {
+        "completed": 10,
+        "correct": 7,
+        "n": 10,
+        "n_correct": 7,
+        "planned": 10,
+        "expected": 10,
+        "aggregated": true,
+        "errors": 0,
+        "sr_percent": 70,
+        "last_saved_utc": "2026-11-13T07:05:31.408556+00:00"
+      },
+      "Speed1.5": {
+        "completed": 10,
+        "correct": 6,
+        "n": 10,
+        "n_correct": 6,
+        "planned": 10,
+        "expected": 10,
+        "aggregated": true,
+        "errors": 0,
+        "sr_percent": 60,
+        "last_saved_utc": "2026-11-13T07:10:46.768207+00:00"
+      },
+      "TOTAL": {
+        "completed": 50,
+        "correct": 29,
+        "n": 50,
+        "n_correct": 29,
+        "planned": 50,
+        "expected": 50,
+        "aggregated": true,
+        "errors": 0,
+        "sr_percent": 58,
+        "last_saved_utc": "2026-11-13T07:10:46.768207+00:00"
+      }
+    },
+    "put_bottles_dustbin": {
+      "Demo": {
+        "completed": 10,
+        "correct": 2,
+        "n": 10,
+        "n_correct": 2,
+        "planned": 10,
+        "expected": 10,
+        "aggregated": true,
+        "errors": 0,
+        "sr_percent": 20,
+        "last_saved_utc": "2026-11-13T06:30:00.673736+00:00"
+      },
+      "Pause-ID": {
+        "completed": 10,
+        "correct": 2,
+        "n": 10,
+        "n_correct": 2,
+        "planned": 10,
+        "expected": 10,
+        "aggregated": true,
+        "errors": 0,
+        "sr_percent": 20,
+        "last_saved_utc": "2026-11-13T06:53:33.038840+00:00"
+      },
+      "Pause-OOD": {
+        "completed": 10,
+        "correct": 4,
+        "n": 10,
+        "n_correct": 4,
+        "planned": 10,
+        "expected": 10,
+        "aggregated": true,
+        "errors": 0,
+        "sr_percent": 40,
+        "last_saved_utc": "2026-11-13T07:01:15.224692+00:00"
+      },
+      "Speed0.5": {
+        "completed": 10,
+        "correct": 1,
+        "n": 10,
+        "n_correct": 1,
+        "planned": 10,
+        "expected": 10,
+        "aggregated": true,
+        "errors": 0,
+        "sr_percent": 10,
+        "last_saved_utc": "2026-11-13T07:08:41.198034+00:00"
+      },
+      "Speed1.5": {
+        "completed": 10,
+        "correct": 3,
+        "n": 10,
+        "n_correct": 3,
+        "planned": 10,
+        "expected": 10,
+        "aggregated": true,
+        "errors": 0,
+        "sr_percent": 30,
+        "last_saved_utc": "2026-11-13T07:15:41.313710+00:00"
+      },
+      "TOTAL": {
+        "completed": 50,
+        "correct": 12,
+        "n": 50,
+        "n_correct": 12,
+        "planned": 50,
+        "expected": 50,
+        "aggregated": true,
+        "errors": 0,
+        "sr_percent": 24,
+        "last_saved_utc": "2026-11-13T07:15:41.313710+00:00"
+      }
+    },
+    "stack_blocks_three": {
+      "Demo": {
+        "completed": 10,
+        "correct": 10,
+        "n": 10,
+        "n_correct": 10,
+        "planned": 10,
+        "expected": 10,
+        "aggregated": true,
+        "errors": 0,
+        "sr_percent": 100,
+        "last_saved_utc": "2026-11-13T07:18:04.316422+00:00"
+      },
+      "Pause-ID": {
+        "completed": 10,
+        "correct": 10,
+        "n": 10,
+        "n_correct": 10,
+        "planned": 10,
+        "expected": 10,
+        "aggregated": true,
+        "errors": 0,
+        "sr_percent": 100,
+        "last_saved_utc": "2026-11-13T07:35:06.312568+00:00"
+      },
+      "Pause-OOD": {
+        "completed": 10,
+        "correct": 3,
+        "n": 10,
+        "n_correct": 3,
+        "planned": 10,
+        "expected": 10,
+        "aggregated": true,
+        "errors": 0,
+        "sr_percent": 30,
+        "last_saved_utc": "2026-11-13T07:41:16.124037+00:00"
+      },
+      "Speed0.5": {
+        "completed": 10,
+        "correct": 10,
+        "n": 10,
+        "n_correct": 10,
+        "planned": 10,
+        "expected": 10,
+        "aggregated": true,
+        "errors": 0,
+        "sr_percent": 100,
+        "last_saved_utc": "2026-11-13T07:50:44.808123+00:00"
+      },
+      "Speed1.5": {
+        "completed": 10,
+        "correct": 10,
+        "n": 10,
+        "n_correct": 10,
+        "planned": 10,
+        "expected": 10,
+        "aggregated": true,
+        "errors": 0,
+        "sr_percent": 100,
+        "last_saved_utc": "2026-11-13T07:54:26.071037+00:00"
+      },
+      "TOTAL": {
+        "completed": 50,
+        "correct": 43,
+        "n": 50,
+        "n_correct": 43,
+        "planned": 50,
+        "expected": 50,
+        "aggregated": true,
+        "errors": 0,
+        "sr_percent": 86,
+        "last_saved_utc": "2026-11-13T07:54:26.071037+00:00"
+      }
+    }
+  },
+  "selection": {
+    "potential_slots": 110,
+    "eligible_slots": 85,
+    "absent_slots": 25,
+    "selected_clips": 85
+  },
+  "clips": [
+    {
+      "id": "M1adaptive--handover_mic--Demo--s8050003",
+      "model_id": "M1Adaptive10kSubset",
+      "task": "handover_mic",
+      "suite": "Demo",
+      "condition": "Demo",
+      "scene_seed": 8050003,
+      "success": true,
+      "status": "ready",
+      "verified": true,
+      "video_url": "assets/m1-adaptive-subset550/M1adaptive--handover_mic--Demo--s8050003.mp4",
+      "poster_url": "assets/m1-adaptive-subset550/M1adaptive--handover_mic--Demo--s8050003.jpg",
+      "timeline_url": "assets/m1-adaptive-subset550/M1adaptive--handover_mic--Demo--s8050003.timeline.json",
+      "fps": 15,
+      "source_episode_id": "handover_mic__clean__s8050003__e000",
+      "source_run": "/mnt/harbor/users/seonghu/leftright-w2/variational-20261111/evaluation/m1-10k-adaptive-common2200-20261113",
+      "model_inference": false,
+      "replay_checks": {
+        "success": true,
+        "termination": true,
+        "physics_ticks": true,
+        "control_time": true
+      },
+      "media_bytes": 273934
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-11-13T14:29:09.527Z",
+  "updated_utc": "2026-11-13T14:33:12.728Z",
   "evaluation": {
     "model_id": "M1Adaptive10kSubset",
     "checkpoint_update": 10000,
@@ -935,6 +935,81 @@
         "control_time": true
       },
       "media_bytes": 273934
+    },
+    {
+      "id": "M1adaptive--handover_mic--Pause1--s8050001",
+      "model_id": "M1Adaptive10kSubset",
+      "task": "handover_mic",
+      "suite": "Pause-ID",
+      "condition": "Pause1",
+      "scene_seed": 8050001,
+      "success": true,
+      "status": "ready",
+      "verified": true,
+      "video_url": "assets/m1-adaptive-subset550/M1adaptive--handover_mic--Pause1--s8050001.mp4",
+      "poster_url": "assets/m1-adaptive-subset550/M1adaptive--handover_mic--Pause1--s8050001.jpg",
+      "timeline_url": "assets/m1-adaptive-subset550/M1adaptive--handover_mic--Pause1--s8050001.timeline.json",
+      "fps": 15,
+      "source_episode_id": "handover_mic__T_pause__s8050001__e001",
+      "source_run": "/mnt/harbor/users/seonghu/leftright-w2/variational-20261111/evaluation/m1-10k-adaptive-common2200-20261113",
+      "model_inference": false,
+      "replay_checks": {
+        "success": true,
+        "termination": true,
+        "physics_ticks": true,
+        "control_time": true
+      },
+      "media_bytes": 303881
+    },
+    {
+      "id": "M1adaptive--handover_mic--Pause16--s8050034",
+      "model_id": "M1Adaptive10kSubset",
+      "task": "handover_mic",
+      "suite": "Pause-OOD",
+      "condition": "Pause16",
+      "scene_seed": 8050034,
+      "success": true,
+      "status": "ready",
+      "verified": true,
+      "video_url": "assets/m1-adaptive-subset550/M1adaptive--handover_mic--Pause16--s8050034.mp4",
+      "poster_url": "assets/m1-adaptive-subset550/M1adaptive--handover_mic--Pause16--s8050034.jpg",
+      "timeline_url": "assets/m1-adaptive-subset550/M1adaptive--handover_mic--Pause16--s8050034.timeline.json",
+      "fps": 15,
+      "source_episode_id": "handover_mic__T_pause__s8050034__e016",
+      "source_run": "/mnt/harbor/users/seonghu/leftright-w2/variational-20261111/evaluation/m1-10k-adaptive-common2200-20261113",
+      "model_inference": false,
+      "replay_checks": {
+        "success": true,
+        "termination": true,
+        "physics_ticks": true,
+        "control_time": true
+      },
+      "media_bytes": 446321
+    },
+    {
+      "id": "M1adaptive--handover_mic--Speed1.5--s8050027",
+      "model_id": "M1Adaptive10kSubset",
+      "task": "handover_mic",
+      "suite": "Speed1.5",
+      "condition": "Speed1.5",
+      "scene_seed": 8050027,
+      "success": false,
+      "status": "ready",
+      "verified": true,
+      "video_url": "assets/m1-adaptive-subset550/M1adaptive--handover_mic--Speed1.5--s8050027.mp4",
+      "poster_url": "assets/m1-adaptive-subset550/M1adaptive--handover_mic--Speed1.5--s8050027.jpg",
+      "timeline_url": "assets/m1-adaptive-subset550/M1adaptive--handover_mic--Speed1.5--s8050027.timeline.json",
+      "fps": 15,
+      "source_episode_id": "handover_mic__clean__s8050027__e000",
+      "source_run": "/mnt/harbor/users/seonghu/leftright-w2/variational-20261111/evaluation/m1-10k-adaptive-common2200-20261113",
+      "model_inference": false,
+      "replay_checks": {
+        "success": true,
+        "termination": true,
+        "physics_ticks": true,
+        "control_time": true
+      },
+      "media_bytes": 542582
     }
   ]
 }

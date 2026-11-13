@@ -16,7 +16,7 @@
   };
   const value = row => row && row.n > 0 ? `${row.correct}/${row.n} (${(100 * row.correct / row.n).toFixed(1)}%)` : '평가 대기';
   const stamp = text => text ? text.slice(0, 19).replace('T', ' ') + ' UTC' : '집계 대기';
-  const stateLabel = text => ({RUNNING: '실행 중', PENDING: '대기', COMPLETED: '완료', FAILED: '오류 종료'}[text] || text);
+  const stateLabel = text => ({RUNNING: '실행 중', PENDING: '대기', COMPLETED: '완료', FAILED: '오류 종료', CANCELLED: '사용자 요청 중단 · 기록 보존'}[String(text).split(' ')[0]] || text);
   const style = add('style', '');
   style.textContent = '#abc-current-results{display:grid;gap:20px}#abc-current-results section{display:grid;gap:10px}#abc-current-results .current-selects{display:flex;gap:16px;flex-wrap:wrap}#abc-current-results label{display:grid;gap:6px}#abc-current-results select{font:inherit;max-width:100%;padding:8px}#abc-current-results .current-videos{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:16px}#abc-current-results video{width:100%;max-height:420px;background:#111}#abc-current-results .current-video{border:1px solid var(--color-border,#d4d4d4);border-radius:8px;padding:12px}#abc-current-results button{font:inherit}#abc-current-results .current-selected{font-weight:700;text-decoration:underline}#abc-current-results .pause-ood{background:color-mix(in srgb,var(--color-warn,#be123c) 8%,transparent)}';
   try {
@@ -45,8 +45,9 @@
     for (const m of [...d.models, ...d.pending_models]) {
       const tr = add('tr', '', progressRows); add('th', m.label, tr).scope = 'row';
       add('td', m.progress ? `${m.progress.correct}/${m.progress.n}` : '이 비교 스냅샷에 미포함', tr);
-      add('td', '2,200', tr); add('td', m.job.id, tr); add('td', stateLabel(m.job.state), tr);
+      add('td', '2,200', tr); add('td', m.job.parallel_ids ? m.job.parallel_ids.join(', ') : m.job.id, tr); add('td', stateLabel(m.job.state), tr);
     }
+    if (d.latest_m1_scope) note(d.latest_m1_scope.explanation + ' Fixed와 adaptive에 GPU를 각각 3장씩 사용하며, 같은 2,200case에서 task를 나누어 진행합니다.', progress);
     note('전체 저장 진행과 같은 1,000case 비교의 확인 시각을 구분했습니다. 15k M1, M1+M2는 별도 평가 중이며 공통 1,000case 표에는 합치지 않습니다. 기록된 task 결과는 아래 영상 선택에서 확인할 수 있습니다.', progress);
     note('Mug export의 초기 상태 메타데이터를 원 수집 기록과 일치시켜 재개했습니다. 원 source, 2,200case ID, 성공조건과 물리 budget은 유지했습니다. Mug 원 clean expert는 50scene 중 26성공, 24실패였고, 모두 기록된 RIGHT tape와 정지 anchor를 갖춘 원 고정 case로 평가에 포함합니다.', progress);
 
@@ -119,8 +120,8 @@
 
     if (d.adaptive_m1_15k) {
       const a = d.adaptive_m1_15k;
-      const section = add('section', ''); add('h3', 'M1 15k + 대기 중 재관측 / 별도 평가 진행', section);
-      note(`Partner A의 같은 고정 2,200case. Job ${a.job_id}: ${stateLabel(a.job_state)}. ${a.correct}/${a.n} 저장 완료, 집계 ${stamp(a.snapshot_utc)}. 위 공통 1,000case 표와 이전 candidate60 실험에는 합치지 않습니다.`, section);
+      const section = add('section', ''); add('h3', '최신 M1 15k / Fixed K32 대 Adaptive / 별도 평가 진행', section);
+      note(`Partner A의 같은 고정 2,200case, 같은 M1 15k 가중치와 정규화입니다. 각 조건에 GPU ${a.gpu_per_arm}장. Fixed jobs ${a.baseline_parallel_jobs.join(', ')}, adaptive jobs ${a.parallel_jobs.join(', ')}. Adaptive ${a.correct}/${a.n} 저장 완료, 집계 ${stamp(a.snapshot_utc)}. 위 공통 1,000case 표와 이전 candidate60 실험에는 합치지 않습니다.`, section);
       note('H32 전체 예측이 현재 명령의 팔 관절 0.01rad·gripper 0.01 안에 있으면 4개만 실행하고 나머지를 버린 뒤 새 RGB로 다시 예측합니다. 움직임이 포함되면 32개를 실행합니다. 같은 M1 15k의 K32 baseline과 비교합니다.', section);
       const body = table(section, '현재 저장 완료분 / baseline과 같은 case 교집합', ['Suite', 'Adaptive 성공 / 완료', '계획', '짝지은 case', 'K32 성공', 'Adaptive 성공', 'K4 / K32 횟수']);
       for (const s of a.suites) {

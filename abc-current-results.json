@@ -1,7 +1,7 @@
 {
   "version": "leftright-current-common1000-20261113-v1",
   "snapshot_utc": "2026-11-13T03:05:41.256879+00:00",
-  "jobs_checked_utc": "2026-11-13T04:29:49.493140+00:00",
+  "jobs_checked_utc": "2026-11-13T05:39:12.435010+00:00",
   "shared_completed": 1000,
   "planned_per_model": 2200,
   "source_cohort": "fixed common2200 Partner A",
@@ -38,12 +38,12 @@
       "label": "π0.5 A 20k",
       "selected_update": 20000,
       "job": {
-        "id": "359298",
+        "id": "359872",
         "state": "RUNNING"
       },
       "progress": {
-        "n": 1325,
-        "correct": 425
+        "n": 1600,
+        "correct": 439
       }
     },
     {
@@ -52,11 +52,11 @@
       "selected_update": 20000,
       "job": {
         "id": "359299",
-        "state": "RUNNING"
+        "state": "CANCELLED by 1071"
       },
       "progress": {
-        "n": 1750,
-        "correct": 471
+        "n": 2075,
+        "correct": 507
       }
     },
     {
@@ -68,8 +68,8 @@
         "state": "RUNNING"
       },
       "progress": {
-        "n": 1350,
-        "correct": 327
+        "n": 1664,
+        "correct": 370
       }
     },
     {
@@ -78,11 +78,11 @@
       "selected_update": 10000,
       "job": {
         "id": "359303",
-        "state": "RUNNING"
+        "state": "CANCELLED by 1071"
       },
       "progress": {
-        "n": 1350,
-        "correct": 378
+        "n": 1642,
+        "correct": 390
       }
     },
     {
@@ -91,11 +91,11 @@
       "selected_update": 10000,
       "job": {
         "id": "359304",
-        "state": "RUNNING"
+        "state": "CANCELLED by 1071"
       },
       "progress": {
-        "n": 1350,
-        "correct": 306
+        "n": 1650,
+        "correct": 352
       }
     }
   ],
@@ -106,11 +106,16 @@
       "selected_update": 15000,
       "job": {
         "id": "359305",
-        "state": "RUNNING"
+        "state": "RUNNING",
+        "parallel_ids": [
+          "359305",
+          "359961",
+          "359963"
+        ]
       },
       "progress": {
-        "n": 400,
-        "correct": 27
+        "n": 824,
+        "correct": 290
       }
     },
     {
@@ -119,11 +124,11 @@
       "selected_update": 15000,
       "job": {
         "id": "359309",
-        "state": "RUNNING"
+        "state": "CANCELLED by 1071"
       },
       "progress": {
-        "n": 400,
-        "correct": 23
+        "n": 806,
+        "correct": 295
       }
     }
   ],
@@ -2670,7 +2675,7 @@
       "model_id": "A",
       "task": "fabrica_beam",
       "suite": "Pause-OOD",
-      "n": 25,
+      "n": 50,
       "correct": 0,
       "planned": 50
     },
@@ -2678,16 +2683,16 @@
       "model_id": "A",
       "task": "fabrica_beam",
       "suite": "Speed0.5",
-      "n": 0,
-      "correct": null,
+      "n": 25,
+      "correct": 0,
       "planned": 25
     },
     {
       "model_id": "A",
       "task": "fabrica_beam",
       "suite": "Speed1.5",
-      "n": 0,
-      "correct": null,
+      "n": 25,
+      "correct": 0,
       "planned": 25
     },
     {
@@ -2734,32 +2739,32 @@
       "model_id": "A",
       "task": "fabrica_stool",
       "suite": "Demo",
-      "n": 0,
-      "correct": null,
+      "n": 50,
+      "correct": 0,
       "planned": 50
     },
     {
       "model_id": "A",
       "task": "fabrica_stool",
       "suite": "Pause-ID",
-      "n": 0,
-      "correct": null,
+      "n": 50,
+      "correct": 4,
       "planned": 50
     },
     {
       "model_id": "A",
       "task": "fabrica_stool",
       "suite": "Pause-OOD",
-      "n": 0,
-      "correct": null,
+      "n": 50,
+      "correct": 1,
       "planned": 50
     },
     {
       "model_id": "A",
       "task": "fabrica_stool",
       "suite": "Speed0.5",
-      "n": 0,
-      "correct": null,
+      "n": 25,
+      "correct": 3,
       "planned": 25
     },
     {
@@ -3118,16 +3123,16 @@
       "model_id": "B",
       "task": "fabrica_beam",
       "suite": "Speed0.5",
-      "n": 0,
-      "correct": null,
+      "n": 25,
+      "correct": 0,
       "planned": 25
     },
     {
       "model_id": "B",
       "task": "fabrica_beam",
       "suite": "Speed1.5",
-      "n": 0,
-      "correct": null,
+      "n": 25,
+      "correct": 0,
       "planned": 25
     },
     {
@@ -3174,40 +3179,40 @@
       "model_id": "B",
       "task": "fabrica_stool",
       "suite": "Demo",
-      "n": 0,
-      "correct": null,
+      "n": 50,
+      "correct": 0,
       "planned": 50
     },
     {
       "model_id": "B",
       "task": "fabrica_stool",
       "suite": "Pause-ID",
-      "n": 0,
-      "correct": null,
+      "n": 50,
+      "correct": 4,
       "planned": 50
     },
     {
       "model_id": "B",
       "task": "fabrica_stool",
       "suite": "Pause-OOD",
-      "n": 0,
-      "correct": null,
+      "n": 50,
+      "correct": 0,
       "planned": 50
     },
     {
       "model_id": "B",
       "task": "fabrica_stool",
       "suite": "Speed0.5",
-      "n": 0,
-      "correct": null,
+      "n": 25,
+      "correct": 0,
       "planned": 25
     },
     {
       "model_id": "B",
       "task": "fabrica_stool",
       "suite": "Speed1.5",
-      "n": 0,
-      "correct": null,
+      "n": 25,
+      "correct": 1,
       "planned": 25
     },
     {
@@ -3374,16 +3379,16 @@
       "model_id": "B",
       "task": "lift_pot",
       "suite": "Demo",
-      "n": 0,
-      "correct": null,
+      "n": 50,
+      "correct": 22,
       "planned": 50
     },
     {
       "model_id": "B",
       "task": "lift_pot",
       "suite": "Pause-ID",
-      "n": 0,
-      "correct": null,
+      "n": 25,
+      "correct": 9,
       "planned": 50
     },
     {
@@ -3558,16 +3563,16 @@
       "model_id": "C",
       "task": "fabrica_beam",
       "suite": "Speed0.5",
-      "n": 0,
-      "correct": null,
+      "n": 25,
+      "correct": 0,
       "planned": 25
     },
     {
       "model_id": "C",
       "task": "fabrica_beam",
       "suite": "Speed1.5",
-      "n": 0,
-      "correct": null,
+      "n": 25,
+      "correct": 0,
       "planned": 25
     },
     {
@@ -3614,40 +3619,40 @@
       "model_id": "C",
       "task": "fabrica_stool",
       "suite": "Demo",
-      "n": 0,
-      "correct": null,
+      "n": 50,
+      "correct": 1,
       "planned": 50
     },
     {
       "model_id": "C",
       "task": "fabrica_stool",
       "suite": "Pause-ID",
-      "n": 0,
-      "correct": null,
+      "n": 50,
+      "correct": 0,
       "planned": 50
     },
     {
       "model_id": "C",
       "task": "fabrica_stool",
       "suite": "Pause-OOD",
-      "n": 0,
-      "correct": null,
+      "n": 50,
+      "correct": 0,
       "planned": 50
     },
     {
       "model_id": "C",
       "task": "fabrica_stool",
       "suite": "Speed0.5",
-      "n": 0,
-      "correct": null,
+      "n": 25,
+      "correct": 0,
       "planned": 25
     },
     {
       "model_id": "C",
       "task": "fabrica_stool",
       "suite": "Speed1.5",
-      "n": 0,
-      "correct": null,
+      "n": 25,
+      "correct": 0,
       "planned": 25
     },
     {
@@ -3814,8 +3819,8 @@
       "model_id": "C",
       "task": "lift_pot",
       "suite": "Demo",
-      "n": 0,
-      "correct": null,
+      "n": 50,
+      "correct": 30,
       "planned": 50
     },
     {
@@ -3998,16 +4003,16 @@
       "model_id": "m1",
       "task": "fabrica_beam",
       "suite": "Speed0.5",
-      "n": 0,
-      "correct": null,
+      "n": 25,
+      "correct": 0,
       "planned": 25
     },
     {
       "model_id": "m1",
       "task": "fabrica_beam",
       "suite": "Speed1.5",
-      "n": 0,
-      "correct": null,
+      "n": 25,
+      "correct": 0,
       "planned": 25
     },
     {
@@ -4054,40 +4059,40 @@
       "model_id": "m1",
       "task": "fabrica_stool",
       "suite": "Demo",
-      "n": 0,
-      "correct": null,
+      "n": 50,
+      "correct": 2,
       "planned": 50
     },
     {
       "model_id": "m1",
       "task": "fabrica_stool",
       "suite": "Pause-ID",
-      "n": 0,
-      "correct": null,
+      "n": 50,
+      "correct": 1,
       "planned": 50
     },
     {
       "model_id": "m1",
       "task": "fabrica_stool",
       "suite": "Pause-OOD",
-      "n": 0,
-      "correct": null,
+      "n": 50,
+      "correct": 0,
       "planned": 50
     },
     {
       "model_id": "m1",
       "task": "fabrica_stool",
       "suite": "Speed0.5",
-      "n": 0,
-      "correct": null,
+      "n": 25,
+      "correct": 0,
       "planned": 25
     },
     {
       "model_id": "m1",
       "task": "fabrica_stool",
       "suite": "Speed1.5",
-      "n": 0,
-      "correct": null,
+      "n": 25,
+      "correct": 0,
       "planned": 25
     },
     {
@@ -4438,16 +4443,16 @@
       "model_id": "m1-m2",
       "task": "fabrica_beam",
       "suite": "Speed0.5",
-      "n": 0,
-      "correct": null,
+      "n": 25,
+      "correct": 0,
       "planned": 25
     },
     {
       "model_id": "m1-m2",
       "task": "fabrica_beam",
       "suite": "Speed1.5",
-      "n": 0,
-      "correct": null,
+      "n": 25,
+      "correct": 0,
       "planned": 25
     },
     {
@@ -4494,40 +4499,40 @@
       "model_id": "m1-m2",
       "task": "fabrica_stool",
       "suite": "Demo",
-      "n": 0,
-      "correct": null,
+      "n": 50,
+      "correct": 28,
       "planned": 50
     },
     {
       "model_id": "m1-m2",
       "task": "fabrica_stool",
       "suite": "Pause-ID",
-      "n": 0,
-      "correct": null,
+      "n": 50,
+      "correct": 1,
       "planned": 50
     },
     {
       "model_id": "m1-m2",
       "task": "fabrica_stool",
       "suite": "Pause-OOD",
-      "n": 0,
-      "correct": null,
+      "n": 50,
+      "correct": 3,
       "planned": 50
     },
     {
       "model_id": "m1-m2",
       "task": "fabrica_stool",
       "suite": "Speed0.5",
-      "n": 0,
-      "correct": null,
+      "n": 25,
+      "correct": 0,
       "planned": 25
     },
     {
       "model_id": "m1-m2",
       "task": "fabrica_stool",
       "suite": "Speed1.5",
-      "n": 0,
-      "correct": null,
+      "n": 25,
+      "correct": 0,
       "planned": 25
     },
     {
@@ -4694,8 +4699,8 @@
       "model_id": "m1-m2",
       "task": "lift_pot",
       "suite": "Demo",
-      "n": 0,
-      "correct": null,
+      "n": 50,
+      "correct": 14,
       "planned": 50
     },
     {
@@ -5174,40 +5179,40 @@
       "model_id": "m1-15k",
       "task": "place_object_basket",
       "suite": "Demo",
-      "n": 0,
-      "correct": null,
+      "n": 50,
+      "correct": 26,
       "planned": 50
     },
     {
       "model_id": "m1-15k",
       "task": "place_object_basket",
       "suite": "Pause-ID",
-      "n": 0,
-      "correct": null,
+      "n": 50,
+      "correct": 16,
       "planned": 50
     },
     {
       "model_id": "m1-15k",
       "task": "place_object_basket",
       "suite": "Pause-OOD",
-      "n": 0,
-      "correct": null,
+      "n": 50,
+      "correct": 18,
       "planned": 50
     },
     {
       "model_id": "m1-15k",
       "task": "place_object_basket",
       "suite": "Speed0.5",
-      "n": 0,
-      "correct": null,
+      "n": 25,
+      "correct": 10,
       "planned": 25
     },
     {
       "model_id": "m1-15k",
       "task": "place_object_basket",
       "suite": "Speed1.5",
-      "n": 0,
-      "correct": null,
+      "n": 25,
+      "correct": 12,
       "planned": 25
     },
     {
@@ -5254,40 +5259,40 @@
       "model_id": "m1-15k",
       "task": "stack_blocks_three",
       "suite": "Demo",
-      "n": 0,
-      "correct": null,
+      "n": 50,
+      "correct": 48,
       "planned": 50
     },
     {
       "model_id": "m1-15k",
       "task": "stack_blocks_three",
       "suite": "Pause-ID",
-      "n": 0,
-      "correct": null,
+      "n": 50,
+      "correct": 49,
       "planned": 50
     },
     {
       "model_id": "m1-15k",
       "task": "stack_blocks_three",
       "suite": "Pause-OOD",
-      "n": 0,
-      "correct": null,
+      "n": 50,
+      "correct": 25,
       "planned": 50
     },
     {
       "model_id": "m1-15k",
       "task": "stack_blocks_three",
       "suite": "Speed0.5",
-      "n": 0,
-      "correct": null,
+      "n": 25,
+      "correct": 25,
       "planned": 25
     },
     {
       "model_id": "m1-15k",
       "task": "stack_blocks_three",
       "suite": "Speed1.5",
-      "n": 0,
-      "correct": null,
+      "n": 25,
+      "correct": 25,
       "planned": 25
     },
     {
@@ -5614,48 +5619,48 @@
       "model_id": "m1-m2-15k",
       "task": "place_object_basket",
       "suite": "Demo",
-      "n": 0,
-      "correct": null,
+      "n": 50,
+      "correct": 23,
       "planned": 50
     },
     {
       "model_id": "m1-m2-15k",
       "task": "place_object_basket",
       "suite": "Pause-ID",
-      "n": 0,
-      "correct": null,
+      "n": 50,
+      "correct": 22,
       "planned": 50
     },
     {
       "model_id": "m1-m2-15k",
       "task": "place_object_basket",
       "suite": "Pause-OOD",
-      "n": 0,
-      "correct": null,
+      "n": 50,
+      "correct": 15,
       "planned": 50
     },
     {
       "model_id": "m1-m2-15k",
       "task": "place_object_basket",
       "suite": "Speed0.5",
-      "n": 0,
-      "correct": null,
+      "n": 25,
+      "correct": 13,
       "planned": 25
     },
     {
       "model_id": "m1-m2-15k",
       "task": "place_object_basket",
       "suite": "Speed1.5",
-      "n": 0,
-      "correct": null,
+      "n": 25,
+      "correct": 10,
       "planned": 25
     },
     {
       "model_id": "m1-m2-15k",
       "task": "put_bottles_dustbin",
       "suite": "Demo",
-      "n": 0,
-      "correct": null,
+      "n": 6,
+      "correct": 6,
       "planned": 50
     },
     {
@@ -5694,46 +5699,46 @@
       "model_id": "m1-m2-15k",
       "task": "stack_blocks_three",
       "suite": "Demo",
-      "n": 0,
-      "correct": null,
+      "n": 50,
+      "correct": 50,
       "planned": 50
     },
     {
       "model_id": "m1-m2-15k",
       "task": "stack_blocks_three",
       "suite": "Pause-ID",
-      "n": 0,
-      "correct": null,
+      "n": 50,
+      "correct": 50,
       "planned": 50
     },
     {
       "model_id": "m1-m2-15k",
       "task": "stack_blocks_three",
       "suite": "Pause-OOD",
-      "n": 0,
-      "correct": null,
+      "n": 50,
+      "correct": 33,
       "planned": 50
     },
     {
       "model_id": "m1-m2-15k",
       "task": "stack_blocks_three",
       "suite": "Speed0.5",
-      "n": 0,
-      "correct": null,
+      "n": 25,
+      "correct": 25,
       "planned": 25
     },
     {
       "model_id": "m1-m2-15k",
       "task": "stack_blocks_three",
       "suite": "Speed1.5",
-      "n": 0,
-      "correct": null,
+      "n": 25,
+      "correct": 25,
       "planned": 25
     }
   ],
-  "B_additional_completed_outside_common1000": 750,
+  "B_additional_completed_outside_common1000": 1075,
   "adaptive_experiment_is_separate": true,
-  "progress_snapshot_utc": "2026-11-13T04:25:34.703882+00:00",
+  "progress_snapshot_utc": "2026-11-13T05:39:03.563493+00:00",
   "B_preserved_extra_Roller_Plumber": 400,
   "gallery_models": [
     {
@@ -5742,11 +5747,11 @@
       "selected_update": 20000,
       "job": {
         "id": "359298",
-        "state": "RUNNING"
+        "state": "FAILED"
       },
       "progress": {
-        "n": 1325,
-        "correct": 425
+        "n": 1575,
+        "correct": 433
       }
     },
     {
@@ -5755,11 +5760,11 @@
       "selected_update": 20000,
       "job": {
         "id": "359299",
-        "state": "RUNNING"
+        "state": "CANCELLED by 1071"
       },
       "progress": {
-        "n": 1750,
-        "correct": 471
+        "n": 2075,
+        "correct": 507
       }
     },
     {
@@ -5771,8 +5776,8 @@
         "state": "RUNNING"
       },
       "progress": {
-        "n": 1350,
-        "correct": 327
+        "n": 1650,
+        "correct": 358
       }
     },
     {
@@ -5781,11 +5786,11 @@
       "selected_update": 10000,
       "job": {
         "id": "359303",
-        "state": "RUNNING"
+        "state": "CANCELLED by 1071"
       },
       "progress": {
-        "n": 1350,
-        "correct": 378
+        "n": 1600,
+        "correct": 381
       }
     },
     {
@@ -5794,11 +5799,11 @@
       "selected_update": 10000,
       "job": {
         "id": "359304",
-        "state": "RUNNING"
+        "state": "CANCELLED by 1071"
       },
       "progress": {
-        "n": 1350,
-        "correct": 306
+        "n": 1650,
+        "correct": 352
       }
     },
     {
@@ -5810,8 +5815,8 @@
         "state": "RUNNING"
       },
       "progress": {
-        "n": 400,
-        "correct": 27
+        "n": 800,
+        "correct": 281
       }
     },
     {
@@ -5820,16 +5825,38 @@
       "selected_update": 15000,
       "job": {
         "id": "359309",
-        "state": "RUNNING"
+        "state": "CANCELLED by 1071"
       },
       "progress": {
-        "n": 400,
-        "correct": 23
+        "n": 806,
+        "correct": 295
       }
     }
   ],
+  "latest_m1_scope": {
+    "checkpoint_update": 15000,
+    "fixed_jobs": [
+      "359305",
+      "359961",
+      "359963"
+    ],
+    "adaptive_jobs": [
+      "359657",
+      "359962",
+      "359964"
+    ],
+    "fixed_gpu": 3,
+    "adaptive_gpu": 3,
+    "stopped_jobs": [
+      "359299",
+      "359303",
+      "359304",
+      "359309"
+    ],
+    "explanation": "M1 최신 15k만 fixed K32와 adaptive로 비교합니다. B20k·10k·M1M2 평가는 사용자 요청으로 중단했으며 저장 결과를 보존합니다."
+  },
   "adaptive_m1_15k": {
-    "snapshot_utc": "2026-11-13T04:29:57.333263+00:00",
+    "snapshot_utc": "2026-11-13T05:39:25.907049+00:00",
     "label": "M1 15k + adaptive K4/K32",
     "checkpoint_update": 15000,
     "job_id": "359657",
@@ -5837,68 +5864,68 @@
     "baseline_job_id": "359305",
     "partner": "A",
     "planned": 2200,
-    "n": 37,
-    "correct": 5,
+    "n": 375,
+    "correct": 50,
     "suites": [
       {
         "suite": "Demo",
-        "n": 37,
-        "correct": 5,
+        "n": 100,
+        "correct": 17,
         "planned": 550,
-        "paired_n": 37,
+        "paired_n": 100,
         "paired_baseline_correct": 4,
-        "paired_adaptive_correct": 5,
-        "K4_chunks": 49,
-        "K32_chunks": 845,
-        "inferences": 894
+        "paired_adaptive_correct": 17,
+        "K4_chunks": 294,
+        "K32_chunks": 1968,
+        "inferences": 2262
       },
       {
         "suite": "Pause-ID",
-        "n": 0,
-        "correct": 0,
+        "n": 100,
+        "correct": 12,
         "planned": 550,
-        "paired_n": 0,
-        "paired_baseline_correct": 0,
-        "paired_adaptive_correct": 0,
-        "K4_chunks": 0,
-        "K32_chunks": 0,
-        "inferences": 0
+        "paired_n": 100,
+        "paired_baseline_correct": 4,
+        "paired_adaptive_correct": 12,
+        "K4_chunks": 351,
+        "K32_chunks": 2119,
+        "inferences": 2470
       },
       {
         "suite": "Pause-OOD",
-        "n": 0,
-        "correct": 0,
+        "n": 100,
+        "correct": 9,
         "planned": 550,
-        "paired_n": 0,
-        "paired_baseline_correct": 0,
-        "paired_adaptive_correct": 0,
-        "K4_chunks": 0,
-        "K32_chunks": 0,
-        "inferences": 0
+        "paired_n": 100,
+        "paired_baseline_correct": 10,
+        "paired_adaptive_correct": 9,
+        "K4_chunks": 865,
+        "K32_chunks": 2639,
+        "inferences": 3504
       },
       {
         "suite": "Speed0.5",
-        "n": 0,
-        "correct": 0,
+        "n": 50,
+        "correct": 12,
         "planned": 275,
-        "paired_n": 0,
-        "paired_baseline_correct": 0,
-        "paired_adaptive_correct": 0,
-        "K4_chunks": 0,
-        "K32_chunks": 0,
-        "inferences": 0
+        "paired_n": 50,
+        "paired_baseline_correct": 8,
+        "paired_adaptive_correct": 12,
+        "K4_chunks": 555,
+        "K32_chunks": 1135,
+        "inferences": 1690
       },
       {
         "suite": "Speed1.5",
-        "n": 0,
+        "n": 25,
         "correct": 0,
         "planned": 275,
-        "paired_n": 0,
-        "paired_baseline_correct": 0,
+        "paired_n": 25,
+        "paired_baseline_correct": 1,
         "paired_adaptive_correct": 0,
-        "K4_chunks": 0,
-        "K32_chunks": 0,
-        "inferences": 0
+        "K4_chunks": 4,
+        "K32_chunks": 625,
+        "inferences": 629
       }
     ],
     "separate_from_common1000": true,
@@ -5915,6 +5942,17 @@
       "next_control_step": 228,
       "next_physics_tick": 3420,
       "next_fresh_rgb": true
-    }
+    },
+    "parallel_jobs": [
+      "359657",
+      "359962",
+      "359964"
+    ],
+    "baseline_parallel_jobs": [
+      "359305",
+      "359961",
+      "359963"
+    ],
+    "gpu_per_arm": 3
   }
 }

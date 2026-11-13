@@ -35,14 +35,14 @@
       for(const s of [...d.suites,{id:'TOTAL',label:'합계'}]){
         const fixed=a.matched.fixed10k[s.id],adaptive=a.matched.adaptive10k[s.id];
         const tr=add('tr','',matched);add('th',s.label,tr).scope='row';add('td',fixed.completed,tr);
-        add('td',value({correct:fixed.correct,n:fixed.completed}),tr);add('td',value({correct:adaptive.correct,n:adaptive.completed}),tr);
+        add('td',fixed.completed?value({correct:fixed.correct,n:fixed.completed}):'공통 완료 대기',tr);add('td',adaptive.completed?value({correct:adaptive.correct,n:adaptive.completed}):'공통 완료 대기',tr);
         if(s.id==='Pause-OOD')tr.className='pause-ood';
       }
-      note('공통 비교 구성: '+Object.entries(a.matched_by_task).map(([id,n])=>`${d.tasks.find(t=>t.id===id)?.label||id} ${n}건`).join(', ')+'. Pause-OOD는 아직 Mic25건만 공통 완료했으며 전체 task의 최종 결과가 아닙니다. Speed는 아직 공통 완료가 없습니다.',section);
+      note('공통 비교 구성: '+Object.entries(a.matched_by_task).map(([id,n])=>`${d.tasks.find(t=>t.id===id)?.label||id} ${n}건`).join(', ')+'. Pause-OOD는 아직 Mic25건만 공통 완료했으며 전체 task의 최종 결과가 아닙니다. Speed0.5와1.5는 각각275건, 총550건이 평가 계획에 포함돼 있습니다. 이 집계 시점에는 아직 공통 완료가 없습니다.',section);
       const raw=table(section,'원시 저장 진행 / 모델별 완료 구성은 서로 다름',['Suite','fixed10k 보존 완료','adaptive10k 저장 완료']);
       for(const s of [...d.suites,{id:'TOTAL',label:'합계'}]){
         const tr=add('tr','',raw);add('th',s.label,tr).scope='row';
-        for(const id of ['fixed10k','adaptive10k']){const row=a.raw[id][s.id];add('td',value({correct:row.correct,n:row.completed}),tr);}
+        for(const id of ['fixed10k','adaptive10k']){const row=a.raw[id][s.id];add('td',row.completed?value({correct:row.correct,n:row.completed}):`계획 ${a.planned_by_suite[s.id]}건 · 저장 대기`,tr);}
       }
       note('위 원시 진행 표는 저장 상태를 보여 줍니다. 두 모델의 성능 비교는 공통 case 표를 사용합니다. 15k fixed·adaptive6개 잡은 모두 중단했고 기존 결과를 아래에 보존했습니다.',section);
       const rows=table(section,'10k adaptive 실행 lane',['Job','Task','저장 완료 / 담당 계획','노드','상태']);

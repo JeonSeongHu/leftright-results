@@ -6594,6 +6594,14 @@
       },
       "Speed0.5": {},
       "Speed1.5": {}
+    },
+    "planned_by_suite": {
+      "Demo": 550,
+      "Pause-ID": 550,
+      "Pause-OOD": 550,
+      "Speed0.5": 275,
+      "Speed1.5": 275,
+      "TOTAL": 2200
     }
   }
 }

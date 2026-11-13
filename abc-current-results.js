@@ -278,6 +278,8 @@
     try { const r = await fetch('abc-current-videos.json', {cache: 'no-store'}); if (r.ok) clips = (await r.json()).clips || []; } catch {}
     const cell = (model, suite, task) => d.gallery_cells.find(r => r.model_id === model && r.suite === suite && r.task === task);
     function slot(model, suite, task, success) {
+      const original = clips.find(c => c.model_id === model && c.suite === suite && c.task === task && c.success === success && c.legacy === true && c.source_run && c.execution_chunk_steps === 32 && c.partner === 'A' && ['published','available'].includes(c.status) && /^(https:\/\/|assets\/)/.test(c.url));
+      if (original) return {status: '재생 가능 · 기존 원평가 K32', clip: original};
       const row = cell(model, suite, task);
       if (!row || !row.n) return {status: '평가 대기'};
       const count = success ? row.correct : row.n - row.correct;

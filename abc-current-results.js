@@ -77,16 +77,21 @@
 
 
 
+
+
     }
 
     if(d.a20k_fixed_k4_evaluation){
       const a=d.a20k_fixed_k4_evaluation,section=add('section','');section.id='a20k-fixedk4-execution-section';
-      add('h3','추가 실행 / π0.5 A20k 고정 K4',section);
-      note(`상태 확인 ${stamp(a.snapshot_utc)}. ${a.status}. GPU3장·GPU당16환경·batch상한16입니다.`,section);
+      add('h3','π0.5 A20k / 고정 K32 대 고정 K4',section);
+      note(`집계 ${stamp(a.snapshot_utc)}. A20k 고정K4 저장 ${a.completed}/2,200건·성공 ${a.correct}건, GPU3장·GPU당16환경·batch상한16입니다.`,section);
       note('원래 A20k K32와 같은 가중치·정규화·Partner A·고정2,200case입니다. H32를 예측해 앞4개만 실행하고 나머지28개를 버린 뒤 새 RGB로 다시 예측합니다. Adaptive 판정은 적용하지 않습니다.',section);
-      note('11개 task의 Demo·Pause-ID·Pause-OOD·Speed0.5·Speed1.5를 모두 포함합니다. A20k K32와 K4의 같은 case 비교는 M1 10k의3조건 표와 분리하며, 아직 A20k K4의 SR을 집계하지 않았습니다.',section);
-      const body=table(section,'A20k 고정 K4 실행 lane',['Job','Task','노드','상태']);
-      for(const r of a.jobs){const tr=add('tr','',body);add('td',r.id,tr);add('td',r.tasks.map(id=>d.tasks.find(t=>t.id===id)?.label||id).join(' · '),tr);add('td',r.node,tr);add('td',stateLabel(r.state),tr);}
+      note('11개 task의 Demo·Pause-ID·Pause-OOD·Speed0.5·Speed1.5를 모두 포함합니다. 이 A20k 비교와 위 M1 10k의3조건 비교는 서로 다른 분모입니다.',section);
+      note('공통 구성: '+Object.entries(a.matched_by_task).map(([id,n])=>`${d.tasks.find(t=>t.id===id)?.label||id} ${n}건`).join(', ')+'. 아직 먼저 끝난 일부 장면의 결과이며 전체 SR이 아닙니다.',section);
+      const matched=table(section,`A20k 같은 ${a.matched_n}case의 성공 / 완료와 SR`,['Suite','공통 n','A20k fixed K32','A20k fixed K4']);
+      for(const s of [...d.suites,{id:'TOTAL',label:'합계'}]){const tr=add('tr','',matched);add('th',s.label,tr).scope='row';add('td',a.matched.A20k[s.id].completed,tr);for(const id of ['A20k','A20kK4']){const r=a.matched[id][s.id];add('td',r.completed?value({correct:r.correct,n:r.completed}):'공통 완료 대기',tr);}}
+      const body=table(section,'A20k 고정 K4 실행 lane',['Job','Task','저장 / 담당 계획','노드','상태']);
+      for(const r of a.jobs){const tr=add('tr','',body);add('td',r.id,tr);add('td',r.tasks.map(id=>d.tasks.find(t=>t.id===id)?.label||id).join(' · '),tr);add('td',`${r.completed}/${r.planned}`,tr);add('td',r.node,tr);add('td',stateLabel(r.state),tr);}
     }
 
     add('h3', 'ABC, M1 평가 / 같은 1,000case 중간 비교');

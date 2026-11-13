@@ -1,10 +1,10 @@
 {
-  "snapshot_utc": "2026-11-13T07:22:48.477090+00:00",
+  "snapshot_utc": "2026-11-13T07:27:20.550859+00:00",
   "label": "π0.5 A20k fixed K4",
   "checkpoint_update": 20000,
   "planned": 2200,
-  "completed": null,
-  "correct": null,
+  "completed": 6,
+  "correct": 6,
   "partner": "A",
   "gpu": 3,
   "workers_per_gpu": 16,
@@ -23,7 +23,9 @@
         "stack_blocks_three"
       ],
       "state": "RUNNING",
-      "node": "DGX-H100-1"
+      "node": "DGX-H100-1",
+      "completed": 6,
+      "planned": 800
     },
     {
       "id": "360663",
@@ -34,7 +36,9 @@
         "grab_roller"
       ],
       "state": "RUNNING",
-      "node": "DGX-H100-6"
+      "node": "DGX-H100-6",
+      "completed": 0,
+      "planned": 800
     },
     {
       "id": "360664",
@@ -44,7 +48,88 @@
         "fabrica_plumbers_block"
       ],
       "state": "RUNNING",
-      "node": "DGX-H100-5"
+      "node": "DGX-H100-5",
+      "completed": 0,
+      "planned": 600
     }
-  ]
+  ],
+  "matched": {
+    "A20k": {
+      "Demo": {
+        "completed": 6,
+        "correct": 6,
+        "sr_percent": 100.0
+      },
+      "Pause-ID": {
+        "completed": 0,
+        "correct": 0,
+        "sr_percent": null
+      },
+      "Pause-OOD": {
+        "completed": 0,
+        "correct": 0,
+        "sr_percent": null
+      },
+      "Speed0.5": {
+        "completed": 0,
+        "correct": 0,
+        "sr_percent": null
+      },
+      "Speed1.5": {
+        "completed": 0,
+        "correct": 0,
+        "sr_percent": null
+      },
+      "TOTAL": {
+        "completed": 6,
+        "correct": 6,
+        "sr_percent": 100.0
+      }
+    },
+    "A20kK4": {
+      "Demo": {
+        "completed": 6,
+        "correct": 6,
+        "sr_percent": 100.0
+      },
+      "Pause-ID": {
+        "completed": 0,
+        "correct": 0,
+        "sr_percent": null
+      },
+      "Pause-OOD": {
+        "completed": 0,
+        "correct": 0,
+        "sr_percent": null
+      },
+      "Speed0.5": {
+        "completed": 0,
+        "correct": 0,
+        "sr_percent": null
+      },
+      "Speed1.5": {
+        "completed": 0,
+        "correct": 0,
+        "sr_percent": null
+      },
+      "TOTAL": {
+        "completed": 6,
+        "correct": 6,
+        "sr_percent": 100.0
+      }
+    }
+  },
+  "matched_n": 6,
+  "matched_by_task": {
+    "handover_mic": 6
+  },
+  "matched_by_suite_task": {
+    "Demo": {
+      "handover_mic": 6
+    },
+    "Pause-ID": {},
+    "Pause-OOD": {},
+    "Speed0.5": {},
+    "Speed1.5": {}
+  }
 }

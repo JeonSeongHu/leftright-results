@@ -1,12 +1,12 @@
 {
-  "snapshot_utc": "2026-11-13T07:18:21.528487+00:00",
+  "snapshot_utc": "2026-11-13T07:27:20.550859+00:00",
   "models": [
     {
       "id": "A20k",
-      "label": "π0.5 A 20k",
-      "completed": 2150,
+      "label": "π0.5 A 20k fixed K32",
+      "completed": 2175,
       "correct": 555,
-      "last_saved_utc": "2026-11-13T07:14:30.263198+00:00",
+      "last_saved_utc": "2026-11-13T07:23:43.226703+00:00",
       "errors": 0,
       "job_ids": [
         "359872"
@@ -16,7 +16,7 @@
     },
     {
       "id": "C20k",
-      "label": "π0.5 C 20k",
+      "label": "π0.5 C 20k fixed K32",
       "completed": 2200,
       "correct": 509,
       "last_saved_utc": "2026-11-13T07:13:58.283419+00:00",
@@ -41,9 +41,9 @@
     {
       "id": "adaptive10k",
       "label": "M1 10k adaptive",
-      "completed": 1628,
-      "correct": 412,
-      "last_saved_utc": "2026-11-13T07:18:20.108349+00:00",
+      "completed": 1802,
+      "correct": 458,
+      "last_saved_utc": "2026-11-13T07:27:17.872701+00:00",
       "errors": 0,
       "job_ids": [
         "360172",
@@ -59,14 +59,29 @@
     {
       "id": "fixedK4",
       "label": "M1 10k fixed K4",
-      "completed": 136,
-      "correct": 54,
-      "last_saved_utc": "2026-11-13T07:18:20.212341+00:00",
+      "completed": 149,
+      "correct": 56,
+      "last_saved_utc": "2026-11-13T07:27:18.260919+00:00",
       "errors": 0,
       "job_ids": [
         "360265",
         "360266",
         "360267"
+      ],
+      "state": "RUNNING",
+      "planned": 2200
+    },
+    {
+      "id": "A20kK4",
+      "label": "π0.5 A 20k fixed K4",
+      "completed": 6,
+      "correct": 6,
+      "last_saved_utc": "2026-11-13T07:27:19.388584+00:00",
+      "errors": 0,
+      "job_ids": [
+        "360662",
+        "360663",
+        "360664"
       ],
       "state": "RUNNING",
       "planned": 2200

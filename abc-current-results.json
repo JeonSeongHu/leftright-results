@@ -6293,19 +6293,19 @@
     }
   ],
   "active_evaluation": {
-    "snapshot_utc": "2026-11-13T07:18:21.528487+00:00",
+    "snapshot_utc": "2026-11-13T07:27:20.550859+00:00",
     "label": "π0.5 C + M1 10k adaptive",
     "checkpoint_update": 10000,
     "planned": 2200,
     "partner": "A",
-    "gpu": 5,
+    "gpu": 4,
     "workers_per_gpu": 16,
     "batch_cap": 16,
     "baseline_fixed_completed": 1642,
     "baseline_fixed_status": "중단 · 저장 결과 재사용",
-    "completed": 1628,
-    "correct": 412,
-    "progress_status": "저장 완료 1628/2,200건 · 성공 412건 · 저장 오류 0건",
+    "completed": 1802,
+    "correct": 458,
+    "progress_status": "저장 완료 1802/2,200건 · 성공 458건 · 저장 오류 0건",
     "jobs": [
       {
         "id": "360172",
@@ -6316,7 +6316,7 @@
         ],
         "state": "RUNNING",
         "node": "DGX-H100-1",
-        "completed": 331,
+        "completed": 376,
         "planned": 400
       },
       {
@@ -6328,7 +6328,7 @@
         ],
         "state": "RUNNING",
         "node": "DGX-H100-1",
-        "completed": 250,
+        "completed": 276,
         "planned": 400
       },
       {
@@ -6340,7 +6340,7 @@
         ],
         "state": "RUNNING",
         "node": "DGX-H100-6",
-        "completed": 200,
+        "completed": 250,
         "planned": 400
       },
       {
@@ -6350,9 +6350,9 @@
           "lift_pot",
           "grab_roller"
         ],
-        "state": "RUNNING",
+        "state": "COMPLETED",
         "node": "DGX-H100-3",
-        "completed": 375,
+        "completed": 400,
         "planned": 400
       },
       {
@@ -6364,7 +6364,7 @@
         ],
         "state": "RUNNING",
         "node": "DGX-H100-3",
-        "completed": 272,
+        "completed": 300,
         "planned": 400
       },
       {
@@ -6438,46 +6438,46 @@
     "raw": {
       "adaptive10k": {
         "Demo": {
-          "completed": 500,
-          "correct": 157,
-          "sr_percent": 31.4
+          "completed": 550,
+          "correct": 159,
+          "sr_percent": 28.909
         },
         "Pause-ID": {
-          "completed": 422,
-          "correct": 96,
-          "sr_percent": 22.749
+          "completed": 450,
+          "correct": 119,
+          "sr_percent": 26.444
         },
         "Pause-OOD": {
-          "completed": 381,
-          "correct": 87,
-          "sr_percent": 22.835
+          "completed": 426,
+          "correct": 88,
+          "sr_percent": 20.657
         },
         "Speed0.5": {
-          "completed": 175,
-          "correct": 49,
+          "completed": 200,
+          "correct": 56,
           "sr_percent": 28.0
         },
         "Speed1.5": {
-          "completed": 150,
-          "correct": 23,
-          "sr_percent": 15.333
+          "completed": 176,
+          "correct": 36,
+          "sr_percent": 20.455
         },
         "TOTAL": {
-          "completed": 1628,
-          "correct": 412,
-          "sr_percent": 25.307
+          "completed": 1802,
+          "correct": 458,
+          "sr_percent": 25.416
         }
       },
       "fixedK4": {
         "Demo": {
-          "completed": 118,
-          "correct": 44,
-          "sr_percent": 37.288
+          "completed": 124,
+          "correct": 46,
+          "sr_percent": 37.097
         },
         "Pause-ID": {
-          "completed": 18,
+          "completed": 25,
           "correct": 10,
-          "sr_percent": 55.556
+          "sr_percent": 40.0
         },
         "Pause-OOD": {
           "completed": 0,
@@ -6495,9 +6495,9 @@
           "sr_percent": null
         },
         "TOTAL": {
-          "completed": 136,
-          "correct": 54,
-          "sr_percent": 39.706
+          "completed": 149,
+          "correct": 56,
+          "sr_percent": 37.584
         }
       },
       "fixed10k": {
@@ -6549,9 +6549,9 @@
           "sr_percent": 9.091
         },
         "Speed0.5": {
-          "completed": 250,
+          "completed": 275,
           "correct": 34,
-          "sr_percent": 13.6
+          "sr_percent": 12.364
         },
         "Speed1.5": {
           "completed": 250,
@@ -6559,9 +6559,9 @@
           "sr_percent": 41.6
         },
         "TOTAL": {
-          "completed": 2150,
+          "completed": 2175,
           "correct": 555,
-          "sr_percent": 25.814
+          "sr_percent": 25.517
         }
       },
       "C20k": {
@@ -6595,84 +6595,117 @@
           "correct": 509,
           "sr_percent": 23.136
         }
+      },
+      "A20kK4": {
+        "Demo": {
+          "completed": 6,
+          "correct": 6,
+          "sr_percent": 100.0
+        },
+        "Pause-ID": {
+          "completed": 0,
+          "correct": 0,
+          "sr_percent": null
+        },
+        "Pause-OOD": {
+          "completed": 0,
+          "correct": 0,
+          "sr_percent": null
+        },
+        "Speed0.5": {
+          "completed": 0,
+          "correct": 0,
+          "sr_percent": null
+        },
+        "Speed1.5": {
+          "completed": 0,
+          "correct": 0,
+          "sr_percent": null
+        },
+        "TOTAL": {
+          "completed": 6,
+          "correct": 6,
+          "sr_percent": 100.0
+        }
       }
     },
     "matched": {
       "fixed10k": {
         "Demo": {
-          "completed": 392,
-          "correct": 112,
-          "sr_percent": 28.571
+          "completed": 442,
+          "correct": 116,
+          "sr_percent": 26.244
         },
         "Pause-ID": {
-          "completed": 272,
-          "correct": 44,
-          "sr_percent": 16.176
+          "completed": 300,
+          "correct": 70,
+          "sr_percent": 23.333
         },
         "Pause-OOD": {
-          "completed": 231,
-          "correct": 61,
-          "sr_percent": 26.407
+          "completed": 276,
+          "correct": 62,
+          "sr_percent": 22.464
         },
         "Speed0.5": {
-          "completed": 100,
-          "correct": 26,
-          "sr_percent": 26.0
+          "completed": 125,
+          "correct": 32,
+          "sr_percent": 25.6
         },
         "Speed1.5": {
-          "completed": 100,
-          "correct": 16,
-          "sr_percent": 16.0
+          "completed": 101,
+          "correct": 17,
+          "sr_percent": 16.832
         },
         "TOTAL": {
-          "completed": 1095,
-          "correct": 259,
-          "sr_percent": 23.653
+          "completed": 1244,
+          "correct": 297,
+          "sr_percent": 23.875
         }
       },
       "adaptive10k": {
         "Demo": {
-          "completed": 392,
-          "correct": 124,
-          "sr_percent": 31.633
+          "completed": 442,
+          "correct": 126,
+          "sr_percent": 28.507
         },
         "Pause-ID": {
-          "completed": 272,
-          "correct": 58,
-          "sr_percent": 21.324
+          "completed": 300,
+          "correct": 81,
+          "sr_percent": 27.0
         },
         "Pause-OOD": {
-          "completed": 231,
-          "correct": 58,
-          "sr_percent": 25.108
+          "completed": 276,
+          "correct": 59,
+          "sr_percent": 21.377
         },
         "Speed0.5": {
-          "completed": 100,
-          "correct": 33,
-          "sr_percent": 33.0
+          "completed": 125,
+          "correct": 40,
+          "sr_percent": 32.0
         },
         "Speed1.5": {
-          "completed": 100,
-          "correct": 23,
-          "sr_percent": 23.0
+          "completed": 101,
+          "correct": 24,
+          "sr_percent": 23.762
         },
         "TOTAL": {
-          "completed": 1095,
-          "correct": 296,
-          "sr_percent": 27.032
+          "completed": 1244,
+          "correct": 330,
+          "sr_percent": 26.527
         }
       }
     },
-    "matched_n": 1095,
+    "matched_n": 1244,
     "matched_by_task": {
       "handover_mic": 200,
-      "handover_block": 131,
+      "handover_block": 176,
       "place_object_basket": 200,
-      "stack_blocks_three": 50,
+      "stack_blocks_three": 76,
       "put_bottles_dustbin": 200,
+      "hanging_mug": 50,
       "lift_pot": 42,
       "fabrica_beam": 200,
-      "fabrica_stool": 72
+      "fabrica_stool": 100
     },
     "matched_by_suite_task": {
       "Demo": {
@@ -6681,6 +6714,7 @@
         "place_object_basket": 50,
         "stack_blocks_three": 50,
         "put_bottles_dustbin": 50,
+        "hanging_mug": 50,
         "lift_pot": 42,
         "fabrica_beam": 50,
         "fabrica_stool": 50
@@ -6689,25 +6723,30 @@
         "handover_mic": 50,
         "handover_block": 50,
         "place_object_basket": 50,
+        "stack_blocks_three": 25,
         "put_bottles_dustbin": 50,
         "fabrica_beam": 50,
-        "fabrica_stool": 22
+        "fabrica_stool": 25
       },
       "Pause-OOD": {
         "handover_mic": 50,
-        "handover_block": 31,
+        "handover_block": 50,
         "place_object_basket": 50,
+        "stack_blocks_three": 1,
         "put_bottles_dustbin": 50,
-        "fabrica_beam": 50
+        "fabrica_beam": 50,
+        "fabrica_stool": 25
       },
       "Speed0.5": {
         "handover_mic": 25,
+        "handover_block": 25,
         "place_object_basket": 25,
         "put_bottles_dustbin": 25,
         "fabrica_beam": 25
       },
       "Speed1.5": {
         "handover_mic": 25,
+        "handover_block": 1,
         "place_object_basket": 25,
         "put_bottles_dustbin": 25,
         "fabrica_beam": 25
@@ -6724,12 +6763,12 @@
     "gpu_budget": 6
   },
   "fixed_k4_evaluation": {
-    "snapshot_utc": "2026-11-13T07:18:21.528487+00:00",
+    "snapshot_utc": "2026-11-13T07:27:20.550859+00:00",
     "label": "M1 10k fixed K4",
     "checkpoint_update": 10000,
     "planned": 2200,
-    "completed": 136,
-    "correct": 54,
+    "completed": 149,
+    "correct": 56,
     "partner": "A",
     "gpu": 3,
     "workers_per_gpu": 16,
@@ -6739,7 +6778,7 @@
     "discard_tail": 28,
     "adaptive_wait": false,
     "record_video": false,
-    "status": "실제 추론 실행 중 · 저장 136/2,200건 · 성공 54건",
+    "status": "실제 추론 실행 중 · 저장 149/2,200건 · 성공 56건",
     "planned_by_suite": {
       "Demo": 550,
       "Pause-ID": 550,
@@ -6758,7 +6797,7 @@
         ],
         "state": "RUNNING",
         "node": "DGX-H100-3",
-        "completed": 68,
+        "completed": 75,
         "planned": 800
       },
       {
@@ -6771,7 +6810,7 @@
         ],
         "state": "RUNNING",
         "node": "DGX-H100-3",
-        "completed": 20,
+        "completed": 24,
         "planned": 800
       },
       {
@@ -6783,7 +6822,7 @@
         ],
         "state": "RUNNING",
         "node": "DGX-H100-4",
-        "completed": 48,
+        "completed": 50,
         "planned": 600
       }
     ],
@@ -6823,12 +6862,12 @@
     "triple_matched": {
       "fixed10k": {
         "Demo": {
-          "completed": 118,
-          "correct": 23,
-          "sr_percent": 19.492
+          "completed": 124,
+          "correct": 24,
+          "sr_percent": 19.355
         },
         "Pause-ID": {
-          "completed": 18,
+          "completed": 25,
           "correct": 0,
           "sr_percent": 0.0
         },
@@ -6848,21 +6887,21 @@
           "sr_percent": null
         },
         "TOTAL": {
-          "completed": 136,
-          "correct": 23,
-          "sr_percent": 16.912
+          "completed": 149,
+          "correct": 24,
+          "sr_percent": 16.107
         }
       },
       "fixedK4": {
         "Demo": {
-          "completed": 118,
-          "correct": 44,
-          "sr_percent": 37.288
+          "completed": 124,
+          "correct": 46,
+          "sr_percent": 37.097
         },
         "Pause-ID": {
-          "completed": 18,
+          "completed": 25,
           "correct": 10,
-          "sr_percent": 55.556
+          "sr_percent": 40.0
         },
         "Pause-OOD": {
           "completed": 0,
@@ -6880,21 +6919,21 @@
           "sr_percent": null
         },
         "TOTAL": {
-          "completed": 136,
-          "correct": 54,
-          "sr_percent": 39.706
+          "completed": 149,
+          "correct": 56,
+          "sr_percent": 37.584
         }
       },
       "adaptive10k": {
         "Demo": {
-          "completed": 118,
-          "correct": 26,
-          "sr_percent": 22.034
+          "completed": 124,
+          "correct": 27,
+          "sr_percent": 21.774
         },
         "Pause-ID": {
-          "completed": 18,
+          "completed": 25,
           "correct": 3,
-          "sr_percent": 16.667
+          "sr_percent": 12.0
         },
         "Pause-OOD": {
           "completed": 0,
@@ -6912,26 +6951,26 @@
           "sr_percent": null
         },
         "TOTAL": {
-          "completed": 136,
-          "correct": 29,
-          "sr_percent": 21.324
+          "completed": 149,
+          "correct": 30,
+          "sr_percent": 20.134
         }
       }
     },
-    "triple_matched_n": 136,
+    "triple_matched_n": 149,
     "triple_by_task": {
-      "handover_mic": 68,
-      "put_bottles_dustbin": 20,
-      "fabrica_beam": 48
+      "handover_mic": 75,
+      "put_bottles_dustbin": 24,
+      "fabrica_beam": 50
     },
     "triple_by_suite_task": {
       "Demo": {
         "handover_mic": 50,
-        "put_bottles_dustbin": 20,
-        "fabrica_beam": 48
+        "put_bottles_dustbin": 24,
+        "fabrica_beam": 50
       },
       "Pause-ID": {
-        "handover_mic": 18
+        "handover_mic": 25
       },
       "Pause-OOD": {},
       "Speed0.5": {},
@@ -6939,14 +6978,14 @@
     }
   },
   "current_run_progress": {
-    "snapshot_utc": "2026-11-13T07:18:21.528487+00:00",
+    "snapshot_utc": "2026-11-13T07:27:20.550859+00:00",
     "models": [
       {
         "id": "A20k",
-        "label": "π0.5 A 20k",
-        "completed": 2150,
+        "label": "π0.5 A 20k fixed K32",
+        "completed": 2175,
         "correct": 555,
-        "last_saved_utc": "2026-11-13T07:14:30.263198+00:00",
+        "last_saved_utc": "2026-11-13T07:23:43.226703+00:00",
         "errors": 0,
         "job_ids": [
           "359872"
@@ -6956,7 +6995,7 @@
       },
       {
         "id": "C20k",
-        "label": "π0.5 C 20k",
+        "label": "π0.5 C 20k fixed K32",
         "completed": 2200,
         "correct": 509,
         "last_saved_utc": "2026-11-13T07:13:58.283419+00:00",
@@ -6981,9 +7020,9 @@
       {
         "id": "adaptive10k",
         "label": "M1 10k adaptive",
-        "completed": 1628,
-        "correct": 412,
-        "last_saved_utc": "2026-11-13T07:18:20.108349+00:00",
+        "completed": 1802,
+        "correct": 458,
+        "last_saved_utc": "2026-11-13T07:27:17.872701+00:00",
         "errors": 0,
         "job_ids": [
           "360172",
@@ -6999,9 +7038,9 @@
       {
         "id": "fixedK4",
         "label": "M1 10k fixed K4",
-        "completed": 136,
-        "correct": 54,
-        "last_saved_utc": "2026-11-13T07:18:20.212341+00:00",
+        "completed": 149,
+        "correct": 56,
+        "last_saved_utc": "2026-11-13T07:27:18.260919+00:00",
         "errors": 0,
         "job_ids": [
           "360265",
@@ -7010,16 +7049,31 @@
         ],
         "state": "RUNNING",
         "planned": 2200
+      },
+      {
+        "id": "A20kK4",
+        "label": "π0.5 A 20k fixed K4",
+        "completed": 6,
+        "correct": 6,
+        "last_saved_utc": "2026-11-13T07:27:19.388584+00:00",
+        "errors": 0,
+        "job_ids": [
+          "360662",
+          "360663",
+          "360664"
+        ],
+        "state": "RUNNING",
+        "planned": 2200
       }
     ]
   },
   "a20k_fixed_k4_evaluation": {
-    "snapshot_utc": "2026-11-13T07:22:48.477090+00:00",
+    "snapshot_utc": "2026-11-13T07:27:20.550859+00:00",
     "label": "π0.5 A20k fixed K4",
     "checkpoint_update": 20000,
     "planned": 2200,
-    "completed": null,
-    "correct": null,
+    "completed": 6,
+    "correct": 6,
     "partner": "A",
     "gpu": 3,
     "workers_per_gpu": 16,
@@ -7038,7 +7092,9 @@
           "stack_blocks_three"
         ],
         "state": "RUNNING",
-        "node": "DGX-H100-1"
+        "node": "DGX-H100-1",
+        "completed": 6,
+        "planned": 800
       },
       {
         "id": "360663",
@@ -7049,7 +7105,9 @@
           "grab_roller"
         ],
         "state": "RUNNING",
-        "node": "DGX-H100-6"
+        "node": "DGX-H100-6",
+        "completed": 0,
+        "planned": 800
       },
       {
         "id": "360664",
@@ -7059,8 +7117,89 @@
           "fabrica_plumbers_block"
         ],
         "state": "RUNNING",
-        "node": "DGX-H100-5"
+        "node": "DGX-H100-5",
+        "completed": 0,
+        "planned": 600
       }
-    ]
+    ],
+    "matched": {
+      "A20k": {
+        "Demo": {
+          "completed": 6,
+          "correct": 6,
+          "sr_percent": 100.0
+        },
+        "Pause-ID": {
+          "completed": 0,
+          "correct": 0,
+          "sr_percent": null
+        },
+        "Pause-OOD": {
+          "completed": 0,
+          "correct": 0,
+          "sr_percent": null
+        },
+        "Speed0.5": {
+          "completed": 0,
+          "correct": 0,
+          "sr_percent": null
+        },
+        "Speed1.5": {
+          "completed": 0,
+          "correct": 0,
+          "sr_percent": null
+        },
+        "TOTAL": {
+          "completed": 6,
+          "correct": 6,
+          "sr_percent": 100.0
+        }
+      },
+      "A20kK4": {
+        "Demo": {
+          "completed": 6,
+          "correct": 6,
+          "sr_percent": 100.0
+        },
+        "Pause-ID": {
+          "completed": 0,
+          "correct": 0,
+          "sr_percent": null
+        },
+        "Pause-OOD": {
+          "completed": 0,
+          "correct": 0,
+          "sr_percent": null
+        },
+        "Speed0.5": {
+          "completed": 0,
+          "correct": 0,
+          "sr_percent": null
+        },
+        "Speed1.5": {
+          "completed": 0,
+          "correct": 0,
+          "sr_percent": null
+        },
+        "TOTAL": {
+          "completed": 6,
+          "correct": 6,
+          "sr_percent": 100.0
+        }
+      }
+    },
+    "matched_n": 6,
+    "matched_by_task": {
+      "handover_mic": 6
+    },
+    "matched_by_suite_task": {
+      "Demo": {
+        "handover_mic": 6
+      },
+      "Pause-ID": {},
+      "Pause-OOD": {},
+      "Speed0.5": {},
+      "Speed1.5": {}
+    }
   }
 }

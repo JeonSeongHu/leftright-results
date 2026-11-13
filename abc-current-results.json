@@ -7667,234 +7667,287 @@
   },
   "subset550_evaluation": {
     "dataset_version": "k4-subset550-20261113",
-    "snapshot_utc": "2026-11-13T09:04:50.030990+00:00",
+    "snapshot_utc": "2026-11-13T10:27:49.483994+00:00",
     "planned_per_run": 550,
+    "K4_matched": {
+      "A20kK4": {
+        "Demo": {
+          "completed": 110,
+          "correct": 37,
+          "sr_percent": 33.636
+        },
+        "Pause-ID": {
+          "completed": 110,
+          "correct": 32,
+          "sr_percent": 29.091
+        },
+        "Pause-OOD": {
+          "completed": 110,
+          "correct": 14,
+          "sr_percent": 12.727
+        },
+        "Speed0.5": {
+          "completed": 110,
+          "correct": 29,
+          "sr_percent": 26.364
+        },
+        "Speed1.5": {
+          "completed": 110,
+          "correct": 28,
+          "sr_percent": 25.455
+        },
+        "TOTAL": {
+          "completed": 550,
+          "correct": 140,
+          "sr_percent": 25.455
+        }
+      },
+      "C20kK4": {
+        "Demo": {
+          "completed": 110,
+          "correct": 37,
+          "sr_percent": 33.636
+        },
+        "Pause-ID": {
+          "completed": 110,
+          "correct": 29,
+          "sr_percent": 26.364
+        },
+        "Pause-OOD": {
+          "completed": 110,
+          "correct": 13,
+          "sr_percent": 11.818
+        },
+        "Speed0.5": {
+          "completed": 110,
+          "correct": 23,
+          "sr_percent": 20.909
+        },
+        "Speed1.5": {
+          "completed": 110,
+          "correct": 26,
+          "sr_percent": 23.636
+        },
+        "TOTAL": {
+          "completed": 550,
+          "correct": 128,
+          "sr_percent": 23.273
+        }
+      },
+      "fixedK4": {
+        "Demo": {
+          "completed": 110,
+          "correct": 26,
+          "sr_percent": 23.636
+        },
+        "Pause-ID": {
+          "completed": 110,
+          "correct": 17,
+          "sr_percent": 15.455
+        },
+        "Pause-OOD": {
+          "completed": 110,
+          "correct": 18,
+          "sr_percent": 16.364
+        },
+        "Speed0.5": {
+          "completed": 110,
+          "correct": 25,
+          "sr_percent": 22.727
+        },
+        "Speed1.5": {
+          "completed": 110,
+          "correct": 26,
+          "sr_percent": 23.636
+        },
+        "TOTAL": {
+          "completed": 550,
+          "correct": 112,
+          "sr_percent": 20.364
+        }
+      }
+    },
+    "K4_matched_n": 550,
+    "K4_matched_by_task": {
+      "handover_mic": 50,
+      "handover_block": 50,
+      "place_object_basket": 50,
+      "stack_blocks_three": 50,
+      "put_bottles_dustbin": 50,
+      "hanging_mug": 50,
+      "lift_pot": 50,
+      "grab_roller": 50,
+      "fabrica_beam": 50,
+      "fabrica_stool": 50,
+      "fabrica_plumbers_block": 50
+    },
+    "K4_matched_by_suite_task": {
+      "Demo": {
+        "handover_mic": 10,
+        "handover_block": 10,
+        "place_object_basket": 10,
+        "stack_blocks_three": 10,
+        "put_bottles_dustbin": 10,
+        "hanging_mug": 10,
+        "lift_pot": 10,
+        "grab_roller": 10,
+        "fabrica_beam": 10,
+        "fabrica_stool": 10,
+        "fabrica_plumbers_block": 10
+      },
+      "Pause-ID": {
+        "handover_mic": 10,
+        "handover_block": 10,
+        "place_object_basket": 10,
+        "stack_blocks_three": 10,
+        "put_bottles_dustbin": 10,
+        "hanging_mug": 10,
+        "lift_pot": 10,
+        "grab_roller": 10,
+        "fabrica_beam": 10,
+        "fabrica_stool": 10,
+        "fabrica_plumbers_block": 10
+      },
+      "Pause-OOD": {
+        "handover_mic": 10,
+        "handover_block": 10,
+        "place_object_basket": 10,
+        "stack_blocks_three": 10,
+        "put_bottles_dustbin": 10,
+        "hanging_mug": 10,
+        "lift_pot": 10,
+        "grab_roller": 10,
+        "fabrica_beam": 10,
+        "fabrica_stool": 10,
+        "fabrica_plumbers_block": 10
+      },
+      "Speed0.5": {
+        "handover_mic": 10,
+        "handover_block": 10,
+        "place_object_basket": 10,
+        "stack_blocks_three": 10,
+        "put_bottles_dustbin": 10,
+        "hanging_mug": 10,
+        "lift_pot": 10,
+        "grab_roller": 10,
+        "fabrica_beam": 10,
+        "fabrica_stool": 10,
+        "fabrica_plumbers_block": 10
+      },
+      "Speed1.5": {
+        "handover_mic": 10,
+        "handover_block": 10,
+        "place_object_basket": 10,
+        "stack_blocks_three": 10,
+        "put_bottles_dustbin": 10,
+        "hanging_mug": 10,
+        "lift_pot": 10,
+        "grab_roller": 10,
+        "fabrica_beam": 10,
+        "fabrica_stool": 10,
+        "fabrica_plumbers_block": 10
+      }
+    },
     "display_models": [
       "A20kK4",
       "C20kK4",
       "fixedK4"
     ],
-    "K4_matched": {
-      "A20kK4": {
-        "Demo": {
-          "completed": 43,
-          "correct": 25,
-          "sr_percent": 58.14
-        },
-        "Pause-ID": {
-          "completed": 10,
-          "correct": 5,
-          "sr_percent": 50.0
-        },
-        "Pause-OOD": {
-          "completed": 1,
-          "correct": 1,
-          "sr_percent": 100.0
-        },
-        "Speed0.5": {
-          "completed": 0,
-          "correct": 0,
-          "sr_percent": null
-        },
-        "Speed1.5": {
-          "completed": 0,
-          "correct": 0,
-          "sr_percent": null
-        },
-        "TOTAL": {
-          "completed": 54,
-          "correct": 31,
-          "sr_percent": 57.407
-        }
-      },
-      "C20kK4": {
-        "Demo": {
-          "completed": 43,
-          "correct": 23,
-          "sr_percent": 53.488
-        },
-        "Pause-ID": {
-          "completed": 10,
-          "correct": 3,
-          "sr_percent": 30.0
-        },
-        "Pause-OOD": {
-          "completed": 1,
-          "correct": 1,
-          "sr_percent": 100.0
-        },
-        "Speed0.5": {
-          "completed": 0,
-          "correct": 0,
-          "sr_percent": null
-        },
-        "Speed1.5": {
-          "completed": 0,
-          "correct": 0,
-          "sr_percent": null
-        },
-        "TOTAL": {
-          "completed": 54,
-          "correct": 27,
-          "sr_percent": 50.0
-        }
-      },
-      "fixedK4": {
-        "Demo": {
-          "completed": 43,
-          "correct": 19,
-          "sr_percent": 44.186
-        },
-        "Pause-ID": {
-          "completed": 10,
-          "correct": 2,
-          "sr_percent": 20.0
-        },
-        "Pause-OOD": {
-          "completed": 1,
-          "correct": 0,
-          "sr_percent": 0.0
-        },
-        "Speed0.5": {
-          "completed": 0,
-          "correct": 0,
-          "sr_percent": null
-        },
-        "Speed1.5": {
-          "completed": 0,
-          "correct": 0,
-          "sr_percent": null
-        },
-        "TOTAL": {
-          "completed": 54,
-          "correct": 21,
-          "sr_percent": 38.889
-        }
-      }
-    },
-    "K4_matched_n": 54,
-    "K4_matched_by_task": {
-      "handover_mic": 16,
-      "handover_block": 2,
-      "place_object_basket": 4,
-      "put_bottles_dustbin": 7,
-      "grab_roller": 10,
-      "fabrica_beam": 15
-    },
-    "K4_matched_by_suite_task": {
-      "Demo": {
-        "handover_mic": 10,
-        "handover_block": 2,
-        "place_object_basket": 4,
-        "put_bottles_dustbin": 7,
-        "grab_roller": 10,
-        "fabrica_beam": 10
-      },
-      "Pause-ID": {
-        "handover_mic": 5,
-        "fabrica_beam": 5
-      },
-      "Pause-OOD": {
-        "handover_mic": 1
-      },
-      "Speed0.5": {},
-      "Speed1.5": {}
-    },
     "raw": {
       "A20kK4": {
         "Demo": {
-          "completed": 71,
-          "correct": 36,
-          "sr_percent": 50.704
+          "completed": 110,
+          "correct": 37,
+          "sr_percent": 33.636
         },
         "Pause-ID": {
-          "completed": 25,
-          "correct": 11,
-          "sr_percent": 44.0
+          "completed": 110,
+          "correct": 32,
+          "sr_percent": 29.091
         },
         "Pause-OOD": {
-          "completed": 15,
-          "correct": 6,
-          "sr_percent": 40.0
+          "completed": 110,
+          "correct": 14,
+          "sr_percent": 12.727
         },
         "Speed0.5": {
-          "completed": 10,
-          "correct": 8,
-          "sr_percent": 80.0
+          "completed": 110,
+          "correct": 29,
+          "sr_percent": 26.364
         },
         "Speed1.5": {
-          "completed": 3,
-          "correct": 3,
-          "sr_percent": 100.0
+          "completed": 110,
+          "correct": 28,
+          "sr_percent": 25.455
         },
         "TOTAL": {
-          "completed": 124,
-          "correct": 64,
-          "sr_percent": 51.613
+          "completed": 550,
+          "correct": 140,
+          "sr_percent": 25.455
         }
       },
       "C20kK4": {
         "Demo": {
-          "completed": 60,
-          "correct": 36,
-          "sr_percent": 60.0
+          "completed": 110,
+          "correct": 37,
+          "sr_percent": 33.636
         },
         "Pause-ID": {
-          "completed": 10,
-          "correct": 3,
-          "sr_percent": 30.0
+          "completed": 110,
+          "correct": 29,
+          "sr_percent": 26.364
         },
         "Pause-OOD": {
-          "completed": 1,
-          "correct": 1,
-          "sr_percent": 100.0
+          "completed": 110,
+          "correct": 13,
+          "sr_percent": 11.818
         },
         "Speed0.5": {
-          "completed": 0,
-          "correct": 0,
-          "sr_percent": null
+          "completed": 110,
+          "correct": 23,
+          "sr_percent": 20.909
         },
         "Speed1.5": {
-          "completed": 0,
-          "correct": 0,
-          "sr_percent": null
+          "completed": 110,
+          "correct": 26,
+          "sr_percent": 23.636
         },
         "TOTAL": {
-          "completed": 71,
-          "correct": 40,
-          "sr_percent": 56.338
+          "completed": 550,
+          "correct": 128,
+          "sr_percent": 23.273
         }
       },
       "fixedK4": {
         "Demo": {
-          "completed": 62,
-          "correct": 25,
-          "sr_percent": 40.323
+          "completed": 110,
+          "correct": 26,
+          "sr_percent": 23.636
         },
         "Pause-ID": {
-          "completed": 25,
-          "correct": 3,
-          "sr_percent": 12.0
+          "completed": 110,
+          "correct": 17,
+          "sr_percent": 15.455
         },
         "Pause-OOD": {
-          "completed": 22,
-          "correct": 6,
-          "sr_percent": 27.273
+          "completed": 110,
+          "correct": 18,
+          "sr_percent": 16.364
         },
         "Speed0.5": {
-          "completed": 10,
-          "correct": 9,
-          "sr_percent": 90.0
+          "completed": 110,
+          "correct": 25,
+          "sr_percent": 22.727
         },
         "Speed1.5": {
-          "completed": 10,
-          "correct": 4,
-          "sr_percent": 40.0
+          "completed": 110,
+          "correct": 26,
+          "sr_percent": 23.636
         },
         "TOTAL": {
-          "completed": 129,
-          "correct": 47,
-          "sr_percent": 36.434
+          "completed": 550,
+          "correct": 112,
+          "sr_percent": 20.364
         }
       }
     },
@@ -7908,16 +7961,16 @@
         "execute_steps": 4,
         "wait_execute_steps": 4,
         "motion_execute_steps": 4,
-        "status": "running",
-        "active_gpus": 11,
+        "status": "completed",
+        "active_gpus": 0,
         "planned": 550,
         "errors": 0,
         "dataset_version": "k4-subset550-20261113",
         "current_evaluation": true,
-        "result_read_utc": "2026-11-13T09:04:49.879782+00:00",
-        "result_snapshot_utc": "2026-11-13T09:04:50.030990+00:00",
-        "status_utc": "2026-11-13T09:04:50.030990+00:00",
-        "last_saved_utc": "2026-11-13T09:04:49.225287+00:00"
+        "result_read_utc": "2026-11-13T10:27:49.459397+00:00",
+        "result_snapshot_utc": "2026-11-13T10:27:49.483994+00:00",
+        "status_utc": "2026-11-13T10:27:49.483994+00:00",
+        "last_saved_utc": "2026-11-13T10:10:24.028251+00:00"
       },
       "C20kK4": {
         "model_key": "C20kK4",
@@ -7928,16 +7981,16 @@
         "execute_steps": 4,
         "wait_execute_steps": 4,
         "motion_execute_steps": 4,
-        "status": "running",
-        "active_gpus": 11,
+        "status": "completed",
+        "active_gpus": 0,
         "planned": 550,
         "errors": 0,
         "dataset_version": "k4-subset550-20261113",
         "current_evaluation": true,
-        "result_read_utc": "2026-11-13T09:04:50.015683+00:00",
-        "result_snapshot_utc": "2026-11-13T09:04:50.030990+00:00",
-        "status_utc": "2026-11-13T09:04:50.030990+00:00",
-        "last_saved_utc": "2026-11-13T09:04:48.926508+00:00"
+        "result_read_utc": "2026-11-13T10:27:49.467643+00:00",
+        "result_snapshot_utc": "2026-11-13T10:27:49.483994+00:00",
+        "status_utc": "2026-11-13T10:27:49.483994+00:00",
+        "last_saved_utc": "2026-11-13T10:27:34.651260+00:00"
       },
       "fixedK4": {
         "model_key": "fixedK4",
@@ -7948,16 +8001,16 @@
         "execute_steps": 4,
         "wait_execute_steps": 4,
         "motion_execute_steps": 4,
-        "status": "running",
-        "active_gpus": 10,
+        "status": "completed",
+        "active_gpus": 0,
         "planned": 550,
         "errors": 0,
         "dataset_version": "k4-subset550-20261113",
         "current_evaluation": true,
-        "result_read_utc": "2026-11-13T09:04:49.614150+00:00",
-        "result_snapshot_utc": "2026-11-13T09:04:50.030990+00:00",
-        "status_utc": "2026-11-13T09:04:50.030990+00:00",
-        "last_saved_utc": "2026-11-13T09:04:49.094177+00:00"
+        "result_read_utc": "2026-11-13T10:27:49.438339+00:00",
+        "result_snapshot_utc": "2026-11-13T10:27:49.483994+00:00",
+        "status_utc": "2026-11-13T10:27:49.483994+00:00",
+        "last_saved_utc": "2026-11-13T10:05:43.432756+00:00"
       }
     },
     "task_breakdown": {
@@ -7996,170 +8049,170 @@
             "last_saved_utc": "2026-11-13T08:51:29.340156+00:00"
           },
           "Speed1.5": {
-            "completed": 3,
+            "completed": 10,
             "correct": 3,
             "errors": 0,
             "planned": 10,
-            "sr_percent": 100.0,
-            "last_saved_utc": "2026-11-13T09:04:48.365243+00:00"
+            "sr_percent": 30.0,
+            "last_saved_utc": "2026-11-13T09:05:59.433846+00:00"
           },
           "TOTAL": {
-            "completed": 43,
+            "completed": 50,
             "correct": 35,
             "errors": 0,
             "planned": 50,
-            "sr_percent": 81.395,
-            "last_saved_utc": "2026-11-13T09:04:48.365243+00:00"
+            "sr_percent": 70.0,
+            "last_saved_utc": "2026-11-13T09:05:59.433846+00:00"
           }
         },
         "handover_block": {
           "Demo": {
-            "completed": 2,
+            "completed": 10,
             "correct": 2,
             "errors": 0,
             "planned": 10,
-            "sr_percent": 100.0,
-            "last_saved_utc": "2026-11-13T09:04:48.745522+00:00"
+            "sr_percent": 20.0,
+            "last_saved_utc": "2026-11-13T09:06:27.448910+00:00"
           },
           "Pause-ID": {
-            "completed": 0,
-            "correct": 0,
-            "errors": 0,
-            "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
-          },
-          "Pause-OOD": {
-            "completed": 0,
-            "correct": 0,
-            "errors": 0,
-            "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
-          },
-          "Speed0.5": {
-            "completed": 0,
-            "correct": 0,
-            "errors": 0,
-            "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
-          },
-          "Speed1.5": {
-            "completed": 0,
-            "correct": 0,
-            "errors": 0,
-            "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
-          },
-          "TOTAL": {
-            "completed": 2,
+            "completed": 10,
             "correct": 2,
             "errors": 0,
+            "planned": 10,
+            "sr_percent": 20.0,
+            "last_saved_utc": "2026-11-13T09:26:35.200595+00:00"
+          },
+          "Pause-OOD": {
+            "completed": 10,
+            "correct": 1,
+            "errors": 0,
+            "planned": 10,
+            "sr_percent": 10.0,
+            "last_saved_utc": "2026-11-13T09:33:50.479005+00:00"
+          },
+          "Speed0.5": {
+            "completed": 10,
+            "correct": 2,
+            "errors": 0,
+            "planned": 10,
+            "sr_percent": 20.0,
+            "last_saved_utc": "2026-11-13T09:45:24.230447+00:00"
+          },
+          "Speed1.5": {
+            "completed": 10,
+            "correct": 2,
+            "errors": 0,
+            "planned": 10,
+            "sr_percent": 20.0,
+            "last_saved_utc": "2026-11-13T09:54:05.697165+00:00"
+          },
+          "TOTAL": {
+            "completed": 50,
+            "correct": 9,
+            "errors": 0,
             "planned": 50,
-            "sr_percent": 100.0,
-            "last_saved_utc": "2026-11-13T09:04:48.745522+00:00"
+            "sr_percent": 18.0,
+            "last_saved_utc": "2026-11-13T09:54:05.697165+00:00"
           }
         },
         "place_object_basket": {
           "Demo": {
-            "completed": 6,
+            "completed": 10,
             "correct": 6,
             "errors": 0,
             "planned": 10,
-            "sr_percent": 100.0,
-            "last_saved_utc": "2026-11-13T09:04:48.897510+00:00"
+            "sr_percent": 60.0,
+            "last_saved_utc": "2026-11-13T09:05:49.577832+00:00"
           },
           "Pause-ID": {
-            "completed": 0,
-            "correct": 0,
+            "completed": 10,
+            "correct": 7,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 70.0,
+            "last_saved_utc": "2026-11-13T09:23:33.401625+00:00"
           },
           "Pause-OOD": {
-            "completed": 0,
-            "correct": 0,
+            "completed": 10,
+            "correct": 4,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 40.0,
+            "last_saved_utc": "2026-11-13T09:30:24.767880+00:00"
           },
           "Speed0.5": {
-            "completed": 0,
-            "correct": 0,
+            "completed": 10,
+            "correct": 7,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 70.0,
+            "last_saved_utc": "2026-11-13T09:39:42.380849+00:00"
           },
           "Speed1.5": {
-            "completed": 0,
-            "correct": 0,
+            "completed": 10,
+            "correct": 7,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 70.0,
+            "last_saved_utc": "2026-11-13T09:47:07.710454+00:00"
           },
           "TOTAL": {
-            "completed": 6,
-            "correct": 6,
+            "completed": 50,
+            "correct": 31,
             "errors": 0,
             "planned": 50,
-            "sr_percent": 100.0,
-            "last_saved_utc": "2026-11-13T09:04:48.897510+00:00"
+            "sr_percent": 62.0,
+            "last_saved_utc": "2026-11-13T09:47:07.710454+00:00"
           }
         },
         "stack_blocks_three": {
           "Demo": {
-            "completed": 3,
-            "correct": 3,
+            "completed": 10,
+            "correct": 4,
             "errors": 0,
             "planned": 10,
-            "sr_percent": 100.0,
-            "last_saved_utc": "2026-11-13T09:04:48.552761+00:00"
+            "sr_percent": 40.0,
+            "last_saved_utc": "2026-11-13T09:08:05.460684+00:00"
           },
           "Pause-ID": {
-            "completed": 0,
-            "correct": 0,
+            "completed": 10,
+            "correct": 4,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 40.0,
+            "last_saved_utc": "2026-11-13T09:31:00.685362+00:00"
           },
           "Pause-OOD": {
-            "completed": 0,
-            "correct": 0,
+            "completed": 10,
+            "correct": 1,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 10.0,
+            "last_saved_utc": "2026-11-13T09:39:47.796977+00:00"
           },
           "Speed0.5": {
-            "completed": 0,
-            "correct": 0,
-            "errors": 0,
-            "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
-          },
-          "Speed1.5": {
-            "completed": 0,
-            "correct": 0,
-            "errors": 0,
-            "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
-          },
-          "TOTAL": {
-            "completed": 3,
+            "completed": 10,
             "correct": 3,
             "errors": 0,
+            "planned": 10,
+            "sr_percent": 30.0,
+            "last_saved_utc": "2026-11-13T09:51:53.326375+00:00"
+          },
+          "Speed1.5": {
+            "completed": 10,
+            "correct": 5,
+            "errors": 0,
+            "planned": 10,
+            "sr_percent": 50.0,
+            "last_saved_utc": "2026-11-13T10:01:18.862033+00:00"
+          },
+          "TOTAL": {
+            "completed": 50,
+            "correct": 17,
+            "errors": 0,
             "planned": 50,
-            "sr_percent": 100.0,
-            "last_saved_utc": "2026-11-13T09:04:48.552761+00:00"
+            "sr_percent": 34.0,
+            "last_saved_utc": "2026-11-13T10:01:18.862033+00:00"
           }
         },
         "put_bottles_dustbin": {
@@ -8172,94 +8225,94 @@
             "last_saved_utc": "2026-11-13T08:17:56.119699+00:00"
           },
           "Pause-ID": {
-            "completed": 5,
+            "completed": 10,
             "correct": 3,
             "errors": 0,
             "planned": 10,
-            "sr_percent": 60.0,
-            "last_saved_utc": "2026-11-13T09:02:54.357504+00:00"
+            "sr_percent": 30.0,
+            "last_saved_utc": "2026-11-13T09:28:29.980907+00:00"
           },
           "Pause-OOD": {
-            "completed": 0,
-            "correct": 0,
+            "completed": 10,
+            "correct": 1,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 10.0,
+            "last_saved_utc": "2026-11-13T09:39:55.412394+00:00"
           },
           "Speed0.5": {
-            "completed": 0,
-            "correct": 0,
+            "completed": 10,
+            "correct": 4,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 40.0,
+            "last_saved_utc": "2026-11-13T09:56:51.506523+00:00"
           },
           "Speed1.5": {
-            "completed": 0,
-            "correct": 0,
+            "completed": 10,
+            "correct": 5,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 50.0,
+            "last_saved_utc": "2026-11-13T10:10:24.028251+00:00"
           },
           "TOTAL": {
-            "completed": 15,
-            "correct": 7,
+            "completed": 50,
+            "correct": 17,
             "errors": 0,
             "planned": 50,
-            "sr_percent": 46.667,
-            "last_saved_utc": "2026-11-13T09:02:54.357504+00:00"
+            "sr_percent": 34.0,
+            "last_saved_utc": "2026-11-13T10:10:24.028251+00:00"
           }
         },
         "hanging_mug": {
           "Demo": {
-            "completed": 0,
+            "completed": 10,
             "correct": 0,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 0.0,
+            "last_saved_utc": "2026-11-13T09:05:47.553778+00:00"
           },
           "Pause-ID": {
-            "completed": 0,
-            "correct": 0,
+            "completed": 10,
+            "correct": 1,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 10.0,
+            "last_saved_utc": "2026-11-13T09:23:40.531283+00:00"
           },
           "Pause-OOD": {
-            "completed": 0,
-            "correct": 0,
+            "completed": 10,
+            "correct": 1,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 10.0,
+            "last_saved_utc": "2026-11-13T09:29:57.452604+00:00"
           },
           "Speed0.5": {
-            "completed": 0,
+            "completed": 10,
             "correct": 0,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 0.0,
+            "last_saved_utc": "2026-11-13T09:43:39.367782+00:00"
           },
           "Speed1.5": {
-            "completed": 0,
+            "completed": 10,
             "correct": 0,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 0.0,
+            "last_saved_utc": "2026-11-13T09:51:10.778044+00:00"
           },
           "TOTAL": {
-            "completed": 0,
-            "correct": 0,
+            "completed": 50,
+            "correct": 2,
             "errors": 0,
             "planned": 50,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 4.0,
+            "last_saved_utc": "2026-11-13T09:51:10.778044+00:00"
           }
         },
         "lift_pot": {
@@ -8272,44 +8325,44 @@
             "last_saved_utc": "2026-11-13T09:03:44.005799+00:00"
           },
           "Pause-ID": {
-            "completed": 0,
-            "correct": 0,
+            "completed": 10,
+            "correct": 1,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 10.0,
+            "last_saved_utc": "2026-11-13T09:21:49.322694+00:00"
           },
           "Pause-OOD": {
-            "completed": 0,
+            "completed": 10,
             "correct": 0,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 0.0,
+            "last_saved_utc": "2026-11-13T09:28:12.394714+00:00"
           },
           "Speed0.5": {
-            "completed": 0,
+            "completed": 10,
             "correct": 0,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 0.0,
+            "last_saved_utc": "2026-11-13T09:35:48.052106+00:00"
           },
           "Speed1.5": {
-            "completed": 0,
+            "completed": 10,
             "correct": 0,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 0.0,
+            "last_saved_utc": "2026-11-13T09:43:19.241906+00:00"
           },
           "TOTAL": {
-            "completed": 10,
-            "correct": 4,
+            "completed": 50,
+            "correct": 5,
             "errors": 0,
             "planned": 50,
-            "sr_percent": 40.0,
-            "last_saved_utc": "2026-11-13T09:03:44.005799+00:00"
+            "sr_percent": 10.0,
+            "last_saved_utc": "2026-11-13T09:43:19.241906+00:00"
           }
         },
         "grab_roller": {
@@ -8322,44 +8375,44 @@
             "last_saved_utc": "2026-11-13T09:02:43.777456+00:00"
           },
           "Pause-ID": {
-            "completed": 0,
-            "correct": 0,
-            "errors": 0,
-            "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
-          },
-          "Pause-OOD": {
-            "completed": 0,
-            "correct": 0,
-            "errors": 0,
-            "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
-          },
-          "Speed0.5": {
-            "completed": 0,
-            "correct": 0,
-            "errors": 0,
-            "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
-          },
-          "Speed1.5": {
-            "completed": 0,
-            "correct": 0,
-            "errors": 0,
-            "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
-          },
-          "TOTAL": {
             "completed": 10,
             "correct": 6,
             "errors": 0,
-            "planned": 50,
+            "planned": 10,
             "sr_percent": 60.0,
-            "last_saved_utc": "2026-11-13T09:02:43.777456+00:00"
+            "last_saved_utc": "2026-11-13T09:16:52.682051+00:00"
+          },
+          "Pause-OOD": {
+            "completed": 10,
+            "correct": 0,
+            "errors": 0,
+            "planned": 10,
+            "sr_percent": 0.0,
+            "last_saved_utc": "2026-11-13T09:22:11.691339+00:00"
+          },
+          "Speed0.5": {
+            "completed": 10,
+            "correct": 5,
+            "errors": 0,
+            "planned": 10,
+            "sr_percent": 50.0,
+            "last_saved_utc": "2026-11-13T09:27:30.686627+00:00"
+          },
+          "Speed1.5": {
+            "completed": 10,
+            "correct": 6,
+            "errors": 0,
+            "planned": 10,
+            "sr_percent": 60.0,
+            "last_saved_utc": "2026-11-13T09:32:11.723333+00:00"
+          },
+          "TOTAL": {
+            "completed": 50,
+            "correct": 23,
+            "errors": 0,
+            "planned": 50,
+            "sr_percent": 46.0,
+            "last_saved_utc": "2026-11-13T09:32:11.723333+00:00"
           }
         },
         "fabrica_beam": {
@@ -8380,36 +8433,36 @@
             "last_saved_utc": "2026-11-13T09:04:49.225287+00:00"
           },
           "Pause-OOD": {
-            "completed": 5,
+            "completed": 10,
             "correct": 0,
             "errors": 0,
             "planned": 10,
             "sr_percent": 0.0,
-            "last_saved_utc": "2026-11-13T08:46:26.537460+00:00"
+            "last_saved_utc": "2026-11-13T09:12:00.547386+00:00"
           },
           "Speed0.5": {
-            "completed": 0,
+            "completed": 10,
             "correct": 0,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 0.0,
+            "last_saved_utc": "2026-11-13T09:28:04.794468+00:00"
           },
           "Speed1.5": {
-            "completed": 0,
+            "completed": 10,
             "correct": 0,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 0.0,
+            "last_saved_utc": "2026-11-13T09:37:20.350412+00:00"
           },
           "TOTAL": {
-            "completed": 25,
+            "completed": 50,
             "correct": 0,
             "errors": 0,
             "planned": 50,
             "sr_percent": 0.0,
-            "last_saved_utc": "2026-11-13T09:04:49.225287+00:00"
+            "last_saved_utc": "2026-11-13T09:37:20.350412+00:00"
           }
         },
         "fabrica_stool": {
@@ -8422,94 +8475,94 @@
             "last_saved_utc": "2026-11-13T09:04:39.369177+00:00"
           },
           "Pause-ID": {
-            "completed": 0,
+            "completed": 10,
             "correct": 0,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 0.0,
+            "last_saved_utc": "2026-11-13T09:21:43.137869+00:00"
           },
           "Pause-OOD": {
-            "completed": 0,
+            "completed": 10,
             "correct": 0,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 0.0,
+            "last_saved_utc": "2026-11-13T09:27:56.419223+00:00"
           },
           "Speed0.5": {
-            "completed": 0,
+            "completed": 10,
             "correct": 0,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 0.0,
+            "last_saved_utc": "2026-11-13T09:38:38.013414+00:00"
           },
           "Speed1.5": {
-            "completed": 0,
+            "completed": 10,
             "correct": 0,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 0.0,
+            "last_saved_utc": "2026-11-13T09:44:51.087798+00:00"
           },
           "TOTAL": {
-            "completed": 10,
+            "completed": 50,
             "correct": 1,
             "errors": 0,
             "planned": 50,
-            "sr_percent": 10.0,
-            "last_saved_utc": "2026-11-13T09:04:39.369177+00:00"
+            "sr_percent": 2.0,
+            "last_saved_utc": "2026-11-13T09:44:51.087798+00:00"
           }
         },
         "fabrica_plumbers_block": {
           "Demo": {
-            "completed": 0,
+            "completed": 10,
             "correct": 0,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 0.0,
+            "last_saved_utc": "2026-11-13T09:05:26.356823+00:00"
           },
           "Pause-ID": {
-            "completed": 0,
+            "completed": 10,
             "correct": 0,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 0.0,
+            "last_saved_utc": "2026-11-13T09:22:45.451300+00:00"
           },
           "Pause-OOD": {
-            "completed": 0,
+            "completed": 10,
             "correct": 0,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 0.0,
+            "last_saved_utc": "2026-11-13T09:28:36.459707+00:00"
           },
           "Speed0.5": {
-            "completed": 0,
+            "completed": 10,
             "correct": 0,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 0.0,
+            "last_saved_utc": "2026-11-13T09:41:12.367680+00:00"
           },
           "Speed1.5": {
-            "completed": 0,
+            "completed": 10,
             "correct": 0,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 0.0,
+            "last_saved_utc": "2026-11-13T09:48:53.690166+00:00"
           },
           "TOTAL": {
-            "completed": 0,
+            "completed": 50,
             "correct": 0,
             "errors": 0,
             "planned": 50,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 0.0,
+            "last_saved_utc": "2026-11-13T09:48:53.690166+00:00"
           }
         }
       },
@@ -8524,294 +8577,294 @@
             "last_saved_utc": "2026-11-13T08:26:51.434199+00:00"
           },
           "Pause-ID": {
-            "completed": 5,
-            "correct": 3,
+            "completed": 10,
+            "correct": 7,
             "errors": 0,
             "planned": 10,
-            "sr_percent": 60.0,
-            "last_saved_utc": "2026-11-13T08:38:19.498486+00:00"
+            "sr_percent": 70.0,
+            "last_saved_utc": "2026-11-13T09:09:49.626188+00:00"
           },
           "Pause-OOD": {
-            "completed": 1,
+            "completed": 10,
             "correct": 1,
             "errors": 0,
             "planned": 10,
-            "sr_percent": 100.0,
-            "last_saved_utc": "2026-11-13T09:04:48.106388+00:00"
+            "sr_percent": 10.0,
+            "last_saved_utc": "2026-11-13T09:16:26.749389+00:00"
           },
           "Speed0.5": {
-            "completed": 0,
-            "correct": 0,
+            "completed": 10,
+            "correct": 9,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 90.0,
+            "last_saved_utc": "2026-11-13T09:23:58.663652+00:00"
           },
           "Speed1.5": {
-            "completed": 0,
-            "correct": 0,
+            "completed": 10,
+            "correct": 4,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 40.0,
+            "last_saved_utc": "2026-11-13T09:30:28.846489+00:00"
           },
           "TOTAL": {
-            "completed": 16,
-            "correct": 11,
+            "completed": 50,
+            "correct": 28,
             "errors": 0,
             "planned": 50,
-            "sr_percent": 68.75,
-            "last_saved_utc": "2026-11-13T09:04:48.106388+00:00"
+            "sr_percent": 56.0,
+            "last_saved_utc": "2026-11-13T09:30:28.846489+00:00"
           }
         },
         "handover_block": {
           "Demo": {
-            "completed": 2,
+            "completed": 10,
             "correct": 2,
             "errors": 0,
             "planned": 10,
-            "sr_percent": 100.0,
-            "last_saved_utc": "2026-11-13T09:04:48.926508+00:00"
+            "sr_percent": 20.0,
+            "last_saved_utc": "2026-11-13T09:06:49.666193+00:00"
           },
           "Pause-ID": {
-            "completed": 0,
-            "correct": 0,
-            "errors": 0,
-            "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
-          },
-          "Pause-OOD": {
-            "completed": 0,
-            "correct": 0,
-            "errors": 0,
-            "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
-          },
-          "Speed0.5": {
-            "completed": 0,
-            "correct": 0,
-            "errors": 0,
-            "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
-          },
-          "Speed1.5": {
-            "completed": 0,
-            "correct": 0,
-            "errors": 0,
-            "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
-          },
-          "TOTAL": {
-            "completed": 2,
+            "completed": 10,
             "correct": 2,
             "errors": 0,
+            "planned": 10,
+            "sr_percent": 20.0,
+            "last_saved_utc": "2026-11-13T09:27:07.733085+00:00"
+          },
+          "Pause-OOD": {
+            "completed": 10,
+            "correct": 2,
+            "errors": 0,
+            "planned": 10,
+            "sr_percent": 20.0,
+            "last_saved_utc": "2026-11-13T09:34:38.897269+00:00"
+          },
+          "Speed0.5": {
+            "completed": 10,
+            "correct": 1,
+            "errors": 0,
+            "planned": 10,
+            "sr_percent": 10.0,
+            "last_saved_utc": "2026-11-13T09:46:54.640463+00:00"
+          },
+          "Speed1.5": {
+            "completed": 10,
+            "correct": 2,
+            "errors": 0,
+            "planned": 10,
+            "sr_percent": 20.0,
+            "last_saved_utc": "2026-11-13T09:55:46.594371+00:00"
+          },
+          "TOTAL": {
+            "completed": 50,
+            "correct": 9,
+            "errors": 0,
             "planned": 50,
-            "sr_percent": 100.0,
-            "last_saved_utc": "2026-11-13T09:04:48.926508+00:00"
+            "sr_percent": 18.0,
+            "last_saved_utc": "2026-11-13T09:55:46.594371+00:00"
           }
         },
         "place_object_basket": {
           "Demo": {
-            "completed": 7,
+            "completed": 10,
             "correct": 7,
             "errors": 0,
             "planned": 10,
-            "sr_percent": 100.0,
-            "last_saved_utc": "2026-11-13T09:04:48.653347+00:00"
+            "sr_percent": 70.0,
+            "last_saved_utc": "2026-11-13T09:05:15.258831+00:00"
           },
           "Pause-ID": {
-            "completed": 0,
-            "correct": 0,
+            "completed": 10,
+            "correct": 3,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 30.0,
+            "last_saved_utc": "2026-11-13T09:26:14.739686+00:00"
           },
           "Pause-OOD": {
-            "completed": 0,
-            "correct": 0,
+            "completed": 10,
+            "correct": 3,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 30.0,
+            "last_saved_utc": "2026-11-13T09:32:39.042308+00:00"
           },
           "Speed0.5": {
-            "completed": 0,
-            "correct": 0,
+            "completed": 10,
+            "correct": 4,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 40.0,
+            "last_saved_utc": "2026-11-13T09:42:52.528218+00:00"
           },
           "Speed1.5": {
-            "completed": 0,
-            "correct": 0,
+            "completed": 10,
+            "correct": 4,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 40.0,
+            "last_saved_utc": "2026-11-13T09:51:26.009604+00:00"
           },
           "TOTAL": {
-            "completed": 7,
-            "correct": 7,
+            "completed": 50,
+            "correct": 21,
             "errors": 0,
             "planned": 50,
-            "sr_percent": 100.0,
-            "last_saved_utc": "2026-11-13T09:04:48.653347+00:00"
+            "sr_percent": 42.0,
+            "last_saved_utc": "2026-11-13T09:51:26.009604+00:00"
           }
         },
         "stack_blocks_three": {
           "Demo": {
-            "completed": 4,
-            "correct": 4,
+            "completed": 10,
+            "correct": 5,
             "errors": 0,
             "planned": 10,
-            "sr_percent": 100.0,
-            "last_saved_utc": "2026-11-13T09:04:48.020802+00:00"
+            "sr_percent": 50.0,
+            "last_saved_utc": "2026-11-13T09:07:59.060174+00:00"
           },
           "Pause-ID": {
-            "completed": 0,
-            "correct": 0,
+            "completed": 10,
+            "correct": 5,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 50.0,
+            "last_saved_utc": "2026-11-13T09:32:38.767849+00:00"
           },
           "Pause-OOD": {
-            "completed": 0,
-            "correct": 0,
+            "completed": 10,
+            "correct": 1,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 10.0,
+            "last_saved_utc": "2026-11-13T09:40:55.854762+00:00"
           },
           "Speed0.5": {
-            "completed": 0,
-            "correct": 0,
+            "completed": 10,
+            "correct": 2,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 20.0,
+            "last_saved_utc": "2026-11-13T09:53:11.360395+00:00"
           },
           "Speed1.5": {
-            "completed": 0,
-            "correct": 0,
+            "completed": 10,
+            "correct": 5,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 50.0,
+            "last_saved_utc": "2026-11-13T10:02:44.828444+00:00"
           },
           "TOTAL": {
-            "completed": 4,
-            "correct": 4,
+            "completed": 50,
+            "correct": 18,
             "errors": 0,
             "planned": 50,
-            "sr_percent": 100.0,
-            "last_saved_utc": "2026-11-13T09:04:48.020802+00:00"
+            "sr_percent": 36.0,
+            "last_saved_utc": "2026-11-13T10:02:44.828444+00:00"
           }
         },
         "put_bottles_dustbin": {
           "Demo": {
-            "completed": 7,
+            "completed": 10,
             "correct": 4,
             "errors": 0,
             "planned": 10,
-            "sr_percent": 57.143,
-            "last_saved_utc": "2026-11-13T09:04:48.552761+00:00"
+            "sr_percent": 40.0,
+            "last_saved_utc": "2026-11-13T09:08:23.468306+00:00"
           },
           "Pause-ID": {
-            "completed": 0,
-            "correct": 0,
+            "completed": 10,
+            "correct": 2,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 20.0,
+            "last_saved_utc": "2026-11-13T09:43:49.762434+00:00"
           },
           "Pause-OOD": {
-            "completed": 0,
+            "completed": 10,
             "correct": 0,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 0.0,
+            "last_saved_utc": "2026-11-13T09:56:21.173848+00:00"
           },
           "Speed0.5": {
-            "completed": 0,
-            "correct": 0,
+            "completed": 10,
+            "correct": 3,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 30.0,
+            "last_saved_utc": "2026-11-13T10:13:38.530344+00:00"
           },
           "Speed1.5": {
-            "completed": 0,
-            "correct": 0,
+            "completed": 10,
+            "correct": 5,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 50.0,
+            "last_saved_utc": "2026-11-13T10:27:34.651260+00:00"
           },
           "TOTAL": {
-            "completed": 7,
-            "correct": 4,
+            "completed": 50,
+            "correct": 14,
             "errors": 0,
             "planned": 50,
-            "sr_percent": 57.143,
-            "last_saved_utc": "2026-11-13T09:04:48.552761+00:00"
+            "sr_percent": 28.0,
+            "last_saved_utc": "2026-11-13T10:27:34.651260+00:00"
           }
         },
         "hanging_mug": {
           "Demo": {
-            "completed": 0,
+            "completed": 10,
             "correct": 0,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 0.0,
+            "last_saved_utc": "2026-11-13T09:05:55.518025+00:00"
           },
           "Pause-ID": {
-            "completed": 0,
+            "completed": 10,
             "correct": 0,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 0.0,
+            "last_saved_utc": "2026-11-13T09:24:04.624002+00:00"
           },
           "Pause-OOD": {
-            "completed": 0,
+            "completed": 10,
             "correct": 0,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 0.0,
+            "last_saved_utc": "2026-11-13T09:30:23.783112+00:00"
           },
           "Speed0.5": {
-            "completed": 0,
+            "completed": 10,
             "correct": 0,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 0.0,
+            "last_saved_utc": "2026-11-13T09:44:05.604298+00:00"
           },
           "Speed1.5": {
-            "completed": 0,
+            "completed": 10,
             "correct": 0,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 0.0,
+            "last_saved_utc": "2026-11-13T09:51:36.826582+00:00"
           },
           "TOTAL": {
-            "completed": 0,
+            "completed": 50,
             "correct": 0,
             "errors": 0,
             "planned": 50,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 0.0,
+            "last_saved_utc": "2026-11-13T09:51:36.826582+00:00"
           }
         },
         "lift_pot": {
@@ -8824,44 +8877,44 @@
             "last_saved_utc": "2026-11-13T09:03:55.073040+00:00"
           },
           "Pause-ID": {
-            "completed": 0,
-            "correct": 0,
-            "errors": 0,
-            "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
-          },
-          "Pause-OOD": {
-            "completed": 0,
-            "correct": 0,
-            "errors": 0,
-            "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
-          },
-          "Speed0.5": {
-            "completed": 0,
-            "correct": 0,
-            "errors": 0,
-            "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
-          },
-          "Speed1.5": {
-            "completed": 0,
-            "correct": 0,
-            "errors": 0,
-            "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
-          },
-          "TOTAL": {
             "completed": 10,
             "correct": 6,
             "errors": 0,
-            "planned": 50,
+            "planned": 10,
             "sr_percent": 60.0,
-            "last_saved_utc": "2026-11-13T09:03:55.073040+00:00"
+            "last_saved_utc": "2026-11-13T09:19:46.466410+00:00"
+          },
+          "Pause-OOD": {
+            "completed": 10,
+            "correct": 4,
+            "errors": 0,
+            "planned": 10,
+            "sr_percent": 40.0,
+            "last_saved_utc": "2026-11-13T09:24:53.589767+00:00"
+          },
+          "Speed0.5": {
+            "completed": 10,
+            "correct": 1,
+            "errors": 0,
+            "planned": 10,
+            "sr_percent": 10.0,
+            "last_saved_utc": "2026-11-13T09:32:37.141045+00:00"
+          },
+          "Speed1.5": {
+            "completed": 10,
+            "correct": 1,
+            "errors": 0,
+            "planned": 10,
+            "sr_percent": 10.0,
+            "last_saved_utc": "2026-11-13T09:40:00.668132+00:00"
+          },
+          "TOTAL": {
+            "completed": 50,
+            "correct": 18,
+            "errors": 0,
+            "planned": 50,
+            "sr_percent": 36.0,
+            "last_saved_utc": "2026-11-13T09:40:00.668132+00:00"
           }
         },
         "grab_roller": {
@@ -8874,44 +8927,44 @@
             "last_saved_utc": "2026-11-13T09:03:16.058693+00:00"
           },
           "Pause-ID": {
-            "completed": 0,
-            "correct": 0,
+            "completed": 10,
+            "correct": 4,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 40.0,
+            "last_saved_utc": "2026-11-13T09:17:13.232199+00:00"
           },
           "Pause-OOD": {
-            "completed": 0,
-            "correct": 0,
+            "completed": 10,
+            "correct": 2,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 20.0,
+            "last_saved_utc": "2026-11-13T09:22:16.277881+00:00"
           },
           "Speed0.5": {
-            "completed": 0,
-            "correct": 0,
+            "completed": 10,
+            "correct": 3,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 30.0,
+            "last_saved_utc": "2026-11-13T09:28:19.436149+00:00"
           },
           "Speed1.5": {
-            "completed": 0,
-            "correct": 0,
+            "completed": 10,
+            "correct": 5,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 50.0,
+            "last_saved_utc": "2026-11-13T09:33:58.729578+00:00"
           },
           "TOTAL": {
-            "completed": 10,
-            "correct": 6,
+            "completed": 50,
+            "correct": 20,
             "errors": 0,
             "planned": 50,
-            "sr_percent": 60.0,
-            "last_saved_utc": "2026-11-13T09:03:16.058693+00:00"
+            "sr_percent": 40.0,
+            "last_saved_utc": "2026-11-13T09:33:58.729578+00:00"
           }
         },
         "fabrica_beam": {
@@ -8924,144 +8977,144 @@
             "last_saved_utc": "2026-11-13T08:42:14.817918+00:00"
           },
           "Pause-ID": {
-            "completed": 5,
+            "completed": 10,
             "correct": 0,
             "errors": 0,
             "planned": 10,
             "sr_percent": 0.0,
-            "last_saved_utc": "2026-11-13T09:03:44.892718+00:00"
+            "last_saved_utc": "2026-11-13T09:17:51.310428+00:00"
           },
           "Pause-OOD": {
-            "completed": 0,
+            "completed": 10,
             "correct": 0,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 0.0,
+            "last_saved_utc": "2026-11-13T09:25:00.474239+00:00"
           },
           "Speed0.5": {
-            "completed": 0,
+            "completed": 10,
             "correct": 0,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 0.0,
+            "last_saved_utc": "2026-11-13T09:40:14.659761+00:00"
           },
           "Speed1.5": {
-            "completed": 0,
+            "completed": 10,
             "correct": 0,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 0.0,
+            "last_saved_utc": "2026-11-13T09:48:54.135325+00:00"
           },
           "TOTAL": {
-            "completed": 15,
+            "completed": 50,
             "correct": 0,
             "errors": 0,
             "planned": 50,
             "sr_percent": 0.0,
-            "last_saved_utc": "2026-11-13T09:03:44.892718+00:00"
+            "last_saved_utc": "2026-11-13T09:48:54.135325+00:00"
           }
         },
         "fabrica_stool": {
           "Demo": {
-            "completed": 0,
+            "completed": 10,
             "correct": 0,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 0.0,
+            "last_saved_utc": "2026-11-13T09:07:33.386575+00:00"
           },
           "Pause-ID": {
-            "completed": 0,
+            "completed": 10,
             "correct": 0,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 0.0,
+            "last_saved_utc": "2026-11-13T09:24:10.469954+00:00"
           },
           "Pause-OOD": {
-            "completed": 0,
+            "completed": 10,
             "correct": 0,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 0.0,
+            "last_saved_utc": "2026-11-13T09:29:57.512761+00:00"
           },
           "Speed0.5": {
-            "completed": 0,
+            "completed": 10,
             "correct": 0,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 0.0,
+            "last_saved_utc": "2026-11-13T09:39:47.019771+00:00"
           },
           "Speed1.5": {
-            "completed": 0,
+            "completed": 10,
             "correct": 0,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 0.0,
+            "last_saved_utc": "2026-11-13T09:46:08.406487+00:00"
           },
           "TOTAL": {
-            "completed": 0,
+            "completed": 50,
             "correct": 0,
             "errors": 0,
             "planned": 50,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 0.0,
+            "last_saved_utc": "2026-11-13T09:46:08.406487+00:00"
           }
         },
         "fabrica_plumbers_block": {
           "Demo": {
-            "completed": 0,
+            "completed": 10,
             "correct": 0,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 0.0,
+            "last_saved_utc": "2026-11-13T09:05:52.467474+00:00"
           },
           "Pause-ID": {
-            "completed": 0,
+            "completed": 10,
             "correct": 0,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 0.0,
+            "last_saved_utc": "2026-11-13T09:23:15.549591+00:00"
           },
           "Pause-OOD": {
-            "completed": 0,
+            "completed": 10,
             "correct": 0,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 0.0,
+            "last_saved_utc": "2026-11-13T09:29:00.725523+00:00"
           },
           "Speed0.5": {
-            "completed": 0,
+            "completed": 10,
             "correct": 0,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 0.0,
+            "last_saved_utc": "2026-11-13T09:40:32.431274+00:00"
           },
           "Speed1.5": {
-            "completed": 0,
+            "completed": 10,
             "correct": 0,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 0.0,
+            "last_saved_utc": "2026-11-13T09:48:35.876769+00:00"
           },
           "TOTAL": {
-            "completed": 0,
+            "completed": 50,
             "correct": 0,
             "errors": 0,
             "planned": 50,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 0.0,
+            "last_saved_utc": "2026-11-13T09:48:35.876769+00:00"
           }
         }
       },
@@ -9118,152 +9171,152 @@
         },
         "handover_block": {
           "Demo": {
-            "completed": 4,
+            "completed": 10,
             "correct": 4,
             "errors": 0,
             "planned": 10,
-            "sr_percent": 100.0,
-            "last_saved_utc": "2026-11-13T09:04:48.854513+00:00"
+            "sr_percent": 40.0,
+            "last_saved_utc": "2026-11-13T09:05:21.463999+00:00"
           },
           "Pause-ID": {
-            "completed": 0,
-            "correct": 0,
+            "completed": 10,
+            "correct": 1,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 10.0,
+            "last_saved_utc": "2026-11-13T09:25:46.854326+00:00"
           },
           "Pause-OOD": {
-            "completed": 0,
-            "correct": 0,
+            "completed": 10,
+            "correct": 1,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 10.0,
+            "last_saved_utc": "2026-11-13T09:32:57.999055+00:00"
           },
           "Speed0.5": {
-            "completed": 0,
-            "correct": 0,
+            "completed": 10,
+            "correct": 1,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 10.0,
+            "last_saved_utc": "2026-11-13T09:44:25.642973+00:00"
           },
           "Speed1.5": {
-            "completed": 0,
-            "correct": 0,
+            "completed": 10,
+            "correct": 2,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 20.0,
+            "last_saved_utc": "2026-11-13T09:53:01.028161+00:00"
           },
           "TOTAL": {
-            "completed": 4,
-            "correct": 4,
+            "completed": 50,
+            "correct": 9,
             "errors": 0,
             "planned": 50,
-            "sr_percent": 100.0,
-            "last_saved_utc": "2026-11-13T09:04:48.854513+00:00"
+            "sr_percent": 18.0,
+            "last_saved_utc": "2026-11-13T09:53:01.028161+00:00"
           }
         },
         "place_object_basket": {
           "Demo": {
-            "completed": 6,
+            "completed": 10,
             "correct": 6,
             "errors": 0,
             "planned": 10,
-            "sr_percent": 100.0,
-            "last_saved_utc": "2026-11-13T09:04:48.648347+00:00"
+            "sr_percent": 60.0,
+            "last_saved_utc": "2026-11-13T09:05:39.265562+00:00"
           },
           "Pause-ID": {
-            "completed": 0,
-            "correct": 0,
+            "completed": 10,
+            "correct": 5,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 50.0,
+            "last_saved_utc": "2026-11-13T09:24:00.455397+00:00"
           },
           "Pause-OOD": {
-            "completed": 0,
-            "correct": 0,
+            "completed": 10,
+            "correct": 5,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 50.0,
+            "last_saved_utc": "2026-11-13T09:30:38.604709+00:00"
           },
           "Speed0.5": {
-            "completed": 0,
-            "correct": 0,
+            "completed": 10,
+            "correct": 7,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 70.0,
+            "last_saved_utc": "2026-11-13T09:40:10.150593+00:00"
           },
           "Speed1.5": {
-            "completed": 0,
-            "correct": 0,
+            "completed": 10,
+            "correct": 8,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 80.0,
+            "last_saved_utc": "2026-11-13T09:46:31.400492+00:00"
           },
           "TOTAL": {
-            "completed": 6,
-            "correct": 6,
+            "completed": 50,
+            "correct": 31,
             "errors": 0,
             "planned": 50,
-            "sr_percent": 100.0,
-            "last_saved_utc": "2026-11-13T09:04:48.648347+00:00"
+            "sr_percent": 62.0,
+            "last_saved_utc": "2026-11-13T09:46:31.400492+00:00"
           }
         },
         "stack_blocks_three": {
           "Demo": {
-            "completed": 1,
-            "correct": 1,
+            "completed": 10,
+            "correct": 2,
             "errors": 0,
             "planned": 10,
-            "sr_percent": 100.0,
-            "last_saved_utc": "2026-11-13T09:04:48.548761+00:00"
+            "sr_percent": 20.0,
+            "last_saved_utc": "2026-11-13T09:09:13.570469+00:00"
           },
           "Pause-ID": {
-            "completed": 0,
-            "correct": 0,
+            "completed": 10,
+            "correct": 2,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 20.0,
+            "last_saved_utc": "2026-11-13T09:34:22.928870+00:00"
           },
           "Pause-OOD": {
-            "completed": 0,
+            "completed": 10,
             "correct": 0,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 0.0,
+            "last_saved_utc": "2026-11-13T09:43:12.028326+00:00"
           },
           "Speed0.5": {
-            "completed": 0,
-            "correct": 0,
-            "errors": 0,
-            "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
-          },
-          "Speed1.5": {
-            "completed": 0,
-            "correct": 0,
-            "errors": 0,
-            "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
-          },
-          "TOTAL": {
-            "completed": 1,
+            "completed": 10,
             "correct": 1,
             "errors": 0,
+            "planned": 10,
+            "sr_percent": 10.0,
+            "last_saved_utc": "2026-11-13T09:55:27.927928+00:00"
+          },
+          "Speed1.5": {
+            "completed": 10,
+            "correct": 4,
+            "errors": 0,
+            "planned": 10,
+            "sr_percent": 40.0,
+            "last_saved_utc": "2026-11-13T10:05:43.432756+00:00"
+          },
+          "TOTAL": {
+            "completed": 50,
+            "correct": 9,
+            "errors": 0,
             "planned": 50,
-            "sr_percent": 100.0,
-            "last_saved_utc": "2026-11-13T09:04:48.548761+00:00"
+            "sr_percent": 18.0,
+            "last_saved_utc": "2026-11-13T10:05:43.432756+00:00"
           }
         },
         "put_bottles_dustbin": {
@@ -9276,144 +9329,144 @@
             "last_saved_utc": "2026-11-13T07:56:20.411525+00:00"
           },
           "Pause-ID": {
-            "completed": 5,
+            "completed": 10,
             "correct": 0,
             "errors": 0,
             "planned": 10,
             "sr_percent": 0.0,
-            "last_saved_utc": "2026-11-13T08:36:16.753890+00:00"
+            "last_saved_utc": "2026-11-13T09:20:06.821589+00:00"
           },
           "Pause-OOD": {
-            "completed": 2,
-            "correct": 2,
+            "completed": 10,
+            "correct": 4,
             "errors": 0,
             "planned": 10,
-            "sr_percent": 100.0,
-            "last_saved_utc": "2026-11-13T09:04:47.657606+00:00"
+            "sr_percent": 40.0,
+            "last_saved_utc": "2026-11-13T09:30:40.800642+00:00"
           },
           "Speed0.5": {
-            "completed": 0,
-            "correct": 0,
-            "errors": 0,
-            "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
-          },
-          "Speed1.5": {
-            "completed": 0,
-            "correct": 0,
-            "errors": 0,
-            "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
-          },
-          "TOTAL": {
-            "completed": 17,
+            "completed": 10,
             "correct": 3,
             "errors": 0,
+            "planned": 10,
+            "sr_percent": 30.0,
+            "last_saved_utc": "2026-11-13T09:48:29.897105+00:00"
+          },
+          "Speed1.5": {
+            "completed": 10,
+            "correct": 4,
+            "errors": 0,
+            "planned": 10,
+            "sr_percent": 40.0,
+            "last_saved_utc": "2026-11-13T10:03:12.688959+00:00"
+          },
+          "TOTAL": {
+            "completed": 50,
+            "correct": 12,
+            "errors": 0,
             "planned": 50,
-            "sr_percent": 17.647,
-            "last_saved_utc": "2026-11-13T09:04:47.657606+00:00"
+            "sr_percent": 24.0,
+            "last_saved_utc": "2026-11-13T10:03:12.688959+00:00"
           }
         },
         "hanging_mug": {
           "Demo": {
-            "completed": 0,
+            "completed": 10,
             "correct": 0,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 0.0,
+            "last_saved_utc": "2026-11-13T09:06:16.475313+00:00"
           },
           "Pause-ID": {
-            "completed": 0,
+            "completed": 10,
             "correct": 0,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 0.0,
+            "last_saved_utc": "2026-11-13T09:24:31.924717+00:00"
           },
           "Pause-OOD": {
-            "completed": 0,
+            "completed": 10,
             "correct": 0,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 0.0,
+            "last_saved_utc": "2026-11-13T09:30:37.149844+00:00"
           },
           "Speed0.5": {
-            "completed": 0,
+            "completed": 10,
             "correct": 0,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 0.0,
+            "last_saved_utc": "2026-11-13T09:44:15.139233+00:00"
           },
           "Speed1.5": {
-            "completed": 0,
+            "completed": 10,
             "correct": 0,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 0.0,
+            "last_saved_utc": "2026-11-13T09:51:52.618086+00:00"
           },
           "TOTAL": {
-            "completed": 0,
+            "completed": 50,
             "correct": 0,
             "errors": 0,
             "planned": 50,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 0.0,
+            "last_saved_utc": "2026-11-13T09:51:52.618086+00:00"
           }
         },
         "lift_pot": {
           "Demo": {
-            "completed": 0,
+            "completed": 10,
             "correct": 0,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 0.0,
+            "last_saved_utc": "2026-11-13T09:05:41.397581+00:00"
           },
           "Pause-ID": {
-            "completed": 0,
-            "correct": 0,
+            "completed": 10,
+            "correct": 1,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 10.0,
+            "last_saved_utc": "2026-11-13T09:23:38.669454+00:00"
           },
           "Pause-OOD": {
-            "completed": 0,
+            "completed": 10,
             "correct": 0,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 0.0,
+            "last_saved_utc": "2026-11-13T09:30:09.994188+00:00"
           },
           "Speed0.5": {
-            "completed": 0,
+            "completed": 10,
             "correct": 0,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 0.0,
+            "last_saved_utc": "2026-11-13T09:38:03.245547+00:00"
           },
           "Speed1.5": {
-            "completed": 0,
+            "completed": 10,
             "correct": 0,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 0.0,
+            "last_saved_utc": "2026-11-13T09:45:22.581959+00:00"
           },
           "TOTAL": {
-            "completed": 0,
-            "correct": 0,
+            "completed": 50,
+            "correct": 1,
             "errors": 0,
             "planned": 50,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 2.0,
+            "last_saved_utc": "2026-11-13T09:45:22.581959+00:00"
           }
         },
         "grab_roller": {
@@ -9426,44 +9479,44 @@
             "last_saved_utc": "2026-11-13T09:03:10.090088+00:00"
           },
           "Pause-ID": {
-            "completed": 0,
-            "correct": 0,
+            "completed": 10,
+            "correct": 5,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 50.0,
+            "last_saved_utc": "2026-11-13T09:17:01.046299+00:00"
           },
           "Pause-OOD": {
-            "completed": 0,
-            "correct": 0,
+            "completed": 10,
+            "correct": 4,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 40.0,
+            "last_saved_utc": "2026-11-13T09:21:30.028089+00:00"
           },
           "Speed0.5": {
-            "completed": 0,
-            "correct": 0,
+            "completed": 10,
+            "correct": 4,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 40.0,
+            "last_saved_utc": "2026-11-13T09:27:09.281554+00:00"
           },
           "Speed1.5": {
-            "completed": 0,
-            "correct": 0,
+            "completed": 10,
+            "correct": 4,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 40.0,
+            "last_saved_utc": "2026-11-13T09:32:40.685726+00:00"
           },
           "TOTAL": {
-            "completed": 10,
-            "correct": 6,
+            "completed": 50,
+            "correct": 23,
             "errors": 0,
             "planned": 50,
-            "sr_percent": 60.0,
-            "last_saved_utc": "2026-11-13T09:03:10.090088+00:00"
+            "sr_percent": 46.0,
+            "last_saved_utc": "2026-11-13T09:32:40.685726+00:00"
           }
         },
         "fabrica_beam": {
@@ -9492,28 +9545,28 @@
             "last_saved_utc": "2026-11-13T08:41:36.861904+00:00"
           },
           "Speed0.5": {
-            "completed": 0,
+            "completed": 10,
             "correct": 0,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 0.0,
+            "last_saved_utc": "2026-11-13T09:12:09.054619+00:00"
           },
           "Speed1.5": {
-            "completed": 0,
+            "completed": 10,
             "correct": 0,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 0.0,
+            "last_saved_utc": "2026-11-13T09:20:06.503580+00:00"
           },
           "TOTAL": {
-            "completed": 30,
+            "completed": 50,
             "correct": 0,
             "errors": 0,
             "planned": 50,
             "sr_percent": 0.0,
-            "last_saved_utc": "2026-11-13T08:41:36.861904+00:00"
+            "last_saved_utc": "2026-11-13T09:20:06.503580+00:00"
           }
         },
         "fabrica_stool": {
@@ -9526,97 +9579,133 @@
             "last_saved_utc": "2026-11-13T09:04:21.424796+00:00"
           },
           "Pause-ID": {
-            "completed": 0,
+            "completed": 10,
             "correct": 0,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 0.0,
+            "last_saved_utc": "2026-11-13T09:21:14.877416+00:00"
           },
           "Pause-OOD": {
-            "completed": 0,
+            "completed": 10,
             "correct": 0,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 0.0,
+            "last_saved_utc": "2026-11-13T09:27:18.131673+00:00"
           },
           "Speed0.5": {
-            "completed": 0,
+            "completed": 10,
             "correct": 0,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 0.0,
+            "last_saved_utc": "2026-11-13T09:37:09.765366+00:00"
           },
           "Speed1.5": {
-            "completed": 0,
+            "completed": 10,
             "correct": 0,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 0.0,
+            "last_saved_utc": "2026-11-13T09:43:31.020014+00:00"
           },
           "TOTAL": {
-            "completed": 10,
+            "completed": 50,
             "correct": 0,
             "errors": 0,
             "planned": 50,
             "sr_percent": 0.0,
-            "last_saved_utc": "2026-11-13T09:04:21.424796+00:00"
+            "last_saved_utc": "2026-11-13T09:43:31.020014+00:00"
           }
         },
         "fabrica_plumbers_block": {
           "Demo": {
-            "completed": 1,
+            "completed": 10,
             "correct": 0,
             "errors": 0,
             "planned": 10,
             "sr_percent": 0.0,
-            "last_saved_utc": "2026-11-13T09:04:49.094177+00:00"
+            "last_saved_utc": "2026-11-13T09:05:48.351844+00:00"
           },
           "Pause-ID": {
-            "completed": 0,
+            "completed": 10,
             "correct": 0,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 0.0,
+            "last_saved_utc": "2026-11-13T09:23:29.516334+00:00"
           },
           "Pause-OOD": {
-            "completed": 0,
+            "completed": 10,
             "correct": 0,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 0.0,
+            "last_saved_utc": "2026-11-13T09:29:46.620392+00:00"
           },
           "Speed0.5": {
-            "completed": 0,
+            "completed": 10,
             "correct": 0,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 0.0,
+            "last_saved_utc": "2026-11-13T09:43:16.648496+00:00"
           },
           "Speed1.5": {
-            "completed": 0,
+            "completed": 10,
             "correct": 0,
             "errors": 0,
             "planned": 10,
-            "sr_percent": null,
-            "last_saved_utc": null
+            "sr_percent": 0.0,
+            "last_saved_utc": "2026-11-13T09:51:07.983097+00:00"
           },
           "TOTAL": {
-            "completed": 1,
+            "completed": 50,
             "correct": 0,
             "errors": 0,
             "planned": 50,
             "sr_percent": 0.0,
-            "last_saved_utc": "2026-11-13T09:04:49.094177+00:00"
+            "last_saved_utc": "2026-11-13T09:51:07.983097+00:00"
           }
         }
       }
+    },
+    "publication_utc": "2026-11-13T10:43:49.294538+00:00"
+  },
+  "latency_suite_plan": {
+    "status_utc": "2026-11-13T10:43:43.954723+00:00",
+    "job_id": "363453",
+    "status_label": "추론 지연 실측 진행 중",
+    "stage_note": "기존 평가 종료 의존성은 해제됐고 dispatch 361676은 완료했습니다. 전용 추론 실측·물리 smoke 363453이 실행 중이며, 후속 launcher 363454는 afterok:363453을 기다립니다. 실평가 결과는 아직 없으며 지연 d도 미확정입니다.",
+    "dependency_cleared": true,
+    "inference_delay_steps": null,
+    "planned_by_suite": {
+      "Demo": 40,
+      "Pause-ID": 0,
+      "Pause-OOD": 40,
+      "Speed0.5": 0,
+      "Speed1.5": 40
+    },
+    "source_status": {
+      "updated_utc": "2026-11-13T10:42:18.692668+00:00",
+      "stage": "dedicated_latency_measurement_and_physics_smoke",
+      "measurement_job": "363453",
+      "measurement_state": "RUNNING",
+      "measurement_node": "DGX-H100-3",
+      "pilots_launcher_job": "363454",
+      "pilots_launcher_state": "PENDING",
+      "pilots_launcher_dependency": "afterok:363453",
+      "inference_delay_steps": null,
+      "completed_K32": 0,
+      "completed_K4": 0,
+      "planned_per_K": 120,
+      "planned_total": 240,
+      "error": null
+    },
+    "job_states": {
+      "363453": "RUNNING",
+      "363454": "PENDING"
     }
   }
 }

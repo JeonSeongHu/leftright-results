@@ -68,7 +68,7 @@
         summary.textContent=`${v.label} / ${v.scope_label} / ${selected==='TOTAL'?'전체 Suite':selectedSuites[0].label} · ${r.counts_pending?`성공/완료 집계 대기 · SR — · 계획 ${r.planned}`:r.planned?`성공 ${r.correct??'—'}/완료 ${r.completed} · SR ${sr(r)} · 완료 ${r.completed}/계획 ${r.planned}`:'미계획 · SR —'} · ${v.status_label}`;
         taskHost.replaceChildren();
         const body=table(taskHost,'선택한 모델과 Suite의 실제 task 수치',['Task','성공/완료','SR','완료/계획','상태',...selectedSuites.map(s=>s.label)]);body.id='subset550-task-rows';
-        for(const task of v.tasks){const item=v.task_breakdown[task.id],r=item[selected],tr=add('tr','',body);tr.dataset.task=task.id;add('th',task.label,tr).scope='row';add('td',r.counts_pending&&r.planned?'집계 대기':r.planned?`${r.correct??'—'}/${r.completed}`:'—',tr).dataset.metric='success';add('td',sr(r),tr).dataset.metric='sr';add('td',r.counts_pending&&r.planned?`집계 대기 / ${r.planned}`:r.planned?`${r.completed}/${r.planned}`:'—',tr).dataset.metric='progress';add('td',!r.planned?'미계획':r.counts_pending?'개수 집계 대기':r.completed===r.planned?'완료':r.completed?'일부 완료':'결과 대기',tr);for(const s of selectedSuites){const td=add('td','',tr);metric(td,item[s.id]);if(s.id==='Pause-OOD')td.className='pause-ood';}}
+        for(const task of v.tasks){const item=v.task_breakdown[task.id],r=item[selected],tr=add('tr','',body);tr.dataset.task=task.id;const th=add('th','',tr);th.scope='row';if(v.group==='k4'){const b=add('button',task.label,th);b.type='button';b.title='이 K4 task의 성공·실패 영상 보기';b.addEventListener('click',()=>window.dispatchEvent(new CustomEvent('leftright-k4-video',{detail:{model:v.id,suite:selected==='TOTAL'?'Demo':selected,task:task.id}})));}else th.textContent=task.label;add('td',r.counts_pending&&r.planned?'집계 대기':r.planned?`${r.correct??'—'}/${r.completed}`:'—',tr).dataset.metric='success';add('td',sr(r),tr).dataset.metric='sr';add('td',r.counts_pending&&r.planned?`집계 대기 / ${r.planned}`:r.planned?`${r.completed}/${r.planned}`:'—',tr).dataset.metric='progress';add('td',!r.planned?'미계획':r.counts_pending?'개수 집계 대기':r.completed===r.planned?'완료':r.completed?'일부 완료':'결과 대기',tr);for(const s of selectedSuites){const td=add('td','',tr);metric(td,item[s.id]);if(s.id==='Pause-OOD')td.className='pause-ood';}}
         for(const body of boards)for(const tr of body.rows){const selectedModel=tr.dataset.model===model.value;tr.classList.toggle('subset-selected-model',selectedModel);for(const b of tr.querySelectorAll('[data-suite]'))b.setAttribute('aria-pressed',String(selectedModel&&b.dataset.suite===selected));}
       }
       model.addEventListener('change',drawTasks);suite.addEventListener('change',drawTasks);drawTasks();
@@ -271,19 +271,30 @@
     const gallery = add('section', ''); add('h3', '모델 → suite → task 성공·실패 영상', gallery);
     note('원 평가의 저장 행동을 재생해 결과와 종료를 확인한 영상만 연결합니다. 평가 대기, 현재 완료분에 해당 결과 없음, 영상 준비 중을 구분합니다. 각 영상에는 실제 1/2/8/16초 조건을 표시합니다.', gallery);
     const gc = add('div', '', gallery); gc.className = 'current-selects';
-    const galleryModels = d.gallery_models || d.models;
-    const gm = select('모델', galleryModels, gc); const gs = select('Suite', d.suites, gc); const gt = select('Task', d.tasks, gc);
-    const grid = add('div', '', gallery); const viewer = add('div', '', gallery); viewer.className = 'current-videos';
     let clips = [];
     try { const r = await fetch('abc-current-videos.json', {cache: 'no-store'}); if (r.ok) clips = (await r.json()).clips || []; } catch {}
-    const cell = (model, suite, task) => d.gallery_cells.find(r => r.model_id === model && r.suite === suite && r.task === task);
+    const k4Metadata = d.subset550_evaluation?.model_metadata || {};
+    const k4Ids = d.subset550_evaluation?.display_models || [];
+    const validK4Clip = c => k4Ids.includes(c.model_id) && c.execution_chunk_steps === 4 && c.checkpoint === k4Metadata[c.model_id].checkpoint_update && c.delay_steps === 0 && c.partner === 'A' && c.evaluation_view_id === 'k4-subset550-20261113' && c.legacy === false && c.is_latest_eval_video === true && c.source_run && c.source_episode_key && c.source_result_basename && ['success','termination','physics_ticks','control_time'].every(key => c.replay_checks?.[key] === true) && ['published','available'].includes(c.status) && /^(https:\/\/|assets\/)/.test(c.url);
+    const k4GalleryModels = k4Ids.filter(id => clips.some(c => c.model_id === id && validK4Clip(c))).map(id => ({id, label: `π0.5 ${k4Metadata[id].model_name} ${k4Metadata[id].checkpoint_update/1000}k / K4 · subset550`}));
+    const galleryModels = [...(d.gallery_models || d.models), ...k4GalleryModels];
+    const gm = select('모델', galleryModels, gc); const gs = select('Suite', d.suites, gc); const gt = select('Task', d.tasks, gc);
+    const grid = add('div', '', gallery); const viewer = add('div', '', gallery); viewer.className = 'current-videos';
+    gallery.id = 'k4-policy-videos';
+    const cell = (model, suite, task) => {
+      if (k4Ids.includes(model)) { const row = d.subset550_evaluation.task_breakdown[model]?.[task]?.[suite]; return row ? {n: row.completed, correct: row.correct, planned: row.planned} : null; }
+      return d.gallery_cells.find(r => r.model_id === model && r.suite === suite && r.task === task);
+    };
     function slot(model, suite, task, success) {
+      const k4Clip = clips.find(c => c.model_id === model && c.suite === suite && c.task === task && c.success === success && validK4Clip(c));
+      if (k4Clip) return {status: '재생 가능 · K4', clip: k4Clip};
       const original = clips.find(c => c.model_id === model && c.suite === suite && c.task === task && c.success === success && c.legacy === true && c.source_run && c.execution_chunk_steps === 32 && c.partner === 'A' && ['published','available'].includes(c.status) && /^(https:\/\/|assets\/)/.test(c.url));
       if (original) return {status: '재생 가능 · 기존 원평가 K32', clip: original};
       const row = cell(model, suite, task);
       if (!row || !row.n) return {status: '평가 대기'};
       const count = success ? row.correct : row.n - row.correct;
       if (!count) return {status: `현재 완료분에 ${success ? '성공' : '실패'} 사례 없음`};
+      if (k4Ids.includes(model)) return {status: '영상 준비 중'};
       const clip = clips.find(c => c.model_id === model && c.suite === suite && c.task === task && c.success === success && ['published','available'].includes(c.status) && /^(https:\/\/|assets\/)/.test(c.url));
       return clip ? {status: '재생 가능', clip} : {status: '영상 준비 중'};
     }
@@ -312,6 +323,19 @@
       }
     }
     for (const s of [gm, gs, gt]) s.addEventListener('change', drawGallery); drawGallery();
+    function openK4Video(model, suite = 'Demo', task = gt.value) {
+      if (!k4GalleryModels.some(m => m.id === model)) return;
+      gm.value = model; gs.value = suite; gt.value = task; drawGallery(); gallery.scrollIntoView({block: 'start'});
+    }
+    window.addEventListener('leftright-k4-video', event => openK4Video(event.detail.model, event.detail.suite, event.detail.task));
+    function openK4FromHash() {
+      if (location.hash !== '#k4-policy-videos' || !k4GalleryModels.length) return;
+      document.querySelector('.lr-tab[data-tab="partners"]')?.click();
+      document.querySelector('#new-pause [data-panel="abc"]')?.click();
+      history.replaceState(null, '', '#k4-policy-videos'); openK4Video(k4GalleryModels[0].id);
+    }
+    window.addEventListener('hashchange', openK4FromHash); openK4FromHash();
+    if (k4GalleryModels.length) { const link = add('a', 'K4 정책 평가 영상 보기', document.getElementById('subset550-evaluation-section')); link.href = '#k4-policy-videos'; }
 
     const adaptive = add('section', ''); add('h3', 'Adaptive waiting / 별도 고정60쌍 실험 완료', adaptive);
     note('candidate1 wait-protected π0.5 10k의 원1925 roster에서 Mic/Block/Stack/Basket × P0/2s/8s 각 첫5case를 선택했습니다. 위 M1 학습 비교와 별도 실험입니다.', adaptive);

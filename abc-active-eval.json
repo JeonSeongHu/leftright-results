@@ -1,0 +1,132 @@
+{
+  "snapshot_utc": "2026-11-13T06:22:46.940313+00:00",
+  "label": "π0.5 C + M1 10k adaptive",
+  "checkpoint_update": 10000,
+  "planned": 2200,
+  "partner": "A",
+  "gpu": 6,
+  "workers_per_gpu": 16,
+  "batch_cap": 16,
+  "baseline_fixed_completed": 1642,
+  "baseline_fixed_status": "중단 · 저장 결과 재사용",
+  "completed": null,
+  "correct": null,
+  "progress_status": "실제 추론 시작 · 첫 집계 대기",
+  "jobs": [
+    {
+      "id": "360172",
+      "lane": "lane0",
+      "tasks": [
+        "handover_mic",
+        "handover_block"
+      ],
+      "state": "RUNNING",
+      "node": "DGX-H100-1"
+    },
+    {
+      "id": "360173",
+      "lane": "lane1",
+      "tasks": [
+        "place_object_basket",
+        "stack_blocks_three"
+      ],
+      "state": "RUNNING",
+      "node": "DGX-H100-1"
+    },
+    {
+      "id": "360175",
+      "lane": "lane2",
+      "tasks": [
+        "put_bottles_dustbin",
+        "hanging_mug"
+      ],
+      "state": "RUNNING",
+      "node": "DGX-H100-6"
+    },
+    {
+      "id": "360177",
+      "lane": "lane3",
+      "tasks": [
+        "lift_pot",
+        "grab_roller"
+      ],
+      "state": "RUNNING",
+      "node": "DGX-H100-3"
+    },
+    {
+      "id": "360178",
+      "lane": "lane4",
+      "tasks": [
+        "fabrica_beam",
+        "fabrica_stool"
+      ],
+      "state": "RUNNING",
+      "node": "DGX-H100-3"
+    },
+    {
+      "id": "360179",
+      "lane": "lane5",
+      "tasks": [
+        "fabrica_plumbers_block"
+      ],
+      "state": "RUNNING",
+      "node": "DGX-H100-3"
+    }
+  ],
+  "stopped_15k_jobs": [
+    {
+      "id": "359305",
+      "state": "CANCELLED by 1071",
+      "node": "DGX-H100-6"
+    },
+    {
+      "id": "359961",
+      "state": "CANCELLED by 1071",
+      "node": "DGX-H100-8"
+    },
+    {
+      "id": "359963",
+      "state": "CANCELLED by 1071",
+      "node": "DGX-H100-8"
+    },
+    {
+      "id": "359657",
+      "state": "CANCELLED by 1071",
+      "node": "DGX-H100-8"
+    },
+    {
+      "id": "359962",
+      "state": "CANCELLED by 1071",
+      "node": "DGX-H100-8"
+    },
+    {
+      "id": "359964",
+      "state": "CANCELLED by 1071",
+      "node": "DGX-H100-8"
+    }
+  ],
+  "first_queries": [
+    {
+      "job_id": "360172",
+      "task": "handover_mic",
+      "scene_seed": 8050007,
+      "control_step": 0,
+      "physics_tick": 0
+    },
+    {
+      "job_id": "360173",
+      "task": "place_object_basket",
+      "scene_seed": 8080028,
+      "control_step": 0,
+      "physics_tick": 0
+    }
+  ],
+  "execution": {
+    "H": 32,
+    "K_hold": 4,
+    "K_motion": 32,
+    "joint_eps": 0.01,
+    "gripper_eps": 0.01
+  },
+  "noise_mode": "기존 fixed10k 기본 설정 유지 · 새 seed override 없음"
+}

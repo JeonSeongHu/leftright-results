@@ -25,6 +25,17 @@
     const d = await response.json();
     const nav = document.querySelector('#new-pause [data-panel="abc"]');
     if (nav) nav.textContent = 'ABC / M1 비교';
+
+    if(d.active_evaluation){
+      const a=d.active_evaluation;const section=add('section','');section.id='active10k-execution-section';
+      add('h3','현재 실행 / M1 10k adaptive',section);
+      note(`상태 확인 ${stamp(a.snapshot_utc)}. 같은 Partner A 고정2,200case를 GPU ${a.gpu}장, GPU당16환경·batch상한16으로 나누어 평가합니다. ${a.progress_status}.`,section);
+      note('15k fixed·adaptive6개 잡은 모두 중단하고 저장 결과를 보존했습니다. 비교 기준인 fixed10k는 저장1642건을 재사용하며, 새 adaptive와 양쪽 모두 완료한 같은 case에서만 SR을 비교합니다.',section);
+      const rows=table(section,'10k adaptive 실행 lane',['Job','Task','노드','상태']);
+      for(const r of a.jobs){const tr=add('tr','',rows);add('td',r.id,tr);add('td',r.tasks.map(id=>d.tasks.find(t=>t.id===id)?.label||id).join(' · '),tr);add('td',r.node,tr);add('td',stateLabel(r.state),tr);}
+      note('H32 전체가 현재 명령 근처의 유지 동작이면4개만 실행하고 새 RGB로 다시 예측하며, 그 외에는32개를 실행합니다. 기존 fixed10k 기본 noise 설정을 유지했습니다.',section);
+    }
+
     add('h3', 'ABC, M1 평가 / 같은 1,000case 중간 비교');
     note(`Partner A, 고정 2,200case 계획 중 다섯 모델이 모두 완료한 같은 ${d.shared_completed.toLocaleString()}case만 비교합니다. 결과 스냅샷 ${stamp(d.snapshot_utc)}. 이 표는 전체 평가의 최종 SR이 아닙니다.`);
     note('Demo는 정지 없음, Pause-ID는 1초와 2초, Pause-OOD는 8초와 16초입니다. Speed는 파트너 재생 속도입니다. 모든 SR에 성공 수와 실제 완료 수를 함께 적었습니다.');
@@ -56,8 +67,8 @@
 
     if (d.adaptive_m1_15k) {
       const a = d.adaptive_m1_15k;
-      const section = add('section', ''); add('h3', '최신 M1 15k / Fixed K32 대 Adaptive / 별도 평가 진행', section);
-      note(`Partner A의 같은 고정 2,200case, 같은 M1 15k 가중치와 정규화입니다. 각 조건에 GPU ${a.gpu_per_arm}장. Fixed jobs ${a.baseline_parallel_jobs.join(', ')}, adaptive jobs ${a.parallel_jobs.join(', ')}. Adaptive ${a.correct}/${a.n} 저장 완료, 집계 ${stamp(a.snapshot_utc)}. 위 공통 1,000case 표와 이전 candidate60 실험에는 합치지 않습니다.`, section);
+      const section = add('section', ''); add('h3', 'M1 15k / Fixed K32 대 Adaptive / 중단 전 보존 결과', section);
+      note(`Partner A의 같은 고정 2,200case, 같은 M1 15k 가중치와 정규화입니다. 중단 전 설정은 각 조건 GPU ${a.gpu_per_arm}장이었습니다. Fixed jobs ${a.baseline_parallel_jobs.join(', ')}, adaptive jobs ${a.parallel_jobs.join(', ')}. Adaptive ${a.correct}/${a.n} 저장 완료, 집계 ${stamp(a.snapshot_utc)}. 위 공통 1,000case 표와 이전 candidate60 실험에는 합치지 않습니다.`, section);
       note('현재 같은 case 비교의 task 구성: ' + Object.entries(a.paired_cohort.by_task).map(([id,n]) => `${d.tasks.find(t => t.id === id)?.label || id} ${n}건`).join(', ') + '. 일부 task와 조건이 진행 중이므로 전체 11task 최종 SR로 해석하지 않습니다.', section);
       note(`동일 case 비교 기준 ${stamp(a.paired_snapshot_utc)} / 원시 저장 진행 기준 ${stamp(a.snapshot_utc)}. 두 집계의 기준 시각을 구분합니다.`, section);
       note('H32 전체 예측이 현재 명령의 팔 관절 0.01rad·gripper 0.01 안에 있으면 4개만 실행하고 나머지를 버린 뒤 새 RGB로 다시 예측합니다. 움직임이 포함되면 32개를 실행합니다. 같은 M1 15k의 K32 baseline과 비교합니다.', section);
@@ -103,7 +114,7 @@
       add('td', m.progress ? `${m.progress.correct}/${m.progress.n}` : '이 비교 스냅샷에 미포함', tr);
       add('td', '2,200', tr); add('td', m.job.parallel_ids ? m.job.parallel_ids.join(', ') : m.job.id, tr); add('td', stateLabel(m.job.state), tr);
     }
-    if (d.latest_m1_scope) note(d.latest_m1_scope.explanation + ' Fixed와 adaptive에 GPU를 각각 3장씩 사용하며, 같은 2,200case에서 task를 나누어 진행합니다.', progress);
+    if (d.latest_m1_scope) note(d.latest_m1_scope.explanation + ' 현재 활성 평가는10k adaptive이며, 각 run의 계획2200건과 공통 완료 비교 분모를 구분합니다.', progress);
     note('전체 저장 진행과 같은 1,000case 비교의 확인 시각을 구분했습니다. 15k M1, M1+M2는 별도 평가 중이며 공통 1,000case 표에는 합치지 않습니다. 기록된 task 결과는 아래 영상 선택에서 확인할 수 있습니다.', progress);
     note('Mug export의 초기 상태 메타데이터를 원 수집 기록과 일치시켜 재개했습니다. 원 source, 2,200case ID, 성공조건과 물리 budget은 유지했습니다. Mug 원 clean expert는 50scene 중 26성공, 24실패였고, 모두 기록된 RIGHT tape와 정지 anchor를 갖춘 원 고정 case로 평가에 포함합니다.', progress);
 

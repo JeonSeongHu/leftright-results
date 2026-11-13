@@ -40,9 +40,40 @@
     }
     note('B의 추가 완료 Roller와 Plumber 400case는 아래 전체 진행에만 포함하고, 같은 1,000case 비교에서는 제외했습니다. 재개 후 추가 Mug 완료분도 이 고정 비교표에는 합치지 않습니다. A/B/C는 20k, M1과 M1+M2는 10k checkpoint입니다.');
 
+
+    if (d.current_matched) {
+      const section = add('section', ''); add('h3', '최신 집계 / ABC 20k 동일 case 비교', section);
+      const c = d.current_matched.cohorts.ABC20k; const group = d.current_matched.groups.ABC20k;
+      note(`집계 ${stamp(d.current_matched.snapshot_utc)}. A·B·C 모두 저장한 같은 고정 ${c.completed.toLocaleString()}case만 비교합니다. B는 사용자 요청으로 중단한 시점까지의 결과를 보존했습니다. 전체 11task 최종 SR이 아닙니다.`, section);
+      note('평가 계획은 각 run 동일 2,200건으로 고정합니다. 비교표 n은 현재 세 모델 또는 두 모델이 모두 완료한 공통 장면 수이며, 계획 건수가 달라진 것이 아닙니다.', section);
+      note('현재 비교의 task 구성: ' + Object.entries(c.by_task).map(([task,n]) => `${d.tasks.find(t => t.id === task)?.label || task} ${n}건`).join(', '), section);
+      const body = table(section, 'ABC 20k · 같은 case의 성공 / 완료 및 SR', ['모델', ...d.suites.map(s => s.label), '공통 합계']);
+      for (const id of ['A','B','C']) {
+        const tr = add('tr', '', body); add('th', d.models.find(m => m.id === id)?.label || id, tr).scope = 'row';
+        for (const s of [...d.suites,{id:'TOTAL'}]) { const r = group[s.id][id]; const td = add('td', value({n:r.completed,correct:r.correct}), tr); if (s.id === 'Pause-OOD') td.className = 'pause-ood'; }
+      }
+    }
+
+    if (d.adaptive_m1_15k) {
+      const a = d.adaptive_m1_15k;
+      const section = add('section', ''); add('h3', '최신 M1 15k / Fixed K32 대 Adaptive / 별도 평가 진행', section);
+      note(`Partner A의 같은 고정 2,200case, 같은 M1 15k 가중치와 정규화입니다. 각 조건에 GPU ${a.gpu_per_arm}장. Fixed jobs ${a.baseline_parallel_jobs.join(', ')}, adaptive jobs ${a.parallel_jobs.join(', ')}. Adaptive ${a.correct}/${a.n} 저장 완료, 집계 ${stamp(a.snapshot_utc)}. 위 공통 1,000case 표와 이전 candidate60 실험에는 합치지 않습니다.`, section);
+      note('현재 같은 case 비교의 task 구성: ' + Object.entries(a.paired_cohort.by_task).map(([id,n]) => `${d.tasks.find(t => t.id === id)?.label || id} ${n}건`).join(', ') + '. 일부 task와 조건이 진행 중이므로 전체 11task 최종 SR로 해석하지 않습니다.', section);
+      note('H32 전체 예측이 현재 명령의 팔 관절 0.01rad·gripper 0.01 안에 있으면 4개만 실행하고 나머지를 버린 뒤 새 RGB로 다시 예측합니다. 움직임이 포함되면 32개를 실행합니다. 같은 M1 15k의 K32 baseline과 비교합니다.', section);
+      const body = table(section, '현재 저장 완료분 / baseline과 같은 case 교집합', ['Suite', 'Adaptive 성공 / 완료', '계획', '짝지은 case', 'K32 성공', 'Adaptive 성공', 'K4 / K32 횟수']);
+      for (const s of a.suites) {
+        const tr = add('tr', '', body); add('th', suiteMap.get(s.suite)?.label || s.suite, tr).scope = 'row';
+        add('td', value(s), tr); add('td', s.planned, tr); add('td', s.paired_n, tr);
+        add('td', value({correct: s.paired_baseline_correct, n: s.paired_n}), tr);
+        add('td', value({correct: s.paired_adaptive_correct, n: s.paired_n}), tr);
+        add('td', `${s.K4_chunks} / ${s.K32_chunks}`, tr);
+      }
+      note('첫 실제 K4는 control 224 / physics 3360에서 실행됐고, control 228 / physics 3420에서 새 RGB와 새 추론이 확인됐습니다. 아직 전체 SR의 차이를 판단할 단계는 아닙니다.', section);
+    }
+
     const progress = add('section', ''); add('h3', '고정 2,200case 평가 진행', progress);
     const progressRows = table(progress, `완료 수 스냅샷 ${stamp(d.progress_snapshot_utc || d.snapshot_utc)} / job 상태 ${stamp(d.jobs_checked_utc)}`, ['모델', '성공 / 저장 완료', '계획', '현재 job', '실행 상태']);
-    for (const m of [...d.models, ...d.pending_models]) {
+    for (const m of d.progress_models || [...d.models, ...d.pending_models]) {
       const tr = add('tr', '', progressRows); add('th', m.label, tr).scope = 'row';
       add('td', m.progress ? `${m.progress.correct}/${m.progress.n}` : '이 비교 스냅샷에 미포함', tr);
       add('td', '2,200', tr); add('td', m.job.parallel_ids ? m.job.parallel_ids.join(', ') : m.job.id, tr); add('td', stateLabel(m.job.state), tr);
@@ -116,23 +147,6 @@
       }
     }
     for (const s of [gm, gs, gt]) s.addEventListener('change', drawGallery); drawGallery();
-
-
-    if (d.adaptive_m1_15k) {
-      const a = d.adaptive_m1_15k;
-      const section = add('section', ''); add('h3', '최신 M1 15k / Fixed K32 대 Adaptive / 별도 평가 진행', section);
-      note(`Partner A의 같은 고정 2,200case, 같은 M1 15k 가중치와 정규화입니다. 각 조건에 GPU ${a.gpu_per_arm}장. Fixed jobs ${a.baseline_parallel_jobs.join(', ')}, adaptive jobs ${a.parallel_jobs.join(', ')}. Adaptive ${a.correct}/${a.n} 저장 완료, 집계 ${stamp(a.snapshot_utc)}. 위 공통 1,000case 표와 이전 candidate60 실험에는 합치지 않습니다.`, section);
-      note('H32 전체 예측이 현재 명령의 팔 관절 0.01rad·gripper 0.01 안에 있으면 4개만 실행하고 나머지를 버린 뒤 새 RGB로 다시 예측합니다. 움직임이 포함되면 32개를 실행합니다. 같은 M1 15k의 K32 baseline과 비교합니다.', section);
-      const body = table(section, '현재 저장 완료분 / baseline과 같은 case 교집합', ['Suite', 'Adaptive 성공 / 완료', '계획', '짝지은 case', 'K32 성공', 'Adaptive 성공', 'K4 / K32 횟수']);
-      for (const s of a.suites) {
-        const tr = add('tr', '', body); add('th', suiteMap.get(s.suite)?.label || s.suite, tr).scope = 'row';
-        add('td', value(s), tr); add('td', s.planned, tr); add('td', s.paired_n, tr);
-        add('td', value({correct: s.paired_baseline_correct, n: s.paired_n}), tr);
-        add('td', value({correct: s.paired_adaptive_correct, n: s.paired_n}), tr);
-        add('td', `${s.K4_chunks} / ${s.K32_chunks}`, tr);
-      }
-      note('첫 실제 K4는 control 224 / physics 3360에서 실행됐고, control 228 / physics 3420에서 새 RGB와 새 추론이 확인됐습니다. 아직 전체 SR의 차이를 판단할 단계는 아닙니다.', section);
-    }
 
     const adaptive = add('section', ''); add('h3', 'Adaptive waiting / 별도 고정60쌍 실험 완료', adaptive);
     note('candidate1 wait-protected π0.5 10k의 원1925 roster에서 Mic/Block/Stack/Basket × P0/2s/8s 각 첫5case를 선택했습니다. 위 M1 학습 비교와 별도 실험입니다.', adaptive);

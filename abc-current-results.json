@@ -1,7 +1,7 @@
 {
   "version": "leftright-current-common1000-20261113-v1",
   "snapshot_utc": "2026-11-13T03:05:41.256879+00:00",
-  "jobs_checked_utc": "2026-11-13T05:39:12.435010+00:00",
+  "jobs_checked_utc": "2026-11-13T05:59:57.514963+00:00",
   "shared_completed": 1000,
   "planned_per_model": 2200,
   "source_cohort": "fixed common2200 Partner A",
@@ -42,8 +42,8 @@
         "state": "RUNNING"
       },
       "progress": {
-        "n": 1600,
-        "correct": 439
+        "n": 1725,
+        "correct": 458
       }
     },
     {
@@ -68,8 +68,8 @@
         "state": "RUNNING"
       },
       "progress": {
-        "n": 1664,
-        "correct": 370
+        "n": 1775,
+        "correct": 408
       }
     },
     {
@@ -114,8 +114,8 @@
         ]
       },
       "progress": {
-        "n": 824,
-        "correct": 290
+        "n": 1125,
+        "correct": 307
       }
     },
     {
@@ -2771,8 +2771,8 @@
       "model_id": "A",
       "task": "fabrica_stool",
       "suite": "Speed1.5",
-      "n": 0,
-      "correct": null,
+      "n": 25,
+      "correct": 6,
       "planned": 25
     },
     {
@@ -2939,24 +2939,24 @@
       "model_id": "A",
       "task": "lift_pot",
       "suite": "Demo",
-      "n": 0,
-      "correct": null,
+      "n": 50,
+      "correct": 19,
       "planned": 50
     },
     {
       "model_id": "A",
       "task": "lift_pot",
       "suite": "Pause-ID",
-      "n": 0,
-      "correct": null,
+      "n": 25,
+      "correct": 0,
       "planned": 50
     },
     {
       "model_id": "A",
       "task": "lift_pot",
       "suite": "Pause-OOD",
-      "n": 0,
-      "correct": null,
+      "n": 25,
+      "correct": 0,
       "planned": 50
     },
     {
@@ -3827,24 +3827,24 @@
       "model_id": "C",
       "task": "lift_pot",
       "suite": "Pause-ID",
-      "n": 0,
-      "correct": null,
+      "n": 50,
+      "correct": 24,
       "planned": 50
     },
     {
       "model_id": "C",
       "task": "lift_pot",
       "suite": "Pause-OOD",
-      "n": 0,
-      "correct": null,
+      "n": 50,
+      "correct": 23,
       "planned": 50
     },
     {
       "model_id": "C",
       "task": "lift_pot",
       "suite": "Speed0.5",
-      "n": 0,
-      "correct": null,
+      "n": 9,
+      "correct": 1,
       "planned": 25
     },
     {
@@ -4259,8 +4259,8 @@
       "model_id": "m1",
       "task": "lift_pot",
       "suite": "Demo",
-      "n": 0,
-      "correct": null,
+      "n": 42,
+      "correct": 9,
       "planned": 50
     },
     {
@@ -4859,16 +4859,16 @@
       "model_id": "m1-15k",
       "task": "fabrica_beam",
       "suite": "Demo",
-      "n": 0,
-      "correct": null,
+      "n": 50,
+      "correct": 0,
       "planned": 50
     },
     {
       "model_id": "m1-15k",
       "task": "fabrica_beam",
       "suite": "Pause-ID",
-      "n": 0,
-      "correct": null,
+      "n": 25,
+      "correct": 0,
       "planned": 50
     },
     {
@@ -5099,24 +5099,24 @@
       "model_id": "m1-15k",
       "task": "hanging_mug",
       "suite": "Demo",
-      "n": 0,
-      "correct": null,
+      "n": 50,
+      "correct": 3,
       "planned": 50
     },
     {
       "model_id": "m1-15k",
       "task": "hanging_mug",
       "suite": "Pause-ID",
-      "n": 0,
-      "correct": null,
+      "n": 25,
+      "correct": 0,
       "planned": 50
     },
     {
       "model_id": "m1-15k",
       "task": "hanging_mug",
       "suite": "Pause-OOD",
-      "n": 0,
-      "correct": null,
+      "n": 25,
+      "correct": 2,
       "planned": 50
     },
     {
@@ -5219,16 +5219,16 @@
       "model_id": "m1-15k",
       "task": "put_bottles_dustbin",
       "suite": "Demo",
-      "n": 0,
-      "correct": null,
+      "n": 50,
+      "correct": 10,
       "planned": 50
     },
     {
       "model_id": "m1-15k",
       "task": "put_bottles_dustbin",
       "suite": "Pause-ID",
-      "n": 0,
-      "correct": null,
+      "n": 25,
+      "correct": 6,
       "planned": 50
     },
     {
@@ -5738,7 +5738,7 @@
   ],
   "B_additional_completed_outside_common1000": 1075,
   "adaptive_experiment_is_separate": true,
-  "progress_snapshot_utc": "2026-11-13T05:39:03.563493+00:00",
+  "progress_snapshot_utc": "2026-11-13T05:59:51.082489+00:00",
   "B_preserved_extra_Roller_Plumber": 400,
   "gallery_models": [
     {
@@ -5750,8 +5750,8 @@
         "state": "FAILED"
       },
       "progress": {
-        "n": 1575,
-        "correct": 433
+        "n": 1700,
+        "correct": 458
       }
     },
     {
@@ -5776,8 +5776,8 @@
         "state": "RUNNING"
       },
       "progress": {
-        "n": 1650,
-        "correct": 358
+        "n": 1759,
+        "correct": 406
       }
     },
     {
@@ -5789,8 +5789,8 @@
         "state": "CANCELLED by 1071"
       },
       "progress": {
-        "n": 1600,
-        "correct": 381
+        "n": 1642,
+        "correct": 390
       }
     },
     {
@@ -5815,8 +5815,8 @@
         "state": "RUNNING"
       },
       "progress": {
-        "n": 800,
-        "correct": 281
+        "n": 1050,
+        "correct": 302
       }
     },
     {
@@ -5833,6 +5833,215 @@
       }
     }
   ],
+  "current_matched": {
+    "snapshot_utc": "2026-11-13T05:59:51.105701+00:00",
+    "groups": {
+      "ABC20k": {
+        "Demo": {
+          "A": {
+            "correct": 190,
+            "completed": 450,
+            "sr_percent": 42.222
+          },
+          "B": {
+            "correct": 180,
+            "completed": 450,
+            "sr_percent": 40.0
+          },
+          "C": {
+            "correct": 180,
+            "completed": 450,
+            "sr_percent": 40.0
+          }
+        },
+        "Pause-ID": {
+          "A": {
+            "correct": 112,
+            "completed": 425,
+            "sr_percent": 26.353
+          },
+          "B": {
+            "correct": 103,
+            "completed": 425,
+            "sr_percent": 24.235
+          },
+          "C": {
+            "correct": 99,
+            "completed": 425,
+            "sr_percent": 23.294
+          }
+        },
+        "Pause-OOD": {
+          "A": {
+            "correct": 39,
+            "completed": 400,
+            "sr_percent": 9.75
+          },
+          "B": {
+            "correct": 13,
+            "completed": 400,
+            "sr_percent": 3.25
+          },
+          "C": {
+            "correct": 6,
+            "completed": 400,
+            "sr_percent": 1.5
+          }
+        },
+        "Speed0.5": {
+          "A": {
+            "correct": 26,
+            "completed": 200,
+            "sr_percent": 13.0
+          },
+          "B": {
+            "correct": 12,
+            "completed": 200,
+            "sr_percent": 6.0
+          },
+          "C": {
+            "correct": 11,
+            "completed": 200,
+            "sr_percent": 5.5
+          }
+        },
+        "Speed1.5": {
+          "A": {
+            "correct": 91,
+            "completed": 200,
+            "sr_percent": 45.5
+          },
+          "B": {
+            "correct": 75,
+            "completed": 200,
+            "sr_percent": 37.5
+          },
+          "C": {
+            "correct": 74,
+            "completed": 200,
+            "sr_percent": 37.0
+          }
+        },
+        "TOTAL": {
+          "A": {
+            "correct": 458,
+            "completed": 1675,
+            "sr_percent": 27.343
+          },
+          "B": {
+            "correct": 383,
+            "completed": 1675,
+            "sr_percent": 22.866
+          },
+          "C": {
+            "correct": 370,
+            "completed": 1675,
+            "sr_percent": 22.09
+          }
+        }
+      },
+      "M1-15k-fixed-vs-adaptive": {
+        "Demo": {
+          "m1-15k": {
+            "correct": 33,
+            "completed": 250,
+            "sr_percent": 13.2
+          },
+          "m1-adaptive-15k": {
+            "correct": 39,
+            "completed": 250,
+            "sr_percent": 15.6
+          }
+        },
+        "Pause-ID": {
+          "m1-15k": {
+            "correct": 10,
+            "completed": 175,
+            "sr_percent": 5.714
+          },
+          "m1-adaptive-15k": {
+            "correct": 26,
+            "completed": 175,
+            "sr_percent": 14.857
+          }
+        },
+        "Pause-OOD": {
+          "m1-15k": {
+            "correct": 12,
+            "completed": 125,
+            "sr_percent": 9.6
+          },
+          "m1-adaptive-15k": {
+            "correct": 9,
+            "completed": 125,
+            "sr_percent": 7.2
+          }
+        },
+        "Speed0.5": {
+          "m1-15k": {
+            "correct": 8,
+            "completed": 50,
+            "sr_percent": 16.0
+          },
+          "m1-adaptive-15k": {
+            "correct": 12,
+            "completed": 50,
+            "sr_percent": 24.0
+          }
+        },
+        "Speed1.5": {
+          "m1-15k": {
+            "correct": 1,
+            "completed": 50,
+            "sr_percent": 2.0
+          },
+          "m1-adaptive-15k": {
+            "correct": 1,
+            "completed": 50,
+            "sr_percent": 2.0
+          }
+        },
+        "TOTAL": {
+          "m1-15k": {
+            "correct": 64,
+            "completed": 650,
+            "sr_percent": 9.846
+          },
+          "m1-adaptive-15k": {
+            "correct": 87,
+            "completed": 650,
+            "sr_percent": 13.385
+          }
+        }
+      }
+    },
+    "cohorts": {
+      "ABC20k": {
+        "completed": 1675,
+        "by_task": {
+          "fabrica_beam": 200,
+          "fabrica_stool": 200,
+          "handover_block": 200,
+          "handover_mic": 200,
+          "hanging_mug": 200,
+          "lift_pot": 75,
+          "place_object_basket": 200,
+          "put_bottles_dustbin": 200,
+          "stack_blocks_three": 200
+        }
+      },
+      "M1-15k-fixed-vs-adaptive": {
+        "completed": 650,
+        "by_task": {
+          "fabrica_beam": 75,
+          "handover_block": 200,
+          "handover_mic": 200,
+          "hanging_mug": 100,
+          "place_object_basket": 75
+        }
+      }
+    }
+  },
   "latest_m1_scope": {
     "checkpoint_update": 15000,
     "fixed_jobs": [
@@ -5856,7 +6065,7 @@
     "explanation": "M1 최신 15k만 fixed K32와 adaptive로 비교합니다. B20k·10k·M1M2 평가는 사용자 요청으로 중단했으며 저장 결과를 보존합니다."
   },
   "adaptive_m1_15k": {
-    "snapshot_utc": "2026-11-13T05:39:25.907049+00:00",
+    "snapshot_utc": "2026-11-13T06:00:07.446222+00:00",
     "label": "M1 15k + adaptive K4/K32",
     "checkpoint_update": 15000,
     "job_id": "359657",
@@ -5864,44 +6073,44 @@
     "baseline_job_id": "359305",
     "partner": "A",
     "planned": 2200,
-    "n": 375,
-    "correct": 50,
+    "n": 652,
+    "correct": 87,
     "suites": [
       {
         "suite": "Demo",
-        "n": 100,
-        "correct": 17,
+        "n": 250,
+        "correct": 39,
         "planned": 550,
-        "paired_n": 100,
-        "paired_baseline_correct": 4,
-        "paired_adaptive_correct": 17,
-        "K4_chunks": 294,
-        "K32_chunks": 1968,
-        "inferences": 2262
+        "paired_n": 250,
+        "paired_baseline_correct": 33,
+        "paired_adaptive_correct": 39,
+        "K4_chunks": 2630,
+        "K32_chunks": 4244,
+        "inferences": 6874
       },
       {
         "suite": "Pause-ID",
-        "n": 100,
-        "correct": 12,
+        "n": 177,
+        "correct": 26,
         "planned": 550,
-        "paired_n": 100,
-        "paired_baseline_correct": 4,
-        "paired_adaptive_correct": 12,
-        "K4_chunks": 351,
-        "K32_chunks": 2119,
-        "inferences": 2470
+        "paired_n": 177,
+        "paired_baseline_correct": 10,
+        "paired_adaptive_correct": 26,
+        "K4_chunks": 1431,
+        "K32_chunks": 3324,
+        "inferences": 4755
       },
       {
         "suite": "Pause-OOD",
-        "n": 100,
+        "n": 125,
         "correct": 9,
         "planned": 550,
-        "paired_n": 100,
-        "paired_baseline_correct": 10,
+        "paired_n": 125,
+        "paired_baseline_correct": 12,
         "paired_adaptive_correct": 9,
-        "K4_chunks": 865,
-        "K32_chunks": 2639,
-        "inferences": 3504
+        "K4_chunks": 1099,
+        "K32_chunks": 3233,
+        "inferences": 4332
       },
       {
         "suite": "Speed0.5",
@@ -5917,15 +6126,15 @@
       },
       {
         "suite": "Speed1.5",
-        "n": 25,
-        "correct": 0,
+        "n": 50,
+        "correct": 1,
         "planned": 275,
-        "paired_n": 25,
+        "paired_n": 50,
         "paired_baseline_correct": 1,
-        "paired_adaptive_correct": 0,
-        "K4_chunks": 4,
-        "K32_chunks": 625,
-        "inferences": 629
+        "paired_adaptive_correct": 1,
+        "K4_chunks": 87,
+        "K32_chunks": 1081,
+        "inferences": 1168
       }
     ],
     "separate_from_common1000": true,
@@ -5953,6 +6162,131 @@
       "359961",
       "359963"
     ],
-    "gpu_per_arm": 3
-  }
+    "gpu_per_arm": 3,
+    "paired_cohort": {
+      "completed": 650,
+      "by_task": {
+        "fabrica_beam": 75,
+        "handover_block": 200,
+        "handover_mic": 200,
+        "hanging_mug": 100,
+        "place_object_basket": 75
+      }
+    }
+  },
+  "progress_models": [
+    {
+      "id": "A",
+      "label": "π0.5 A 20k",
+      "selected_update": 20000,
+      "job": {
+        "id": "359872",
+        "state": "RUNNING"
+      },
+      "progress": {
+        "n": 1725,
+        "correct": 458
+      }
+    },
+    {
+      "id": "B",
+      "label": "π0.5 B 20k",
+      "selected_update": 20000,
+      "job": {
+        "id": "359299",
+        "state": "CANCELLED by 1071"
+      },
+      "progress": {
+        "n": 2075,
+        "correct": 507
+      }
+    },
+    {
+      "id": "C",
+      "label": "π0.5 C 20k",
+      "selected_update": 20000,
+      "job": {
+        "id": "359300",
+        "state": "RUNNING"
+      },
+      "progress": {
+        "n": 1775,
+        "correct": 408
+      }
+    },
+    {
+      "id": "m1",
+      "label": "π0.5 C + M1 10k",
+      "selected_update": 10000,
+      "job": {
+        "id": "359303",
+        "state": "CANCELLED by 1071"
+      },
+      "progress": {
+        "n": 1642,
+        "correct": 390
+      }
+    },
+    {
+      "id": "m1-m2",
+      "label": "π0.5 C + M1+M2 10k",
+      "selected_update": 10000,
+      "job": {
+        "id": "359304",
+        "state": "CANCELLED by 1071"
+      },
+      "progress": {
+        "n": 1650,
+        "correct": 352
+      }
+    },
+    {
+      "id": "m1-15k",
+      "label": "π0.5 C + M1 15k",
+      "selected_update": 15000,
+      "job": {
+        "id": "359305",
+        "state": "RUNNING",
+        "parallel_ids": [
+          "359305",
+          "359961",
+          "359963"
+        ]
+      },
+      "progress": {
+        "n": 1125,
+        "correct": 307
+      }
+    },
+    {
+      "id": "m1-m2-15k",
+      "label": "π0.5 C + M1+M2 15k",
+      "selected_update": 15000,
+      "job": {
+        "id": "359309",
+        "state": "CANCELLED by 1071"
+      },
+      "progress": {
+        "n": 806,
+        "correct": 295
+      }
+    },
+    {
+      "id": "m1-adaptive-15k",
+      "label": "π0.5 C + M1 15k adaptive",
+      "progress": {
+        "n": 652,
+        "correct": 87
+      },
+      "job": {
+        "id": "359657",
+        "state": "RUNNING",
+        "parallel_ids": [
+          "359657",
+          "359962",
+          "359964"
+        ]
+      }
+    }
+  ]
 }

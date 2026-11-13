@@ -10400,7 +10400,7 @@
           }
         }
       },
-      "status_label": "실행 중 · 활성 GPU 1",
+      "status_label": "새 K32 평가 · 성공/완료 개수 집계 대기",
       "source_status": {
         "model_key": "A20kK32fresh",
         "model_name": "A",
@@ -10439,7 +10439,8 @@
         "last_saved_utc": null,
         "dataset_version": "k4-task-suite10-subset550-v1",
         "current_evaluation": true
-      }
+      },
+      "counts_pending": true
     },
     {
       "id": "C20kK32fresh",
@@ -11061,7 +11062,7 @@
           }
         }
       },
-      "status_label": "실행 중 · 활성 GPU 1",
+      "status_label": "새 K32 평가 · 성공/완료 개수 집계 대기",
       "source_status": {
         "model_key": "C20kK32fresh",
         "model_name": "C",
@@ -11100,7 +11101,8 @@
         "last_saved_utc": null,
         "dataset_version": "k4-task-suite10-subset550-v1",
         "current_evaluation": true
-      }
+      },
+      "counts_pending": true
     },
     {
       "id": "M1K32fresh",
@@ -11722,7 +11724,7 @@
           }
         }
       },
-      "status_label": "실행 중 · 활성 GPU 2",
+      "status_label": "새 K32 평가 · 성공/완료 개수 집계 대기",
       "source_status": {
         "model_key": "M1K32fresh",
         "model_name": "M1",
@@ -11761,7 +11763,8 @@
         "last_saved_utc": null,
         "dataset_version": "k4-task-suite10-subset550-v1",
         "current_evaluation": true
-      }
+      },
+      "counts_pending": true
     },
     {
       "id": "A20kK4d0control120",
@@ -12245,7 +12248,8 @@
           }
         }
       },
-      "status_label": "새 K32 결과 대기"
+      "status_label": "새 K32 평가 · 성공/완료 개수 집계 대기",
+      "counts_pending": true
     },
     {
       "id": "A20kK32d3latency120",
@@ -12758,5 +12762,6 @@
       }
     }
   ],
-  "suite_views_status_utc": "2026-11-13T10:48:34.601740+00:00"
+  "suite_views_status_utc": "2026-11-13T10:48:34.601740+00:00",
+  "fresh_k32_metadata_utc": "2026-11-13T10:52:35.105301+00:00"
 }

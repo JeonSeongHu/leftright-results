@@ -32,14 +32,15 @@
       const suites=d.suites.map(s=>({id:s.id,label:s.label}));
       const label=m=>`${a.model_metadata[m].model_name} ${a.model_metadata[m].checkpoint_update/1000}k`;
       const views=a.display_models.map(m=>({id:m,label:`${label(m)} K4`,group:'k4',scope_label:'subset550 · K4',planned:550,raw:a.raw[m],task_breakdown:a.task_breakdown[m],tasks:d.tasks,model_metadata:a.model_metadata[m],status_label:a.model_metadata[m].status==='completed'?'완료':a.model_metadata[m].status==='running'?'실행 중':a.model_metadata[m].status})).concat(d.suite_run_views||[]);
+      for(const v of views)if(v.counts_pending)for(const cells of [v.raw,...Object.values(v.task_breakdown)])for(const r of Object.values(cells))r.counts_pending=true;
       add('h3','현재 평가 / A·C·M1 같은 subset550의 K4 · fresh K32',section);
       note(`K4 결과 기준 ${stamp(a.snapshot_utc)} · 게시 ${stamp(a.publication_utc)}. 각 모델 같은 550case, 11task × 5suite × 각10case입니다. ID는 1초5 + 2초5, OOD는 8초5 + 16초5이며 Speed 0.5×와 1.5×는 따로 표시합니다.`,section);
       note('기존 checkpoint·Partner A·물리·목표를 유지합니다. K4는 H32 예측/앞4 실행, 새 K32는 H32 전체 실행으로 다시 평가합니다. SR은 성공/유효 완료이며 미완료는 분모에서 제외합니다. 아래 이전 Full2200 및 보존된 K32 결과와 합치지 않습니다.',section);
       const progress=table(section,'subset550 K4 모델별 저장 진행',['모델','checkpoint','K','활성GPU','완료/계획','성공','완료분SR','상태']);
       for(const m of a.display_models){const r=a.raw[m].TOTAL,meta=a.model_metadata[m],tr=add('tr','',progress);add('th',label(m),tr).scope='row';add('td',meta.checkpoint_update.toLocaleString(),tr);add('td','4',tr);add('td',meta.active_gpus,tr);add('td',`${r.completed}/${a.planned_per_run}`,tr);add('td',r.correct,tr);add('td',r.completed?(100*r.correct/r.completed).toFixed(1)+'%':'평가 대기',tr);add('td',meta.status==='running'?'실행 중':meta.status==='completed'?'완료':meta.status,tr);}
       const boards=[];
-      const sr=r=>r.completed?`${(100*r.correct/r.completed).toFixed(1)}%`:'—';
-      const metric=(parent,r)=>{add('strong',sr(r),parent);if(!r.planned){add('span','미계획',parent).className='subset-metric-line';return;}add('span',`성공 ${r.correct??'—'} / 완료 ${r.completed}`,parent).className='subset-metric-line';add('span',`완료 ${r.completed} / 계획 ${r.planned}`,parent).className='subset-metric-line';if(!r.completed)add('span','결과 대기',parent).className='subset-metric-line';};
+      const sr=r=>!r.counts_pending&&r.completed?`${(100*r.correct/r.completed).toFixed(1)}%`:'—';
+      const metric=(parent,r)=>{add('strong',sr(r),parent);if(r.counts_pending&&r.planned){add('span','성공/완료 집계 대기',parent).className='subset-metric-line';add('span',`계획 ${r.planned}`,parent).className='subset-metric-line';return;}if(!r.planned){add('span','미계획',parent).className='subset-metric-line';return;}add('span',`성공 ${r.correct??'—'} / 완료 ${r.completed}`,parent).className='subset-metric-line';add('span',`완료 ${r.completed} / 계획 ${r.planned}`,parent).className='subset-metric-line';if(!r.completed)add('span','결과 대기',parent).className='subset-metric-line';};
       function board(title,group){
         const rows=views.filter(v=>v.group===group);if(!rows.length)return;
         const body=table(section,title,['모델 / 조건',...suites.map(s=>s.label),'전체','상태']);body.parentElement.classList.add('subset-suite-table');boards.push(body);
@@ -64,10 +65,10 @@
       function choose(m,s){model.value=m;suite.value=s;drawTasks();detail.scrollIntoView({block:'start'});model.focus({preventScroll:true});}
       function drawTasks(){
         const v=views.find(v=>v.id===model.value),selected=suite.value,selectedSuites=selected==='TOTAL'?suites:suites.filter(s=>s.id===selected),r=v.raw[selected];
-        summary.textContent=`${v.label} / ${v.scope_label} / ${selected==='TOTAL'?'전체 Suite':selectedSuites[0].label} · ${r.planned?`성공 ${r.correct??'—'}/완료 ${r.completed} · SR ${sr(r)} · 완료 ${r.completed}/계획 ${r.planned}`:'미계획 · SR —'} · ${v.status_label}`;
+        summary.textContent=`${v.label} / ${v.scope_label} / ${selected==='TOTAL'?'전체 Suite':selectedSuites[0].label} · ${r.counts_pending?`성공/완료 집계 대기 · SR — · 계획 ${r.planned}`:r.planned?`성공 ${r.correct??'—'}/완료 ${r.completed} · SR ${sr(r)} · 완료 ${r.completed}/계획 ${r.planned}`:'미계획 · SR —'} · ${v.status_label}`;
         taskHost.replaceChildren();
         const body=table(taskHost,'선택한 모델과 Suite의 실제 task 수치',['Task','성공/완료','SR','완료/계획','상태',...selectedSuites.map(s=>s.label)]);body.id='subset550-task-rows';
-        for(const task of v.tasks){const item=v.task_breakdown[task.id],r=item[selected],tr=add('tr','',body);tr.dataset.task=task.id;add('th',task.label,tr).scope='row';add('td',r.planned?`${r.correct??'—'}/${r.completed}`:'—',tr).dataset.metric='success';add('td',sr(r),tr).dataset.metric='sr';add('td',r.planned?`${r.completed}/${r.planned}`:'—',tr).dataset.metric='progress';add('td',!r.planned?'미계획':r.completed===r.planned?'완료':r.completed?'일부 완료':'결과 대기',tr);for(const s of selectedSuites){const td=add('td','',tr);metric(td,item[s.id]);if(s.id==='Pause-OOD')td.className='pause-ood';}}
+        for(const task of v.tasks){const item=v.task_breakdown[task.id],r=item[selected],tr=add('tr','',body);tr.dataset.task=task.id;add('th',task.label,tr).scope='row';add('td',r.counts_pending&&r.planned?'집계 대기':r.planned?`${r.correct??'—'}/${r.completed}`:'—',tr).dataset.metric='success';add('td',sr(r),tr).dataset.metric='sr';add('td',r.counts_pending&&r.planned?`집계 대기 / ${r.planned}`:r.planned?`${r.completed}/${r.planned}`:'—',tr).dataset.metric='progress';add('td',!r.planned?'미계획':r.counts_pending?'개수 집계 대기':r.completed===r.planned?'완료':r.completed?'일부 완료':'결과 대기',tr);for(const s of selectedSuites){const td=add('td','',tr);metric(td,item[s.id]);if(s.id==='Pause-OOD')td.className='pause-ood';}}
         for(const body of boards)for(const tr of body.rows){const selectedModel=tr.dataset.model===model.value;tr.classList.toggle('subset-selected-model',selectedModel);for(const b of tr.querySelectorAll('[data-suite]'))b.setAttribute('aria-pressed',String(selectedModel&&b.dataset.suite===selected));}
       }
       model.addEventListener('change',drawTasks);suite.addEventListener('change',drawTasks);drawTasks();

@@ -651,6 +651,7 @@ dash.calc('task_board', {
   document.querySelectorAll('.lr-tab').forEach((b) => b.addEventListener('click', () => { show(b.dataset.tab); dash.setLink(b.dataset.tab); }));
   const named = location.hash.slice(1) === 'latest' ? 'partners' : location.hash.slice(1);
   if (document.querySelector(`[data-page="${named}"]`)) show(named);
+  else if (!named) show('partners');
 })();
 
 // header + tiles
@@ -1166,4 +1167,4 @@ dash.draw('rr-ep-chart', (el) => {
   });
 });
 </script>
-</main><script src="leaderboard-videos.js"></script><script src="pause-ood.js"></script><script src="all-condition-videos.js"></script><script src="new-pause.js"></script><script src="abc-leaderboard.js"></script><script src="abc-current-results.js?v=363534"></script><script src="abc-collection-diagnosis.js"></script></body></html>
+</main><script src="leaderboard-videos.js"></script><script src="pause-ood.js"></script><script src="all-condition-videos.js"></script><script src="new-pause.js?v=363565"></script><script src="abc-leaderboard.js"></script><script src="abc-current-results.js?v=363565"></script><script src="abc-collection-diagnosis.js"></script></body></html>

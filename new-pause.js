@@ -39,6 +39,13 @@
   const legacySummary = document.getElementById('legacy-leader-summary');
   if (legacySummary) { legacySummary.hidden = false; legacy.append(legacySummary); }
   showPanel('main');
+  function openMainOverall(){
+    if(location.hash!=='#main-overall-start')return;
+    document.querySelector('.lr-tab[data-tab="partners"]')?.click();showPanel('main');
+    history.replaceState(null,'','#main-overall-start');
+    (document.getElementById('main-overall-start')||card).scrollIntoView({block:'start'});
+  }
+  window.addEventListener('hashchange',openMainOverall);openMainOverall();
   try {
     const response = await fetch('new-pause-results.json', {cache: 'no-store'});
     if (!response.ok) throw new Error('results');
@@ -127,35 +134,36 @@
     }
     if (data.new_anchor_id) note((data.new_anchor_id.complete ? '새 지점 Pause-ID 재평가 완료. ' : '새 지점 Pause-ID 재평가 중. ')+'Basket·Stack·Block·Mic·Mug에서 새 OOD와 같은 지점의 1초·2초 정지를 각각 측정했습니다. 기준 다섯 모델의 이전 ID 값은 예전 지점의 결과이므로 개별 실험에 보존했습니다. SimpleSG의 ID는 아직 예전 지점입니다. 동일 seed의 길이별 비교는 개별 실험에서 확인하세요.', main);
     if (data.speed_audit) note('Speed 검증: Mug 두 속도·Mic 1.5×·Bottles 1.5×·Lift Pot 1.5×는 같은 속도의 양팔 Expert를 검증한 뒤 유효 seed만 집계합니다. Oracle S2는 명령만 제공하고 S1의 속도를 직접 제어하지 않으므로 Speed 성능 상한으로 보지 않습니다.',main);
-    add('h3', '1. 전체 리더보드', main);
-    note('완료된 새 평가와 보존한 기존 결과를 함께 표시합니다. 각 열은 기준 모델들이 모두 완료한 공통 task를 합산합니다. 조건별 task 수와 평가 버전이 달라 전체 순위는 매기지 않습니다.', main);
-    note('Oracle + S1 10k · 기존/연속 target/대기 보호를 추가했습니다. 이 세 모델은 기존 1,494건을 완료했으며, 추가 Pause-ID·Speed 평가를 재개했습니다. 새 ID는 460/760건이며 Role 450건은 미평가입니다. 추가 S1·SimpleSG의 Lift Pot은 판정 v2, 기준 다섯 모델의 보존된 Lift Pot은 v1이므로 구분해 보세요.',main);
-    const overallControls = add('div', '', main); overallControls.className = 'lr-controls';
+    const overallSection=add('section','',main);overallSection.id='main-overall-start';overallSection.style.scrollMarginTop='5rem';main.prepend(overallSection);
+    add('h3', '1. 전체 리더보드 · 전체와 조건별 SR', overallSection);
+    const overallControls = add('div', '', overallSection); overallControls.className = 'lr-controls';
     const overallPartner = select(overallControls, '리더보드 파트너', [['A', 'A · 녹화 궤적 재생'], ['B', 'B · 온라인 전문가']]);
-    const overall = table(main, ['모델', ...Object.values(data.full_groups)]); overall.parentElement.querySelectorAll('th')[3].className = 'pause-ood';
-    const overallNote = note('', main);
+    const overall = table(overallSection, ['모델', '전체 SR', 'Demo', 'Pause · ID + OOD', 'Speed · 0.5× + 1.5×', 'Role']);
+    overall.id='main-overall-rows';overall.parentElement.id='main-overall-table';
+    const overallNote = note('', overallSection);
+    note('각 조건은 기존 기준 모델들이 모두 완료한 공통 task만 합산합니다. 전체는 아래 조건들의 합계이며, 조건별 task 수와 평가 버전이 달라 전체 순위는 매기지 않습니다. 각 칸은 SR · 성공/완료 · 완료/계획입니다.', overallSection);
     function drawOverall() {
       overall.replaceChildren(); const p = overallPartner.value;
       const required = Object.keys(data.models).filter(m => tasks.some(t => groups.some(g => { const r = getResult(p, m, t, g); return r.complete && r.n > 0; })));
       const common = Object.fromEntries(groups.map(g => [g, required.length ? tasks.filter(t => required.every(m => { const r = getResult(p, m, t, g); return r.complete && r.n > 0; })) : []]));
+      const combine=rows=>rows.reduce((a,r)=>({n:a.n+(r.n||0),correct:a.correct+(r.correct||0),expected:a.expected+(r.expected||0)}),{n:0,correct:0,expected:0});
+      const metric=(parent,r)=>{add('strong',r.n?`${(100*r.correct/r.n).toFixed(1)}%`:'—',parent);add('span',r.n?`성공 ${r.correct} / 완료 ${r.n}`:'완료 결과 없음',parent).className='source-note';add('span',`완료 ${r.n} / 계획 ${r.expected}`,parent).className='source-note';};
       for (const m of modelOrder) {
-        const tr = add('tr', '', overall), td = add('td', '', tr), b = add('button', models[m] + (m === 'oracle' ? ' · 참고' : ''), td); b.className = 'lr-btn';
+        const tr = add('tr', '', overall);tr.dataset.model=m;
+        const td = add('td', '', tr), b = add('button', models[m] + (m === 'oracle' ? ' · 참고' : ''), td); b.className = 'lr-btn';
         const actual = p === 'A' && data.model_evaluation_status?.[m];
         if(actual){const state=add('span',actual.status,td);state.className='source-note';state.title=actual.source_plan||'';add('span',actual.detail,td).className='source-note';if(actual.checked_utc)add('span',`마지막 집계 확인 ${actual.checked_utc.slice(0,19).replace('T',' ')} UTC`,td).className='source-note';}
         b.onclick = () => { model.value = m; partner.value = p; changeFilter(); matrixSection.scrollIntoView({behavior: 'smooth', block: 'nearest'}); };
-        for (const g of groups) {
-          const rows = common[g].map(t => getResult(p, m, t, g));
-          const total = rows.reduce((a, r) => ({n: a.n + (r.n || 0), correct: a.correct + (r.correct || 0), expected: a.expected + (r.expected || 0)}), {n: 0, correct: 0, expected: 0});
-          const complete = rows.length && rows.every(r => r.complete && r.n > 0);
-          const c = add('td', total.n ? score(total) + (complete ? '' : ' †') : '미평가', tr);
-          if (g === 'P1-OOD') c.className = 'pause-ood';
-          add('span', complete ? `${rows.length} task` : total.n ? `기평가 ${total.n}건 · 전체 조건 일부` : '측정된 결과 없음', c).className = 'source-note';
+        const totals=Object.fromEntries(groups.map(g=>[g,combine(common[g].map(t=>getResult(p,m,t,g)))]));
+        for(const [id,keys] of [['TOTAL',groups],['Demo',['P0']],['Pause',['P1-ID','P1-OOD']],['Speed',['P1-speed0.5','P1-speed1.5']],['Role',['P2']]]){
+          const cell=add('td','',tr);cell.dataset.condition=id;const r=combine(keys.map(g=>totals[g]).filter(Boolean));metric(cell,r);
+          if(id==='Pause'||id==='Speed')for(const g of keys){const q=totals[g];add('span',`${data.full_groups[g]}: ${q?.n?score(q):'—'}`,cell).className='source-note';}
         }
       }
       overallNote.textContent = `${required.length > 1 ? required.length + '개 기준 모델의 공통 완료 task' : required.length ? models[required[0]] + '만 평가됨' : '완료된 평가 없음'} · ` + groups.map(g => `${data.full_groups[g]} ${common[g].length}개`).join(' · ');
     }
     overallPartner.onchange = drawOverall;
-    note('†는 측정된 일부 표본의 SR입니다. 전체 완료 값과 직접 비교하지 마세요. 실행 여부와 남은 범위는 task별 상태 및 개별 실험에서 확인할 수 있습니다.',main);
+    note('Oracle + S1 10k · 기존/연속 target/대기 보호를 포함합니다. 추가 S1·SimpleSG의 Lift Pot 판정 v2와 기준 모델의 보존된 v1 결과를 구분합니다. 기존 실행 상태와 task별 영상은 아래에서 확인할 수 있습니다.',overallSection);
     const matrixSection = add('section', '', main); matrixSection.id = 'task-partner-matrix'; matrixSection.style.scrollMarginTop = '5rem';
     add('h3', '2. 모델별 task × 파트너 조건', matrixSection);
     note('성공률 셀을 누르면 같은 모델·task·파트너·조건의 성공·실패 영상이 열립니다. 조건을 선택하면 표의 열도 함께 바뀝니다.', matrixSection);
@@ -227,7 +235,7 @@
       drawMatrix(); drawPlayer();
     };
     model.onchange = partner.onchange = condition.onchange = changeFilter;
-    drawOverall(); drawMatrix();
+    drawOverall(); drawMatrix();openMainOverall();
     note(`검증·게시 영상 ${videos.available}개. 미평가·진행 중·해당 결과 없음·영상 대기를 구분해 표시합니다.`, main);
     const experiment = (title, description) => { const d = add('details', '', experiments); d.className = 'experiment'; add('summary', title, d); if (description) note(description, d); return d; };
     if(data.simplesg_final){

@@ -6093,7 +6093,7 @@
         "n": 177,
         "correct": 26,
         "planned": 550,
-        "paired_n": 177,
+        "paired_n": 175,
         "paired_baseline_correct": 10,
         "paired_adaptive_correct": 26,
         "K4_chunks": 1431,
@@ -6172,7 +6172,8 @@
         "hanging_mug": 100,
         "place_object_basket": 75
       }
-    }
+    },
+    "paired_snapshot_utc": "2026-11-13T05:59:51.105701+00:00"
   },
   "progress_models": [
     {

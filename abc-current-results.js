@@ -59,6 +59,7 @@
       const section = add('section', ''); add('h3', '최신 M1 15k / Fixed K32 대 Adaptive / 별도 평가 진행', section);
       note(`Partner A의 같은 고정 2,200case, 같은 M1 15k 가중치와 정규화입니다. 각 조건에 GPU ${a.gpu_per_arm}장. Fixed jobs ${a.baseline_parallel_jobs.join(', ')}, adaptive jobs ${a.parallel_jobs.join(', ')}. Adaptive ${a.correct}/${a.n} 저장 완료, 집계 ${stamp(a.snapshot_utc)}. 위 공통 1,000case 표와 이전 candidate60 실험에는 합치지 않습니다.`, section);
       note('현재 같은 case 비교의 task 구성: ' + Object.entries(a.paired_cohort.by_task).map(([id,n]) => `${d.tasks.find(t => t.id === id)?.label || id} ${n}건`).join(', ') + '. 일부 task와 조건이 진행 중이므로 전체 11task 최종 SR로 해석하지 않습니다.', section);
+      note(`동일 case 비교 기준 ${stamp(a.paired_snapshot_utc)} / 원시 저장 진행 기준 ${stamp(a.snapshot_utc)}. 두 집계의 기준 시각을 구분합니다.`, section);
       note('H32 전체 예측이 현재 명령의 팔 관절 0.01rad·gripper 0.01 안에 있으면 4개만 실행하고 나머지를 버린 뒤 새 RGB로 다시 예측합니다. 움직임이 포함되면 32개를 실행합니다. 같은 M1 15k의 K32 baseline과 비교합니다.', section);
       const body = table(section, '현재 저장 완료분 / baseline과 같은 case 교집합', ['Suite', 'Adaptive 성공 / 완료', '계획', '짝지은 case', 'K32 성공', 'Adaptive 성공', 'K4 / K32 횟수']);
       for (const s of a.suites) {

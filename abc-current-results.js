@@ -116,6 +116,23 @@
     }
     for (const s of [gm, gs, gt]) s.addEventListener('change', drawGallery); drawGallery();
 
+
+    if (d.adaptive_m1_15k) {
+      const a = d.adaptive_m1_15k;
+      const section = add('section', ''); add('h3', 'M1 15k + 대기 중 재관측 / 별도 평가 진행', section);
+      note(`Partner A의 같은 고정 2,200case. Job ${a.job_id}: ${stateLabel(a.job_state)}. ${a.correct}/${a.n} 저장 완료, 집계 ${stamp(a.snapshot_utc)}. 위 공통 1,000case 표와 이전 candidate60 실험에는 합치지 않습니다.`, section);
+      note('H32 전체 예측이 현재 명령의 팔 관절 0.01rad·gripper 0.01 안에 있으면 4개만 실행하고 나머지를 버린 뒤 새 RGB로 다시 예측합니다. 움직임이 포함되면 32개를 실행합니다. 같은 M1 15k의 K32 baseline과 비교합니다.', section);
+      const body = table(section, '현재 저장 완료분 / baseline과 같은 case 교집합', ['Suite', 'Adaptive 성공 / 완료', '계획', '짝지은 case', 'K32 성공', 'Adaptive 성공', 'K4 / K32 횟수']);
+      for (const s of a.suites) {
+        const tr = add('tr', '', body); add('th', suiteMap.get(s.suite)?.label || s.suite, tr).scope = 'row';
+        add('td', value(s), tr); add('td', s.planned, tr); add('td', s.paired_n, tr);
+        add('td', value({correct: s.paired_baseline_correct, n: s.paired_n}), tr);
+        add('td', value({correct: s.paired_adaptive_correct, n: s.paired_n}), tr);
+        add('td', `${s.K4_chunks} / ${s.K32_chunks}`, tr);
+      }
+      note('첫 실제 K4는 control 224 / physics 3360에서 실행됐고, control 228 / physics 3420에서 새 RGB와 새 추론이 확인됐습니다. 아직 전체 SR의 차이를 판단할 단계는 아닙니다.', section);
+    }
+
     const adaptive = add('section', ''); add('h3', 'Adaptive waiting / 별도 고정60쌍 실험 완료', adaptive);
     note('candidate1 wait-protected π0.5 10k의 원1925 roster에서 Mic/Block/Stack/Basket × P0/2s/8s 각 첫5case를 선택했습니다. 위 M1 학습 비교와 별도 실험입니다.', adaptive);
     const ab = table(adaptive, 'K32와 adaptive joint .01rad / gripper .01, H32, wait4 / motion32', ['실행', '성공 / 완료', 'K4 활성', '새예측 / freshRGB']);

@@ -1,0 +1,309 @@
+{
+  "table_analysis_utc": "2026-11-13T06:08:16.764447+00:00",
+  "demo_cohort_snapshot_utc": "2026-11-13T05:59:51Z",
+  "demo_task_rows": [
+    {
+      "task": "handover_block",
+      "n": 50,
+      "models": {
+        "m1": {
+          "correct": 6,
+          "n": 50
+        },
+        "m1-15k": {
+          "correct": 4,
+          "n": 50
+        },
+        "m1-adaptive-15k": {
+          "correct": 5,
+          "n": 50
+        },
+        "A": {
+          "correct": 11,
+          "n": 50
+        },
+        "B": {
+          "correct": 5,
+          "n": 50
+        },
+        "C": {
+          "correct": 4,
+          "n": 50
+        },
+        "m1-m2": {
+          "correct": 3,
+          "n": 50
+        }
+      }
+    },
+    {
+      "task": "handover_mic",
+      "n": 50,
+      "models": {
+        "m1": {
+          "correct": 13,
+          "n": 50
+        },
+        "m1-15k": {
+          "correct": 0,
+          "n": 50
+        },
+        "m1-adaptive-15k": {
+          "correct": 12,
+          "n": 50
+        },
+        "A": {
+          "correct": 49,
+          "n": 50
+        },
+        "B": {
+          "correct": 49,
+          "n": 50
+        },
+        "C": {
+          "correct": 49,
+          "n": 50
+        },
+        "m1-m2": {
+          "correct": 0,
+          "n": 50
+        }
+      }
+    },
+    {
+      "task": "hanging_mug",
+      "n": 50,
+      "models": {
+        "m1": {
+          "correct": 4,
+          "n": 50
+        },
+        "m1-15k": {
+          "correct": 3,
+          "n": 50
+        },
+        "m1-adaptive-15k": {
+          "correct": 2,
+          "n": 50
+        },
+        "A": {
+          "correct": 6,
+          "n": 50
+        },
+        "B": {
+          "correct": 2,
+          "n": 50
+        },
+        "C": {
+          "correct": 2,
+          "n": 50
+        },
+        "m1-m2": {
+          "correct": 0,
+          "n": 50
+        }
+      }
+    },
+    {
+      "task": "fabrica_beam",
+      "n": 50,
+      "models": {
+        "m1": {
+          "correct": 0,
+          "n": 50
+        },
+        "m1-15k": {
+          "correct": 0,
+          "n": 50
+        },
+        "m1-adaptive-15k": {
+          "correct": 0,
+          "n": 50
+        },
+        "A": {
+          "correct": 0,
+          "n": 50
+        },
+        "B": {
+          "correct": 0,
+          "n": 50
+        },
+        "C": {
+          "correct": 0,
+          "n": 50
+        },
+        "m1-m2": {
+          "correct": 0,
+          "n": 50
+        }
+      }
+    },
+    {
+      "task": "place_object_basket",
+      "n": 50,
+      "models": {
+        "m1": {
+          "correct": 23,
+          "n": 50
+        },
+        "m1-15k": {
+          "correct": 26,
+          "n": 50
+        },
+        "m1-adaptive-15k": {
+          "correct": 20,
+          "n": 50
+        },
+        "A": {
+          "correct": 28,
+          "n": 50
+        },
+        "B": {
+          "correct": 34,
+          "n": 50
+        },
+        "C": {
+          "correct": 25,
+          "n": 50
+        },
+        "m1-m2": {
+          "correct": 27,
+          "n": 50
+        }
+      }
+    },
+    {
+      "task": "TOTAL",
+      "n": 250,
+      "models": {
+        "m1": {
+          "correct": 46,
+          "n": 250
+        },
+        "m1-15k": {
+          "correct": 33,
+          "n": 250
+        },
+        "m1-adaptive-15k": {
+          "correct": 39,
+          "n": 250
+        },
+        "A": {
+          "correct": 94,
+          "n": 250
+        },
+        "B": {
+          "correct": 90,
+          "n": 250
+        },
+        "C": {
+          "correct": 80,
+          "n": 250
+        },
+        "m1-m2": {
+          "correct": 30,
+          "n": 250
+        }
+      }
+    }
+  ],
+  "demo_n": 250,
+  "suite_snapshot_utc": "2026-11-13T06:08:17.433469+00:00",
+  "suite_rows": [
+    {
+      "suite": "Demo",
+      "n": 350,
+      "models": {
+        "m1": {
+          "correct": 105,
+          "n": 350
+        },
+        "m1-15k": {
+          "correct": 91,
+          "n": 350
+        }
+      }
+    },
+    {
+      "suite": "Pause-ID",
+      "n": 350,
+      "models": {
+        "m1": {
+          "correct": 95,
+          "n": 350
+        },
+        "m1-15k": {
+          "correct": 83,
+          "n": 350
+        }
+      }
+    },
+    {
+      "suite": "Pause-OOD",
+      "n": 316,
+      "models": {
+        "m1": {
+          "correct": 72,
+          "n": 316
+        },
+        "m1-15k": {
+          "correct": 60,
+          "n": 316
+        }
+      }
+    },
+    {
+      "suite": "Speed0.5",
+      "n": 100,
+      "models": {
+        "m1": {
+          "correct": 50,
+          "n": 100
+        },
+        "m1-15k": {
+          "correct": 43,
+          "n": 100
+        }
+      }
+    },
+    {
+      "suite": "Speed1.5",
+      "n": 100,
+      "models": {
+        "m1": {
+          "correct": 37,
+          "n": 100
+        },
+        "m1-15k": {
+          "correct": 38,
+          "n": 100
+        }
+      }
+    },
+    {
+      "suite": "TOTAL",
+      "n": 1216,
+      "models": {
+        "m1": {
+          "correct": 359,
+          "n": 1216
+        },
+        "m1-15k": {
+          "correct": 315,
+          "n": 1216
+        }
+      }
+    }
+  ],
+  "suite_task_counts": {
+    "fabrica_beam": 141,
+    "handover_block": 200,
+    "handover_mic": 200,
+    "hanging_mug": 150,
+    "place_object_basket": 200,
+    "put_bottles_dustbin": 125,
+    "stack_blocks_three": 200
+  },
+  "case_plan_per_run": 2200,
+  "source": "existing saved results; same-case intersections; no new evaluation"
+}

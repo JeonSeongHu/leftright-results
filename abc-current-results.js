@@ -72,6 +72,30 @@
       note('첫 실제 K4는 control 224 / physics 3360에서 실행됐고, control 228 / physics 3420에서 새 RGB와 새 추론이 확인됐습니다. 아직 전체 SR의 차이를 판단할 단계는 아닙니다.', section);
     }
 
+
+    {
+      const response = await fetch('abc-demo250-analysis.json', {cache:'no-store'});
+      if (!response.ok) throw new Error('Checkpoint tables HTTP ' + response.status);
+      const a = await response.json(); const section = add('section',''); section.id = 'demo250-analysis-section';
+      add('h3','같은 Demo 250건 / M1 10k와 15k 정량 비교',section);
+      note(`05:59:51 UTC 비교표의 Demo 250건을 고정했습니다. Block·Mic·Mug·Beam·Basket 각50건이며, 모든 모델에 저장된 같은 case입니다. 집계 ${stamp(a.table_analysis_utc)}.`,section);
+      const cols=[['m1','M1 10k'],['m1-15k','M1 15k'],['m1-adaptive-15k','M1 15k adaptive'],['C','C 20k']];
+      const body=table(section,'동일 Demo case의 성공 / 완료 및 SR',['Task',...cols.map(x=>x[1])]);
+      for(const r of a.demo_task_rows){
+        const tr=add('tr','',body);add('th',r.task==='TOTAL'?'합계':d.tasks.find(t=>t.id===r.task)?.label||r.task,tr).scope='row';
+        for(const [id]of cols)add('td',value(r.models[id]),tr);
+      }
+      add('h3','M1 10k와 15k / 같은 case의 suite별 비교',section);
+      note(`두 fixed K32 평가가 모두 저장한 같은1,216case입니다. 집계 ${stamp(a.suite_snapshot_utc)}. Demo250 표와 task 구성이 다르므로 두 표의 전체 SR을 직접 비교하지 않습니다.`,section);
+      note('구성: '+Object.entries(a.suite_task_counts).map(([id,n])=>`${d.tasks.find(t=>t.id===id)?.label||id} ${n}건`).join(', '),section);
+      const suiteBody=table(section,'동일 case 교집합의 성공 / 완료 및 SR',['Suite','M1 10k','M1 15k']);
+      for(const r of a.suite_rows){
+        const tr=add('tr','',suiteBody);add('th',r.suite==='TOTAL'?'합계':suiteMap.get(r.suite)?.label||r.suite,tr).scope='row';
+        for(const id of ['m1','m1-15k'])add('td',value(r.models[id]),tr);
+      }
+      note('평가 계획은 각 run 동일2,200건으로 고정돼 있습니다. 250과1,216은 이 표에서 같은 case로 비교할 수 있는 저장 완료 수입니다.',section);
+    }
+
     const progress = add('section', ''); add('h3', '고정 2,200case 평가 진행', progress);
     const progressRows = table(progress, `완료 수 스냅샷 ${stamp(d.progress_snapshot_utc || d.snapshot_utc)} / job 상태 ${stamp(d.jobs_checked_utc)}`, ['모델', '성공 / 저장 완료', '계획', '현재 job', '실행 상태']);
     for (const m of d.progress_models || [...d.models, ...d.pending_models]) {

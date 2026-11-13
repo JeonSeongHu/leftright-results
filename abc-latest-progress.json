@@ -1,5 +1,5 @@
 {
-  "snapshot_utc": "2026-11-13T07:35:19.823449+00:00",
+  "snapshot_utc": "2026-11-13T08:07:53.323931+00:00",
   "models": [
     {
       "id": "A20k",
@@ -14,7 +14,8 @@
         "359872"
       ],
       "state": "COMPLETED",
-      "planned": 2200
+      "planned": 2200,
+      "job_status_utc": "2026-11-13T08:07:53.323931+00:00"
     },
     {
       "id": "C20k",
@@ -29,7 +30,8 @@
         "359300"
       ],
       "state": "COMPLETED",
-      "planned": 2200
+      "planned": 2200,
+      "job_status_utc": "2026-11-13T08:07:53.323931+00:00"
     },
     {
       "id": "fixed10k",
@@ -42,16 +44,17 @@
       "errors": 0,
       "job_ids": [],
       "state": "CANCELLED",
-      "planned": 2200
+      "planned": 2200,
+      "job_status_utc": "2026-11-13T08:07:53.323931+00:00"
     },
     {
       "id": "adaptive10k",
       "label": "M1 10k adaptive",
       "checkpoint_update": 10000,
-      "active_gpu": 3,
-      "completed": 1927,
-      "correct": 491,
-      "last_saved_utc": "2026-11-13T07:35:18.089254+00:00",
+      "active_gpu": 0,
+      "completed": 2200,
+      "correct": 553,
+      "last_saved_utc": "2026-11-13T08:04:15.285650+00:00",
       "errors": 0,
       "job_ids": [
         "360172",
@@ -61,17 +64,18 @@
         "360178",
         "360179"
       ],
-      "state": "RUNNING",
-      "planned": 2200
+      "state": "COMPLETED",
+      "planned": 2200,
+      "job_status_utc": "2026-11-13T08:07:53.323931+00:00"
     },
     {
       "id": "fixedK4",
       "label": "M1 10k fixed K4",
       "checkpoint_update": 10000,
       "active_gpu": 3,
-      "completed": 176,
-      "correct": 66,
-      "last_saved_utc": "2026-11-13T07:35:18.312962+00:00",
+      "completed": 293,
+      "correct": 91,
+      "last_saved_utc": "2026-11-13T08:07:52.147466+00:00",
       "errors": 0,
       "job_ids": [
         "360265",
@@ -79,16 +83,17 @@
         "360267"
       ],
       "state": "RUNNING",
-      "planned": 2200
+      "planned": 2200,
+      "job_status_utc": "2026-11-13T08:07:53.323931+00:00"
     },
     {
       "id": "A20kK4",
       "label": "π0.5 A 20k fixed K4",
       "checkpoint_update": 20000,
       "active_gpu": 3,
-      "completed": 69,
-      "correct": 51,
-      "last_saved_utc": "2026-11-13T07:35:19.653539+00:00",
+      "completed": 185,
+      "correct": 102,
+      "last_saved_utc": "2026-11-13T08:07:52.997771+00:00",
       "errors": 0,
       "job_ids": [
         "360662",
@@ -96,7 +101,26 @@
         "360664"
       ],
       "state": "RUNNING",
-      "planned": 2200
+      "planned": 2200,
+      "job_status_utc": "2026-11-13T08:07:53.323931+00:00"
+    },
+    {
+      "id": "C20kK4",
+      "label": "π0.5 C 20k fixed K4",
+      "checkpoint_update": 20000,
+      "active_gpu": 3,
+      "completed": 0,
+      "correct": 0,
+      "last_saved_utc": null,
+      "errors": 0,
+      "job_ids": [
+        "360828",
+        "360829",
+        "360830"
+      ],
+      "state": "RUNNING",
+      "planned": 2200,
+      "job_status_utc": "2026-11-13T08:11:49.171716+00:00"
     }
   ],
   "suite_rows": [
@@ -125,14 +149,19 @@
           "sr_percent": 28.909
         },
         "fixedK4": {
-          "completed": 125,
-          "correct": 46,
-          "sr_percent": 36.8
+          "completed": 150,
+          "correct": 47,
+          "sr_percent": 31.333
         },
         "A20kK4": {
-          "completed": 69,
-          "correct": 51,
-          "sr_percent": 73.913
+          "completed": 135,
+          "correct": 71,
+          "sr_percent": 52.593
+        },
+        "C20kK4": {
+          "completed": 0,
+          "correct": 0,
+          "sr_percent": null
         }
       }
     },
@@ -156,16 +185,21 @@
           "sr_percent": 24.0
         },
         "adaptive10k": {
-          "completed": 525,
+          "completed": 550,
           "correct": 143,
-          "sr_percent": 27.238
+          "sr_percent": 26.0
         },
         "fixedK4": {
-          "completed": 41,
-          "correct": 10,
-          "sr_percent": 24.39
+          "completed": 77,
+          "correct": 26,
+          "sr_percent": 33.766
         },
         "A20kK4": {
+          "completed": 25,
+          "correct": 24,
+          "sr_percent": 96.0
+        },
+        "C20kK4": {
           "completed": 0,
           "correct": 0,
           "sr_percent": null
@@ -192,16 +226,21 @@
           "sr_percent": 20.25
         },
         "adaptive10k": {
-          "completed": 452,
-          "correct": 96,
-          "sr_percent": 21.239
+          "completed": 550,
+          "correct": 107,
+          "sr_percent": 19.455
         },
         "fixedK4": {
-          "completed": 10,
-          "correct": 10,
-          "sr_percent": 100.0
+          "completed": 66,
+          "correct": 18,
+          "sr_percent": 27.273
         },
         "A20kK4": {
+          "completed": 25,
+          "correct": 7,
+          "sr_percent": 28.0
+        },
+        "C20kK4": {
           "completed": 0,
           "correct": 0,
           "sr_percent": null
@@ -228,9 +267,9 @@
           "sr_percent": 27.5
         },
         "adaptive10k": {
-          "completed": 200,
-          "correct": 56,
-          "sr_percent": 28.0
+          "completed": 275,
+          "correct": 81,
+          "sr_percent": 29.455
         },
         "fixedK4": {
           "completed": 0,
@@ -238,6 +277,11 @@
           "sr_percent": null
         },
         "A20kK4": {
+          "completed": 0,
+          "correct": 0,
+          "sr_percent": null
+        },
+        "C20kK4": {
           "completed": 0,
           "correct": 0,
           "sr_percent": null
@@ -264,9 +308,9 @@
           "sr_percent": 21.0
         },
         "adaptive10k": {
-          "completed": 200,
-          "correct": 37,
-          "sr_percent": 18.5
+          "completed": 275,
+          "correct": 63,
+          "sr_percent": 22.909
         },
         "fixedK4": {
           "completed": 0,
@@ -274,6 +318,11 @@
           "sr_percent": null
         },
         "A20kK4": {
+          "completed": 0,
+          "correct": 0,
+          "sr_percent": null
+        },
+        "C20kK4": {
           "completed": 0,
           "correct": 0,
           "sr_percent": null
@@ -300,19 +349,24 @@
           "sr_percent": 23.752
         },
         "adaptive10k": {
-          "completed": 1927,
-          "correct": 491,
-          "sr_percent": 25.48
+          "completed": 2200,
+          "correct": 553,
+          "sr_percent": 25.136
         },
         "fixedK4": {
-          "completed": 176,
-          "correct": 66,
-          "sr_percent": 37.5
+          "completed": 293,
+          "correct": 91,
+          "sr_percent": 31.058
         },
         "A20kK4": {
-          "completed": 69,
-          "correct": 51,
-          "sr_percent": 73.913
+          "completed": 185,
+          "correct": 102,
+          "sr_percent": 55.135
+        },
+        "C20kK4": {
+          "completed": 0,
+          "correct": 0,
+          "sr_percent": null
         }
       }
     }

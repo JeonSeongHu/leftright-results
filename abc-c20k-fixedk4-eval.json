@@ -1,0 +1,126 @@
+{
+  "snapshot_utc": "2026-11-13T08:07:53.323931+00:00",
+  "job_status_utc": "2026-11-13T08:11:49.171716+00:00",
+  "completed": 0,
+  "correct": 0,
+  "planned": 2200,
+  "checkpoint_update": 20000,
+  "model_horizon": 32,
+  "execute_steps": 4,
+  "adaptive_wait": false,
+  "matched": {
+    "C20k": {
+      "Demo": {
+        "completed": 0,
+        "correct": 0,
+        "sr_percent": null
+      },
+      "Pause-ID": {
+        "completed": 0,
+        "correct": 0,
+        "sr_percent": null
+      },
+      "Pause-OOD": {
+        "completed": 0,
+        "correct": 0,
+        "sr_percent": null
+      },
+      "Speed0.5": {
+        "completed": 0,
+        "correct": 0,
+        "sr_percent": null
+      },
+      "Speed1.5": {
+        "completed": 0,
+        "correct": 0,
+        "sr_percent": null
+      },
+      "TOTAL": {
+        "completed": 0,
+        "correct": 0,
+        "sr_percent": null
+      }
+    },
+    "C20kK4": {
+      "Demo": {
+        "completed": 0,
+        "correct": 0,
+        "sr_percent": null
+      },
+      "Pause-ID": {
+        "completed": 0,
+        "correct": 0,
+        "sr_percent": null
+      },
+      "Pause-OOD": {
+        "completed": 0,
+        "correct": 0,
+        "sr_percent": null
+      },
+      "Speed0.5": {
+        "completed": 0,
+        "correct": 0,
+        "sr_percent": null
+      },
+      "Speed1.5": {
+        "completed": 0,
+        "correct": 0,
+        "sr_percent": null
+      },
+      "TOTAL": {
+        "completed": 0,
+        "correct": 0,
+        "sr_percent": null
+      }
+    }
+  },
+  "matched_n": 0,
+  "matched_by_task": {},
+  "matched_by_suite_task": {
+    "Demo": {},
+    "Pause-ID": {},
+    "Pause-OOD": {},
+    "Speed0.5": {},
+    "Speed1.5": {}
+  },
+  "jobs": [
+    {
+      "id": "360828",
+      "tasks": [
+        "handover_mic",
+        "handover_block",
+        "place_object_basket",
+        "stack_blocks_three"
+      ],
+      "node": "DGX-H100-3",
+      "state": "RUNNING",
+      "planned": 800,
+      "completed": 0
+    },
+    {
+      "id": "360829",
+      "tasks": [
+        "put_bottles_dustbin",
+        "hanging_mug",
+        "lift_pot",
+        "grab_roller"
+      ],
+      "node": "DGX-H100-3",
+      "state": "RUNNING",
+      "planned": 800,
+      "completed": 0
+    },
+    {
+      "id": "360830",
+      "tasks": [
+        "fabrica_beam",
+        "fabrica_stool",
+        "fabrica_plumbers_block"
+      ],
+      "node": "DGX-H100-1",
+      "state": "RUNNING",
+      "planned": 600,
+      "completed": 0
+    }
+  ]
+}

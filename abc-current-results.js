@@ -39,7 +39,7 @@
     if(d.active_evaluation){
       const a=d.active_evaluation;const section=add('section','');section.id='active10k-execution-section';
       add('h3','현재 실행 / M1 10k fixed 대 adaptive',section);
-      note(`집계 ${stamp(a.snapshot_utc)}. Adaptive 저장 완료 ${a.completed}/2,200건, 성공 ${a.correct}건. GPU ${a.gpu}장, GPU당16환경·batch상한16으로 실행 중입니다.`,section);
+      note(`집계 ${stamp(a.snapshot_utc)}. Adaptive 저장 완료 ${a.completed}/2,200건, 성공 ${a.correct}건. 현재 활성 GPU ${a.gpu}장입니다. GPU당16환경·batch상한16을 사용했습니다.`,section);
       note('평가 계획은 각 run 동일 2,200건으로 고정돼 있습니다. 아래 비교표 n은 fixed와 adaptive가 모두 완료한 공통 장면 수이며, 계획 건수가 달라진 것이 아닙니다. Fixed10k는 사용자 요청으로 중단한 저장1,642건만 재사용합니다.',section);
       const matched=table(section,`같은 ${a.matched_n}case / 성공·완료와 SR`,['Suite','공통 n','M1 10k fixed K32','M1 10k adaptive']);
       for(const s of [...d.suites,{id:'TOTAL',label:'합계'}]){
@@ -83,6 +83,8 @@
 
 
 
+
+
     }
 
     if(d.a20k_fixed_k4_evaluation){
@@ -96,6 +98,17 @@
       for(const s of [...d.suites,{id:'TOTAL',label:'합계'}]){const tr=add('tr','',matched);add('th',s.label,tr).scope='row';add('td',a.matched.A20k[s.id].completed,tr);for(const id of ['A20k','A20kK4']){const r=a.matched[id][s.id];add('td',r.completed?value({correct:r.correct,n:r.completed}):'공통 완료 대기',tr);}}
       const body=table(section,'A20k 고정 K4 실행 lane',['Job','Task','저장 / 담당 계획','노드','상태']);
       for(const r of a.jobs){const tr=add('tr','',body);add('td',r.id,tr);add('td',r.tasks.map(id=>d.tasks.find(t=>t.id===id)?.label||id).join(' · '),tr);add('td',`${r.completed}/${r.planned}`,tr);add('td',r.node,tr);add('td',stateLabel(r.state),tr);}
+    }
+
+    if(d.c20k_fixed_k4_evaluation){
+      const a=d.c20k_fixed_k4_evaluation,section=add('section','');section.id='c20k-fixedk4-execution-section';
+      add('h3','π0.5 C20k / 고정 K4 신규 평가',section);
+      note(`평가 결과 기준 ${stamp(a.snapshot_utc)}에는 제출 전이므로 저장 결과와 SR은 아직 표시하지 않습니다. 신규 잡 상태 확인 ${stamp(a.job_status_utc)}.`,section);
+      note('기존 ABC C20k 가중치와 Partner A 공통2,200case를 사용합니다. 새로 수집한 정지·감속·가속 C704 모델이 아닙니다. H32를 예측하고 앞4개만 실행한 뒤 나머지28개를 버리고 새 RGB로 다시 예측합니다. Adaptive 판정과 영상 저장은 사용하지 않습니다.',section);
+      note('추가3GPU·GPU당16환경·batch상한16입니다. 본 평가 Mic에서 control0→4→8, physics0→60→120의 새 추론을 확인했습니다. 11task의 Demo·Pause-ID·Pause-OOD·Speed0.5·Speed1.5를 모두 포함합니다.',section);
+      const body=table(section,'C20k 고정 K4 신규 실행 lane',['Job','Task','담당 계획','노드','상태']);
+      for(const r of a.jobs){const tr=add('tr','',body);add('td',r.id,tr);add('td',r.tasks.map(id=>d.tasks.find(t=>t.id===id)?.label||id).join(' · '),tr);add('td',r.planned,tr);add('td',r.node,tr);add('td',stateLabel(r.state),tr);}
+      note('C20k K32와 K4의 SR 비교는 두 조건 모두 완료한 같은 case가 저장된 뒤 표시합니다. 이 스냅샷의 C4 0건은 평가 실패가 아니라 집계 후 신규 실행을 뜻합니다.',section);
     }
 
     add('h3', 'ABC, M1 평가 / 같은 1,000case 중간 비교');

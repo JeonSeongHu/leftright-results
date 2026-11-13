@@ -1,10 +1,10 @@
 {
-  "snapshot_utc": "2026-11-13T07:35:19.823449+00:00",
+  "snapshot_utc": "2026-11-13T08:07:53.323931+00:00",
   "label": "π0.5 A20k fixed K4",
   "checkpoint_update": 20000,
   "planned": 2200,
-  "completed": 69,
-  "correct": 51,
+  "completed": 185,
+  "correct": 102,
   "partner": "A",
   "gpu": 3,
   "workers_per_gpu": 16,
@@ -12,7 +12,7 @@
   "model_horizon": 32,
   "execute_steps": 4,
   "adaptive_wait": false,
-  "status": "실제 평가 중 · 저장 69/2,200건 · 성공 51건",
+  "status": "실제 평가 중 · 저장 185/2,200건 · 성공 102건",
   "jobs": [
     {
       "id": "360662",
@@ -24,7 +24,7 @@
       ],
       "state": "RUNNING",
       "node": "DGX-H100-1",
-      "completed": 44,
+      "completed": 100,
       "planned": 800
     },
     {
@@ -37,7 +37,7 @@
       ],
       "state": "RUNNING",
       "node": "DGX-H100-6",
-      "completed": 9,
+      "completed": 35,
       "planned": 800
     },
     {
@@ -49,26 +49,26 @@
       ],
       "state": "RUNNING",
       "node": "DGX-H100-5",
-      "completed": 16,
+      "completed": 50,
       "planned": 600
     }
   ],
   "matched": {
     "A20k": {
       "Demo": {
-        "completed": 69,
-        "correct": 49,
-        "sr_percent": 71.014
+        "completed": 135,
+        "correct": 69,
+        "sr_percent": 51.111
       },
       "Pause-ID": {
-        "completed": 0,
+        "completed": 25,
         "correct": 0,
-        "sr_percent": null
+        "sr_percent": 0.0
       },
       "Pause-OOD": {
-        "completed": 0,
+        "completed": 25,
         "correct": 0,
-        "sr_percent": null
+        "sr_percent": 0.0
       },
       "Speed0.5": {
         "completed": 0,
@@ -81,26 +81,26 @@
         "sr_percent": null
       },
       "TOTAL": {
-        "completed": 69,
-        "correct": 49,
-        "sr_percent": 71.014
+        "completed": 185,
+        "correct": 69,
+        "sr_percent": 37.297
       }
     },
     "A20kK4": {
       "Demo": {
-        "completed": 69,
-        "correct": 51,
-        "sr_percent": 73.913
+        "completed": 135,
+        "correct": 71,
+        "sr_percent": 52.593
       },
       "Pause-ID": {
-        "completed": 0,
-        "correct": 0,
-        "sr_percent": null
+        "completed": 25,
+        "correct": 24,
+        "sr_percent": 96.0
       },
       "Pause-OOD": {
-        "completed": 0,
-        "correct": 0,
-        "sr_percent": null
+        "completed": 25,
+        "correct": 7,
+        "sr_percent": 28.0
       },
       "Speed0.5": {
         "completed": 0,
@@ -113,26 +113,30 @@
         "sr_percent": null
       },
       "TOTAL": {
-        "completed": 69,
-        "correct": 51,
-        "sr_percent": 73.913
+        "completed": 185,
+        "correct": 102,
+        "sr_percent": 55.135
       }
     }
   },
-  "matched_n": 69,
+  "matched_n": 185,
   "matched_by_task": {
-    "handover_mic": 44,
-    "put_bottles_dustbin": 9,
-    "fabrica_beam": 16
+    "handover_mic": 100,
+    "put_bottles_dustbin": 35,
+    "fabrica_beam": 50
   },
   "matched_by_suite_task": {
     "Demo": {
-      "handover_mic": 44,
-      "put_bottles_dustbin": 9,
-      "fabrica_beam": 16
+      "handover_mic": 50,
+      "put_bottles_dustbin": 35,
+      "fabrica_beam": 50
     },
-    "Pause-ID": {},
-    "Pause-OOD": {},
+    "Pause-ID": {
+      "handover_mic": 25
+    },
+    "Pause-OOD": {
+      "handover_mic": 25
+    },
     "Speed0.5": {},
     "Speed1.5": {}
   }

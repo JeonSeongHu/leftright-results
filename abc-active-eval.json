@@ -1,17 +1,17 @@
 {
-  "snapshot_utc": "2026-11-13T07:35:19.823449+00:00",
+  "snapshot_utc": "2026-11-13T08:07:53.323931+00:00",
   "label": "π0.5 C + M1 10k adaptive",
   "checkpoint_update": 10000,
   "planned": 2200,
   "partner": "A",
-  "gpu": 3,
+  "gpu": 0,
   "workers_per_gpu": 16,
   "batch_cap": 16,
   "baseline_fixed_completed": 1642,
   "baseline_fixed_status": "중단 · 저장 결과 재사용",
-  "completed": 1927,
-  "correct": 491,
-  "progress_status": "저장 완료 1927/2,200건 · 성공 491건 · 저장 오류 0건",
+  "completed": 2200,
+  "correct": 553,
+  "progress_status": "저장 완료 2200/2,200건 · 성공 553건 · 저장 오류 0건",
   "jobs": [
     {
       "id": "360172",
@@ -32,9 +32,9 @@
         "place_object_basket",
         "stack_blocks_three"
       ],
-      "state": "RUNNING",
+      "state": "COMPLETED",
       "node": "DGX-H100-1",
-      "completed": 325,
+      "completed": 400,
       "planned": 400
     },
     {
@@ -44,9 +44,9 @@
         "put_bottles_dustbin",
         "hanging_mug"
       ],
-      "state": "RUNNING",
+      "state": "COMPLETED",
       "node": "DGX-H100-6",
-      "completed": 277,
+      "completed": 400,
       "planned": 400
     },
     {
@@ -68,9 +68,9 @@
         "fabrica_beam",
         "fabrica_stool"
       ],
-      "state": "RUNNING",
+      "state": "COMPLETED",
       "node": "DGX-H100-3",
-      "completed": 325,
+      "completed": 400,
       "planned": 400
     },
     {
@@ -149,46 +149,46 @@
         "sr_percent": 28.909
       },
       "Pause-ID": {
-        "completed": 525,
+        "completed": 550,
         "correct": 143,
-        "sr_percent": 27.238
+        "sr_percent": 26.0
       },
       "Pause-OOD": {
-        "completed": 452,
-        "correct": 96,
-        "sr_percent": 21.239
+        "completed": 550,
+        "correct": 107,
+        "sr_percent": 19.455
       },
       "Speed0.5": {
-        "completed": 200,
-        "correct": 56,
-        "sr_percent": 28.0
+        "completed": 275,
+        "correct": 81,
+        "sr_percent": 29.455
       },
       "Speed1.5": {
-        "completed": 200,
-        "correct": 37,
-        "sr_percent": 18.5
+        "completed": 275,
+        "correct": 63,
+        "sr_percent": 22.909
       },
       "TOTAL": {
-        "completed": 1927,
-        "correct": 491,
-        "sr_percent": 25.48
+        "completed": 2200,
+        "correct": 553,
+        "sr_percent": 25.136
       }
     },
     "fixedK4": {
       "Demo": {
-        "completed": 125,
-        "correct": 46,
-        "sr_percent": 36.8
+        "completed": 150,
+        "correct": 47,
+        "sr_percent": 31.333
       },
       "Pause-ID": {
-        "completed": 41,
-        "correct": 10,
-        "sr_percent": 24.39
+        "completed": 77,
+        "correct": 26,
+        "sr_percent": 33.766
       },
       "Pause-OOD": {
-        "completed": 10,
-        "correct": 10,
-        "sr_percent": 100.0
+        "completed": 66,
+        "correct": 18,
+        "sr_percent": 27.273
       },
       "Speed0.5": {
         "completed": 0,
@@ -201,9 +201,9 @@
         "sr_percent": null
       },
       "TOTAL": {
-        "completed": 176,
-        "correct": 66,
-        "sr_percent": 37.5
+        "completed": 293,
+        "correct": 91,
+        "sr_percent": 31.058
       }
     },
     "fixed10k": {
@@ -304,9 +304,41 @@
     },
     "A20kK4": {
       "Demo": {
-        "completed": 69,
-        "correct": 51,
-        "sr_percent": 73.913
+        "completed": 135,
+        "correct": 71,
+        "sr_percent": 52.593
+      },
+      "Pause-ID": {
+        "completed": 25,
+        "correct": 24,
+        "sr_percent": 96.0
+      },
+      "Pause-OOD": {
+        "completed": 25,
+        "correct": 7,
+        "sr_percent": 28.0
+      },
+      "Speed0.5": {
+        "completed": 0,
+        "correct": 0,
+        "sr_percent": null
+      },
+      "Speed1.5": {
+        "completed": 0,
+        "correct": 0,
+        "sr_percent": null
+      },
+      "TOTAL": {
+        "completed": 185,
+        "correct": 102,
+        "sr_percent": 55.135
+      }
+    },
+    "C20kK4": {
+      "Demo": {
+        "completed": 0,
+        "correct": 0,
+        "sr_percent": null
       },
       "Pause-ID": {
         "completed": 0,
@@ -329,9 +361,9 @@
         "sr_percent": null
       },
       "TOTAL": {
-        "completed": 69,
-        "correct": 51,
-        "sr_percent": 73.913
+        "completed": 0,
+        "correct": 0,
+        "sr_percent": null
       }
     }
   },
@@ -343,29 +375,29 @@
         "sr_percent": 26.244
       },
       "Pause-ID": {
-        "completed": 375,
-        "correct": 95,
-        "sr_percent": 25.333
+        "completed": 400,
+        "correct": 96,
+        "sr_percent": 24.0
       },
       "Pause-OOD": {
-        "completed": 302,
-        "correct": 67,
-        "sr_percent": 22.185
+        "completed": 400,
+        "correct": 81,
+        "sr_percent": 20.25
       },
       "Speed0.5": {
-        "completed": 125,
-        "correct": 32,
-        "sr_percent": 25.6
+        "completed": 200,
+        "correct": 55,
+        "sr_percent": 27.5
       },
       "Speed1.5": {
-        "completed": 125,
-        "correct": 19,
-        "sr_percent": 15.2
+        "completed": 200,
+        "correct": 42,
+        "sr_percent": 21.0
       },
       "TOTAL": {
-        "completed": 1369,
-        "correct": 329,
-        "sr_percent": 24.032
+        "completed": 1642,
+        "correct": 390,
+        "sr_percent": 23.752
       }
     },
     "adaptive10k": {
@@ -375,43 +407,43 @@
         "sr_percent": 28.507
       },
       "Pause-ID": {
-        "completed": 375,
+        "completed": 400,
         "correct": 105,
-        "sr_percent": 28.0
+        "sr_percent": 26.25
       },
       "Pause-OOD": {
-        "completed": 302,
-        "correct": 67,
-        "sr_percent": 22.185
+        "completed": 400,
+        "correct": 78,
+        "sr_percent": 19.5
       },
       "Speed0.5": {
-        "completed": 125,
-        "correct": 40,
-        "sr_percent": 32.0
+        "completed": 200,
+        "correct": 65,
+        "sr_percent": 32.5
       },
       "Speed1.5": {
-        "completed": 125,
-        "correct": 25,
-        "sr_percent": 20.0
+        "completed": 200,
+        "correct": 51,
+        "sr_percent": 25.5
       },
       "TOTAL": {
-        "completed": 1369,
-        "correct": 363,
-        "sr_percent": 26.516
+        "completed": 1642,
+        "correct": 425,
+        "sr_percent": 25.883
       }
     }
   },
-  "matched_n": 1369,
+  "matched_n": 1642,
   "matched_by_task": {
     "handover_mic": 200,
     "handover_block": 200,
     "place_object_basket": 200,
-    "stack_blocks_three": 125,
+    "stack_blocks_three": 200,
     "put_bottles_dustbin": 200,
-    "hanging_mug": 77,
+    "hanging_mug": 200,
     "lift_pot": 42,
     "fabrica_beam": 200,
-    "fabrica_stool": 125
+    "fabrica_stool": 200
   },
   "matched_by_suite_task": {
     "Demo": {
@@ -431,7 +463,7 @@
       "place_object_basket": 50,
       "stack_blocks_three": 50,
       "put_bottles_dustbin": 50,
-      "hanging_mug": 25,
+      "hanging_mug": 50,
       "fabrica_beam": 50,
       "fabrica_stool": 50
     },
@@ -439,25 +471,31 @@
       "handover_mic": 50,
       "handover_block": 50,
       "place_object_basket": 50,
-      "stack_blocks_three": 25,
+      "stack_blocks_three": 50,
       "put_bottles_dustbin": 50,
-      "hanging_mug": 2,
+      "hanging_mug": 50,
       "fabrica_beam": 50,
-      "fabrica_stool": 25
+      "fabrica_stool": 50
     },
     "Speed0.5": {
       "handover_mic": 25,
       "handover_block": 25,
       "place_object_basket": 25,
+      "stack_blocks_three": 25,
       "put_bottles_dustbin": 25,
-      "fabrica_beam": 25
+      "hanging_mug": 25,
+      "fabrica_beam": 25,
+      "fabrica_stool": 25
     },
     "Speed1.5": {
       "handover_mic": 25,
       "handover_block": 25,
       "place_object_basket": 25,
+      "stack_blocks_three": 25,
       "put_bottles_dustbin": 25,
-      "fabrica_beam": 25
+      "hanging_mug": 25,
+      "fabrica_beam": 25,
+      "fabrica_stool": 25
     }
   },
   "planned_by_suite": {

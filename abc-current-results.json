@@ -9674,38 +9674,3089 @@
     "publication_utc": "2026-11-13T10:43:49.294538+00:00"
   },
   "latency_suite_plan": {
-    "status_utc": "2026-11-13T10:43:43.954723+00:00",
-    "job_id": "363453",
-    "status_label": "추론 지연 실측 진행 중",
-    "stage_note": "기존 평가 종료 의존성은 해제됐고 dispatch 361676은 완료했습니다. 전용 추론 실측·물리 smoke 363453이 실행 중이며, 후속 launcher 363454는 afterok:363453을 기다립니다. 실평가 결과는 아직 없으며 지연 d도 미확정입니다.",
-    "dependency_cleared": true,
-    "inference_delay_steps": null,
-    "planned_by_suite": {
-      "Demo": 40,
-      "Pause-ID": 0,
-      "Pause-OOD": 40,
-      "Speed0.5": 0,
-      "Speed1.5": 40
-    },
+    "status_utc": "2026-11-13T10:47:01.807784+00:00",
+    "delay_description": "확정 지연 d=3 (180ms). A20k·H32·batch1 추론 10회: 중앙값 163.727ms, P90 171.347ms (warmup 3회 제외). 두 K에 같은 d를 적용합니다.",
+    "stage_note": "실측·물리 검증은 통과했습니다. 지연 평가 1개 실행 / 7개 대기이며 새 K32 평가와 병렬입니다. 결과 기준시각까지 지연 성공률은 아직 집계 전입니다.",
     "source_status": {
-      "updated_utc": "2026-11-13T10:42:18.692668+00:00",
-      "stage": "dedicated_latency_measurement_and_physics_smoke",
+      "updated_utc": "2026-11-13T10:47:01.807784+00:00",
+      "stage": "pilot_running_with_pending_jobs",
       "measurement_job": "363453",
-      "measurement_state": "RUNNING",
+      "measurement_state": "COMPLETED",
       "measurement_node": "DGX-H100-3",
       "pilots_launcher_job": "363454",
-      "pilots_launcher_state": "PENDING",
+      "pilots_launcher_state": "COMPLETED",
       "pilots_launcher_dependency": "afterok:363453",
-      "inference_delay_steps": null,
+      "inference_delay_steps": 3,
       "completed_K32": 0,
       "completed_K4": 0,
       "planned_per_K": 120,
       "planned_total": 240,
-      "error": null
-    },
-    "job_states": {
-      "363453": "RUNNING",
-      "363454": "PENDING"
+      "error": null,
+      "median_seconds": 0.1637273565866053,
+      "p90_seconds": 0.17134694028645753,
+      "rounded_delay_seconds": 0.18,
+      "measurement_n": 10,
+      "measurement_complete": true,
+      "physical_smoke": "passed",
+      "physical_smoke_summary": "/mnt/harbor/users/seonghu/leftright-w2/variational-20261111/evaluation/sync-latency-pilot-20261113/physical-smoke-363453/summary.json",
+      "pilot_jobs": [
+        {
+          "job_id": "363486",
+          "name": "lr-latency-K32-handover_mic-r1",
+          "state": "RUNNING",
+          "node": "DGX-H100-1",
+          "reason": "None",
+          "dependency": "(null)"
+        },
+        {
+          "job_id": "363487",
+          "name": "lr-latency-K32-stack_blocks_three-r1",
+          "state": "PENDING",
+          "node": "DGX-H100-3",
+          "reason": "ReqNodeNotAvail,_May_be_reserved_for_other_job",
+          "dependency": "(null)"
+        },
+        {
+          "job_id": "363488",
+          "name": "lr-latency-K32-place_object_basket-r1",
+          "state": "PENDING",
+          "node": "DGX-H100-1",
+          "reason": "ReqNodeNotAvail,_May_be_reserved_for_other_job",
+          "dependency": "(null)"
+        },
+        {
+          "job_id": "363489",
+          "name": "lr-latency-K32-lift_pot-r1",
+          "state": "PENDING",
+          "node": "DGX-H100-1",
+          "reason": "ReqNodeNotAvail,_May_be_reserved_for_other_job",
+          "dependency": "(null)"
+        },
+        {
+          "job_id": "363490",
+          "name": "lr-latency-K4-handover_mic-r1",
+          "state": "PENDING",
+          "node": "DGX-H100-1",
+          "reason": "ReqNodeNotAvail,_May_be_reserved_for_other_job",
+          "dependency": "(null)"
+        },
+        {
+          "job_id": "363491",
+          "name": "lr-latency-K4-stack_blocks_three-r1",
+          "state": "PENDING",
+          "node": "DGX-H100-1",
+          "reason": "ReqNodeNotAvail,_May_be_reserved_for_other_job",
+          "dependency": "(null)"
+        },
+        {
+          "job_id": "363492",
+          "name": "lr-latency-K4-place_object_basket-r1",
+          "state": "PENDING",
+          "node": "DGX-H100-1",
+          "reason": "ReqNodeNotAvail,_May_be_reserved_for_other_job",
+          "dependency": "(null)"
+        },
+        {
+          "job_id": "363493",
+          "name": "lr-latency-K4-lift_pot-r1",
+          "state": "PENDING",
+          "node": "DGX-H100-1",
+          "reason": "ReqNodeNotAvail,_May_be_reserved_for_other_job",
+          "dependency": "(null)"
+        }
+      ],
+      "active_gpus": 1,
+      "user_requested_order": "latency and fresh K32 baselines run in parallel; no cross-run dependency",
+      "cancelled_pilot_jobs": [
+        "363458",
+        "363459",
+        "363460",
+        "363461",
+        "363462",
+        "363463",
+        "363464",
+        "363465"
+      ]
     }
-  }
+  },
+  "suite_run_views": [
+    {
+      "id": "A20kK32fresh",
+      "label": "A 20k K32 fresh",
+      "group": "k32_fresh",
+      "scope_label": "subset550 · 새 K32",
+      "planned": 550,
+      "tasks": [
+        {
+          "id": "place_object_basket",
+          "label": "Basket"
+        },
+        {
+          "id": "stack_blocks_three",
+          "label": "Stack"
+        },
+        {
+          "id": "handover_block",
+          "label": "Block"
+        },
+        {
+          "id": "hanging_mug",
+          "label": "Mug"
+        },
+        {
+          "id": "handover_mic",
+          "label": "Mic"
+        },
+        {
+          "id": "grab_roller",
+          "label": "Grab Roller"
+        },
+        {
+          "id": "put_bottles_dustbin",
+          "label": "Bottles"
+        },
+        {
+          "id": "lift_pot",
+          "label": "Lift Pot"
+        },
+        {
+          "id": "fabrica_beam",
+          "label": "Fabrica Beam"
+        },
+        {
+          "id": "fabrica_plumbers_block",
+          "label": "Fabrica Plumber"
+        },
+        {
+          "id": "fabrica_stool",
+          "label": "Fabrica Stool"
+        }
+      ],
+      "raw": {
+        "Demo": {
+          "completed": 0,
+          "correct": null,
+          "planned": 110,
+          "sr_percent": null
+        },
+        "Pause-ID": {
+          "completed": 0,
+          "correct": null,
+          "planned": 110,
+          "sr_percent": null
+        },
+        "Pause-OOD": {
+          "completed": 0,
+          "correct": null,
+          "planned": 110,
+          "sr_percent": null
+        },
+        "Speed0.5": {
+          "completed": 0,
+          "correct": null,
+          "planned": 110,
+          "sr_percent": null
+        },
+        "Speed1.5": {
+          "completed": 0,
+          "correct": null,
+          "planned": 110,
+          "sr_percent": null
+        },
+        "TOTAL": {
+          "completed": 0,
+          "correct": null,
+          "planned": 550,
+          "sr_percent": null
+        }
+      },
+      "task_breakdown": {
+        "place_object_basket": {
+          "Demo": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Pause-ID": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Pause-OOD": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Speed0.5": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Speed1.5": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "TOTAL": {
+            "completed": 0,
+            "correct": null,
+            "planned": 50,
+            "sr_percent": null
+          }
+        },
+        "stack_blocks_three": {
+          "Demo": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Pause-ID": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Pause-OOD": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Speed0.5": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Speed1.5": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "TOTAL": {
+            "completed": 0,
+            "correct": null,
+            "planned": 50,
+            "sr_percent": null
+          }
+        },
+        "handover_block": {
+          "Demo": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Pause-ID": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Pause-OOD": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Speed0.5": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Speed1.5": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "TOTAL": {
+            "completed": 0,
+            "correct": null,
+            "planned": 50,
+            "sr_percent": null
+          }
+        },
+        "hanging_mug": {
+          "Demo": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Pause-ID": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Pause-OOD": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Speed0.5": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Speed1.5": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "TOTAL": {
+            "completed": 0,
+            "correct": null,
+            "planned": 50,
+            "sr_percent": null
+          }
+        },
+        "handover_mic": {
+          "Demo": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Pause-ID": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Pause-OOD": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Speed0.5": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Speed1.5": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "TOTAL": {
+            "completed": 0,
+            "correct": null,
+            "planned": 50,
+            "sr_percent": null
+          }
+        },
+        "grab_roller": {
+          "Demo": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Pause-ID": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Pause-OOD": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Speed0.5": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Speed1.5": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "TOTAL": {
+            "completed": 0,
+            "correct": null,
+            "planned": 50,
+            "sr_percent": null
+          }
+        },
+        "put_bottles_dustbin": {
+          "Demo": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Pause-ID": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Pause-OOD": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Speed0.5": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Speed1.5": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "TOTAL": {
+            "completed": 0,
+            "correct": null,
+            "planned": 50,
+            "sr_percent": null
+          }
+        },
+        "lift_pot": {
+          "Demo": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Pause-ID": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Pause-OOD": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Speed0.5": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Speed1.5": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "TOTAL": {
+            "completed": 0,
+            "correct": null,
+            "planned": 50,
+            "sr_percent": null
+          }
+        },
+        "fabrica_beam": {
+          "Demo": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Pause-ID": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Pause-OOD": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Speed0.5": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Speed1.5": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "TOTAL": {
+            "completed": 0,
+            "correct": null,
+            "planned": 50,
+            "sr_percent": null
+          }
+        },
+        "fabrica_plumbers_block": {
+          "Demo": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Pause-ID": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Pause-OOD": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Speed0.5": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Speed1.5": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "TOTAL": {
+            "completed": 0,
+            "correct": null,
+            "planned": 50,
+            "sr_percent": null
+          }
+        },
+        "fabrica_stool": {
+          "Demo": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Pause-ID": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Pause-OOD": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Speed0.5": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Speed1.5": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "TOTAL": {
+            "completed": 0,
+            "correct": null,
+            "planned": 50,
+            "sr_percent": null
+          }
+        }
+      },
+      "status_label": "실행 중 · 활성 GPU 1",
+      "source_status": {
+        "model_key": "A20kK32fresh",
+        "model_name": "A",
+        "label": "A 20k fresh K32",
+        "checkpoint_update": 20000,
+        "model_horizon": 32,
+        "execution_mode": "fixed",
+        "execute_steps": 32,
+        "wait_execute_steps": 32,
+        "motion_execute_steps": 32,
+        "latency_seconds": 0,
+        "adaptive_wait": false,
+        "status": "running",
+        "active_gpus": 1,
+        "pending_jobs": 10,
+        "planned": 550,
+        "n": 0,
+        "n_correct": null,
+        "job_ids": [
+          "363494",
+          "363497",
+          "363500",
+          "363503",
+          "363506",
+          "363509",
+          "363512",
+          "363515",
+          "363518",
+          "363521",
+          "363524"
+        ],
+        "errors": 0,
+        "status_utc": "2026-11-13T10:48:34.601740+00:00",
+        "result_read_utc": "2026-11-13T10:48:34.601740+00:00",
+        "result_snapshot_utc": "2026-11-13T10:48:34.601740+00:00",
+        "last_saved_utc": null,
+        "dataset_version": "k4-task-suite10-subset550-v1",
+        "current_evaluation": true
+      }
+    },
+    {
+      "id": "C20kK32fresh",
+      "label": "C 20k K32 fresh",
+      "group": "k32_fresh",
+      "scope_label": "subset550 · 새 K32",
+      "planned": 550,
+      "tasks": [
+        {
+          "id": "place_object_basket",
+          "label": "Basket"
+        },
+        {
+          "id": "stack_blocks_three",
+          "label": "Stack"
+        },
+        {
+          "id": "handover_block",
+          "label": "Block"
+        },
+        {
+          "id": "hanging_mug",
+          "label": "Mug"
+        },
+        {
+          "id": "handover_mic",
+          "label": "Mic"
+        },
+        {
+          "id": "grab_roller",
+          "label": "Grab Roller"
+        },
+        {
+          "id": "put_bottles_dustbin",
+          "label": "Bottles"
+        },
+        {
+          "id": "lift_pot",
+          "label": "Lift Pot"
+        },
+        {
+          "id": "fabrica_beam",
+          "label": "Fabrica Beam"
+        },
+        {
+          "id": "fabrica_plumbers_block",
+          "label": "Fabrica Plumber"
+        },
+        {
+          "id": "fabrica_stool",
+          "label": "Fabrica Stool"
+        }
+      ],
+      "raw": {
+        "Demo": {
+          "completed": 0,
+          "correct": null,
+          "planned": 110,
+          "sr_percent": null
+        },
+        "Pause-ID": {
+          "completed": 0,
+          "correct": null,
+          "planned": 110,
+          "sr_percent": null
+        },
+        "Pause-OOD": {
+          "completed": 0,
+          "correct": null,
+          "planned": 110,
+          "sr_percent": null
+        },
+        "Speed0.5": {
+          "completed": 0,
+          "correct": null,
+          "planned": 110,
+          "sr_percent": null
+        },
+        "Speed1.5": {
+          "completed": 0,
+          "correct": null,
+          "planned": 110,
+          "sr_percent": null
+        },
+        "TOTAL": {
+          "completed": 0,
+          "correct": null,
+          "planned": 550,
+          "sr_percent": null
+        }
+      },
+      "task_breakdown": {
+        "place_object_basket": {
+          "Demo": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Pause-ID": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Pause-OOD": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Speed0.5": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Speed1.5": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "TOTAL": {
+            "completed": 0,
+            "correct": null,
+            "planned": 50,
+            "sr_percent": null
+          }
+        },
+        "stack_blocks_three": {
+          "Demo": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Pause-ID": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Pause-OOD": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Speed0.5": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Speed1.5": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "TOTAL": {
+            "completed": 0,
+            "correct": null,
+            "planned": 50,
+            "sr_percent": null
+          }
+        },
+        "handover_block": {
+          "Demo": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Pause-ID": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Pause-OOD": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Speed0.5": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Speed1.5": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "TOTAL": {
+            "completed": 0,
+            "correct": null,
+            "planned": 50,
+            "sr_percent": null
+          }
+        },
+        "hanging_mug": {
+          "Demo": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Pause-ID": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Pause-OOD": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Speed0.5": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Speed1.5": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "TOTAL": {
+            "completed": 0,
+            "correct": null,
+            "planned": 50,
+            "sr_percent": null
+          }
+        },
+        "handover_mic": {
+          "Demo": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Pause-ID": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Pause-OOD": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Speed0.5": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Speed1.5": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "TOTAL": {
+            "completed": 0,
+            "correct": null,
+            "planned": 50,
+            "sr_percent": null
+          }
+        },
+        "grab_roller": {
+          "Demo": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Pause-ID": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Pause-OOD": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Speed0.5": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Speed1.5": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "TOTAL": {
+            "completed": 0,
+            "correct": null,
+            "planned": 50,
+            "sr_percent": null
+          }
+        },
+        "put_bottles_dustbin": {
+          "Demo": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Pause-ID": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Pause-OOD": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Speed0.5": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Speed1.5": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "TOTAL": {
+            "completed": 0,
+            "correct": null,
+            "planned": 50,
+            "sr_percent": null
+          }
+        },
+        "lift_pot": {
+          "Demo": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Pause-ID": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Pause-OOD": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Speed0.5": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Speed1.5": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "TOTAL": {
+            "completed": 0,
+            "correct": null,
+            "planned": 50,
+            "sr_percent": null
+          }
+        },
+        "fabrica_beam": {
+          "Demo": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Pause-ID": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Pause-OOD": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Speed0.5": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Speed1.5": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "TOTAL": {
+            "completed": 0,
+            "correct": null,
+            "planned": 50,
+            "sr_percent": null
+          }
+        },
+        "fabrica_plumbers_block": {
+          "Demo": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Pause-ID": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Pause-OOD": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Speed0.5": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Speed1.5": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "TOTAL": {
+            "completed": 0,
+            "correct": null,
+            "planned": 50,
+            "sr_percent": null
+          }
+        },
+        "fabrica_stool": {
+          "Demo": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Pause-ID": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Pause-OOD": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Speed0.5": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Speed1.5": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "TOTAL": {
+            "completed": 0,
+            "correct": null,
+            "planned": 50,
+            "sr_percent": null
+          }
+        }
+      },
+      "status_label": "실행 중 · 활성 GPU 1",
+      "source_status": {
+        "model_key": "C20kK32fresh",
+        "model_name": "C",
+        "label": "C 20k fresh K32",
+        "checkpoint_update": 20000,
+        "model_horizon": 32,
+        "execution_mode": "fixed",
+        "execute_steps": 32,
+        "wait_execute_steps": 32,
+        "motion_execute_steps": 32,
+        "latency_seconds": 0,
+        "adaptive_wait": false,
+        "status": "running",
+        "active_gpus": 1,
+        "pending_jobs": 10,
+        "planned": 550,
+        "n": 0,
+        "n_correct": null,
+        "job_ids": [
+          "363495",
+          "363498",
+          "363501",
+          "363504",
+          "363507",
+          "363510",
+          "363513",
+          "363516",
+          "363519",
+          "363522",
+          "363525"
+        ],
+        "errors": 0,
+        "status_utc": "2026-11-13T10:48:34.601740+00:00",
+        "result_read_utc": "2026-11-13T10:48:34.601740+00:00",
+        "result_snapshot_utc": "2026-11-13T10:48:34.601740+00:00",
+        "last_saved_utc": null,
+        "dataset_version": "k4-task-suite10-subset550-v1",
+        "current_evaluation": true
+      }
+    },
+    {
+      "id": "M1K32fresh",
+      "label": "M1 10k K32 fresh",
+      "group": "k32_fresh",
+      "scope_label": "subset550 · 새 K32",
+      "planned": 550,
+      "tasks": [
+        {
+          "id": "place_object_basket",
+          "label": "Basket"
+        },
+        {
+          "id": "stack_blocks_three",
+          "label": "Stack"
+        },
+        {
+          "id": "handover_block",
+          "label": "Block"
+        },
+        {
+          "id": "hanging_mug",
+          "label": "Mug"
+        },
+        {
+          "id": "handover_mic",
+          "label": "Mic"
+        },
+        {
+          "id": "grab_roller",
+          "label": "Grab Roller"
+        },
+        {
+          "id": "put_bottles_dustbin",
+          "label": "Bottles"
+        },
+        {
+          "id": "lift_pot",
+          "label": "Lift Pot"
+        },
+        {
+          "id": "fabrica_beam",
+          "label": "Fabrica Beam"
+        },
+        {
+          "id": "fabrica_plumbers_block",
+          "label": "Fabrica Plumber"
+        },
+        {
+          "id": "fabrica_stool",
+          "label": "Fabrica Stool"
+        }
+      ],
+      "raw": {
+        "Demo": {
+          "completed": 0,
+          "correct": null,
+          "planned": 110,
+          "sr_percent": null
+        },
+        "Pause-ID": {
+          "completed": 0,
+          "correct": null,
+          "planned": 110,
+          "sr_percent": null
+        },
+        "Pause-OOD": {
+          "completed": 0,
+          "correct": null,
+          "planned": 110,
+          "sr_percent": null
+        },
+        "Speed0.5": {
+          "completed": 0,
+          "correct": null,
+          "planned": 110,
+          "sr_percent": null
+        },
+        "Speed1.5": {
+          "completed": 0,
+          "correct": null,
+          "planned": 110,
+          "sr_percent": null
+        },
+        "TOTAL": {
+          "completed": 0,
+          "correct": null,
+          "planned": 550,
+          "sr_percent": null
+        }
+      },
+      "task_breakdown": {
+        "place_object_basket": {
+          "Demo": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Pause-ID": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Pause-OOD": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Speed0.5": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Speed1.5": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "TOTAL": {
+            "completed": 0,
+            "correct": null,
+            "planned": 50,
+            "sr_percent": null
+          }
+        },
+        "stack_blocks_three": {
+          "Demo": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Pause-ID": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Pause-OOD": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Speed0.5": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Speed1.5": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "TOTAL": {
+            "completed": 0,
+            "correct": null,
+            "planned": 50,
+            "sr_percent": null
+          }
+        },
+        "handover_block": {
+          "Demo": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Pause-ID": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Pause-OOD": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Speed0.5": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Speed1.5": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "TOTAL": {
+            "completed": 0,
+            "correct": null,
+            "planned": 50,
+            "sr_percent": null
+          }
+        },
+        "hanging_mug": {
+          "Demo": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Pause-ID": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Pause-OOD": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Speed0.5": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Speed1.5": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "TOTAL": {
+            "completed": 0,
+            "correct": null,
+            "planned": 50,
+            "sr_percent": null
+          }
+        },
+        "handover_mic": {
+          "Demo": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Pause-ID": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Pause-OOD": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Speed0.5": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Speed1.5": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "TOTAL": {
+            "completed": 0,
+            "correct": null,
+            "planned": 50,
+            "sr_percent": null
+          }
+        },
+        "grab_roller": {
+          "Demo": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Pause-ID": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Pause-OOD": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Speed0.5": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Speed1.5": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "TOTAL": {
+            "completed": 0,
+            "correct": null,
+            "planned": 50,
+            "sr_percent": null
+          }
+        },
+        "put_bottles_dustbin": {
+          "Demo": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Pause-ID": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Pause-OOD": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Speed0.5": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Speed1.5": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "TOTAL": {
+            "completed": 0,
+            "correct": null,
+            "planned": 50,
+            "sr_percent": null
+          }
+        },
+        "lift_pot": {
+          "Demo": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Pause-ID": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Pause-OOD": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Speed0.5": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Speed1.5": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "TOTAL": {
+            "completed": 0,
+            "correct": null,
+            "planned": 50,
+            "sr_percent": null
+          }
+        },
+        "fabrica_beam": {
+          "Demo": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Pause-ID": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Pause-OOD": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Speed0.5": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Speed1.5": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "TOTAL": {
+            "completed": 0,
+            "correct": null,
+            "planned": 50,
+            "sr_percent": null
+          }
+        },
+        "fabrica_plumbers_block": {
+          "Demo": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Pause-ID": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Pause-OOD": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Speed0.5": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Speed1.5": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "TOTAL": {
+            "completed": 0,
+            "correct": null,
+            "planned": 50,
+            "sr_percent": null
+          }
+        },
+        "fabrica_stool": {
+          "Demo": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Pause-ID": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Pause-OOD": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Speed0.5": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Speed1.5": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "TOTAL": {
+            "completed": 0,
+            "correct": null,
+            "planned": 50,
+            "sr_percent": null
+          }
+        }
+      },
+      "status_label": "실행 중 · 활성 GPU 2",
+      "source_status": {
+        "model_key": "M1K32fresh",
+        "model_name": "M1",
+        "label": "M1 10k fresh K32",
+        "checkpoint_update": 10000,
+        "model_horizon": 32,
+        "execution_mode": "fixed",
+        "execute_steps": 32,
+        "wait_execute_steps": 32,
+        "motion_execute_steps": 32,
+        "latency_seconds": 0,
+        "adaptive_wait": false,
+        "status": "running",
+        "active_gpus": 2,
+        "pending_jobs": 9,
+        "planned": 550,
+        "n": 0,
+        "n_correct": null,
+        "job_ids": [
+          "363496",
+          "363499",
+          "363502",
+          "363505",
+          "363508",
+          "363511",
+          "363514",
+          "363517",
+          "363520",
+          "363523",
+          "363526"
+        ],
+        "errors": 0,
+        "status_utc": "2026-11-13T10:48:34.601740+00:00",
+        "result_read_utc": "2026-11-13T10:48:34.601740+00:00",
+        "result_snapshot_utc": "2026-11-13T10:48:34.601740+00:00",
+        "last_saved_utc": null,
+        "dataset_version": "k4-task-suite10-subset550-v1",
+        "current_evaluation": true
+      }
+    },
+    {
+      "id": "A20kK4d0control120",
+      "label": "A 20k K4 · 지연0",
+      "group": "latency120",
+      "scope_label": "같은120key · 지연0 대조",
+      "planned": 120,
+      "tasks": [
+        {
+          "id": "place_object_basket",
+          "label": "Basket"
+        },
+        {
+          "id": "stack_blocks_three",
+          "label": "Stack"
+        },
+        {
+          "id": "handover_mic",
+          "label": "Mic"
+        },
+        {
+          "id": "lift_pot",
+          "label": "Lift Pot"
+        }
+      ],
+      "raw": {
+        "Demo": {
+          "completed": 40,
+          "correct": 24,
+          "planned": 40,
+          "sr_percent": 60.0
+        },
+        "Pause-ID": {
+          "completed": 0,
+          "correct": null,
+          "planned": 0,
+          "sr_percent": null
+        },
+        "Pause-OOD": {
+          "completed": 40,
+          "correct": 11,
+          "planned": 40,
+          "sr_percent": 27.5
+        },
+        "Speed0.5": {
+          "completed": 0,
+          "correct": null,
+          "planned": 0,
+          "sr_percent": null
+        },
+        "Speed1.5": {
+          "completed": 40,
+          "correct": 15,
+          "planned": 40,
+          "sr_percent": 37.5
+        },
+        "TOTAL": {
+          "completed": 120,
+          "correct": 50,
+          "planned": 120,
+          "sr_percent": 41.666666666666664
+        }
+      },
+      "task_breakdown": {
+        "place_object_basket": {
+          "Demo": {
+            "completed": 10,
+            "correct": 6,
+            "errors": 0,
+            "planned": 10,
+            "sr_percent": 60.0,
+            "last_saved_utc": "2026-11-13T09:05:49.577832+00:00"
+          },
+          "Pause-ID": {
+            "completed": 0,
+            "correct": null,
+            "planned": 0,
+            "sr_percent": null
+          },
+          "Pause-OOD": {
+            "completed": 10,
+            "correct": 4,
+            "errors": 0,
+            "planned": 10,
+            "sr_percent": 40.0,
+            "last_saved_utc": "2026-11-13T09:30:24.767880+00:00"
+          },
+          "Speed0.5": {
+            "completed": 0,
+            "correct": null,
+            "planned": 0,
+            "sr_percent": null
+          },
+          "Speed1.5": {
+            "completed": 10,
+            "correct": 7,
+            "errors": 0,
+            "planned": 10,
+            "sr_percent": 70.0,
+            "last_saved_utc": "2026-11-13T09:47:07.710454+00:00"
+          },
+          "TOTAL": {
+            "completed": 30,
+            "correct": 17,
+            "planned": 30,
+            "sr_percent": 56.666666666666664
+          }
+        },
+        "stack_blocks_three": {
+          "Demo": {
+            "completed": 10,
+            "correct": 4,
+            "errors": 0,
+            "planned": 10,
+            "sr_percent": 40.0,
+            "last_saved_utc": "2026-11-13T09:08:05.460684+00:00"
+          },
+          "Pause-ID": {
+            "completed": 0,
+            "correct": null,
+            "planned": 0,
+            "sr_percent": null
+          },
+          "Pause-OOD": {
+            "completed": 10,
+            "correct": 1,
+            "errors": 0,
+            "planned": 10,
+            "sr_percent": 10.0,
+            "last_saved_utc": "2026-11-13T09:39:47.796977+00:00"
+          },
+          "Speed0.5": {
+            "completed": 0,
+            "correct": null,
+            "planned": 0,
+            "sr_percent": null
+          },
+          "Speed1.5": {
+            "completed": 10,
+            "correct": 5,
+            "errors": 0,
+            "planned": 10,
+            "sr_percent": 50.0,
+            "last_saved_utc": "2026-11-13T10:01:18.862033+00:00"
+          },
+          "TOTAL": {
+            "completed": 30,
+            "correct": 10,
+            "planned": 30,
+            "sr_percent": 33.333333333333336
+          }
+        },
+        "handover_mic": {
+          "Demo": {
+            "completed": 10,
+            "correct": 10,
+            "errors": 0,
+            "planned": 10,
+            "sr_percent": 100.0,
+            "last_saved_utc": "2026-11-13T07:36:14.812284+00:00"
+          },
+          "Pause-ID": {
+            "completed": 0,
+            "correct": null,
+            "planned": 0,
+            "sr_percent": null
+          },
+          "Pause-OOD": {
+            "completed": 10,
+            "correct": 6,
+            "errors": 0,
+            "planned": 10,
+            "sr_percent": 60.0,
+            "last_saved_utc": "2026-11-13T08:36:56.556462+00:00"
+          },
+          "Speed0.5": {
+            "completed": 0,
+            "correct": null,
+            "planned": 0,
+            "sr_percent": null
+          },
+          "Speed1.5": {
+            "completed": 10,
+            "correct": 3,
+            "errors": 0,
+            "planned": 10,
+            "sr_percent": 30.0,
+            "last_saved_utc": "2026-11-13T09:05:59.433846+00:00"
+          },
+          "TOTAL": {
+            "completed": 30,
+            "correct": 19,
+            "planned": 30,
+            "sr_percent": 63.333333333333336
+          }
+        },
+        "lift_pot": {
+          "Demo": {
+            "completed": 10,
+            "correct": 4,
+            "errors": 0,
+            "planned": 10,
+            "sr_percent": 40.0,
+            "last_saved_utc": "2026-11-13T09:03:44.005799+00:00"
+          },
+          "Pause-ID": {
+            "completed": 0,
+            "correct": null,
+            "planned": 0,
+            "sr_percent": null
+          },
+          "Pause-OOD": {
+            "completed": 10,
+            "correct": 0,
+            "errors": 0,
+            "planned": 10,
+            "sr_percent": 0.0,
+            "last_saved_utc": "2026-11-13T09:28:12.394714+00:00"
+          },
+          "Speed0.5": {
+            "completed": 0,
+            "correct": null,
+            "planned": 0,
+            "sr_percent": null
+          },
+          "Speed1.5": {
+            "completed": 10,
+            "correct": 0,
+            "errors": 0,
+            "planned": 10,
+            "sr_percent": 0.0,
+            "last_saved_utc": "2026-11-13T09:43:19.241906+00:00"
+          },
+          "TOTAL": {
+            "completed": 30,
+            "correct": 4,
+            "planned": 30,
+            "sr_percent": 13.333333333333334
+          }
+        }
+      },
+      "status_label": "완료 · K4 동결본의 같은120key"
+    },
+    {
+      "id": "A20kK32d0control120",
+      "label": "A 20k K32 fresh · 지연0",
+      "group": "latency120",
+      "scope_label": "같은120key · 지연0 대조",
+      "planned": 120,
+      "tasks": [
+        {
+          "id": "place_object_basket",
+          "label": "Basket"
+        },
+        {
+          "id": "stack_blocks_three",
+          "label": "Stack"
+        },
+        {
+          "id": "handover_mic",
+          "label": "Mic"
+        },
+        {
+          "id": "lift_pot",
+          "label": "Lift Pot"
+        }
+      ],
+      "raw": {
+        "Demo": {
+          "completed": 0,
+          "correct": null,
+          "planned": 40,
+          "sr_percent": null
+        },
+        "Pause-ID": {
+          "completed": 0,
+          "correct": null,
+          "planned": 0,
+          "sr_percent": null
+        },
+        "Pause-OOD": {
+          "completed": 0,
+          "correct": null,
+          "planned": 40,
+          "sr_percent": null
+        },
+        "Speed0.5": {
+          "completed": 0,
+          "correct": null,
+          "planned": 0,
+          "sr_percent": null
+        },
+        "Speed1.5": {
+          "completed": 0,
+          "correct": null,
+          "planned": 40,
+          "sr_percent": null
+        },
+        "TOTAL": {
+          "completed": 0,
+          "correct": null,
+          "planned": 120,
+          "sr_percent": null
+        }
+      },
+      "task_breakdown": {
+        "place_object_basket": {
+          "Demo": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Pause-ID": {
+            "completed": 0,
+            "correct": null,
+            "planned": 0,
+            "sr_percent": null
+          },
+          "Pause-OOD": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Speed0.5": {
+            "completed": 0,
+            "correct": null,
+            "planned": 0,
+            "sr_percent": null
+          },
+          "Speed1.5": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "TOTAL": {
+            "completed": 0,
+            "correct": null,
+            "planned": 30,
+            "sr_percent": null
+          }
+        },
+        "stack_blocks_three": {
+          "Demo": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Pause-ID": {
+            "completed": 0,
+            "correct": null,
+            "planned": 0,
+            "sr_percent": null
+          },
+          "Pause-OOD": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Speed0.5": {
+            "completed": 0,
+            "correct": null,
+            "planned": 0,
+            "sr_percent": null
+          },
+          "Speed1.5": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "TOTAL": {
+            "completed": 0,
+            "correct": null,
+            "planned": 30,
+            "sr_percent": null
+          }
+        },
+        "handover_mic": {
+          "Demo": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Pause-ID": {
+            "completed": 0,
+            "correct": null,
+            "planned": 0,
+            "sr_percent": null
+          },
+          "Pause-OOD": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Speed0.5": {
+            "completed": 0,
+            "correct": null,
+            "planned": 0,
+            "sr_percent": null
+          },
+          "Speed1.5": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "TOTAL": {
+            "completed": 0,
+            "correct": null,
+            "planned": 30,
+            "sr_percent": null
+          }
+        },
+        "lift_pot": {
+          "Demo": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Pause-ID": {
+            "completed": 0,
+            "correct": null,
+            "planned": 0,
+            "sr_percent": null
+          },
+          "Pause-OOD": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Speed0.5": {
+            "completed": 0,
+            "correct": null,
+            "planned": 0,
+            "sr_percent": null
+          },
+          "Speed1.5": {
+            "completed": 0,
+            "correct": 0,
+            "n": 0,
+            "n_correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "TOTAL": {
+            "completed": 0,
+            "correct": null,
+            "planned": 30,
+            "sr_percent": null
+          }
+        }
+      },
+      "status_label": "새 K32 결과 대기"
+    },
+    {
+      "id": "A20kK32d3latency120",
+      "label": "A 20k K32 · 지연d3",
+      "group": "latency120",
+      "scope_label": "pilot120 · 지연180ms",
+      "planned": 120,
+      "tasks": [
+        {
+          "id": "place_object_basket",
+          "label": "Basket"
+        },
+        {
+          "id": "stack_blocks_three",
+          "label": "Stack"
+        },
+        {
+          "id": "handover_mic",
+          "label": "Mic"
+        },
+        {
+          "id": "lift_pot",
+          "label": "Lift Pot"
+        }
+      ],
+      "raw": {
+        "Demo": {
+          "completed": 0,
+          "correct": null,
+          "planned": 40,
+          "sr_percent": null
+        },
+        "Pause-ID": {
+          "completed": 0,
+          "correct": null,
+          "planned": 0,
+          "sr_percent": null
+        },
+        "Pause-OOD": {
+          "completed": 0,
+          "correct": null,
+          "planned": 40,
+          "sr_percent": null
+        },
+        "Speed0.5": {
+          "completed": 0,
+          "correct": null,
+          "planned": 0,
+          "sr_percent": null
+        },
+        "Speed1.5": {
+          "completed": 0,
+          "correct": null,
+          "planned": 40,
+          "sr_percent": null
+        },
+        "TOTAL": {
+          "completed": 0,
+          "correct": null,
+          "planned": 120,
+          "sr_percent": null
+        }
+      },
+      "task_breakdown": {
+        "place_object_basket": {
+          "Demo": {
+            "completed": 0,
+            "correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Pause-ID": {
+            "completed": 0,
+            "correct": null,
+            "planned": 0,
+            "sr_percent": null
+          },
+          "Pause-OOD": {
+            "completed": 0,
+            "correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Speed0.5": {
+            "completed": 0,
+            "correct": null,
+            "planned": 0,
+            "sr_percent": null
+          },
+          "Speed1.5": {
+            "completed": 0,
+            "correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "TOTAL": {
+            "completed": 0,
+            "correct": null,
+            "planned": 30,
+            "sr_percent": null
+          }
+        },
+        "stack_blocks_three": {
+          "Demo": {
+            "completed": 0,
+            "correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Pause-ID": {
+            "completed": 0,
+            "correct": null,
+            "planned": 0,
+            "sr_percent": null
+          },
+          "Pause-OOD": {
+            "completed": 0,
+            "correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Speed0.5": {
+            "completed": 0,
+            "correct": null,
+            "planned": 0,
+            "sr_percent": null
+          },
+          "Speed1.5": {
+            "completed": 0,
+            "correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "TOTAL": {
+            "completed": 0,
+            "correct": null,
+            "planned": 30,
+            "sr_percent": null
+          }
+        },
+        "handover_mic": {
+          "Demo": {
+            "completed": 0,
+            "correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Pause-ID": {
+            "completed": 0,
+            "correct": null,
+            "planned": 0,
+            "sr_percent": null
+          },
+          "Pause-OOD": {
+            "completed": 0,
+            "correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Speed0.5": {
+            "completed": 0,
+            "correct": null,
+            "planned": 0,
+            "sr_percent": null
+          },
+          "Speed1.5": {
+            "completed": 0,
+            "correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "TOTAL": {
+            "completed": 0,
+            "correct": null,
+            "planned": 30,
+            "sr_percent": null
+          }
+        },
+        "lift_pot": {
+          "Demo": {
+            "completed": 0,
+            "correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Pause-ID": {
+            "completed": 0,
+            "correct": null,
+            "planned": 0,
+            "sr_percent": null
+          },
+          "Pause-OOD": {
+            "completed": 0,
+            "correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Speed0.5": {
+            "completed": 0,
+            "correct": null,
+            "planned": 0,
+            "sr_percent": null
+          },
+          "Speed1.5": {
+            "completed": 0,
+            "correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "TOTAL": {
+            "completed": 0,
+            "correct": null,
+            "planned": 30,
+            "sr_percent": null
+          }
+        }
+      },
+      "status_label": "실행 1 / 대기 3 · 결과 집계 대기",
+      "source_status": {
+        "jobs": [
+          {
+            "job_id": "363486",
+            "name": "lr-latency-K32-handover_mic-r1",
+            "state": "RUNNING",
+            "node": "DGX-H100-1",
+            "reason": "None",
+            "dependency": "(null)"
+          },
+          {
+            "job_id": "363487",
+            "name": "lr-latency-K32-stack_blocks_three-r1",
+            "state": "PENDING",
+            "node": "DGX-H100-3",
+            "reason": "ReqNodeNotAvail,_May_be_reserved_for_other_job",
+            "dependency": "(null)"
+          },
+          {
+            "job_id": "363488",
+            "name": "lr-latency-K32-place_object_basket-r1",
+            "state": "PENDING",
+            "node": "DGX-H100-1",
+            "reason": "ReqNodeNotAvail,_May_be_reserved_for_other_job",
+            "dependency": "(null)"
+          },
+          {
+            "job_id": "363489",
+            "name": "lr-latency-K32-lift_pot-r1",
+            "state": "PENDING",
+            "node": "DGX-H100-1",
+            "reason": "ReqNodeNotAvail,_May_be_reserved_for_other_job",
+            "dependency": "(null)"
+          }
+        ],
+        "updated_utc": "2026-11-13T10:47:01.807784+00:00"
+      }
+    },
+    {
+      "id": "A20kK4d3latency120",
+      "label": "A 20k K4 · 지연d3",
+      "group": "latency120",
+      "scope_label": "pilot120 · 지연180ms",
+      "planned": 120,
+      "tasks": [
+        {
+          "id": "place_object_basket",
+          "label": "Basket"
+        },
+        {
+          "id": "stack_blocks_three",
+          "label": "Stack"
+        },
+        {
+          "id": "handover_mic",
+          "label": "Mic"
+        },
+        {
+          "id": "lift_pot",
+          "label": "Lift Pot"
+        }
+      ],
+      "raw": {
+        "Demo": {
+          "completed": 0,
+          "correct": null,
+          "planned": 40,
+          "sr_percent": null
+        },
+        "Pause-ID": {
+          "completed": 0,
+          "correct": null,
+          "planned": 0,
+          "sr_percent": null
+        },
+        "Pause-OOD": {
+          "completed": 0,
+          "correct": null,
+          "planned": 40,
+          "sr_percent": null
+        },
+        "Speed0.5": {
+          "completed": 0,
+          "correct": null,
+          "planned": 0,
+          "sr_percent": null
+        },
+        "Speed1.5": {
+          "completed": 0,
+          "correct": null,
+          "planned": 40,
+          "sr_percent": null
+        },
+        "TOTAL": {
+          "completed": 0,
+          "correct": null,
+          "planned": 120,
+          "sr_percent": null
+        }
+      },
+      "task_breakdown": {
+        "place_object_basket": {
+          "Demo": {
+            "completed": 0,
+            "correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Pause-ID": {
+            "completed": 0,
+            "correct": null,
+            "planned": 0,
+            "sr_percent": null
+          },
+          "Pause-OOD": {
+            "completed": 0,
+            "correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Speed0.5": {
+            "completed": 0,
+            "correct": null,
+            "planned": 0,
+            "sr_percent": null
+          },
+          "Speed1.5": {
+            "completed": 0,
+            "correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "TOTAL": {
+            "completed": 0,
+            "correct": null,
+            "planned": 30,
+            "sr_percent": null
+          }
+        },
+        "stack_blocks_three": {
+          "Demo": {
+            "completed": 0,
+            "correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Pause-ID": {
+            "completed": 0,
+            "correct": null,
+            "planned": 0,
+            "sr_percent": null
+          },
+          "Pause-OOD": {
+            "completed": 0,
+            "correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Speed0.5": {
+            "completed": 0,
+            "correct": null,
+            "planned": 0,
+            "sr_percent": null
+          },
+          "Speed1.5": {
+            "completed": 0,
+            "correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "TOTAL": {
+            "completed": 0,
+            "correct": null,
+            "planned": 30,
+            "sr_percent": null
+          }
+        },
+        "handover_mic": {
+          "Demo": {
+            "completed": 0,
+            "correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Pause-ID": {
+            "completed": 0,
+            "correct": null,
+            "planned": 0,
+            "sr_percent": null
+          },
+          "Pause-OOD": {
+            "completed": 0,
+            "correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Speed0.5": {
+            "completed": 0,
+            "correct": null,
+            "planned": 0,
+            "sr_percent": null
+          },
+          "Speed1.5": {
+            "completed": 0,
+            "correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "TOTAL": {
+            "completed": 0,
+            "correct": null,
+            "planned": 30,
+            "sr_percent": null
+          }
+        },
+        "lift_pot": {
+          "Demo": {
+            "completed": 0,
+            "correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Pause-ID": {
+            "completed": 0,
+            "correct": null,
+            "planned": 0,
+            "sr_percent": null
+          },
+          "Pause-OOD": {
+            "completed": 0,
+            "correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "Speed0.5": {
+            "completed": 0,
+            "correct": null,
+            "planned": 0,
+            "sr_percent": null
+          },
+          "Speed1.5": {
+            "completed": 0,
+            "correct": null,
+            "planned": 10,
+            "sr_percent": null
+          },
+          "TOTAL": {
+            "completed": 0,
+            "correct": null,
+            "planned": 30,
+            "sr_percent": null
+          }
+        }
+      },
+      "status_label": "실행 0 / 대기 4 · 결과 집계 대기",
+      "source_status": {
+        "jobs": [
+          {
+            "job_id": "363490",
+            "name": "lr-latency-K4-handover_mic-r1",
+            "state": "PENDING",
+            "node": "DGX-H100-1",
+            "reason": "ReqNodeNotAvail,_May_be_reserved_for_other_job",
+            "dependency": "(null)"
+          },
+          {
+            "job_id": "363491",
+            "name": "lr-latency-K4-stack_blocks_three-r1",
+            "state": "PENDING",
+            "node": "DGX-H100-1",
+            "reason": "ReqNodeNotAvail,_May_be_reserved_for_other_job",
+            "dependency": "(null)"
+          },
+          {
+            "job_id": "363492",
+            "name": "lr-latency-K4-place_object_basket-r1",
+            "state": "PENDING",
+            "node": "DGX-H100-1",
+            "reason": "ReqNodeNotAvail,_May_be_reserved_for_other_job",
+            "dependency": "(null)"
+          },
+          {
+            "job_id": "363493",
+            "name": "lr-latency-K4-lift_pot-r1",
+            "state": "PENDING",
+            "node": "DGX-H100-1",
+            "reason": "ReqNodeNotAvail,_May_be_reserved_for_other_job",
+            "dependency": "(null)"
+          }
+        ],
+        "updated_utc": "2026-11-13T10:47:01.807784+00:00"
+      }
+    }
+  ],
+  "suite_views_status_utc": "2026-11-13T10:48:34.601740+00:00"
 }

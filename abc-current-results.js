@@ -70,11 +70,23 @@
       note('실제 서버 기록에서 Mic8050001과 Bottles8090015의 control0→4→8, physics0→60→120 후속 추론을 확인했습니다. 동일10k 가중치·정규화·기존 noise 기본값을 사용합니다.',section);
       if(a.triple_matched){
         add('h3',`고정 K32·고정 K4·adaptive / 같은 ${a.triple_matched_n}case`,section);
-        note('구성: '+Object.entries(a.triple_by_task).map(([id,n])=>`${d.tasks.find(t=>t.id===id)?.label||id} ${n}건`).join(', ')+'. 아직 일부 Demo의 빠른 완료분입니다. ID/OOD/Speed의3조건 비교는 공통 완료를 기다립니다.',section);
+        note('구성: '+Object.entries(a.triple_by_task).map(([id,n])=>`${d.tasks.find(t=>t.id===id)?.label||id} ${n}건`).join(', ')+'. 세 조건 모두 완료한 일부 task와 case만 비교합니다. 분모0은 공통 완료를 기다리는 조건입니다.',section);
         const rows=table(section,`공통 case의 성공 / 완료 · ${stamp(a.snapshot_utc)}`,['Suite','공통 n','fixed K32','fixed K4','adaptive']);
         for(const s of [...d.suites,{id:'TOTAL',label:'합계'}]){const tr=add('tr','',rows);add('th',s.label,tr).scope='row';add('td',a.triple_matched.fixed10k[s.id].completed,tr);for(const id of ['fixed10k','fixedK4','adaptive10k']){const r=a.triple_matched[id][s.id];add('td',r.completed?value({correct:r.correct,n:r.completed}):'공통 완료 대기',tr);}}
       }
 
+
+
+    }
+
+    if(d.a20k_fixed_k4_evaluation){
+      const a=d.a20k_fixed_k4_evaluation,section=add('section','');section.id='a20k-fixedk4-execution-section';
+      add('h3','추가 실행 / π0.5 A20k 고정 K4',section);
+      note(`상태 확인 ${stamp(a.snapshot_utc)}. ${a.status}. GPU3장·GPU당16환경·batch상한16입니다.`,section);
+      note('원래 A20k K32와 같은 가중치·정규화·Partner A·고정2,200case입니다. H32를 예측해 앞4개만 실행하고 나머지28개를 버린 뒤 새 RGB로 다시 예측합니다. Adaptive 판정은 적용하지 않습니다.',section);
+      note('11개 task의 Demo·Pause-ID·Pause-OOD·Speed0.5·Speed1.5를 모두 포함합니다. A20k K32와 K4의 같은 case 비교는 M1 10k의3조건 표와 분리하며, 아직 A20k K4의 SR을 집계하지 않았습니다.',section);
+      const body=table(section,'A20k 고정 K4 실행 lane',['Job','Task','노드','상태']);
+      for(const r of a.jobs){const tr=add('tr','',body);add('td',r.id,tr);add('td',r.tasks.map(id=>d.tasks.find(t=>t.id===id)?.label||id).join(' · '),tr);add('td',r.node,tr);add('td',stateLabel(r.state),tr);}
     }
 
     add('h3', 'ABC, M1 평가 / 같은 1,000case 중간 비교');

@@ -1,0 +1,50 @@
+{
+  "snapshot_utc": "2026-11-13T07:22:48.477090+00:00",
+  "label": "π0.5 A20k fixed K4",
+  "checkpoint_update": 20000,
+  "planned": 2200,
+  "completed": null,
+  "correct": null,
+  "partner": "A",
+  "gpu": 3,
+  "workers_per_gpu": 16,
+  "batch_cap": 16,
+  "model_horizon": 32,
+  "execute_steps": 4,
+  "adaptive_wait": false,
+  "status": "실행 중 · 첫 정량 집계 대기",
+  "jobs": [
+    {
+      "id": "360662",
+      "tasks": [
+        "handover_mic",
+        "handover_block",
+        "place_object_basket",
+        "stack_blocks_three"
+      ],
+      "state": "RUNNING",
+      "node": "DGX-H100-1"
+    },
+    {
+      "id": "360663",
+      "tasks": [
+        "put_bottles_dustbin",
+        "hanging_mug",
+        "lift_pot",
+        "grab_roller"
+      ],
+      "state": "RUNNING",
+      "node": "DGX-H100-6"
+    },
+    {
+      "id": "360664",
+      "tasks": [
+        "fabrica_beam",
+        "fabrica_stool",
+        "fabrica_plumbers_block"
+      ],
+      "state": "RUNNING",
+      "node": "DGX-H100-5"
+    }
+  ]
+}

@@ -1,17 +1,17 @@
 {
-  "snapshot_utc": "2026-11-13T06:58:50.144669+00:00",
+  "snapshot_utc": "2026-11-13T07:18:21.528487+00:00",
   "label": "π0.5 C + M1 10k adaptive",
   "checkpoint_update": 10000,
   "planned": 2200,
   "partner": "A",
-  "gpu": 6,
+  "gpu": 5,
   "workers_per_gpu": 16,
   "batch_cap": 16,
   "baseline_fixed_completed": 1642,
   "baseline_fixed_status": "중단 · 저장 결과 재사용",
-  "completed": 1094,
-  "correct": 226,
-  "progress_status": "저장 완료 1094/2,200건 · 성공 226건 · 저장 오류 0건",
+  "completed": 1628,
+  "correct": 412,
+  "progress_status": "저장 완료 1628/2,200건 · 성공 412건 · 저장 오류 0건",
   "jobs": [
     {
       "id": "360172",
@@ -22,7 +22,7 @@
       ],
       "state": "RUNNING",
       "node": "DGX-H100-1",
-      "completed": 238,
+      "completed": 331,
       "planned": 400
     },
     {
@@ -34,7 +34,7 @@
       ],
       "state": "RUNNING",
       "node": "DGX-H100-1",
-      "completed": 150,
+      "completed": 250,
       "planned": 400
     },
     {
@@ -46,7 +46,7 @@
       ],
       "state": "RUNNING",
       "node": "DGX-H100-6",
-      "completed": 131,
+      "completed": 200,
       "planned": 400
     },
     {
@@ -58,7 +58,7 @@
       ],
       "state": "RUNNING",
       "node": "DGX-H100-3",
-      "completed": 250,
+      "completed": 375,
       "planned": 400
     },
     {
@@ -70,7 +70,7 @@
       ],
       "state": "RUNNING",
       "node": "DGX-H100-3",
-      "completed": 175,
+      "completed": 272,
       "planned": 400
     },
     {
@@ -79,9 +79,9 @@
       "tasks": [
         "fabrica_plumbers_block"
       ],
-      "state": "RUNNING",
+      "state": "COMPLETED",
       "node": "DGX-H100-3",
-      "completed": 150,
+      "completed": 200,
       "planned": 200
     }
   ],
@@ -144,46 +144,46 @@
   "raw": {
     "adaptive10k": {
       "Demo": {
-        "completed": 388,
-        "correct": 104,
-        "sr_percent": 26.804
+        "completed": 500,
+        "correct": 157,
+        "sr_percent": 31.4
       },
       "Pause-ID": {
-        "completed": 300,
-        "correct": 54,
-        "sr_percent": 18.0
+        "completed": 422,
+        "correct": 96,
+        "sr_percent": 22.749
       },
       "Pause-OOD": {
-        "completed": 281,
-        "correct": 57,
-        "sr_percent": 20.285
+        "completed": 381,
+        "correct": 87,
+        "sr_percent": 22.835
       },
       "Speed0.5": {
-        "completed": 75,
-        "correct": 10,
-        "sr_percent": 13.333
+        "completed": 175,
+        "correct": 49,
+        "sr_percent": 28.0
       },
       "Speed1.5": {
-        "completed": 50,
-        "correct": 1,
-        "sr_percent": 2.0
+        "completed": 150,
+        "correct": 23,
+        "sr_percent": 15.333
       },
       "TOTAL": {
-        "completed": 1094,
-        "correct": 226,
-        "sr_percent": 20.658
+        "completed": 1628,
+        "correct": 412,
+        "sr_percent": 25.307
       }
     },
     "fixedK4": {
       "Demo": {
-        "completed": 43,
-        "correct": 19,
-        "sr_percent": 44.186
+        "completed": 118,
+        "correct": 44,
+        "sr_percent": 37.288
       },
       "Pause-ID": {
-        "completed": 0,
-        "correct": 0,
-        "sr_percent": null
+        "completed": 18,
+        "correct": 10,
+        "sr_percent": 55.556
       },
       "Pause-OOD": {
         "completed": 0,
@@ -201,9 +201,9 @@
         "sr_percent": null
       },
       "TOTAL": {
-        "completed": 43,
-        "correct": 19,
-        "sr_percent": 44.186
+        "completed": 136,
+        "correct": 54,
+        "sr_percent": 39.706
       }
     },
     "fixed10k": {
@@ -245,14 +245,14 @@
         "sr_percent": 42.182
       },
       "Pause-ID": {
-        "completed": 525,
+        "completed": 550,
         "correct": 135,
-        "sr_percent": 25.714
+        "sr_percent": 24.545
       },
       "Pause-OOD": {
-        "completed": 500,
+        "completed": 550,
         "correct": 50,
-        "sr_percent": 10.0
+        "sr_percent": 9.091
       },
       "Speed0.5": {
         "completed": 250,
@@ -265,9 +265,9 @@
         "sr_percent": 41.6
       },
       "TOTAL": {
-        "completed": 2075,
+        "completed": 2150,
         "correct": 555,
-        "sr_percent": 26.747
+        "sr_percent": 25.814
       }
     },
     "C20k": {
@@ -282,129 +282,141 @@
         "sr_percent": 25.091
       },
       "Pause-OOD": {
-        "completed": 533,
+        "completed": 550,
         "correct": 45,
-        "sr_percent": 8.443
+        "sr_percent": 8.182
       },
       "Speed0.5": {
-        "completed": 250,
+        "completed": 275,
         "correct": 23,
-        "sr_percent": 9.2
+        "sr_percent": 8.364
       },
       "Speed1.5": {
-        "completed": 250,
+        "completed": 275,
         "correct": 87,
-        "sr_percent": 34.8
+        "sr_percent": 31.636
       },
       "TOTAL": {
-        "completed": 2133,
+        "completed": 2200,
         "correct": 509,
-        "sr_percent": 23.863
+        "sr_percent": 23.136
       }
     }
   },
   "matched": {
     "fixed10k": {
       "Demo": {
-        "completed": 280,
-        "correct": 64,
-        "sr_percent": 22.857
+        "completed": 392,
+        "correct": 112,
+        "sr_percent": 28.571
       },
       "Pause-ID": {
-        "completed": 200,
-        "correct": 38,
-        "sr_percent": 19.0
+        "completed": 272,
+        "correct": 44,
+        "sr_percent": 16.176
       },
       "Pause-OOD": {
-        "completed": 181,
-        "correct": 53,
-        "sr_percent": 29.282
+        "completed": 231,
+        "correct": 61,
+        "sr_percent": 26.407
       },
       "Speed0.5": {
-        "completed": 50,
-        "correct": 11,
-        "sr_percent": 22.0
+        "completed": 100,
+        "correct": 26,
+        "sr_percent": 26.0
       },
       "Speed1.5": {
-        "completed": 25,
-        "correct": 0,
-        "sr_percent": 0.0
+        "completed": 100,
+        "correct": 16,
+        "sr_percent": 16.0
       },
       "TOTAL": {
-        "completed": 736,
-        "correct": 166,
-        "sr_percent": 22.554
+        "completed": 1095,
+        "correct": 259,
+        "sr_percent": 23.653
       }
     },
     "adaptive10k": {
       "Demo": {
-        "completed": 280,
-        "correct": 71,
-        "sr_percent": 25.357
+        "completed": 392,
+        "correct": 124,
+        "sr_percent": 31.633
       },
       "Pause-ID": {
-        "completed": 200,
-        "correct": 50,
-        "sr_percent": 25.0
+        "completed": 272,
+        "correct": 58,
+        "sr_percent": 21.324
       },
       "Pause-OOD": {
-        "completed": 181,
-        "correct": 51,
-        "sr_percent": 28.177
+        "completed": 231,
+        "correct": 58,
+        "sr_percent": 25.108
       },
       "Speed0.5": {
-        "completed": 50,
-        "correct": 10,
-        "sr_percent": 20.0
+        "completed": 100,
+        "correct": 33,
+        "sr_percent": 33.0
       },
       "Speed1.5": {
-        "completed": 25,
-        "correct": 1,
-        "sr_percent": 4.0
+        "completed": 100,
+        "correct": 23,
+        "sr_percent": 23.0
       },
       "TOTAL": {
-        "completed": 736,
-        "correct": 183,
-        "sr_percent": 24.864
+        "completed": 1095,
+        "correct": 296,
+        "sr_percent": 27.032
       }
     }
   },
-  "matched_n": 736,
+  "matched_n": 1095,
   "matched_by_task": {
     "handover_mic": 200,
-    "handover_block": 38,
-    "place_object_basket": 150,
-    "put_bottles_dustbin": 131,
+    "handover_block": 131,
+    "place_object_basket": 200,
+    "stack_blocks_three": 50,
+    "put_bottles_dustbin": 200,
     "lift_pot": 42,
-    "fabrica_beam": 175
+    "fabrica_beam": 200,
+    "fabrica_stool": 72
   },
   "matched_by_suite_task": {
     "Demo": {
       "handover_mic": 50,
-      "handover_block": 38,
+      "handover_block": 50,
       "place_object_basket": 50,
+      "stack_blocks_three": 50,
       "put_bottles_dustbin": 50,
       "lift_pot": 42,
-      "fabrica_beam": 50
+      "fabrica_beam": 50,
+      "fabrica_stool": 50
     },
     "Pause-ID": {
       "handover_mic": 50,
+      "handover_block": 50,
       "place_object_basket": 50,
       "put_bottles_dustbin": 50,
-      "fabrica_beam": 50
+      "fabrica_beam": 50,
+      "fabrica_stool": 22
     },
     "Pause-OOD": {
       "handover_mic": 50,
+      "handover_block": 31,
       "place_object_basket": 50,
-      "put_bottles_dustbin": 31,
+      "put_bottles_dustbin": 50,
       "fabrica_beam": 50
     },
     "Speed0.5": {
       "handover_mic": 25,
+      "place_object_basket": 25,
+      "put_bottles_dustbin": 25,
       "fabrica_beam": 25
     },
     "Speed1.5": {
-      "handover_mic": 25
+      "handover_mic": 25,
+      "place_object_basket": 25,
+      "put_bottles_dustbin": 25,
+      "fabrica_beam": 25
     }
   },
   "planned_by_suite": {
@@ -414,5 +426,6 @@
     "Speed0.5": 275,
     "Speed1.5": 275,
     "TOTAL": 2200
-  }
+  },
+  "gpu_budget": 6
 }

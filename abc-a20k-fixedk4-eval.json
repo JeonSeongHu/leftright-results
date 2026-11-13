@@ -1,10 +1,10 @@
 {
-  "snapshot_utc": "2026-11-13T07:27:20.550859+00:00",
+  "snapshot_utc": "2026-11-13T07:35:19.823449+00:00",
   "label": "π0.5 A20k fixed K4",
   "checkpoint_update": 20000,
   "planned": 2200,
-  "completed": 6,
-  "correct": 6,
+  "completed": 69,
+  "correct": 51,
   "partner": "A",
   "gpu": 3,
   "workers_per_gpu": 16,
@@ -12,7 +12,7 @@
   "model_horizon": 32,
   "execute_steps": 4,
   "adaptive_wait": false,
-  "status": "실행 중 · 첫 정량 집계 대기",
+  "status": "실제 평가 중 · 저장 69/2,200건 · 성공 51건",
   "jobs": [
     {
       "id": "360662",
@@ -24,7 +24,7 @@
       ],
       "state": "RUNNING",
       "node": "DGX-H100-1",
-      "completed": 6,
+      "completed": 44,
       "planned": 800
     },
     {
@@ -37,7 +37,7 @@
       ],
       "state": "RUNNING",
       "node": "DGX-H100-6",
-      "completed": 0,
+      "completed": 9,
       "planned": 800
     },
     {
@@ -49,16 +49,16 @@
       ],
       "state": "RUNNING",
       "node": "DGX-H100-5",
-      "completed": 0,
+      "completed": 16,
       "planned": 600
     }
   ],
   "matched": {
     "A20k": {
       "Demo": {
-        "completed": 6,
-        "correct": 6,
-        "sr_percent": 100.0
+        "completed": 69,
+        "correct": 49,
+        "sr_percent": 71.014
       },
       "Pause-ID": {
         "completed": 0,
@@ -81,16 +81,16 @@
         "sr_percent": null
       },
       "TOTAL": {
-        "completed": 6,
-        "correct": 6,
-        "sr_percent": 100.0
+        "completed": 69,
+        "correct": 49,
+        "sr_percent": 71.014
       }
     },
     "A20kK4": {
       "Demo": {
-        "completed": 6,
-        "correct": 6,
-        "sr_percent": 100.0
+        "completed": 69,
+        "correct": 51,
+        "sr_percent": 73.913
       },
       "Pause-ID": {
         "completed": 0,
@@ -113,19 +113,23 @@
         "sr_percent": null
       },
       "TOTAL": {
-        "completed": 6,
-        "correct": 6,
-        "sr_percent": 100.0
+        "completed": 69,
+        "correct": 51,
+        "sr_percent": 73.913
       }
     }
   },
-  "matched_n": 6,
+  "matched_n": 69,
   "matched_by_task": {
-    "handover_mic": 6
+    "handover_mic": 44,
+    "put_bottles_dustbin": 9,
+    "fabrica_beam": 16
   },
   "matched_by_suite_task": {
     "Demo": {
-      "handover_mic": 6
+      "handover_mic": 44,
+      "put_bottles_dustbin": 9,
+      "fabrica_beam": 16
     },
     "Pause-ID": {},
     "Pause-OOD": {},

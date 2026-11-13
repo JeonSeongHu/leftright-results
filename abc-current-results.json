@@ -6293,19 +6293,19 @@
     }
   ],
   "active_evaluation": {
-    "snapshot_utc": "2026-11-13T07:27:20.550859+00:00",
+    "snapshot_utc": "2026-11-13T07:35:19.823449+00:00",
     "label": "π0.5 C + M1 10k adaptive",
     "checkpoint_update": 10000,
     "planned": 2200,
     "partner": "A",
-    "gpu": 4,
+    "gpu": 3,
     "workers_per_gpu": 16,
     "batch_cap": 16,
     "baseline_fixed_completed": 1642,
     "baseline_fixed_status": "중단 · 저장 결과 재사용",
-    "completed": 1802,
-    "correct": 458,
-    "progress_status": "저장 완료 1802/2,200건 · 성공 458건 · 저장 오류 0건",
+    "completed": 1927,
+    "correct": 491,
+    "progress_status": "저장 완료 1927/2,200건 · 성공 491건 · 저장 오류 0건",
     "jobs": [
       {
         "id": "360172",
@@ -6314,9 +6314,9 @@
           "handover_mic",
           "handover_block"
         ],
-        "state": "RUNNING",
+        "state": "COMPLETED",
         "node": "DGX-H100-1",
-        "completed": 376,
+        "completed": 400,
         "planned": 400
       },
       {
@@ -6328,7 +6328,7 @@
         ],
         "state": "RUNNING",
         "node": "DGX-H100-1",
-        "completed": 276,
+        "completed": 325,
         "planned": 400
       },
       {
@@ -6340,7 +6340,7 @@
         ],
         "state": "RUNNING",
         "node": "DGX-H100-6",
-        "completed": 250,
+        "completed": 277,
         "planned": 400
       },
       {
@@ -6364,7 +6364,7 @@
         ],
         "state": "RUNNING",
         "node": "DGX-H100-3",
-        "completed": 300,
+        "completed": 325,
         "planned": 400
       },
       {
@@ -6443,14 +6443,14 @@
           "sr_percent": 28.909
         },
         "Pause-ID": {
-          "completed": 450,
-          "correct": 119,
-          "sr_percent": 26.444
+          "completed": 525,
+          "correct": 143,
+          "sr_percent": 27.238
         },
         "Pause-OOD": {
-          "completed": 426,
-          "correct": 88,
-          "sr_percent": 20.657
+          "completed": 452,
+          "correct": 96,
+          "sr_percent": 21.239
         },
         "Speed0.5": {
           "completed": 200,
@@ -6458,31 +6458,31 @@
           "sr_percent": 28.0
         },
         "Speed1.5": {
-          "completed": 176,
-          "correct": 36,
-          "sr_percent": 20.455
+          "completed": 200,
+          "correct": 37,
+          "sr_percent": 18.5
         },
         "TOTAL": {
-          "completed": 1802,
-          "correct": 458,
-          "sr_percent": 25.416
+          "completed": 1927,
+          "correct": 491,
+          "sr_percent": 25.48
         }
       },
       "fixedK4": {
         "Demo": {
-          "completed": 124,
+          "completed": 125,
           "correct": 46,
-          "sr_percent": 37.097
+          "sr_percent": 36.8
         },
         "Pause-ID": {
-          "completed": 25,
+          "completed": 41,
           "correct": 10,
-          "sr_percent": 40.0
+          "sr_percent": 24.39
         },
         "Pause-OOD": {
-          "completed": 0,
-          "correct": 0,
-          "sr_percent": null
+          "completed": 10,
+          "correct": 10,
+          "sr_percent": 100.0
         },
         "Speed0.5": {
           "completed": 0,
@@ -6495,9 +6495,9 @@
           "sr_percent": null
         },
         "TOTAL": {
-          "completed": 149,
-          "correct": 56,
-          "sr_percent": 37.584
+          "completed": 176,
+          "correct": 66,
+          "sr_percent": 37.5
         }
       },
       "fixed10k": {
@@ -6554,14 +6554,14 @@
           "sr_percent": 12.364
         },
         "Speed1.5": {
-          "completed": 250,
+          "completed": 275,
           "correct": 104,
-          "sr_percent": 41.6
+          "sr_percent": 37.818
         },
         "TOTAL": {
-          "completed": 2175,
+          "completed": 2200,
           "correct": 555,
-          "sr_percent": 25.517
+          "sr_percent": 25.227
         }
       },
       "C20k": {
@@ -6598,9 +6598,9 @@
       },
       "A20kK4": {
         "Demo": {
-          "completed": 6,
-          "correct": 6,
-          "sr_percent": 100.0
+          "completed": 69,
+          "correct": 51,
+          "sr_percent": 73.913
         },
         "Pause-ID": {
           "completed": 0,
@@ -6623,9 +6623,9 @@
           "sr_percent": null
         },
         "TOTAL": {
-          "completed": 6,
-          "correct": 6,
-          "sr_percent": 100.0
+          "completed": 69,
+          "correct": 51,
+          "sr_percent": 73.913
         }
       }
     },
@@ -6637,14 +6637,14 @@
           "sr_percent": 26.244
         },
         "Pause-ID": {
-          "completed": 300,
-          "correct": 70,
-          "sr_percent": 23.333
+          "completed": 375,
+          "correct": 95,
+          "sr_percent": 25.333
         },
         "Pause-OOD": {
-          "completed": 276,
-          "correct": 62,
-          "sr_percent": 22.464
+          "completed": 302,
+          "correct": 67,
+          "sr_percent": 22.185
         },
         "Speed0.5": {
           "completed": 125,
@@ -6652,14 +6652,14 @@
           "sr_percent": 25.6
         },
         "Speed1.5": {
-          "completed": 101,
-          "correct": 17,
-          "sr_percent": 16.832
+          "completed": 125,
+          "correct": 19,
+          "sr_percent": 15.2
         },
         "TOTAL": {
-          "completed": 1244,
-          "correct": 297,
-          "sr_percent": 23.875
+          "completed": 1369,
+          "correct": 329,
+          "sr_percent": 24.032
         }
       },
       "adaptive10k": {
@@ -6669,14 +6669,14 @@
           "sr_percent": 28.507
         },
         "Pause-ID": {
-          "completed": 300,
-          "correct": 81,
-          "sr_percent": 27.0
+          "completed": 375,
+          "correct": 105,
+          "sr_percent": 28.0
         },
         "Pause-OOD": {
-          "completed": 276,
-          "correct": 59,
-          "sr_percent": 21.377
+          "completed": 302,
+          "correct": 67,
+          "sr_percent": 22.185
         },
         "Speed0.5": {
           "completed": 125,
@@ -6684,28 +6684,28 @@
           "sr_percent": 32.0
         },
         "Speed1.5": {
-          "completed": 101,
-          "correct": 24,
-          "sr_percent": 23.762
+          "completed": 125,
+          "correct": 25,
+          "sr_percent": 20.0
         },
         "TOTAL": {
-          "completed": 1244,
-          "correct": 330,
-          "sr_percent": 26.527
+          "completed": 1369,
+          "correct": 363,
+          "sr_percent": 26.516
         }
       }
     },
-    "matched_n": 1244,
+    "matched_n": 1369,
     "matched_by_task": {
       "handover_mic": 200,
-      "handover_block": 176,
+      "handover_block": 200,
       "place_object_basket": 200,
-      "stack_blocks_three": 76,
+      "stack_blocks_three": 125,
       "put_bottles_dustbin": 200,
-      "hanging_mug": 50,
+      "hanging_mug": 77,
       "lift_pot": 42,
       "fabrica_beam": 200,
-      "fabrica_stool": 100
+      "fabrica_stool": 125
     },
     "matched_by_suite_task": {
       "Demo": {
@@ -6723,17 +6723,19 @@
         "handover_mic": 50,
         "handover_block": 50,
         "place_object_basket": 50,
-        "stack_blocks_three": 25,
+        "stack_blocks_three": 50,
         "put_bottles_dustbin": 50,
+        "hanging_mug": 25,
         "fabrica_beam": 50,
-        "fabrica_stool": 25
+        "fabrica_stool": 50
       },
       "Pause-OOD": {
         "handover_mic": 50,
         "handover_block": 50,
         "place_object_basket": 50,
-        "stack_blocks_three": 1,
+        "stack_blocks_three": 25,
         "put_bottles_dustbin": 50,
+        "hanging_mug": 2,
         "fabrica_beam": 50,
         "fabrica_stool": 25
       },
@@ -6746,7 +6748,7 @@
       },
       "Speed1.5": {
         "handover_mic": 25,
-        "handover_block": 1,
+        "handover_block": 25,
         "place_object_basket": 25,
         "put_bottles_dustbin": 25,
         "fabrica_beam": 25
@@ -6763,12 +6765,12 @@
     "gpu_budget": 6
   },
   "fixed_k4_evaluation": {
-    "snapshot_utc": "2026-11-13T07:27:20.550859+00:00",
+    "snapshot_utc": "2026-11-13T07:35:19.823449+00:00",
     "label": "M1 10k fixed K4",
     "checkpoint_update": 10000,
     "planned": 2200,
-    "completed": 149,
-    "correct": 56,
+    "completed": 176,
+    "correct": 66,
     "partner": "A",
     "gpu": 3,
     "workers_per_gpu": 16,
@@ -6778,7 +6780,7 @@
     "discard_tail": 28,
     "adaptive_wait": false,
     "record_video": false,
-    "status": "실제 추론 실행 중 · 저장 149/2,200건 · 성공 56건",
+    "status": "실제 추론 실행 중 · 저장 176/2,200건 · 성공 66건",
     "planned_by_suite": {
       "Demo": 550,
       "Pause-ID": 550,
@@ -6797,7 +6799,7 @@
         ],
         "state": "RUNNING",
         "node": "DGX-H100-3",
-        "completed": 75,
+        "completed": 85,
         "planned": 800
       },
       {
@@ -6810,7 +6812,7 @@
         ],
         "state": "RUNNING",
         "node": "DGX-H100-3",
-        "completed": 24,
+        "completed": 25,
         "planned": 800
       },
       {
@@ -6822,7 +6824,7 @@
         ],
         "state": "RUNNING",
         "node": "DGX-H100-4",
-        "completed": 50,
+        "completed": 66,
         "planned": 600
       }
     ],
@@ -6862,19 +6864,19 @@
     "triple_matched": {
       "fixed10k": {
         "Demo": {
-          "completed": 124,
+          "completed": 125,
           "correct": 24,
-          "sr_percent": 19.355
+          "sr_percent": 19.2
         },
         "Pause-ID": {
-          "completed": 25,
+          "completed": 41,
           "correct": 0,
           "sr_percent": 0.0
         },
         "Pause-OOD": {
-          "completed": 0,
-          "correct": 0,
-          "sr_percent": null
+          "completed": 10,
+          "correct": 2,
+          "sr_percent": 20.0
         },
         "Speed0.5": {
           "completed": 0,
@@ -6887,26 +6889,26 @@
           "sr_percent": null
         },
         "TOTAL": {
-          "completed": 149,
-          "correct": 24,
-          "sr_percent": 16.107
+          "completed": 176,
+          "correct": 26,
+          "sr_percent": 14.773
         }
       },
       "fixedK4": {
         "Demo": {
-          "completed": 124,
+          "completed": 125,
           "correct": 46,
-          "sr_percent": 37.097
+          "sr_percent": 36.8
         },
         "Pause-ID": {
-          "completed": 25,
+          "completed": 41,
           "correct": 10,
-          "sr_percent": 40.0
+          "sr_percent": 24.39
         },
         "Pause-OOD": {
-          "completed": 0,
-          "correct": 0,
-          "sr_percent": null
+          "completed": 10,
+          "correct": 10,
+          "sr_percent": 100.0
         },
         "Speed0.5": {
           "completed": 0,
@@ -6919,26 +6921,26 @@
           "sr_percent": null
         },
         "TOTAL": {
-          "completed": 149,
-          "correct": 56,
-          "sr_percent": 37.584
+          "completed": 176,
+          "correct": 66,
+          "sr_percent": 37.5
         }
       },
       "adaptive10k": {
         "Demo": {
-          "completed": 124,
-          "correct": 27,
-          "sr_percent": 21.774
+          "completed": 125,
+          "correct": 28,
+          "sr_percent": 22.4
         },
         "Pause-ID": {
-          "completed": 25,
+          "completed": 41,
           "correct": 3,
-          "sr_percent": 12.0
+          "sr_percent": 7.317
         },
         "Pause-OOD": {
-          "completed": 0,
-          "correct": 0,
-          "sr_percent": null
+          "completed": 10,
+          "correct": 3,
+          "sr_percent": 30.0
         },
         "Speed0.5": {
           "completed": 0,
@@ -6951,51 +6953,58 @@
           "sr_percent": null
         },
         "TOTAL": {
-          "completed": 149,
-          "correct": 30,
-          "sr_percent": 20.134
+          "completed": 176,
+          "correct": 34,
+          "sr_percent": 19.318
         }
       }
     },
-    "triple_matched_n": 149,
+    "triple_matched_n": 176,
     "triple_by_task": {
-      "handover_mic": 75,
-      "put_bottles_dustbin": 24,
-      "fabrica_beam": 50
+      "handover_mic": 85,
+      "put_bottles_dustbin": 25,
+      "fabrica_beam": 66
     },
     "triple_by_suite_task": {
       "Demo": {
         "handover_mic": 50,
-        "put_bottles_dustbin": 24,
+        "put_bottles_dustbin": 25,
         "fabrica_beam": 50
       },
       "Pause-ID": {
-        "handover_mic": 25
+        "handover_mic": 25,
+        "fabrica_beam": 16
       },
-      "Pause-OOD": {},
+      "Pause-OOD": {
+        "handover_mic": 10
+      },
       "Speed0.5": {},
       "Speed1.5": {}
     }
   },
   "current_run_progress": {
-    "snapshot_utc": "2026-11-13T07:27:20.550859+00:00",
+    "snapshot_utc": "2026-11-13T07:35:19.823449+00:00",
     "models": [
       {
         "id": "A20k",
         "label": "π0.5 A 20k fixed K32",
-        "completed": 2175,
+        "checkpoint_update": 20000,
+        "active_gpu": 0,
+        "completed": 2200,
         "correct": 555,
-        "last_saved_utc": "2026-11-13T07:23:43.226703+00:00",
+        "last_saved_utc": "2026-11-13T07:30:09.261452+00:00",
         "errors": 0,
         "job_ids": [
           "359872"
         ],
-        "state": "RUNNING",
+        "state": "COMPLETED",
         "planned": 2200
       },
       {
         "id": "C20k",
         "label": "π0.5 C 20k fixed K32",
+        "checkpoint_update": 20000,
+        "active_gpu": 0,
         "completed": 2200,
         "correct": 509,
         "last_saved_utc": "2026-11-13T07:13:58.283419+00:00",
@@ -7009,6 +7018,8 @@
       {
         "id": "fixed10k",
         "label": "M1 10k fixed K32 · 중단 보존",
+        "checkpoint_update": 10000,
+        "active_gpu": 0,
         "completed": 1642,
         "correct": 390,
         "last_saved_utc": "2026-11-13T05:35:09.459492+00:00",
@@ -7020,9 +7031,11 @@
       {
         "id": "adaptive10k",
         "label": "M1 10k adaptive",
-        "completed": 1802,
-        "correct": 458,
-        "last_saved_utc": "2026-11-13T07:27:17.872701+00:00",
+        "checkpoint_update": 10000,
+        "active_gpu": 3,
+        "completed": 1927,
+        "correct": 491,
+        "last_saved_utc": "2026-11-13T07:35:18.089254+00:00",
         "errors": 0,
         "job_ids": [
           "360172",
@@ -7038,9 +7051,11 @@
       {
         "id": "fixedK4",
         "label": "M1 10k fixed K4",
-        "completed": 149,
-        "correct": 56,
-        "last_saved_utc": "2026-11-13T07:27:18.260919+00:00",
+        "checkpoint_update": 10000,
+        "active_gpu": 3,
+        "completed": 176,
+        "correct": 66,
+        "last_saved_utc": "2026-11-13T07:35:18.312962+00:00",
         "errors": 0,
         "job_ids": [
           "360265",
@@ -7053,9 +7068,11 @@
       {
         "id": "A20kK4",
         "label": "π0.5 A 20k fixed K4",
-        "completed": 6,
-        "correct": 6,
-        "last_saved_utc": "2026-11-13T07:27:19.388584+00:00",
+        "checkpoint_update": 20000,
+        "active_gpu": 3,
+        "completed": 69,
+        "correct": 51,
+        "last_saved_utc": "2026-11-13T07:35:19.653539+00:00",
         "errors": 0,
         "job_ids": [
           "360662",
@@ -7065,15 +7082,233 @@
         "state": "RUNNING",
         "planned": 2200
       }
+    ],
+    "suite_rows": [
+      {
+        "suite": "Demo",
+        "planned": 550,
+        "models": {
+          "A20k": {
+            "completed": 550,
+            "correct": 232,
+            "sr_percent": 42.182
+          },
+          "C20k": {
+            "completed": 550,
+            "correct": 216,
+            "sr_percent": 39.273
+          },
+          "fixed10k": {
+            "completed": 442,
+            "correct": 116,
+            "sr_percent": 26.244
+          },
+          "adaptive10k": {
+            "completed": 550,
+            "correct": 159,
+            "sr_percent": 28.909
+          },
+          "fixedK4": {
+            "completed": 125,
+            "correct": 46,
+            "sr_percent": 36.8
+          },
+          "A20kK4": {
+            "completed": 69,
+            "correct": 51,
+            "sr_percent": 73.913
+          }
+        }
+      },
+      {
+        "suite": "Pause-ID",
+        "planned": 550,
+        "models": {
+          "A20k": {
+            "completed": 550,
+            "correct": 135,
+            "sr_percent": 24.545
+          },
+          "C20k": {
+            "completed": 550,
+            "correct": 138,
+            "sr_percent": 25.091
+          },
+          "fixed10k": {
+            "completed": 400,
+            "correct": 96,
+            "sr_percent": 24.0
+          },
+          "adaptive10k": {
+            "completed": 525,
+            "correct": 143,
+            "sr_percent": 27.238
+          },
+          "fixedK4": {
+            "completed": 41,
+            "correct": 10,
+            "sr_percent": 24.39
+          },
+          "A20kK4": {
+            "completed": 0,
+            "correct": 0,
+            "sr_percent": null
+          }
+        }
+      },
+      {
+        "suite": "Pause-OOD",
+        "planned": 550,
+        "models": {
+          "A20k": {
+            "completed": 550,
+            "correct": 50,
+            "sr_percent": 9.091
+          },
+          "C20k": {
+            "completed": 550,
+            "correct": 45,
+            "sr_percent": 8.182
+          },
+          "fixed10k": {
+            "completed": 400,
+            "correct": 81,
+            "sr_percent": 20.25
+          },
+          "adaptive10k": {
+            "completed": 452,
+            "correct": 96,
+            "sr_percent": 21.239
+          },
+          "fixedK4": {
+            "completed": 10,
+            "correct": 10,
+            "sr_percent": 100.0
+          },
+          "A20kK4": {
+            "completed": 0,
+            "correct": 0,
+            "sr_percent": null
+          }
+        }
+      },
+      {
+        "suite": "Speed0.5",
+        "planned": 275,
+        "models": {
+          "A20k": {
+            "completed": 275,
+            "correct": 34,
+            "sr_percent": 12.364
+          },
+          "C20k": {
+            "completed": 275,
+            "correct": 23,
+            "sr_percent": 8.364
+          },
+          "fixed10k": {
+            "completed": 200,
+            "correct": 55,
+            "sr_percent": 27.5
+          },
+          "adaptive10k": {
+            "completed": 200,
+            "correct": 56,
+            "sr_percent": 28.0
+          },
+          "fixedK4": {
+            "completed": 0,
+            "correct": 0,
+            "sr_percent": null
+          },
+          "A20kK4": {
+            "completed": 0,
+            "correct": 0,
+            "sr_percent": null
+          }
+        }
+      },
+      {
+        "suite": "Speed1.5",
+        "planned": 275,
+        "models": {
+          "A20k": {
+            "completed": 275,
+            "correct": 104,
+            "sr_percent": 37.818
+          },
+          "C20k": {
+            "completed": 275,
+            "correct": 87,
+            "sr_percent": 31.636
+          },
+          "fixed10k": {
+            "completed": 200,
+            "correct": 42,
+            "sr_percent": 21.0
+          },
+          "adaptive10k": {
+            "completed": 200,
+            "correct": 37,
+            "sr_percent": 18.5
+          },
+          "fixedK4": {
+            "completed": 0,
+            "correct": 0,
+            "sr_percent": null
+          },
+          "A20kK4": {
+            "completed": 0,
+            "correct": 0,
+            "sr_percent": null
+          }
+        }
+      },
+      {
+        "suite": "TOTAL",
+        "planned": 2200,
+        "models": {
+          "A20k": {
+            "completed": 2200,
+            "correct": 555,
+            "sr_percent": 25.227
+          },
+          "C20k": {
+            "completed": 2200,
+            "correct": 509,
+            "sr_percent": 23.136
+          },
+          "fixed10k": {
+            "completed": 1642,
+            "correct": 390,
+            "sr_percent": 23.752
+          },
+          "adaptive10k": {
+            "completed": 1927,
+            "correct": 491,
+            "sr_percent": 25.48
+          },
+          "fixedK4": {
+            "completed": 176,
+            "correct": 66,
+            "sr_percent": 37.5
+          },
+          "A20kK4": {
+            "completed": 69,
+            "correct": 51,
+            "sr_percent": 73.913
+          }
+        }
+      }
     ]
   },
   "a20k_fixed_k4_evaluation": {
-    "snapshot_utc": "2026-11-13T07:27:20.550859+00:00",
+    "snapshot_utc": "2026-11-13T07:35:19.823449+00:00",
     "label": "π0.5 A20k fixed K4",
     "checkpoint_update": 20000,
     "planned": 2200,
-    "completed": 6,
-    "correct": 6,
+    "completed": 69,
+    "correct": 51,
     "partner": "A",
     "gpu": 3,
     "workers_per_gpu": 16,
@@ -7081,7 +7316,7 @@
     "model_horizon": 32,
     "execute_steps": 4,
     "adaptive_wait": false,
-    "status": "실행 중 · 첫 정량 집계 대기",
+    "status": "실제 평가 중 · 저장 69/2,200건 · 성공 51건",
     "jobs": [
       {
         "id": "360662",
@@ -7093,7 +7328,7 @@
         ],
         "state": "RUNNING",
         "node": "DGX-H100-1",
-        "completed": 6,
+        "completed": 44,
         "planned": 800
       },
       {
@@ -7106,7 +7341,7 @@
         ],
         "state": "RUNNING",
         "node": "DGX-H100-6",
-        "completed": 0,
+        "completed": 9,
         "planned": 800
       },
       {
@@ -7118,16 +7353,16 @@
         ],
         "state": "RUNNING",
         "node": "DGX-H100-5",
-        "completed": 0,
+        "completed": 16,
         "planned": 600
       }
     ],
     "matched": {
       "A20k": {
         "Demo": {
-          "completed": 6,
-          "correct": 6,
-          "sr_percent": 100.0
+          "completed": 69,
+          "correct": 49,
+          "sr_percent": 71.014
         },
         "Pause-ID": {
           "completed": 0,
@@ -7150,16 +7385,16 @@
           "sr_percent": null
         },
         "TOTAL": {
-          "completed": 6,
-          "correct": 6,
-          "sr_percent": 100.0
+          "completed": 69,
+          "correct": 49,
+          "sr_percent": 71.014
         }
       },
       "A20kK4": {
         "Demo": {
-          "completed": 6,
-          "correct": 6,
-          "sr_percent": 100.0
+          "completed": 69,
+          "correct": 51,
+          "sr_percent": 73.913
         },
         "Pause-ID": {
           "completed": 0,
@@ -7182,19 +7417,23 @@
           "sr_percent": null
         },
         "TOTAL": {
-          "completed": 6,
-          "correct": 6,
-          "sr_percent": 100.0
+          "completed": 69,
+          "correct": 51,
+          "sr_percent": 73.913
         }
       }
     },
-    "matched_n": 6,
+    "matched_n": 69,
     "matched_by_task": {
-      "handover_mic": 6
+      "handover_mic": 44,
+      "put_bottles_dustbin": 9,
+      "fabrica_beam": 16
     },
     "matched_by_suite_task": {
       "Demo": {
-        "handover_mic": 6
+        "handover_mic": 44,
+        "put_bottles_dustbin": 9,
+        "fabrica_beam": 16
       },
       "Pause-ID": {},
       "Pause-OOD": {},

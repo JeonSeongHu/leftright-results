@@ -1,10 +1,10 @@
 {
-  "snapshot_utc": "2026-11-13T07:27:20.550859+00:00",
+  "snapshot_utc": "2026-11-13T07:35:19.823449+00:00",
   "label": "M1 10k fixed K4",
   "checkpoint_update": 10000,
   "planned": 2200,
-  "completed": 149,
-  "correct": 56,
+  "completed": 176,
+  "correct": 66,
   "partner": "A",
   "gpu": 3,
   "workers_per_gpu": 16,
@@ -14,7 +14,7 @@
   "discard_tail": 28,
   "adaptive_wait": false,
   "record_video": false,
-  "status": "실제 추론 실행 중 · 저장 149/2,200건 · 성공 56건",
+  "status": "실제 추론 실행 중 · 저장 176/2,200건 · 성공 66건",
   "planned_by_suite": {
     "Demo": 550,
     "Pause-ID": 550,
@@ -33,7 +33,7 @@
       ],
       "state": "RUNNING",
       "node": "DGX-H100-3",
-      "completed": 75,
+      "completed": 85,
       "planned": 800
     },
     {
@@ -46,7 +46,7 @@
       ],
       "state": "RUNNING",
       "node": "DGX-H100-3",
-      "completed": 24,
+      "completed": 25,
       "planned": 800
     },
     {
@@ -58,7 +58,7 @@
       ],
       "state": "RUNNING",
       "node": "DGX-H100-4",
-      "completed": 50,
+      "completed": 66,
       "planned": 600
     }
   ],
@@ -98,19 +98,19 @@
   "triple_matched": {
     "fixed10k": {
       "Demo": {
-        "completed": 124,
+        "completed": 125,
         "correct": 24,
-        "sr_percent": 19.355
+        "sr_percent": 19.2
       },
       "Pause-ID": {
-        "completed": 25,
+        "completed": 41,
         "correct": 0,
         "sr_percent": 0.0
       },
       "Pause-OOD": {
-        "completed": 0,
-        "correct": 0,
-        "sr_percent": null
+        "completed": 10,
+        "correct": 2,
+        "sr_percent": 20.0
       },
       "Speed0.5": {
         "completed": 0,
@@ -123,26 +123,26 @@
         "sr_percent": null
       },
       "TOTAL": {
-        "completed": 149,
-        "correct": 24,
-        "sr_percent": 16.107
+        "completed": 176,
+        "correct": 26,
+        "sr_percent": 14.773
       }
     },
     "fixedK4": {
       "Demo": {
-        "completed": 124,
+        "completed": 125,
         "correct": 46,
-        "sr_percent": 37.097
+        "sr_percent": 36.8
       },
       "Pause-ID": {
-        "completed": 25,
+        "completed": 41,
         "correct": 10,
-        "sr_percent": 40.0
+        "sr_percent": 24.39
       },
       "Pause-OOD": {
-        "completed": 0,
-        "correct": 0,
-        "sr_percent": null
+        "completed": 10,
+        "correct": 10,
+        "sr_percent": 100.0
       },
       "Speed0.5": {
         "completed": 0,
@@ -155,26 +155,26 @@
         "sr_percent": null
       },
       "TOTAL": {
-        "completed": 149,
-        "correct": 56,
-        "sr_percent": 37.584
+        "completed": 176,
+        "correct": 66,
+        "sr_percent": 37.5
       }
     },
     "adaptive10k": {
       "Demo": {
-        "completed": 124,
-        "correct": 27,
-        "sr_percent": 21.774
+        "completed": 125,
+        "correct": 28,
+        "sr_percent": 22.4
       },
       "Pause-ID": {
-        "completed": 25,
+        "completed": 41,
         "correct": 3,
-        "sr_percent": 12.0
+        "sr_percent": 7.317
       },
       "Pause-OOD": {
-        "completed": 0,
-        "correct": 0,
-        "sr_percent": null
+        "completed": 10,
+        "correct": 3,
+        "sr_percent": 30.0
       },
       "Speed0.5": {
         "completed": 0,
@@ -187,28 +187,31 @@
         "sr_percent": null
       },
       "TOTAL": {
-        "completed": 149,
-        "correct": 30,
-        "sr_percent": 20.134
+        "completed": 176,
+        "correct": 34,
+        "sr_percent": 19.318
       }
     }
   },
-  "triple_matched_n": 149,
+  "triple_matched_n": 176,
   "triple_by_task": {
-    "handover_mic": 75,
-    "put_bottles_dustbin": 24,
-    "fabrica_beam": 50
+    "handover_mic": 85,
+    "put_bottles_dustbin": 25,
+    "fabrica_beam": 66
   },
   "triple_by_suite_task": {
     "Demo": {
       "handover_mic": 50,
-      "put_bottles_dustbin": 24,
+      "put_bottles_dustbin": 25,
       "fabrica_beam": 50
     },
     "Pause-ID": {
-      "handover_mic": 25
+      "handover_mic": 25,
+      "fabrica_beam": 16
     },
-    "Pause-OOD": {},
+    "Pause-OOD": {
+      "handover_mic": 10
+    },
     "Speed0.5": {},
     "Speed1.5": {}
   }

@@ -29,9 +29,11 @@
     if(d.current_run_progress){
       const a=d.current_run_progress,section=add('section','');section.id='current-saved-progress-section';
       add('h3','현재 저장 진행 / 모델별 완료 구성은 서로 다름',section);
-      const body=table(section,`집계 ${stamp(a.snapshot_utc)}`,['Run','완료 / 계획','성공','완료분 SR','저장 오류','마지막 저장 UTC','상태']);
-      for(const r of a.models){const tr=add('tr','',body);add('th',r.label,tr).scope='row';add('td',`${r.completed}/${r.planned}`,tr);add('td',r.correct,tr);add('td',r.completed?(100*r.correct/r.completed).toFixed(1)+'%':'집계 대기',tr);add('td',r.errors,tr);add('td',stamp(r.last_saved_utc),tr);add('td',stateLabel(r.state),tr);}
+      const body=table(section,`집계 ${stamp(a.snapshot_utc)}`,['Run','Checkpoint','활성 GPU','완료 / 계획','성공','완료분 SR','저장 오류','마지막 저장 UTC','상태']);
+      for(const r of a.models){const tr=add('tr','',body);add('th',r.label,tr).scope='row';add('td',r.checkpoint_update.toLocaleString(),tr);add('td',r.active_gpu,tr);add('td',`${r.completed}/${r.planned}`,tr);add('td',r.correct,tr);add('td',r.completed?(100*r.correct/r.completed).toFixed(1)+'%':'집계 대기',tr);add('td',r.errors,tr);add('td',stamp(r.last_saved_utc),tr);add('td',stateLabel(r.state),tr);}
       note('각 모델의 완료 task 구성이 다르므로 이 원시 진행 표로 성능 순위를 비교하지 않습니다. 아래 공통 case 표를 사용합니다. 각 run의 평가 계획은 같은2,200건입니다.',section);
+      const suites=table(section,'모든 run의 원시 suite별 성공 / 완료와 SR',['Suite','run별 계획',...a.models.map(m=>m.label)]);
+      for(const s of a.suite_rows){const tr=add('tr','',suites);add('th',s.suite==='TOTAL'?'합계':d.suites.find(x=>x.id===s.suite)?.label||s.suite,tr).scope='row';add('td',s.planned,tr);for(const m of a.models){const r=s.models[m.id];add('td',r.completed?value({correct:r.correct,n:r.completed}):'완료 대기',tr);}if(s.suite==='Pause-OOD')tr.className='pause-ood';}
     }
 
     if(d.active_evaluation){
@@ -74,6 +76,8 @@
         const rows=table(section,`공통 case의 성공 / 완료 · ${stamp(a.snapshot_utc)}`,['Suite','공통 n','fixed K32','fixed K4','adaptive']);
         for(const s of [...d.suites,{id:'TOTAL',label:'합계'}]){const tr=add('tr','',rows);add('th',s.label,tr).scope='row';add('td',a.triple_matched.fixed10k[s.id].completed,tr);for(const id of ['fixed10k','fixedK4','adaptive10k']){const r=a.triple_matched[id][s.id];add('td',r.completed?value({correct:r.correct,n:r.completed}):'공통 완료 대기',tr);}}
       }
+
+
 
 
 

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-11-13T14:41:15.432Z",
+  "updated_utc": "2026-11-13T14:42:19.662Z",
   "evaluation": {
     "model_id": "M1Adaptive10kSubset",
     "checkpoint_update": 10000,
@@ -2960,6 +2960,81 @@
         "control_time": true
       },
       "media_bytes": 2397314
+    },
+    {
+      "id": "M1adaptive--stack_blocks_three--Speed1.5--s8100026",
+      "model_id": "M1Adaptive10kSubset",
+      "task": "stack_blocks_three",
+      "suite": "Speed1.5",
+      "condition": "Speed1.5",
+      "scene_seed": 8100026,
+      "success": true,
+      "status": "ready",
+      "verified": true,
+      "video_url": "assets/m1-adaptive-subset550/M1adaptive--stack_blocks_three--Speed1.5--s8100026.mp4",
+      "poster_url": "assets/m1-adaptive-subset550/M1adaptive--stack_blocks_three--Speed1.5--s8100026.jpg",
+      "timeline_url": "assets/m1-adaptive-subset550/M1adaptive--stack_blocks_three--Speed1.5--s8100026.timeline.json",
+      "fps": 15,
+      "source_episode_id": "stack_blocks_three__clean__s8100026__e000",
+      "source_run": "/mnt/harbor/users/seonghu/leftright-w2/variational-20261111/evaluation/m1-10k-adaptive-common2200-20261113",
+      "model_inference": false,
+      "replay_checks": {
+        "success": true,
+        "termination": true,
+        "physics_ticks": true,
+        "control_time": true
+      },
+      "media_bytes": 475034
+    },
+    {
+      "id": "M1adaptive--stack_blocks_three--Speed0.5--s8100002",
+      "model_id": "M1Adaptive10kSubset",
+      "task": "stack_blocks_three",
+      "suite": "Speed0.5",
+      "condition": "Speed0.5",
+      "scene_seed": 8100002,
+      "success": true,
+      "status": "ready",
+      "verified": true,
+      "video_url": "assets/m1-adaptive-subset550/M1adaptive--stack_blocks_three--Speed0.5--s8100002.mp4",
+      "poster_url": "assets/m1-adaptive-subset550/M1adaptive--stack_blocks_three--Speed0.5--s8100002.jpg",
+      "timeline_url": "assets/m1-adaptive-subset550/M1adaptive--stack_blocks_three--Speed0.5--s8100002.timeline.json",
+      "fps": 15,
+      "source_episode_id": "stack_blocks_three__clean__s8100002__e000",
+      "source_run": "/mnt/harbor/users/seonghu/leftright-w2/variational-20261111/evaluation/m1-10k-adaptive-common2200-20261113",
+      "model_inference": false,
+      "replay_checks": {
+        "success": true,
+        "termination": true,
+        "physics_ticks": true,
+        "control_time": true
+      },
+      "media_bytes": 865487
+    },
+    {
+      "id": "M1adaptive--stack_blocks_three--Pause8--s8100002",
+      "model_id": "M1Adaptive10kSubset",
+      "task": "stack_blocks_three",
+      "suite": "Pause-OOD",
+      "condition": "Pause8",
+      "scene_seed": 8100002,
+      "success": false,
+      "status": "ready",
+      "verified": true,
+      "video_url": "assets/m1-adaptive-subset550/M1adaptive--stack_blocks_three--Pause8--s8100002.mp4",
+      "poster_url": "assets/m1-adaptive-subset550/M1adaptive--stack_blocks_three--Pause8--s8100002.jpg",
+      "timeline_url": "assets/m1-adaptive-subset550/M1adaptive--stack_blocks_three--Pause8--s8100002.timeline.json",
+      "fps": 15,
+      "source_episode_id": "stack_blocks_three__T_pause__s8100002__e008",
+      "source_run": "/mnt/harbor/users/seonghu/leftright-w2/variational-20261111/evaluation/m1-10k-adaptive-common2200-20261113",
+      "model_inference": false,
+      "replay_checks": {
+        "success": true,
+        "termination": true,
+        "physics_ticks": true,
+        "control_time": true
+      },
+      "media_bytes": 951885
     }
   ]
 }

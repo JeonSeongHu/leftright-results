@@ -1,0 +1,75 @@
+{
+  "snapshot_utc": "2026-11-13T06:58:50.144669+00:00",
+  "models": [
+    {
+      "id": "A20k",
+      "label": "π0.5 A 20k",
+      "completed": 2075,
+      "correct": 555,
+      "last_saved_utc": "2026-11-13T06:55:24.101705+00:00",
+      "errors": 0,
+      "job_ids": [
+        "359872"
+      ],
+      "state": "RUNNING",
+      "planned": 2200
+    },
+    {
+      "id": "C20k",
+      "label": "π0.5 C 20k",
+      "completed": 2133,
+      "correct": 509,
+      "last_saved_utc": "2026-11-13T06:58:49.070567+00:00",
+      "errors": 0,
+      "job_ids": [
+        "359300"
+      ],
+      "state": "RUNNING",
+      "planned": 2200
+    },
+    {
+      "id": "fixed10k",
+      "label": "M1 10k fixed K32 · 중단 보존",
+      "completed": 1642,
+      "correct": 390,
+      "last_saved_utc": "2026-11-13T05:35:09.459492+00:00",
+      "errors": 0,
+      "job_ids": [],
+      "state": "CANCELLED",
+      "planned": 2200
+    },
+    {
+      "id": "adaptive10k",
+      "label": "M1 10k adaptive",
+      "completed": 1094,
+      "correct": 226,
+      "last_saved_utc": "2026-11-13T06:58:47.627148+00:00",
+      "errors": 0,
+      "job_ids": [
+        "360172",
+        "360173",
+        "360175",
+        "360177",
+        "360178",
+        "360179"
+      ],
+      "state": "RUNNING",
+      "planned": 2200
+    },
+    {
+      "id": "fixedK4",
+      "label": "M1 10k fixed K4",
+      "completed": 43,
+      "correct": 19,
+      "last_saved_utc": "2026-11-13T06:58:47.812510+00:00",
+      "errors": 0,
+      "job_ids": [
+        "360265",
+        "360266",
+        "360267"
+      ],
+      "state": "RUNNING",
+      "planned": 2200
+    }
+  ]
+}

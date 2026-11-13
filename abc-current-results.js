@@ -26,6 +26,14 @@
     const nav = document.querySelector('#new-pause [data-panel="abc"]');
     if (nav) nav.textContent = 'ABC / M1 비교';
 
+    if(d.current_run_progress){
+      const a=d.current_run_progress,section=add('section','');section.id='current-saved-progress-section';
+      add('h3','현재 저장 진행 / 모델별 완료 구성은 서로 다름',section);
+      const body=table(section,`집계 ${stamp(a.snapshot_utc)}`,['Run','완료 / 계획','성공','완료분 SR','저장 오류','마지막 저장 UTC','상태']);
+      for(const r of a.models){const tr=add('tr','',body);add('th',r.label,tr).scope='row';add('td',`${r.completed}/${r.planned}`,tr);add('td',r.correct,tr);add('td',r.completed?(100*r.correct/r.completed).toFixed(1)+'%':'집계 대기',tr);add('td',r.errors,tr);add('td',stamp(r.last_saved_utc),tr);add('td',stateLabel(r.state),tr);}
+      note('각 모델의 완료 task 구성이 다르므로 이 원시 진행 표로 성능 순위를 비교하지 않습니다. 아래 공통 case 표를 사용합니다. 각 run의 평가 계획은 같은2,200건입니다.',section);
+    }
+
     if(d.active_evaluation){
       const a=d.active_evaluation;const section=add('section','');section.id='active10k-execution-section';
       add('h3','현재 실행 / M1 10k fixed 대 adaptive',section);
@@ -38,7 +46,8 @@
         add('td',fixed.completed?value({correct:fixed.correct,n:fixed.completed}):'공통 완료 대기',tr);add('td',adaptive.completed?value({correct:adaptive.correct,n:adaptive.completed}):'공통 완료 대기',tr);
         if(s.id==='Pause-OOD')tr.className='pause-ood';
       }
-      note('공통 비교 구성: '+Object.entries(a.matched_by_task).map(([id,n])=>`${d.tasks.find(t=>t.id===id)?.label||id} ${n}건`).join(', ')+'. Pause-OOD는 아직 Mic25건만 공통 완료했으며 전체 task의 최종 결과가 아닙니다. Speed0.5와1.5는 각각275건, 총550건이 평가 계획에 포함돼 있습니다. 이 집계 시점에는 아직 공통 완료가 없습니다.',section);
+      note('공통 비교 구성: '+Object.entries(a.matched_by_task).map(([id,n])=>`${d.tasks.find(t=>t.id===id)?.label||id} ${n}건`).join(', ')+'. 전체11task의 최종 결과가 아닙니다. Speed0.5와1.5는 각각275건, 총550건이 평가 계획에 포함돼 있습니다.',section);
+      for(const id of ['Pause-OOD','Speed0.5','Speed1.5'])note((d.suites.find(s=>s.id===id)?.label||id)+' 공통 구성: '+(Object.entries(a.matched_by_suite_task[id]).map(([task,n])=>`${d.tasks.find(t=>t.id===task)?.label||task} ${n}건`).join(', ')||'공통 완료 대기'),section);
       const raw=table(section,'원시 저장 진행 / 모델별 완료 구성은 서로 다름',['Suite','fixed10k 보존 완료','adaptive10k 저장 완료']);
       for(const s of [...d.suites,{id:'TOTAL',label:'합계'}]){
         const tr=add('tr','',raw);add('th',s.label,tr).scope='row';
@@ -55,10 +64,17 @@
       add('h3','추가 실행 / 같은 M1 10k의 고정 K4',section);
       note(`상태 확인 ${stamp(a.snapshot_utc)}. ${a.status}. GPU3장·GPU당16환경·batch상한16이며, 같은 Partner A 고정2,200case를 실행합니다.`,section);
       note('모델 예측 H32는 유지합니다. 움직임과 대기 모두 앞4개만 실행하고 나머지28개는 버린 뒤 새 RGB로 다시 예측합니다. 유지 동작 여부를 판정하는 adaptive 조건은 적용하지 않습니다.',section);
-      note('Demo·Pause-ID·Pause-OOD·Speed0.5·Speed1.5를 모두 포함합니다. Speed는 각275건입니다. 위 fixed K32·adaptive 결과는 보존하며, 고정K4의 SR은 아직 집계하지 않았습니다.',section);
+      note('Demo·Pause-ID·Pause-OOD·Speed0.5·Speed1.5를 모두 포함합니다. Speed는 각275건입니다. 위 fixed K32·adaptive 결과와 같은 case에서만 비교합니다. 고정K4의 빠른 완료분만으로 전체 성능을 판단하지 않습니다.',section);
       const body=table(section,'고정 K4 실행 lane',['Job','Task','노드','상태']);
       for(const r of a.jobs){const tr=add('tr','',body);add('td',r.id,tr);add('td',r.tasks.map(id=>d.tasks.find(t=>t.id===id)?.label||id).join(' · '),tr);add('td',r.node,tr);add('td',stateLabel(r.state),tr);}
       note('실제 서버 기록에서 Mic8050001과 Bottles8090015의 control0→4→8, physics0→60→120 후속 추론을 확인했습니다. 동일10k 가중치·정규화·기존 noise 기본값을 사용합니다.',section);
+      if(a.triple_matched){
+        add('h3',`고정 K32·고정 K4·adaptive / 같은 ${a.triple_matched_n}case`,section);
+        note('구성: '+Object.entries(a.triple_by_task).map(([id,n])=>`${d.tasks.find(t=>t.id===id)?.label||id} ${n}건`).join(', ')+'. 아직 일부 Demo의 빠른 완료분입니다. ID/OOD/Speed의3조건 비교는 공통 완료를 기다립니다.',section);
+        const rows=table(section,`공통 case의 성공 / 완료 · ${stamp(a.snapshot_utc)}`,['Suite','공통 n','fixed K32','fixed K4','adaptive']);
+        for(const s of [...d.suites,{id:'TOTAL',label:'합계'}]){const tr=add('tr','',rows);add('th',s.label,tr).scope='row';add('td',a.triple_matched.fixed10k[s.id].completed,tr);for(const id of ['fixed10k','fixedK4','adaptive10k']){const r=a.triple_matched[id][s.id];add('td',r.completed?value({correct:r.correct,n:r.completed}):'공통 완료 대기',tr);}}
+      }
+
     }
 
     add('h3', 'ABC, M1 평가 / 같은 1,000case 중간 비교');
@@ -78,7 +94,7 @@
 
 
     if (d.current_matched) {
-      const section = add('section', ''); add('h3', '최신 집계 / ABC 20k 동일 case 비교', section);
+      const section = add('section', ''); add('h3', 'ABC 20k / 이전 공통 case 스냅샷', section);
       const c = d.current_matched.cohorts.ABC20k; const group = d.current_matched.groups.ABC20k;
       note(`집계 ${stamp(d.current_matched.snapshot_utc)}. A·B·C 모두 저장한 같은 고정 ${c.completed.toLocaleString()}case만 비교합니다. B는 사용자 요청으로 중단한 시점까지의 결과를 보존했습니다. 전체 11task 최종 SR이 아닙니다.`, section);
       note('평가 계획은 각 run 동일 2,200건으로 고정합니다. 비교표 n은 현재 세 모델 또는 두 모델이 모두 완료한 공통 장면 수이며, 계획 건수가 달라진 것이 아닙니다.', section);
@@ -132,7 +148,7 @@
       note('평가 계획은 각 run 동일2,200건으로 고정돼 있습니다. 250과1,216은 이 표에서 같은 case로 비교할 수 있는 저장 완료 수입니다.',section);
     }
 
-    const progress = add('section', ''); add('h3', '고정 2,200case 평가 진행', progress);
+    const progress = add('section', ''); add('h3', '이전 저장 진행 스냅샷 / 보존', progress);
     const progressRows = table(progress, `완료 수 스냅샷 ${stamp(d.progress_snapshot_utc || d.snapshot_utc)} / job 상태 ${stamp(d.jobs_checked_utc)}`, ['모델', '성공 / 저장 완료', '계획', '현재 job', '실행 상태']);
     for (const m of d.progress_models || [...d.models, ...d.pending_models]) {
       const tr = add('tr', '', progressRows); add('th', m.label, tr).scope = 'row';

@@ -1,5 +1,5 @@
 {
-  "snapshot_utc": "2026-11-13T06:22:46.940313+00:00",
+  "snapshot_utc": "2026-11-13T06:36:22.296705+00:00",
   "label": "π0.5 C + M1 10k adaptive",
   "checkpoint_update": 10000,
   "planned": 2200,
@@ -9,9 +9,9 @@
   "batch_cap": 16,
   "baseline_fixed_completed": 1642,
   "baseline_fixed_status": "중단 · 저장 결과 재사용",
-  "completed": null,
-  "correct": null,
-  "progress_status": "실제 추론 시작 · 첫 집계 대기",
+  "completed": 493,
+  "correct": 106,
+  "progress_status": "저장 완료 493/2,200건 · 성공 106건 · 저장 오류 0건",
   "jobs": [
     {
       "id": "360172",
@@ -21,7 +21,9 @@
         "handover_block"
       ],
       "state": "RUNNING",
-      "node": "DGX-H100-1"
+      "node": "DGX-H100-1",
+      "completed": 100,
+      "planned": 400
     },
     {
       "id": "360173",
@@ -31,7 +33,9 @@
         "stack_blocks_three"
       ],
       "state": "RUNNING",
-      "node": "DGX-H100-1"
+      "node": "DGX-H100-1",
+      "completed": 75,
+      "planned": 400
     },
     {
       "id": "360175",
@@ -41,7 +45,9 @@
         "hanging_mug"
       ],
       "state": "RUNNING",
-      "node": "DGX-H100-6"
+      "node": "DGX-H100-6",
+      "completed": 68,
+      "planned": 400
     },
     {
       "id": "360177",
@@ -51,7 +57,9 @@
         "grab_roller"
       ],
       "state": "RUNNING",
-      "node": "DGX-H100-3"
+      "node": "DGX-H100-3",
+      "completed": 100,
+      "planned": 400
     },
     {
       "id": "360178",
@@ -61,7 +69,9 @@
         "fabrica_stool"
       ],
       "state": "RUNNING",
-      "node": "DGX-H100-3"
+      "node": "DGX-H100-3",
+      "completed": 75,
+      "planned": 400
     },
     {
       "id": "360179",
@@ -70,7 +80,9 @@
         "fabrica_plumbers_block"
       ],
       "state": "RUNNING",
-      "node": "DGX-H100-3"
+      "node": "DGX-H100-3",
+      "completed": 75,
+      "planned": 200
     }
   ],
   "stopped_15k_jobs": [
@@ -128,5 +140,165 @@
     "joint_eps": 0.01,
     "gripper_eps": 0.01
   },
-  "noise_mode": "기존 fixed10k 기본 설정 유지 · 새 seed override 없음"
+  "noise_mode": "기존 fixed10k 기본 설정 유지 · 새 seed override 없음",
+  "raw": {
+    "adaptive10k": {
+      "Demo": {
+        "completed": 300,
+        "correct": 64,
+        "sr_percent": 21.333
+      },
+      "Pause-ID": {
+        "completed": 143,
+        "correct": 29,
+        "sr_percent": 20.28
+      },
+      "Pause-OOD": {
+        "completed": 50,
+        "correct": 13,
+        "sr_percent": 26.0
+      },
+      "Speed0.5": {
+        "completed": 0,
+        "correct": 0,
+        "sr_percent": null
+      },
+      "Speed1.5": {
+        "completed": 0,
+        "correct": 0,
+        "sr_percent": null
+      },
+      "TOTAL": {
+        "completed": 493,
+        "correct": 106,
+        "sr_percent": 21.501
+      }
+    },
+    "fixed10k": {
+      "Demo": {
+        "completed": 442,
+        "correct": 116,
+        "sr_percent": 26.244
+      },
+      "Pause-ID": {
+        "completed": 400,
+        "correct": 96,
+        "sr_percent": 24.0
+      },
+      "Pause-OOD": {
+        "completed": 400,
+        "correct": 81,
+        "sr_percent": 20.25
+      },
+      "Speed0.5": {
+        "completed": 200,
+        "correct": 55,
+        "sr_percent": 27.5
+      },
+      "Speed1.5": {
+        "completed": 200,
+        "correct": 42,
+        "sr_percent": 21.0
+      },
+      "TOTAL": {
+        "completed": 1642,
+        "correct": 390,
+        "sr_percent": 23.752
+      }
+    }
+  },
+  "matched": {
+    "adaptive10k": {
+      "Demo": {
+        "completed": 242,
+        "correct": 64,
+        "sr_percent": 26.446
+      },
+      "Pause-ID": {
+        "completed": 93,
+        "correct": 27,
+        "sr_percent": 29.032
+      },
+      "Pause-OOD": {
+        "completed": 25,
+        "correct": 8,
+        "sr_percent": 32.0
+      },
+      "Speed0.5": {
+        "completed": 0,
+        "correct": 0,
+        "sr_percent": null
+      },
+      "Speed1.5": {
+        "completed": 0,
+        "correct": 0,
+        "sr_percent": null
+      },
+      "TOTAL": {
+        "completed": 360,
+        "correct": 99,
+        "sr_percent": 27.5
+      }
+    },
+    "fixed10k": {
+      "Demo": {
+        "completed": 242,
+        "correct": 59,
+        "sr_percent": 24.38
+      },
+      "Pause-ID": {
+        "completed": 93,
+        "correct": 18,
+        "sr_percent": 19.355
+      },
+      "Pause-OOD": {
+        "completed": 25,
+        "correct": 4,
+        "sr_percent": 16.0
+      },
+      "Speed0.5": {
+        "completed": 0,
+        "correct": 0,
+        "sr_percent": null
+      },
+      "Speed1.5": {
+        "completed": 0,
+        "correct": 0,
+        "sr_percent": null
+      },
+      "TOTAL": {
+        "completed": 360,
+        "correct": 81,
+        "sr_percent": 22.5
+      }
+    }
+  },
+  "matched_n": 360,
+  "matched_by_task": {
+    "handover_mic": 100,
+    "place_object_basket": 75,
+    "put_bottles_dustbin": 68,
+    "lift_pot": 42,
+    "fabrica_beam": 75
+  },
+  "matched_by_suite_task": {
+    "Demo": {
+      "handover_mic": 50,
+      "place_object_basket": 50,
+      "put_bottles_dustbin": 50,
+      "lift_pot": 42,
+      "fabrica_beam": 50
+    },
+    "Pause-ID": {
+      "handover_mic": 25,
+      "place_object_basket": 25,
+      "put_bottles_dustbin": 18,
+      "fabrica_beam": 25
+    },
+    "Pause-OOD": {
+      "handover_mic": 25
+    },
+    "Speed0.5": {},
+    "Speed1.5": {}
+  }
 }

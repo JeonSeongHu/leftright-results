@@ -28,11 +28,25 @@
 
     if(d.active_evaluation){
       const a=d.active_evaluation;const section=add('section','');section.id='active10k-execution-section';
-      add('h3','현재 실행 / M1 10k adaptive',section);
-      note(`상태 확인 ${stamp(a.snapshot_utc)}. 같은 Partner A 고정2,200case를 GPU ${a.gpu}장, GPU당16환경·batch상한16으로 나누어 평가합니다. ${a.progress_status}.`,section);
-      note('15k fixed·adaptive6개 잡은 모두 중단하고 저장 결과를 보존했습니다. 비교 기준인 fixed10k는 저장1642건을 재사용하며, 새 adaptive와 양쪽 모두 완료한 같은 case에서만 SR을 비교합니다.',section);
-      const rows=table(section,'10k adaptive 실행 lane',['Job','Task','노드','상태']);
-      for(const r of a.jobs){const tr=add('tr','',rows);add('td',r.id,tr);add('td',r.tasks.map(id=>d.tasks.find(t=>t.id===id)?.label||id).join(' · '),tr);add('td',r.node,tr);add('td',stateLabel(r.state),tr);}
+      add('h3','현재 실행 / M1 10k fixed 대 adaptive',section);
+      note(`집계 ${stamp(a.snapshot_utc)}. Adaptive 저장 완료 ${a.completed}/2,200건, 성공 ${a.correct}건. GPU ${a.gpu}장, GPU당16환경·batch상한16으로 실행 중입니다.`,section);
+      note('평가 계획은 각 run 동일 2,200건으로 고정돼 있습니다. 아래 비교표 n은 fixed와 adaptive가 모두 완료한 공통 장면 수이며, 계획 건수가 달라진 것이 아닙니다. Fixed10k는 사용자 요청으로 중단한 저장1,642건만 재사용합니다.',section);
+      const matched=table(section,`같은 ${a.matched_n}case / 성공·완료와 SR`,['Suite','공통 n','M1 10k fixed K32','M1 10k adaptive']);
+      for(const s of [...d.suites,{id:'TOTAL',label:'합계'}]){
+        const fixed=a.matched.fixed10k[s.id],adaptive=a.matched.adaptive10k[s.id];
+        const tr=add('tr','',matched);add('th',s.label,tr).scope='row';add('td',fixed.completed,tr);
+        add('td',value({correct:fixed.correct,n:fixed.completed}),tr);add('td',value({correct:adaptive.correct,n:adaptive.completed}),tr);
+        if(s.id==='Pause-OOD')tr.className='pause-ood';
+      }
+      note('공통 비교 구성: '+Object.entries(a.matched_by_task).map(([id,n])=>`${d.tasks.find(t=>t.id===id)?.label||id} ${n}건`).join(', ')+'. Pause-OOD는 아직 Mic25건만 공통 완료했으며 전체 task의 최종 결과가 아닙니다. Speed는 아직 공통 완료가 없습니다.',section);
+      const raw=table(section,'원시 저장 진행 / 모델별 완료 구성은 서로 다름',['Suite','fixed10k 보존 완료','adaptive10k 저장 완료']);
+      for(const s of [...d.suites,{id:'TOTAL',label:'합계'}]){
+        const tr=add('tr','',raw);add('th',s.label,tr).scope='row';
+        for(const id of ['fixed10k','adaptive10k']){const row=a.raw[id][s.id];add('td',value({correct:row.correct,n:row.completed}),tr);}
+      }
+      note('위 원시 진행 표는 저장 상태를 보여 줍니다. 두 모델의 성능 비교는 공통 case 표를 사용합니다. 15k fixed·adaptive6개 잡은 모두 중단했고 기존 결과를 아래에 보존했습니다.',section);
+      const rows=table(section,'10k adaptive 실행 lane',['Job','Task','저장 완료 / 담당 계획','노드','상태']);
+      for(const r of a.jobs){const tr=add('tr','',rows);add('td',r.id,tr);add('td',r.tasks.map(id=>d.tasks.find(t=>t.id===id)?.label||id).join(' · '),tr);add('td',`${r.completed}/${r.planned}`,tr);add('td',r.node,tr);add('td',stateLabel(r.state),tr);}
       note('H32 전체가 현재 명령 근처의 유지 동작이면4개만 실행하고 새 RGB로 다시 예측하며, 그 외에는32개를 실행합니다. 기존 fixed10k 기본 noise 설정을 유지했습니다.',section);
     }
 
@@ -115,7 +129,7 @@
       add('td', '2,200', tr); add('td', m.job.parallel_ids ? m.job.parallel_ids.join(', ') : m.job.id, tr); add('td', stateLabel(m.job.state), tr);
     }
     if (d.latest_m1_scope) note(d.latest_m1_scope.explanation + ' 현재 활성 평가는10k adaptive이며, 각 run의 계획2200건과 공통 완료 비교 분모를 구분합니다.', progress);
-    note('전체 저장 진행과 같은 1,000case 비교의 확인 시각을 구분했습니다. 15k M1, M1+M2는 별도 평가 중이며 공통 1,000case 표에는 합치지 않습니다. 기록된 task 결과는 아래 영상 선택에서 확인할 수 있습니다.', progress);
+    note('전체 저장 진행과 같은 1,000case 비교의 확인 시각을 구분했습니다. 15k M1, M1+M2는 중단 전 기록이며 공통 1,000case 표에는 합치지 않습니다. 현재 10k adaptive 진행은 맨 위에 따로 표시합니다. 기록된 task 결과는 아래 영상 선택에서 확인할 수 있습니다.', progress);
     note('Mug export의 초기 상태 메타데이터를 원 수집 기록과 일치시켜 재개했습니다. 원 source, 2,200case ID, 성공조건과 물리 budget은 유지했습니다. Mug 원 clean expert는 50scene 중 26성공, 24실패였고, 모두 기록된 RIGHT tape와 정지 anchor를 갖춘 원 고정 case로 평가에 포함합니다.', progress);
 
     const taskSection = add('section', ''); add('h3', '모델별 task와 suite 결과', taskSection);

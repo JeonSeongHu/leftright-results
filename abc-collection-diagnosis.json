@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "scope": "expert_data_collection_diagnostic",
+  "model_success_rate": false,
+  "engine_explanation": "원 p1-corrected-v2 수집기는 패치한 libsapien을 바인딩했지만 native7 실행 명령에서 엔진 바인딩이 빠졌습니다. SAPIEN 3b1, PhysX 5.3.1의 GJK triangle threshold가 원본의 2^-46에서 stock의 2^-23으로 달라졌습니다. 원 엔진을 복원한 뒤 Basket 90168 draw 2와 Bottles 115005 draw 17이 물리 성공 판정을 통과했습니다. 두 사례의 게이트와 성공 기준은 바꾸지 않았습니다.",
+  "clips": [
+    {
+      "id": "bottles115005-engine-comparison",
+      "title": "Bottles 115005, draw 17: stock 실패와 원 엔진 복원 후 성공",
+      "video": "abc-diagnosis-assets/bottles115005-engine-comparison.mp4",
+      "poster": "abc-diagnosis-assets/bottles115005-engine-comparison.jpg",
+      "description": "같은 C validation scene, draw 17, new 영역, anchor 5493 tick, pause 1.048초를 비교했습니다. 왼쪽 stock은 drop으로 실패했고 오른쪽 원 엔진은 성공했습니다. 왼쪽은 새 RGB 재실행이며 원 실패의 308개 상태 표본과 8932 tick 양팔 명령이 모두 정확히 일치합니다. 오른쪽은 formal episode의 저장 RGB 501프레임입니다. 양쪽은 원 시뮬레이션 시간으로 재생하며, 먼저 끝난 영상은 마지막 프레임을 유지합니다.",
+      "actual_success": [
+        false,
+        true
+      ],
+      "media_mode": [
+        "new_rgb_rerun_verified_against_saved_state",
+        "saved_rgb"
+      ],
+      "stock_rerun_state_error": 0,
+      "source_frames": [
+        597,
+        501
+      ],
+      "same_scene_draw_sampling": true
+    },
+    {
+      "id": "basket90168-corrected",
+      "title": "Basket 90168, draw 2: 원 엔진 복원 후 성공",
+      "video": "abc-diagnosis-assets/place_object_basket-90168-corrected.mp4",
+      "poster": "abc-diagnosis-assets/place_object_basket-90168-corrected.jpg",
+      "description": "C, train, new 영역, anchor 1546 tick, pause 1.88초. 성공한 formal episode의 저장 RGB 300프레임을 사용했습니다. 복원 엔진의 pause 전 제어 프레임 62개에서 원 clean의 물체 위치와 오른팔 자세 오차는 0입니다.",
+      "actual_success": true,
+      "media_mode": "saved_rgb",
+      "source_frames": 300,
+      "source_resolution": [
+        320,
+        240
+      ]
+    },
+    {
+      "id": "mic2005107-corrected-native",
+      "title": "Mic 2005107: corrected 엔진에서 파지 동작을 다시 생성한 성공 사례",
+      "video": "abc-diagnosis-assets/handover_mic-2005107-corrected.mp4",
+      "poster": "abc-diagnosis-assets/handover_mic-2005107-corrected.jpg",
+      "description": "A validation의 복구 후 formal episode 185프레임입니다. 원 stock 엔진에서 기록한 명령을 corrected 엔진에 그대로 재생한 진단에서는 drop으로 실패했습니다. corrected 엔진에서 grasp validation과 그리퍼 패드 삽입 6.3mm를 적용해 동작을 다시 생성한 뒤 같은 scene의 실제 strict 성공 판정을 통과했습니다. 엔진만 복원한 비교와 구분해야 합니다.",
+      "actual_success": true,
+      "media_mode": "saved_rgb",
+      "source_frames": 185,
+      "recovery_type": "new_native_grasp_reference_under_corrected_engine"
+    },
+    {
+      "id": "stack1010136-export-repair",
+      "title": "Stack 1010136: 물리 성공 뒤 HOLD 문구 export 오류 복구",
+      "video": "abc-diagnosis-assets/stack_blocks_three-1010136-corrected.mp4",
+      "poster": "abc-diagnosis-assets/stack_blocks_three-1010136-corrected.jpg",
+      "description": "A train의 formal episode 506프레임입니다. 물리 동작은 이미 성공했으며, 성공 후 HOLD 상태의 언어 문구 한 줄이 exporter에 없어 저장을 마치지 못했습니다. HOLD 문구를 추가한 뒤 formal episode 저장을 완료했습니다. 물리 실패 건수와 구분한 사례입니다.",
+      "actual_success": true,
+      "media_mode": "saved_rgb",
+      "source_frames": 506,
+      "recovery_type": "hold_language_export_fix"
+    }
+  ],
+  "notes": [
+    "영상은 native7 전문가 수집 사례입니다. 기존 리더보드의 모델별 수치와 기존 영상은 보존했습니다.",
+    "영상의 저장 RGB 해상도는 320×240이며, 플레이어용 MP4는 640×480으로 표시 확대했습니다."
+  ]
+}

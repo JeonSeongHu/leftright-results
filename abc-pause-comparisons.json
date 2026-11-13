@@ -1,0 +1,34 @@
+{
+  "comparisons": [
+    {
+      "paired_key": "put_bottles_dustbin/8090002/Pause1",
+      "video": "assets/current-comparisons/put_bottles_dustbin--8090002--Pause1--ABC.mp4",
+      "poster": "assets/current-comparisons/put_bottles_dustbin--8090002--Pause1--ABC.jpg",
+      "physical_duration_seconds_by_model": {
+        "A": 74.18000352336094,
+        "B": 103.02000489318743,
+        "C": 103.02000489318743
+      }
+    },
+    {
+      "paired_key": "place_object_basket/8080011/Pause1",
+      "video": "assets/current-comparisons/place_object_basket--8080011--Pause1--ABC.mp4",
+      "poster": "assets/current-comparisons/place_object_basket--8080011--Pause1--ABC.jpg",
+      "physical_duration_seconds_by_model": {
+        "A": 17.104000812396407,
+        "B": 43.020002043340355,
+        "C": 43.020002043340355
+      }
+    },
+    {
+      "paired_key": "put_bottles_dustbin/8091330/Pause2",
+      "video": "assets/current-comparisons/put_bottles_dustbin--8091330--Pause2--ABC.mp4",
+      "poster": "assets/current-comparisons/put_bottles_dustbin--8091330--Pause2--ABC.jpg",
+      "physical_duration_seconds_by_model": {
+        "A": 104.04000494163483,
+        "B": 43.844002082478255,
+        "C": 43.74400207772851
+      }
+    }
+  ]
+}

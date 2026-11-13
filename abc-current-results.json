@@ -1,0 +1,5831 @@
+{
+  "version": "leftright-current-common1000-20261113-v1",
+  "snapshot_utc": "2026-11-13T03:05:41.256879+00:00",
+  "jobs_checked_utc": "2026-11-13T04:16:10.029461+00:00",
+  "shared_completed": 1000,
+  "planned_per_model": 2200,
+  "source_cohort": "fixed common2200 Partner A",
+  "suites": [
+    {
+      "id": "Demo",
+      "label": "Demo",
+      "planned": 550
+    },
+    {
+      "id": "Pause-ID",
+      "label": "Pause-ID / 1/2초",
+      "planned": 550
+    },
+    {
+      "id": "Pause-OOD",
+      "label": "Pause-OOD / 8/16초",
+      "planned": 550
+    },
+    {
+      "id": "Speed0.5",
+      "label": "Speed 0.5×",
+      "planned": 275
+    },
+    {
+      "id": "Speed1.5",
+      "label": "Speed 1.5×",
+      "planned": 275
+    }
+  ],
+  "models": [
+    {
+      "id": "A",
+      "label": "π0.5 A 20k",
+      "selected_update": 20000,
+      "job": {
+        "id": "359298",
+        "state": "RUNNING"
+      },
+      "progress": {
+        "n": 1300,
+        "correct": 425
+      }
+    },
+    {
+      "id": "B",
+      "label": "π0.5 B 20k",
+      "selected_update": 20000,
+      "job": {
+        "id": "359299",
+        "state": "RUNNING"
+      },
+      "progress": {
+        "n": 1716,
+        "correct": 471
+      }
+    },
+    {
+      "id": "C",
+      "label": "π0.5 C 20k",
+      "selected_update": 20000,
+      "job": {
+        "id": "359300",
+        "state": "RUNNING"
+      },
+      "progress": {
+        "n": 1300,
+        "correct": 327
+      }
+    },
+    {
+      "id": "m1",
+      "label": "π0.5 C + M1 10k",
+      "selected_update": 10000,
+      "job": {
+        "id": "359303",
+        "state": "RUNNING"
+      },
+      "progress": {
+        "n": 1325,
+        "correct": 378
+      }
+    },
+    {
+      "id": "m1-m2",
+      "label": "π0.5 C + M1+M2 10k",
+      "selected_update": 10000,
+      "job": {
+        "id": "359304",
+        "state": "RUNNING"
+      },
+      "progress": {
+        "n": 1325,
+        "correct": 306
+      }
+    }
+  ],
+  "pending_models": [
+    {
+      "id": "m1-15k",
+      "label": "π0.5 C + M1 15k",
+      "selected_update": 15000,
+      "job": {
+        "id": "359305",
+        "state": "RUNNING"
+      },
+      "progress": {
+        "n": 345,
+        "correct": 24
+      }
+    },
+    {
+      "id": "m1-m2-15k",
+      "label": "π0.5 C + M1+M2 15k",
+      "selected_update": 15000,
+      "job": {
+        "id": "359309",
+        "state": "RUNNING"
+      },
+      "progress": {
+        "n": 331,
+        "correct": 23
+      }
+    }
+  ],
+  "comparison": [
+    {
+      "suite": "Demo",
+      "n": 250,
+      "planned": 550,
+      "models": {
+        "A": {
+          "n": 250,
+          "correct": 165
+        },
+        "B": {
+          "n": 250,
+          "correct": 156
+        },
+        "C": {
+          "n": 250,
+          "correct": 147
+        },
+        "m1": {
+          "n": 250,
+          "correct": 101
+        },
+        "m1-m2": {
+          "n": 250,
+          "correct": 89
+        }
+      }
+    },
+    {
+      "suite": "Pause-ID",
+      "n": 250,
+      "planned": 550,
+      "models": {
+        "A": {
+          "n": 250,
+          "correct": 101
+        },
+        "B": {
+          "n": 250,
+          "correct": 87
+        },
+        "C": {
+          "n": 250,
+          "correct": 87
+        },
+        "m1": {
+          "n": 250,
+          "correct": 93
+        },
+        "m1-m2": {
+          "n": 250,
+          "correct": 95
+        }
+      }
+    },
+    {
+      "suite": "Pause-OOD",
+      "n": 250,
+      "planned": 550,
+      "models": {
+        "A": {
+          "n": 250,
+          "correct": 35
+        },
+        "B": {
+          "n": 250,
+          "correct": 11
+        },
+        "C": {
+          "n": 250,
+          "correct": 4
+        },
+        "m1": {
+          "n": 250,
+          "correct": 77
+        },
+        "m1-m2": {
+          "n": 250,
+          "correct": 43
+        }
+      }
+    },
+    {
+      "suite": "Speed0.5",
+      "n": 125,
+      "planned": 275,
+      "models": {
+        "A": {
+          "n": 125,
+          "correct": 22
+        },
+        "B": {
+          "n": 125,
+          "correct": 11
+        },
+        "C": {
+          "n": 125,
+          "correct": 10
+        },
+        "m1": {
+          "n": 125,
+          "correct": 54
+        },
+        "m1-m2": {
+          "n": 125,
+          "correct": 37
+        }
+      }
+    },
+    {
+      "suite": "Speed1.5",
+      "n": 125,
+      "planned": 275,
+      "models": {
+        "A": {
+          "n": 125,
+          "correct": 85
+        },
+        "B": {
+          "n": 125,
+          "correct": 74
+        },
+        "C": {
+          "n": 125,
+          "correct": 74
+        },
+        "m1": {
+          "n": 125,
+          "correct": 42
+        },
+        "m1-m2": {
+          "n": 125,
+          "correct": 41
+        }
+      }
+    },
+    {
+      "suite": "TOTAL",
+      "n": 1000,
+      "planned": 2200,
+      "models": {
+        "A": {
+          "n": 1000,
+          "correct": 408
+        },
+        "B": {
+          "n": 1000,
+          "correct": 339
+        },
+        "C": {
+          "n": 1000,
+          "correct": 322
+        },
+        "m1": {
+          "n": 1000,
+          "correct": 367
+        },
+        "m1-m2": {
+          "n": 1000,
+          "correct": 305
+        }
+      }
+    }
+  ],
+  "tasks": [
+    {
+      "id": "place_object_basket",
+      "label": "Basket"
+    },
+    {
+      "id": "stack_blocks_three",
+      "label": "Stack"
+    },
+    {
+      "id": "handover_block",
+      "label": "Block"
+    },
+    {
+      "id": "hanging_mug",
+      "label": "Mug"
+    },
+    {
+      "id": "handover_mic",
+      "label": "Mic"
+    },
+    {
+      "id": "grab_roller",
+      "label": "Grab Roller"
+    },
+    {
+      "id": "put_bottles_dustbin",
+      "label": "Bottles"
+    },
+    {
+      "id": "lift_pot",
+      "label": "Lift Pot"
+    },
+    {
+      "id": "fabrica_beam",
+      "label": "Fabrica Beam"
+    },
+    {
+      "id": "fabrica_plumbers_block",
+      "label": "Fabrica Plumber"
+    },
+    {
+      "id": "fabrica_stool",
+      "label": "Fabrica Stool"
+    }
+  ],
+  "task_comparison": [
+    {
+      "model_id": "A",
+      "task": "place_object_basket",
+      "suite": "Demo",
+      "n": 50,
+      "correct": 28
+    },
+    {
+      "model_id": "A",
+      "task": "place_object_basket",
+      "suite": "Pause-ID",
+      "n": 50,
+      "correct": 22
+    },
+    {
+      "model_id": "A",
+      "task": "place_object_basket",
+      "suite": "Pause-OOD",
+      "n": 50,
+      "correct": 11
+    },
+    {
+      "model_id": "A",
+      "task": "place_object_basket",
+      "suite": "Speed0.5",
+      "n": 25,
+      "correct": 2
+    },
+    {
+      "model_id": "A",
+      "task": "place_object_basket",
+      "suite": "Speed1.5",
+      "n": 25,
+      "correct": 18
+    },
+    {
+      "model_id": "A",
+      "task": "place_object_basket",
+      "suite": "TOTAL",
+      "n": 200,
+      "correct": 81
+    },
+    {
+      "model_id": "A",
+      "task": "stack_blocks_three",
+      "suite": "Demo",
+      "n": 50,
+      "correct": 50
+    },
+    {
+      "model_id": "A",
+      "task": "stack_blocks_three",
+      "suite": "Pause-ID",
+      "n": 50,
+      "correct": 46
+    },
+    {
+      "model_id": "A",
+      "task": "stack_blocks_three",
+      "suite": "Pause-OOD",
+      "n": 50,
+      "correct": 10
+    },
+    {
+      "model_id": "A",
+      "task": "stack_blocks_three",
+      "suite": "Speed0.5",
+      "n": 25,
+      "correct": 9
+    },
+    {
+      "model_id": "A",
+      "task": "stack_blocks_three",
+      "suite": "Speed1.5",
+      "n": 25,
+      "correct": 25
+    },
+    {
+      "model_id": "A",
+      "task": "stack_blocks_three",
+      "suite": "TOTAL",
+      "n": 200,
+      "correct": 140
+    },
+    {
+      "model_id": "A",
+      "task": "handover_block",
+      "suite": "Demo",
+      "n": 50,
+      "correct": 11
+    },
+    {
+      "model_id": "A",
+      "task": "handover_block",
+      "suite": "Pause-ID",
+      "n": 50,
+      "correct": 1
+    },
+    {
+      "model_id": "A",
+      "task": "handover_block",
+      "suite": "Pause-OOD",
+      "n": 50,
+      "correct": 2
+    },
+    {
+      "model_id": "A",
+      "task": "handover_block",
+      "suite": "Speed0.5",
+      "n": 25,
+      "correct": 0
+    },
+    {
+      "model_id": "A",
+      "task": "handover_block",
+      "suite": "Speed1.5",
+      "n": 25,
+      "correct": 2
+    },
+    {
+      "model_id": "A",
+      "task": "handover_block",
+      "suite": "TOTAL",
+      "n": 200,
+      "correct": 16
+    },
+    {
+      "model_id": "A",
+      "task": "hanging_mug",
+      "suite": "Demo",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "A",
+      "task": "hanging_mug",
+      "suite": "Pause-ID",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "A",
+      "task": "hanging_mug",
+      "suite": "Pause-OOD",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "A",
+      "task": "hanging_mug",
+      "suite": "Speed0.5",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "A",
+      "task": "hanging_mug",
+      "suite": "Speed1.5",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "A",
+      "task": "hanging_mug",
+      "suite": "TOTAL",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "A",
+      "task": "handover_mic",
+      "suite": "Demo",
+      "n": 50,
+      "correct": 49
+    },
+    {
+      "model_id": "A",
+      "task": "handover_mic",
+      "suite": "Pause-ID",
+      "n": 50,
+      "correct": 0
+    },
+    {
+      "model_id": "A",
+      "task": "handover_mic",
+      "suite": "Pause-OOD",
+      "n": 50,
+      "correct": 0
+    },
+    {
+      "model_id": "A",
+      "task": "handover_mic",
+      "suite": "Speed0.5",
+      "n": 25,
+      "correct": 0
+    },
+    {
+      "model_id": "A",
+      "task": "handover_mic",
+      "suite": "Speed1.5",
+      "n": 25,
+      "correct": 24
+    },
+    {
+      "model_id": "A",
+      "task": "handover_mic",
+      "suite": "TOTAL",
+      "n": 200,
+      "correct": 73
+    },
+    {
+      "model_id": "A",
+      "task": "grab_roller",
+      "suite": "Demo",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "A",
+      "task": "grab_roller",
+      "suite": "Pause-ID",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "A",
+      "task": "grab_roller",
+      "suite": "Pause-OOD",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "A",
+      "task": "grab_roller",
+      "suite": "Speed0.5",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "A",
+      "task": "grab_roller",
+      "suite": "Speed1.5",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "A",
+      "task": "grab_roller",
+      "suite": "TOTAL",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "A",
+      "task": "put_bottles_dustbin",
+      "suite": "Demo",
+      "n": 50,
+      "correct": 27
+    },
+    {
+      "model_id": "A",
+      "task": "put_bottles_dustbin",
+      "suite": "Pause-ID",
+      "n": 50,
+      "correct": 32
+    },
+    {
+      "model_id": "A",
+      "task": "put_bottles_dustbin",
+      "suite": "Pause-OOD",
+      "n": 50,
+      "correct": 12
+    },
+    {
+      "model_id": "A",
+      "task": "put_bottles_dustbin",
+      "suite": "Speed0.5",
+      "n": 25,
+      "correct": 11
+    },
+    {
+      "model_id": "A",
+      "task": "put_bottles_dustbin",
+      "suite": "Speed1.5",
+      "n": 25,
+      "correct": 16
+    },
+    {
+      "model_id": "A",
+      "task": "put_bottles_dustbin",
+      "suite": "TOTAL",
+      "n": 200,
+      "correct": 98
+    },
+    {
+      "model_id": "A",
+      "task": "lift_pot",
+      "suite": "Demo",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "A",
+      "task": "lift_pot",
+      "suite": "Pause-ID",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "A",
+      "task": "lift_pot",
+      "suite": "Pause-OOD",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "A",
+      "task": "lift_pot",
+      "suite": "Speed0.5",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "A",
+      "task": "lift_pot",
+      "suite": "Speed1.5",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "A",
+      "task": "lift_pot",
+      "suite": "TOTAL",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "A",
+      "task": "fabrica_beam",
+      "suite": "Demo",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "A",
+      "task": "fabrica_beam",
+      "suite": "Pause-ID",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "A",
+      "task": "fabrica_beam",
+      "suite": "Pause-OOD",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "A",
+      "task": "fabrica_beam",
+      "suite": "Speed0.5",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "A",
+      "task": "fabrica_beam",
+      "suite": "Speed1.5",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "A",
+      "task": "fabrica_beam",
+      "suite": "TOTAL",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "A",
+      "task": "fabrica_plumbers_block",
+      "suite": "Demo",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "A",
+      "task": "fabrica_plumbers_block",
+      "suite": "Pause-ID",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "A",
+      "task": "fabrica_plumbers_block",
+      "suite": "Pause-OOD",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "A",
+      "task": "fabrica_plumbers_block",
+      "suite": "Speed0.5",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "A",
+      "task": "fabrica_plumbers_block",
+      "suite": "Speed1.5",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "A",
+      "task": "fabrica_plumbers_block",
+      "suite": "TOTAL",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "A",
+      "task": "fabrica_stool",
+      "suite": "Demo",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "A",
+      "task": "fabrica_stool",
+      "suite": "Pause-ID",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "A",
+      "task": "fabrica_stool",
+      "suite": "Pause-OOD",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "A",
+      "task": "fabrica_stool",
+      "suite": "Speed0.5",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "A",
+      "task": "fabrica_stool",
+      "suite": "Speed1.5",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "A",
+      "task": "fabrica_stool",
+      "suite": "TOTAL",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "B",
+      "task": "place_object_basket",
+      "suite": "Demo",
+      "n": 50,
+      "correct": 34
+    },
+    {
+      "model_id": "B",
+      "task": "place_object_basket",
+      "suite": "Pause-ID",
+      "n": 50,
+      "correct": 19
+    },
+    {
+      "model_id": "B",
+      "task": "place_object_basket",
+      "suite": "Pause-OOD",
+      "n": 50,
+      "correct": 3
+    },
+    {
+      "model_id": "B",
+      "task": "place_object_basket",
+      "suite": "Speed0.5",
+      "n": 25,
+      "correct": 2
+    },
+    {
+      "model_id": "B",
+      "task": "place_object_basket",
+      "suite": "Speed1.5",
+      "n": 25,
+      "correct": 15
+    },
+    {
+      "model_id": "B",
+      "task": "place_object_basket",
+      "suite": "TOTAL",
+      "n": 200,
+      "correct": 73
+    },
+    {
+      "model_id": "B",
+      "task": "stack_blocks_three",
+      "suite": "Demo",
+      "n": 50,
+      "correct": 49
+    },
+    {
+      "model_id": "B",
+      "task": "stack_blocks_three",
+      "suite": "Pause-ID",
+      "n": 50,
+      "correct": 49
+    },
+    {
+      "model_id": "B",
+      "task": "stack_blocks_three",
+      "suite": "Pause-OOD",
+      "n": 50,
+      "correct": 3
+    },
+    {
+      "model_id": "B",
+      "task": "stack_blocks_three",
+      "suite": "Speed0.5",
+      "n": 25,
+      "correct": 3
+    },
+    {
+      "model_id": "B",
+      "task": "stack_blocks_three",
+      "suite": "Speed1.5",
+      "n": 25,
+      "correct": 25
+    },
+    {
+      "model_id": "B",
+      "task": "stack_blocks_three",
+      "suite": "TOTAL",
+      "n": 200,
+      "correct": 129
+    },
+    {
+      "model_id": "B",
+      "task": "handover_block",
+      "suite": "Demo",
+      "n": 50,
+      "correct": 5
+    },
+    {
+      "model_id": "B",
+      "task": "handover_block",
+      "suite": "Pause-ID",
+      "n": 50,
+      "correct": 1
+    },
+    {
+      "model_id": "B",
+      "task": "handover_block",
+      "suite": "Pause-OOD",
+      "n": 50,
+      "correct": 1
+    },
+    {
+      "model_id": "B",
+      "task": "handover_block",
+      "suite": "Speed0.5",
+      "n": 25,
+      "correct": 0
+    },
+    {
+      "model_id": "B",
+      "task": "handover_block",
+      "suite": "Speed1.5",
+      "n": 25,
+      "correct": 1
+    },
+    {
+      "model_id": "B",
+      "task": "handover_block",
+      "suite": "TOTAL",
+      "n": 200,
+      "correct": 8
+    },
+    {
+      "model_id": "B",
+      "task": "hanging_mug",
+      "suite": "Demo",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "B",
+      "task": "hanging_mug",
+      "suite": "Pause-ID",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "B",
+      "task": "hanging_mug",
+      "suite": "Pause-OOD",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "B",
+      "task": "hanging_mug",
+      "suite": "Speed0.5",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "B",
+      "task": "hanging_mug",
+      "suite": "Speed1.5",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "B",
+      "task": "hanging_mug",
+      "suite": "TOTAL",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "B",
+      "task": "handover_mic",
+      "suite": "Demo",
+      "n": 50,
+      "correct": 49
+    },
+    {
+      "model_id": "B",
+      "task": "handover_mic",
+      "suite": "Pause-ID",
+      "n": 50,
+      "correct": 1
+    },
+    {
+      "model_id": "B",
+      "task": "handover_mic",
+      "suite": "Pause-OOD",
+      "n": 50,
+      "correct": 0
+    },
+    {
+      "model_id": "B",
+      "task": "handover_mic",
+      "suite": "Speed0.5",
+      "n": 25,
+      "correct": 0
+    },
+    {
+      "model_id": "B",
+      "task": "handover_mic",
+      "suite": "Speed1.5",
+      "n": 25,
+      "correct": 24
+    },
+    {
+      "model_id": "B",
+      "task": "handover_mic",
+      "suite": "TOTAL",
+      "n": 200,
+      "correct": 74
+    },
+    {
+      "model_id": "B",
+      "task": "grab_roller",
+      "suite": "Demo",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "B",
+      "task": "grab_roller",
+      "suite": "Pause-ID",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "B",
+      "task": "grab_roller",
+      "suite": "Pause-OOD",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "B",
+      "task": "grab_roller",
+      "suite": "Speed0.5",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "B",
+      "task": "grab_roller",
+      "suite": "Speed1.5",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "B",
+      "task": "grab_roller",
+      "suite": "TOTAL",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "B",
+      "task": "put_bottles_dustbin",
+      "suite": "Demo",
+      "n": 50,
+      "correct": 19
+    },
+    {
+      "model_id": "B",
+      "task": "put_bottles_dustbin",
+      "suite": "Pause-ID",
+      "n": 50,
+      "correct": 17
+    },
+    {
+      "model_id": "B",
+      "task": "put_bottles_dustbin",
+      "suite": "Pause-OOD",
+      "n": 50,
+      "correct": 4
+    },
+    {
+      "model_id": "B",
+      "task": "put_bottles_dustbin",
+      "suite": "Speed0.5",
+      "n": 25,
+      "correct": 6
+    },
+    {
+      "model_id": "B",
+      "task": "put_bottles_dustbin",
+      "suite": "Speed1.5",
+      "n": 25,
+      "correct": 9
+    },
+    {
+      "model_id": "B",
+      "task": "put_bottles_dustbin",
+      "suite": "TOTAL",
+      "n": 200,
+      "correct": 55
+    },
+    {
+      "model_id": "B",
+      "task": "lift_pot",
+      "suite": "Demo",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "B",
+      "task": "lift_pot",
+      "suite": "Pause-ID",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "B",
+      "task": "lift_pot",
+      "suite": "Pause-OOD",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "B",
+      "task": "lift_pot",
+      "suite": "Speed0.5",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "B",
+      "task": "lift_pot",
+      "suite": "Speed1.5",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "B",
+      "task": "lift_pot",
+      "suite": "TOTAL",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "B",
+      "task": "fabrica_beam",
+      "suite": "Demo",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "B",
+      "task": "fabrica_beam",
+      "suite": "Pause-ID",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "B",
+      "task": "fabrica_beam",
+      "suite": "Pause-OOD",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "B",
+      "task": "fabrica_beam",
+      "suite": "Speed0.5",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "B",
+      "task": "fabrica_beam",
+      "suite": "Speed1.5",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "B",
+      "task": "fabrica_beam",
+      "suite": "TOTAL",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "B",
+      "task": "fabrica_plumbers_block",
+      "suite": "Demo",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "B",
+      "task": "fabrica_plumbers_block",
+      "suite": "Pause-ID",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "B",
+      "task": "fabrica_plumbers_block",
+      "suite": "Pause-OOD",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "B",
+      "task": "fabrica_plumbers_block",
+      "suite": "Speed0.5",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "B",
+      "task": "fabrica_plumbers_block",
+      "suite": "Speed1.5",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "B",
+      "task": "fabrica_plumbers_block",
+      "suite": "TOTAL",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "B",
+      "task": "fabrica_stool",
+      "suite": "Demo",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "B",
+      "task": "fabrica_stool",
+      "suite": "Pause-ID",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "B",
+      "task": "fabrica_stool",
+      "suite": "Pause-OOD",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "B",
+      "task": "fabrica_stool",
+      "suite": "Speed0.5",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "B",
+      "task": "fabrica_stool",
+      "suite": "Speed1.5",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "B",
+      "task": "fabrica_stool",
+      "suite": "TOTAL",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "C",
+      "task": "place_object_basket",
+      "suite": "Demo",
+      "n": 50,
+      "correct": 25
+    },
+    {
+      "model_id": "C",
+      "task": "place_object_basket",
+      "suite": "Pause-ID",
+      "n": 50,
+      "correct": 11
+    },
+    {
+      "model_id": "C",
+      "task": "place_object_basket",
+      "suite": "Pause-OOD",
+      "n": 50,
+      "correct": 2
+    },
+    {
+      "model_id": "C",
+      "task": "place_object_basket",
+      "suite": "Speed0.5",
+      "n": 25,
+      "correct": 0
+    },
+    {
+      "model_id": "C",
+      "task": "place_object_basket",
+      "suite": "Speed1.5",
+      "n": 25,
+      "correct": 16
+    },
+    {
+      "model_id": "C",
+      "task": "place_object_basket",
+      "suite": "TOTAL",
+      "n": 200,
+      "correct": 54
+    },
+    {
+      "model_id": "C",
+      "task": "stack_blocks_three",
+      "suite": "Demo",
+      "n": 50,
+      "correct": 50
+    },
+    {
+      "model_id": "C",
+      "task": "stack_blocks_three",
+      "suite": "Pause-ID",
+      "n": 50,
+      "correct": 50
+    },
+    {
+      "model_id": "C",
+      "task": "stack_blocks_three",
+      "suite": "Pause-OOD",
+      "n": 50,
+      "correct": 0
+    },
+    {
+      "model_id": "C",
+      "task": "stack_blocks_three",
+      "suite": "Speed0.5",
+      "n": 25,
+      "correct": 5
+    },
+    {
+      "model_id": "C",
+      "task": "stack_blocks_three",
+      "suite": "Speed1.5",
+      "n": 25,
+      "correct": 25
+    },
+    {
+      "model_id": "C",
+      "task": "stack_blocks_three",
+      "suite": "TOTAL",
+      "n": 200,
+      "correct": 130
+    },
+    {
+      "model_id": "C",
+      "task": "handover_block",
+      "suite": "Demo",
+      "n": 50,
+      "correct": 4
+    },
+    {
+      "model_id": "C",
+      "task": "handover_block",
+      "suite": "Pause-ID",
+      "n": 50,
+      "correct": 0
+    },
+    {
+      "model_id": "C",
+      "task": "handover_block",
+      "suite": "Pause-OOD",
+      "n": 50,
+      "correct": 0
+    },
+    {
+      "model_id": "C",
+      "task": "handover_block",
+      "suite": "Speed0.5",
+      "n": 25,
+      "correct": 0
+    },
+    {
+      "model_id": "C",
+      "task": "handover_block",
+      "suite": "Speed1.5",
+      "n": 25,
+      "correct": 1
+    },
+    {
+      "model_id": "C",
+      "task": "handover_block",
+      "suite": "TOTAL",
+      "n": 200,
+      "correct": 5
+    },
+    {
+      "model_id": "C",
+      "task": "hanging_mug",
+      "suite": "Demo",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "C",
+      "task": "hanging_mug",
+      "suite": "Pause-ID",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "C",
+      "task": "hanging_mug",
+      "suite": "Pause-OOD",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "C",
+      "task": "hanging_mug",
+      "suite": "Speed0.5",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "C",
+      "task": "hanging_mug",
+      "suite": "Speed1.5",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "C",
+      "task": "hanging_mug",
+      "suite": "TOTAL",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "C",
+      "task": "handover_mic",
+      "suite": "Demo",
+      "n": 50,
+      "correct": 49
+    },
+    {
+      "model_id": "C",
+      "task": "handover_mic",
+      "suite": "Pause-ID",
+      "n": 50,
+      "correct": 9
+    },
+    {
+      "model_id": "C",
+      "task": "handover_mic",
+      "suite": "Pause-OOD",
+      "n": 50,
+      "correct": 0
+    },
+    {
+      "model_id": "C",
+      "task": "handover_mic",
+      "suite": "Speed0.5",
+      "n": 25,
+      "correct": 1
+    },
+    {
+      "model_id": "C",
+      "task": "handover_mic",
+      "suite": "Speed1.5",
+      "n": 25,
+      "correct": 25
+    },
+    {
+      "model_id": "C",
+      "task": "handover_mic",
+      "suite": "TOTAL",
+      "n": 200,
+      "correct": 84
+    },
+    {
+      "model_id": "C",
+      "task": "grab_roller",
+      "suite": "Demo",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "C",
+      "task": "grab_roller",
+      "suite": "Pause-ID",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "C",
+      "task": "grab_roller",
+      "suite": "Pause-OOD",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "C",
+      "task": "grab_roller",
+      "suite": "Speed0.5",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "C",
+      "task": "grab_roller",
+      "suite": "Speed1.5",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "C",
+      "task": "grab_roller",
+      "suite": "TOTAL",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "C",
+      "task": "put_bottles_dustbin",
+      "suite": "Demo",
+      "n": 50,
+      "correct": 19
+    },
+    {
+      "model_id": "C",
+      "task": "put_bottles_dustbin",
+      "suite": "Pause-ID",
+      "n": 50,
+      "correct": 17
+    },
+    {
+      "model_id": "C",
+      "task": "put_bottles_dustbin",
+      "suite": "Pause-OOD",
+      "n": 50,
+      "correct": 2
+    },
+    {
+      "model_id": "C",
+      "task": "put_bottles_dustbin",
+      "suite": "Speed0.5",
+      "n": 25,
+      "correct": 4
+    },
+    {
+      "model_id": "C",
+      "task": "put_bottles_dustbin",
+      "suite": "Speed1.5",
+      "n": 25,
+      "correct": 7
+    },
+    {
+      "model_id": "C",
+      "task": "put_bottles_dustbin",
+      "suite": "TOTAL",
+      "n": 200,
+      "correct": 49
+    },
+    {
+      "model_id": "C",
+      "task": "lift_pot",
+      "suite": "Demo",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "C",
+      "task": "lift_pot",
+      "suite": "Pause-ID",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "C",
+      "task": "lift_pot",
+      "suite": "Pause-OOD",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "C",
+      "task": "lift_pot",
+      "suite": "Speed0.5",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "C",
+      "task": "lift_pot",
+      "suite": "Speed1.5",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "C",
+      "task": "lift_pot",
+      "suite": "TOTAL",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "C",
+      "task": "fabrica_beam",
+      "suite": "Demo",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "C",
+      "task": "fabrica_beam",
+      "suite": "Pause-ID",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "C",
+      "task": "fabrica_beam",
+      "suite": "Pause-OOD",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "C",
+      "task": "fabrica_beam",
+      "suite": "Speed0.5",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "C",
+      "task": "fabrica_beam",
+      "suite": "Speed1.5",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "C",
+      "task": "fabrica_beam",
+      "suite": "TOTAL",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "C",
+      "task": "fabrica_plumbers_block",
+      "suite": "Demo",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "C",
+      "task": "fabrica_plumbers_block",
+      "suite": "Pause-ID",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "C",
+      "task": "fabrica_plumbers_block",
+      "suite": "Pause-OOD",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "C",
+      "task": "fabrica_plumbers_block",
+      "suite": "Speed0.5",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "C",
+      "task": "fabrica_plumbers_block",
+      "suite": "Speed1.5",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "C",
+      "task": "fabrica_plumbers_block",
+      "suite": "TOTAL",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "C",
+      "task": "fabrica_stool",
+      "suite": "Demo",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "C",
+      "task": "fabrica_stool",
+      "suite": "Pause-ID",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "C",
+      "task": "fabrica_stool",
+      "suite": "Pause-OOD",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "C",
+      "task": "fabrica_stool",
+      "suite": "Speed0.5",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "C",
+      "task": "fabrica_stool",
+      "suite": "Speed1.5",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "C",
+      "task": "fabrica_stool",
+      "suite": "TOTAL",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "m1",
+      "task": "place_object_basket",
+      "suite": "Demo",
+      "n": 50,
+      "correct": 23
+    },
+    {
+      "model_id": "m1",
+      "task": "place_object_basket",
+      "suite": "Pause-ID",
+      "n": 50,
+      "correct": 25
+    },
+    {
+      "model_id": "m1",
+      "task": "place_object_basket",
+      "suite": "Pause-OOD",
+      "n": 50,
+      "correct": 29
+    },
+    {
+      "model_id": "m1",
+      "task": "place_object_basket",
+      "suite": "Speed0.5",
+      "n": 25,
+      "correct": 11
+    },
+    {
+      "model_id": "m1",
+      "task": "place_object_basket",
+      "suite": "Speed1.5",
+      "n": 25,
+      "correct": 11
+    },
+    {
+      "model_id": "m1",
+      "task": "place_object_basket",
+      "suite": "TOTAL",
+      "n": 200,
+      "correct": 99
+    },
+    {
+      "model_id": "m1",
+      "task": "stack_blocks_three",
+      "suite": "Demo",
+      "n": 50,
+      "correct": 45
+    },
+    {
+      "model_id": "m1",
+      "task": "stack_blocks_three",
+      "suite": "Pause-ID",
+      "n": 50,
+      "correct": 49
+    },
+    {
+      "model_id": "m1",
+      "task": "stack_blocks_three",
+      "suite": "Pause-OOD",
+      "n": 50,
+      "correct": 16
+    },
+    {
+      "model_id": "m1",
+      "task": "stack_blocks_three",
+      "suite": "Speed0.5",
+      "n": 25,
+      "correct": 22
+    },
+    {
+      "model_id": "m1",
+      "task": "stack_blocks_three",
+      "suite": "Speed1.5",
+      "n": 25,
+      "correct": 23
+    },
+    {
+      "model_id": "m1",
+      "task": "stack_blocks_three",
+      "suite": "TOTAL",
+      "n": 200,
+      "correct": 155
+    },
+    {
+      "model_id": "m1",
+      "task": "handover_block",
+      "suite": "Demo",
+      "n": 50,
+      "correct": 6
+    },
+    {
+      "model_id": "m1",
+      "task": "handover_block",
+      "suite": "Pause-ID",
+      "n": 50,
+      "correct": 6
+    },
+    {
+      "model_id": "m1",
+      "task": "handover_block",
+      "suite": "Pause-OOD",
+      "n": 50,
+      "correct": 4
+    },
+    {
+      "model_id": "m1",
+      "task": "handover_block",
+      "suite": "Speed0.5",
+      "n": 25,
+      "correct": 6
+    },
+    {
+      "model_id": "m1",
+      "task": "handover_block",
+      "suite": "Speed1.5",
+      "n": 25,
+      "correct": 3
+    },
+    {
+      "model_id": "m1",
+      "task": "handover_block",
+      "suite": "TOTAL",
+      "n": 200,
+      "correct": 25
+    },
+    {
+      "model_id": "m1",
+      "task": "hanging_mug",
+      "suite": "Demo",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "m1",
+      "task": "hanging_mug",
+      "suite": "Pause-ID",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "m1",
+      "task": "hanging_mug",
+      "suite": "Pause-OOD",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "m1",
+      "task": "hanging_mug",
+      "suite": "Speed0.5",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "m1",
+      "task": "hanging_mug",
+      "suite": "Speed1.5",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "m1",
+      "task": "hanging_mug",
+      "suite": "TOTAL",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "m1",
+      "task": "handover_mic",
+      "suite": "Demo",
+      "n": 50,
+      "correct": 13
+    },
+    {
+      "model_id": "m1",
+      "task": "handover_mic",
+      "suite": "Pause-ID",
+      "n": 50,
+      "correct": 0
+    },
+    {
+      "model_id": "m1",
+      "task": "handover_mic",
+      "suite": "Pause-OOD",
+      "n": 50,
+      "correct": 11
+    },
+    {
+      "model_id": "m1",
+      "task": "handover_mic",
+      "suite": "Speed0.5",
+      "n": 25,
+      "correct": 11
+    },
+    {
+      "model_id": "m1",
+      "task": "handover_mic",
+      "suite": "Speed1.5",
+      "n": 25,
+      "correct": 0
+    },
+    {
+      "model_id": "m1",
+      "task": "handover_mic",
+      "suite": "TOTAL",
+      "n": 200,
+      "correct": 35
+    },
+    {
+      "model_id": "m1",
+      "task": "grab_roller",
+      "suite": "Demo",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "m1",
+      "task": "grab_roller",
+      "suite": "Pause-ID",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "m1",
+      "task": "grab_roller",
+      "suite": "Pause-OOD",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "m1",
+      "task": "grab_roller",
+      "suite": "Speed0.5",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "m1",
+      "task": "grab_roller",
+      "suite": "Speed1.5",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "m1",
+      "task": "grab_roller",
+      "suite": "TOTAL",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "m1",
+      "task": "put_bottles_dustbin",
+      "suite": "Demo",
+      "n": 50,
+      "correct": 14
+    },
+    {
+      "model_id": "m1",
+      "task": "put_bottles_dustbin",
+      "suite": "Pause-ID",
+      "n": 50,
+      "correct": 13
+    },
+    {
+      "model_id": "m1",
+      "task": "put_bottles_dustbin",
+      "suite": "Pause-OOD",
+      "n": 50,
+      "correct": 17
+    },
+    {
+      "model_id": "m1",
+      "task": "put_bottles_dustbin",
+      "suite": "Speed0.5",
+      "n": 25,
+      "correct": 4
+    },
+    {
+      "model_id": "m1",
+      "task": "put_bottles_dustbin",
+      "suite": "Speed1.5",
+      "n": 25,
+      "correct": 5
+    },
+    {
+      "model_id": "m1",
+      "task": "put_bottles_dustbin",
+      "suite": "TOTAL",
+      "n": 200,
+      "correct": 53
+    },
+    {
+      "model_id": "m1",
+      "task": "lift_pot",
+      "suite": "Demo",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "m1",
+      "task": "lift_pot",
+      "suite": "Pause-ID",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "m1",
+      "task": "lift_pot",
+      "suite": "Pause-OOD",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "m1",
+      "task": "lift_pot",
+      "suite": "Speed0.5",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "m1",
+      "task": "lift_pot",
+      "suite": "Speed1.5",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "m1",
+      "task": "lift_pot",
+      "suite": "TOTAL",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "m1",
+      "task": "fabrica_beam",
+      "suite": "Demo",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "m1",
+      "task": "fabrica_beam",
+      "suite": "Pause-ID",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "m1",
+      "task": "fabrica_beam",
+      "suite": "Pause-OOD",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "m1",
+      "task": "fabrica_beam",
+      "suite": "Speed0.5",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "m1",
+      "task": "fabrica_beam",
+      "suite": "Speed1.5",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "m1",
+      "task": "fabrica_beam",
+      "suite": "TOTAL",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "m1",
+      "task": "fabrica_plumbers_block",
+      "suite": "Demo",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "m1",
+      "task": "fabrica_plumbers_block",
+      "suite": "Pause-ID",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "m1",
+      "task": "fabrica_plumbers_block",
+      "suite": "Pause-OOD",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "m1",
+      "task": "fabrica_plumbers_block",
+      "suite": "Speed0.5",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "m1",
+      "task": "fabrica_plumbers_block",
+      "suite": "Speed1.5",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "m1",
+      "task": "fabrica_plumbers_block",
+      "suite": "TOTAL",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "m1",
+      "task": "fabrica_stool",
+      "suite": "Demo",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "m1",
+      "task": "fabrica_stool",
+      "suite": "Pause-ID",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "m1",
+      "task": "fabrica_stool",
+      "suite": "Pause-OOD",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "m1",
+      "task": "fabrica_stool",
+      "suite": "Speed0.5",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "m1",
+      "task": "fabrica_stool",
+      "suite": "Speed1.5",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "m1",
+      "task": "fabrica_stool",
+      "suite": "TOTAL",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "place_object_basket",
+      "suite": "Demo",
+      "n": 50,
+      "correct": 27
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "place_object_basket",
+      "suite": "Pause-ID",
+      "n": 50,
+      "correct": 27
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "place_object_basket",
+      "suite": "Pause-OOD",
+      "n": 50,
+      "correct": 18
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "place_object_basket",
+      "suite": "Speed0.5",
+      "n": 25,
+      "correct": 10
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "place_object_basket",
+      "suite": "Speed1.5",
+      "n": 25,
+      "correct": 10
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "place_object_basket",
+      "suite": "TOTAL",
+      "n": 200,
+      "correct": 92
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "stack_blocks_three",
+      "suite": "Demo",
+      "n": 50,
+      "correct": 46
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "stack_blocks_three",
+      "suite": "Pause-ID",
+      "n": 50,
+      "correct": 50
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "stack_blocks_three",
+      "suite": "Pause-OOD",
+      "n": 50,
+      "correct": 5
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "stack_blocks_three",
+      "suite": "Speed0.5",
+      "n": 25,
+      "correct": 16
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "stack_blocks_three",
+      "suite": "Speed1.5",
+      "n": 25,
+      "correct": 24
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "stack_blocks_three",
+      "suite": "TOTAL",
+      "n": 200,
+      "correct": 141
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "handover_block",
+      "suite": "Demo",
+      "n": 50,
+      "correct": 3
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "handover_block",
+      "suite": "Pause-ID",
+      "n": 50,
+      "correct": 4
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "handover_block",
+      "suite": "Pause-OOD",
+      "n": 50,
+      "correct": 5
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "handover_block",
+      "suite": "Speed0.5",
+      "n": 25,
+      "correct": 4
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "handover_block",
+      "suite": "Speed1.5",
+      "n": 25,
+      "correct": 1
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "handover_block",
+      "suite": "TOTAL",
+      "n": 200,
+      "correct": 17
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "hanging_mug",
+      "suite": "Demo",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "hanging_mug",
+      "suite": "Pause-ID",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "hanging_mug",
+      "suite": "Pause-OOD",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "hanging_mug",
+      "suite": "Speed0.5",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "hanging_mug",
+      "suite": "Speed1.5",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "hanging_mug",
+      "suite": "TOTAL",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "handover_mic",
+      "suite": "Demo",
+      "n": 50,
+      "correct": 0
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "handover_mic",
+      "suite": "Pause-ID",
+      "n": 50,
+      "correct": 0
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "handover_mic",
+      "suite": "Pause-OOD",
+      "n": 50,
+      "correct": 0
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "handover_mic",
+      "suite": "Speed0.5",
+      "n": 25,
+      "correct": 0
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "handover_mic",
+      "suite": "Speed1.5",
+      "n": 25,
+      "correct": 0
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "handover_mic",
+      "suite": "TOTAL",
+      "n": 200,
+      "correct": 0
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "grab_roller",
+      "suite": "Demo",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "grab_roller",
+      "suite": "Pause-ID",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "grab_roller",
+      "suite": "Pause-OOD",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "grab_roller",
+      "suite": "Speed0.5",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "grab_roller",
+      "suite": "Speed1.5",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "grab_roller",
+      "suite": "TOTAL",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "put_bottles_dustbin",
+      "suite": "Demo",
+      "n": 50,
+      "correct": 13
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "put_bottles_dustbin",
+      "suite": "Pause-ID",
+      "n": 50,
+      "correct": 14
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "put_bottles_dustbin",
+      "suite": "Pause-OOD",
+      "n": 50,
+      "correct": 15
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "put_bottles_dustbin",
+      "suite": "Speed0.5",
+      "n": 25,
+      "correct": 7
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "put_bottles_dustbin",
+      "suite": "Speed1.5",
+      "n": 25,
+      "correct": 6
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "put_bottles_dustbin",
+      "suite": "TOTAL",
+      "n": 200,
+      "correct": 55
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "lift_pot",
+      "suite": "Demo",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "lift_pot",
+      "suite": "Pause-ID",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "lift_pot",
+      "suite": "Pause-OOD",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "lift_pot",
+      "suite": "Speed0.5",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "lift_pot",
+      "suite": "Speed1.5",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "lift_pot",
+      "suite": "TOTAL",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "fabrica_beam",
+      "suite": "Demo",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "fabrica_beam",
+      "suite": "Pause-ID",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "fabrica_beam",
+      "suite": "Pause-OOD",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "fabrica_beam",
+      "suite": "Speed0.5",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "fabrica_beam",
+      "suite": "Speed1.5",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "fabrica_beam",
+      "suite": "TOTAL",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "fabrica_plumbers_block",
+      "suite": "Demo",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "fabrica_plumbers_block",
+      "suite": "Pause-ID",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "fabrica_plumbers_block",
+      "suite": "Pause-OOD",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "fabrica_plumbers_block",
+      "suite": "Speed0.5",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "fabrica_plumbers_block",
+      "suite": "Speed1.5",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "fabrica_plumbers_block",
+      "suite": "TOTAL",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "fabrica_stool",
+      "suite": "Demo",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "fabrica_stool",
+      "suite": "Pause-ID",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "fabrica_stool",
+      "suite": "Pause-OOD",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "fabrica_stool",
+      "suite": "Speed0.5",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "fabrica_stool",
+      "suite": "Speed1.5",
+      "n": 0,
+      "correct": null
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "fabrica_stool",
+      "suite": "TOTAL",
+      "n": 0,
+      "correct": null
+    }
+  ],
+  "gallery_cells": [
+    {
+      "model_id": "A",
+      "task": "fabrica_beam",
+      "suite": "Demo",
+      "n": 50,
+      "correct": 0,
+      "planned": 50
+    },
+    {
+      "model_id": "A",
+      "task": "fabrica_beam",
+      "suite": "Pause-ID",
+      "n": 25,
+      "correct": 0,
+      "planned": 50
+    },
+    {
+      "model_id": "A",
+      "task": "fabrica_beam",
+      "suite": "Pause-OOD",
+      "n": 25,
+      "correct": 0,
+      "planned": 50
+    },
+    {
+      "model_id": "A",
+      "task": "fabrica_beam",
+      "suite": "Speed0.5",
+      "n": 0,
+      "correct": null,
+      "planned": 25
+    },
+    {
+      "model_id": "A",
+      "task": "fabrica_beam",
+      "suite": "Speed1.5",
+      "n": 0,
+      "correct": null,
+      "planned": 25
+    },
+    {
+      "model_id": "A",
+      "task": "fabrica_plumbers_block",
+      "suite": "Demo",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "A",
+      "task": "fabrica_plumbers_block",
+      "suite": "Pause-ID",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "A",
+      "task": "fabrica_plumbers_block",
+      "suite": "Pause-OOD",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "A",
+      "task": "fabrica_plumbers_block",
+      "suite": "Speed0.5",
+      "n": 0,
+      "correct": null,
+      "planned": 25
+    },
+    {
+      "model_id": "A",
+      "task": "fabrica_plumbers_block",
+      "suite": "Speed1.5",
+      "n": 0,
+      "correct": null,
+      "planned": 25
+    },
+    {
+      "model_id": "A",
+      "task": "fabrica_stool",
+      "suite": "Demo",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "A",
+      "task": "fabrica_stool",
+      "suite": "Pause-ID",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "A",
+      "task": "fabrica_stool",
+      "suite": "Pause-OOD",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "A",
+      "task": "fabrica_stool",
+      "suite": "Speed0.5",
+      "n": 0,
+      "correct": null,
+      "planned": 25
+    },
+    {
+      "model_id": "A",
+      "task": "fabrica_stool",
+      "suite": "Speed1.5",
+      "n": 0,
+      "correct": null,
+      "planned": 25
+    },
+    {
+      "model_id": "A",
+      "task": "grab_roller",
+      "suite": "Demo",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "A",
+      "task": "grab_roller",
+      "suite": "Pause-ID",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "A",
+      "task": "grab_roller",
+      "suite": "Pause-OOD",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "A",
+      "task": "grab_roller",
+      "suite": "Speed0.5",
+      "n": 0,
+      "correct": null,
+      "planned": 25
+    },
+    {
+      "model_id": "A",
+      "task": "grab_roller",
+      "suite": "Speed1.5",
+      "n": 0,
+      "correct": null,
+      "planned": 25
+    },
+    {
+      "model_id": "A",
+      "task": "handover_block",
+      "suite": "Demo",
+      "n": 50,
+      "correct": 11,
+      "planned": 50
+    },
+    {
+      "model_id": "A",
+      "task": "handover_block",
+      "suite": "Pause-ID",
+      "n": 50,
+      "correct": 1,
+      "planned": 50
+    },
+    {
+      "model_id": "A",
+      "task": "handover_block",
+      "suite": "Pause-OOD",
+      "n": 50,
+      "correct": 2,
+      "planned": 50
+    },
+    {
+      "model_id": "A",
+      "task": "handover_block",
+      "suite": "Speed0.5",
+      "n": 25,
+      "correct": 0,
+      "planned": 25
+    },
+    {
+      "model_id": "A",
+      "task": "handover_block",
+      "suite": "Speed1.5",
+      "n": 25,
+      "correct": 2,
+      "planned": 25
+    },
+    {
+      "model_id": "A",
+      "task": "handover_mic",
+      "suite": "Demo",
+      "n": 50,
+      "correct": 49,
+      "planned": 50
+    },
+    {
+      "model_id": "A",
+      "task": "handover_mic",
+      "suite": "Pause-ID",
+      "n": 50,
+      "correct": 0,
+      "planned": 50
+    },
+    {
+      "model_id": "A",
+      "task": "handover_mic",
+      "suite": "Pause-OOD",
+      "n": 50,
+      "correct": 0,
+      "planned": 50
+    },
+    {
+      "model_id": "A",
+      "task": "handover_mic",
+      "suite": "Speed0.5",
+      "n": 25,
+      "correct": 0,
+      "planned": 25
+    },
+    {
+      "model_id": "A",
+      "task": "handover_mic",
+      "suite": "Speed1.5",
+      "n": 25,
+      "correct": 24,
+      "planned": 25
+    },
+    {
+      "model_id": "A",
+      "task": "hanging_mug",
+      "suite": "Demo",
+      "n": 50,
+      "correct": 6,
+      "planned": 50
+    },
+    {
+      "model_id": "A",
+      "task": "hanging_mug",
+      "suite": "Pause-ID",
+      "n": 50,
+      "correct": 7,
+      "planned": 50
+    },
+    {
+      "model_id": "A",
+      "task": "hanging_mug",
+      "suite": "Pause-OOD",
+      "n": 50,
+      "correct": 3,
+      "planned": 50
+    },
+    {
+      "model_id": "A",
+      "task": "hanging_mug",
+      "suite": "Speed0.5",
+      "n": 25,
+      "correct": 1,
+      "planned": 25
+    },
+    {
+      "model_id": "A",
+      "task": "hanging_mug",
+      "suite": "Speed1.5",
+      "n": 25,
+      "correct": 0,
+      "planned": 25
+    },
+    {
+      "model_id": "A",
+      "task": "lift_pot",
+      "suite": "Demo",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "A",
+      "task": "lift_pot",
+      "suite": "Pause-ID",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "A",
+      "task": "lift_pot",
+      "suite": "Pause-OOD",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "A",
+      "task": "lift_pot",
+      "suite": "Speed0.5",
+      "n": 0,
+      "correct": null,
+      "planned": 25
+    },
+    {
+      "model_id": "A",
+      "task": "lift_pot",
+      "suite": "Speed1.5",
+      "n": 0,
+      "correct": null,
+      "planned": 25
+    },
+    {
+      "model_id": "A",
+      "task": "place_object_basket",
+      "suite": "Demo",
+      "n": 50,
+      "correct": 28,
+      "planned": 50
+    },
+    {
+      "model_id": "A",
+      "task": "place_object_basket",
+      "suite": "Pause-ID",
+      "n": 50,
+      "correct": 22,
+      "planned": 50
+    },
+    {
+      "model_id": "A",
+      "task": "place_object_basket",
+      "suite": "Pause-OOD",
+      "n": 50,
+      "correct": 11,
+      "planned": 50
+    },
+    {
+      "model_id": "A",
+      "task": "place_object_basket",
+      "suite": "Speed0.5",
+      "n": 25,
+      "correct": 2,
+      "planned": 25
+    },
+    {
+      "model_id": "A",
+      "task": "place_object_basket",
+      "suite": "Speed1.5",
+      "n": 25,
+      "correct": 18,
+      "planned": 25
+    },
+    {
+      "model_id": "A",
+      "task": "put_bottles_dustbin",
+      "suite": "Demo",
+      "n": 50,
+      "correct": 27,
+      "planned": 50
+    },
+    {
+      "model_id": "A",
+      "task": "put_bottles_dustbin",
+      "suite": "Pause-ID",
+      "n": 50,
+      "correct": 32,
+      "planned": 50
+    },
+    {
+      "model_id": "A",
+      "task": "put_bottles_dustbin",
+      "suite": "Pause-OOD",
+      "n": 50,
+      "correct": 12,
+      "planned": 50
+    },
+    {
+      "model_id": "A",
+      "task": "put_bottles_dustbin",
+      "suite": "Speed0.5",
+      "n": 25,
+      "correct": 11,
+      "planned": 25
+    },
+    {
+      "model_id": "A",
+      "task": "put_bottles_dustbin",
+      "suite": "Speed1.5",
+      "n": 25,
+      "correct": 16,
+      "planned": 25
+    },
+    {
+      "model_id": "A",
+      "task": "stack_blocks_three",
+      "suite": "Demo",
+      "n": 50,
+      "correct": 50,
+      "planned": 50
+    },
+    {
+      "model_id": "A",
+      "task": "stack_blocks_three",
+      "suite": "Pause-ID",
+      "n": 50,
+      "correct": 46,
+      "planned": 50
+    },
+    {
+      "model_id": "A",
+      "task": "stack_blocks_three",
+      "suite": "Pause-OOD",
+      "n": 50,
+      "correct": 10,
+      "planned": 50
+    },
+    {
+      "model_id": "A",
+      "task": "stack_blocks_three",
+      "suite": "Speed0.5",
+      "n": 25,
+      "correct": 9,
+      "planned": 25
+    },
+    {
+      "model_id": "A",
+      "task": "stack_blocks_three",
+      "suite": "Speed1.5",
+      "n": 25,
+      "correct": 25,
+      "planned": 25
+    },
+    {
+      "model_id": "B",
+      "task": "fabrica_beam",
+      "suite": "Demo",
+      "n": 50,
+      "correct": 0,
+      "planned": 50
+    },
+    {
+      "model_id": "B",
+      "task": "fabrica_beam",
+      "suite": "Pause-ID",
+      "n": 41,
+      "correct": 0,
+      "planned": 50
+    },
+    {
+      "model_id": "B",
+      "task": "fabrica_beam",
+      "suite": "Pause-OOD",
+      "n": 25,
+      "correct": 0,
+      "planned": 50
+    },
+    {
+      "model_id": "B",
+      "task": "fabrica_beam",
+      "suite": "Speed0.5",
+      "n": 0,
+      "correct": null,
+      "planned": 25
+    },
+    {
+      "model_id": "B",
+      "task": "fabrica_beam",
+      "suite": "Speed1.5",
+      "n": 0,
+      "correct": null,
+      "planned": 25
+    },
+    {
+      "model_id": "B",
+      "task": "fabrica_plumbers_block",
+      "suite": "Demo",
+      "n": 50,
+      "correct": 0,
+      "planned": 50
+    },
+    {
+      "model_id": "B",
+      "task": "fabrica_plumbers_block",
+      "suite": "Pause-ID",
+      "n": 50,
+      "correct": 0,
+      "planned": 50
+    },
+    {
+      "model_id": "B",
+      "task": "fabrica_plumbers_block",
+      "suite": "Pause-OOD",
+      "n": 50,
+      "correct": 0,
+      "planned": 50
+    },
+    {
+      "model_id": "B",
+      "task": "fabrica_plumbers_block",
+      "suite": "Speed0.5",
+      "n": 25,
+      "correct": 0,
+      "planned": 25
+    },
+    {
+      "model_id": "B",
+      "task": "fabrica_plumbers_block",
+      "suite": "Speed1.5",
+      "n": 25,
+      "correct": 0,
+      "planned": 25
+    },
+    {
+      "model_id": "B",
+      "task": "fabrica_stool",
+      "suite": "Demo",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "B",
+      "task": "fabrica_stool",
+      "suite": "Pause-ID",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "B",
+      "task": "fabrica_stool",
+      "suite": "Pause-OOD",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "B",
+      "task": "fabrica_stool",
+      "suite": "Speed0.5",
+      "n": 0,
+      "correct": null,
+      "planned": 25
+    },
+    {
+      "model_id": "B",
+      "task": "fabrica_stool",
+      "suite": "Speed1.5",
+      "n": 0,
+      "correct": null,
+      "planned": 25
+    },
+    {
+      "model_id": "B",
+      "task": "grab_roller",
+      "suite": "Demo",
+      "n": 50,
+      "correct": 39,
+      "planned": 50
+    },
+    {
+      "model_id": "B",
+      "task": "grab_roller",
+      "suite": "Pause-ID",
+      "n": 50,
+      "correct": 36,
+      "planned": 50
+    },
+    {
+      "model_id": "B",
+      "task": "grab_roller",
+      "suite": "Pause-OOD",
+      "n": 50,
+      "correct": 24,
+      "planned": 50
+    },
+    {
+      "model_id": "B",
+      "task": "grab_roller",
+      "suite": "Speed0.5",
+      "n": 25,
+      "correct": 12,
+      "planned": 25
+    },
+    {
+      "model_id": "B",
+      "task": "grab_roller",
+      "suite": "Speed1.5",
+      "n": 25,
+      "correct": 13,
+      "planned": 25
+    },
+    {
+      "model_id": "B",
+      "task": "handover_block",
+      "suite": "Demo",
+      "n": 50,
+      "correct": 5,
+      "planned": 50
+    },
+    {
+      "model_id": "B",
+      "task": "handover_block",
+      "suite": "Pause-ID",
+      "n": 50,
+      "correct": 1,
+      "planned": 50
+    },
+    {
+      "model_id": "B",
+      "task": "handover_block",
+      "suite": "Pause-OOD",
+      "n": 50,
+      "correct": 1,
+      "planned": 50
+    },
+    {
+      "model_id": "B",
+      "task": "handover_block",
+      "suite": "Speed0.5",
+      "n": 25,
+      "correct": 0,
+      "planned": 25
+    },
+    {
+      "model_id": "B",
+      "task": "handover_block",
+      "suite": "Speed1.5",
+      "n": 25,
+      "correct": 1,
+      "planned": 25
+    },
+    {
+      "model_id": "B",
+      "task": "handover_mic",
+      "suite": "Demo",
+      "n": 50,
+      "correct": 49,
+      "planned": 50
+    },
+    {
+      "model_id": "B",
+      "task": "handover_mic",
+      "suite": "Pause-ID",
+      "n": 50,
+      "correct": 1,
+      "planned": 50
+    },
+    {
+      "model_id": "B",
+      "task": "handover_mic",
+      "suite": "Pause-OOD",
+      "n": 50,
+      "correct": 0,
+      "planned": 50
+    },
+    {
+      "model_id": "B",
+      "task": "handover_mic",
+      "suite": "Speed0.5",
+      "n": 25,
+      "correct": 0,
+      "planned": 25
+    },
+    {
+      "model_id": "B",
+      "task": "handover_mic",
+      "suite": "Speed1.5",
+      "n": 25,
+      "correct": 24,
+      "planned": 25
+    },
+    {
+      "model_id": "B",
+      "task": "hanging_mug",
+      "suite": "Demo",
+      "n": 50,
+      "correct": 2,
+      "planned": 50
+    },
+    {
+      "model_id": "B",
+      "task": "hanging_mug",
+      "suite": "Pause-ID",
+      "n": 50,
+      "correct": 3,
+      "planned": 50
+    },
+    {
+      "model_id": "B",
+      "task": "hanging_mug",
+      "suite": "Pause-OOD",
+      "n": 50,
+      "correct": 2,
+      "planned": 50
+    },
+    {
+      "model_id": "B",
+      "task": "hanging_mug",
+      "suite": "Speed0.5",
+      "n": 25,
+      "correct": 1,
+      "planned": 25
+    },
+    {
+      "model_id": "B",
+      "task": "hanging_mug",
+      "suite": "Speed1.5",
+      "n": 25,
+      "correct": 0,
+      "planned": 25
+    },
+    {
+      "model_id": "B",
+      "task": "lift_pot",
+      "suite": "Demo",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "B",
+      "task": "lift_pot",
+      "suite": "Pause-ID",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "B",
+      "task": "lift_pot",
+      "suite": "Pause-OOD",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "B",
+      "task": "lift_pot",
+      "suite": "Speed0.5",
+      "n": 0,
+      "correct": null,
+      "planned": 25
+    },
+    {
+      "model_id": "B",
+      "task": "lift_pot",
+      "suite": "Speed1.5",
+      "n": 0,
+      "correct": null,
+      "planned": 25
+    },
+    {
+      "model_id": "B",
+      "task": "place_object_basket",
+      "suite": "Demo",
+      "n": 50,
+      "correct": 34,
+      "planned": 50
+    },
+    {
+      "model_id": "B",
+      "task": "place_object_basket",
+      "suite": "Pause-ID",
+      "n": 50,
+      "correct": 19,
+      "planned": 50
+    },
+    {
+      "model_id": "B",
+      "task": "place_object_basket",
+      "suite": "Pause-OOD",
+      "n": 50,
+      "correct": 3,
+      "planned": 50
+    },
+    {
+      "model_id": "B",
+      "task": "place_object_basket",
+      "suite": "Speed0.5",
+      "n": 25,
+      "correct": 2,
+      "planned": 25
+    },
+    {
+      "model_id": "B",
+      "task": "place_object_basket",
+      "suite": "Speed1.5",
+      "n": 25,
+      "correct": 15,
+      "planned": 25
+    },
+    {
+      "model_id": "B",
+      "task": "put_bottles_dustbin",
+      "suite": "Demo",
+      "n": 50,
+      "correct": 19,
+      "planned": 50
+    },
+    {
+      "model_id": "B",
+      "task": "put_bottles_dustbin",
+      "suite": "Pause-ID",
+      "n": 50,
+      "correct": 17,
+      "planned": 50
+    },
+    {
+      "model_id": "B",
+      "task": "put_bottles_dustbin",
+      "suite": "Pause-OOD",
+      "n": 50,
+      "correct": 4,
+      "planned": 50
+    },
+    {
+      "model_id": "B",
+      "task": "put_bottles_dustbin",
+      "suite": "Speed0.5",
+      "n": 25,
+      "correct": 6,
+      "planned": 25
+    },
+    {
+      "model_id": "B",
+      "task": "put_bottles_dustbin",
+      "suite": "Speed1.5",
+      "n": 25,
+      "correct": 9,
+      "planned": 25
+    },
+    {
+      "model_id": "B",
+      "task": "stack_blocks_three",
+      "suite": "Demo",
+      "n": 50,
+      "correct": 49,
+      "planned": 50
+    },
+    {
+      "model_id": "B",
+      "task": "stack_blocks_three",
+      "suite": "Pause-ID",
+      "n": 50,
+      "correct": 49,
+      "planned": 50
+    },
+    {
+      "model_id": "B",
+      "task": "stack_blocks_three",
+      "suite": "Pause-OOD",
+      "n": 50,
+      "correct": 3,
+      "planned": 50
+    },
+    {
+      "model_id": "B",
+      "task": "stack_blocks_three",
+      "suite": "Speed0.5",
+      "n": 25,
+      "correct": 3,
+      "planned": 25
+    },
+    {
+      "model_id": "B",
+      "task": "stack_blocks_three",
+      "suite": "Speed1.5",
+      "n": 25,
+      "correct": 25,
+      "planned": 25
+    },
+    {
+      "model_id": "C",
+      "task": "fabrica_beam",
+      "suite": "Demo",
+      "n": 50,
+      "correct": 0,
+      "planned": 50
+    },
+    {
+      "model_id": "C",
+      "task": "fabrica_beam",
+      "suite": "Pause-ID",
+      "n": 25,
+      "correct": 0,
+      "planned": 50
+    },
+    {
+      "model_id": "C",
+      "task": "fabrica_beam",
+      "suite": "Pause-OOD",
+      "n": 25,
+      "correct": 0,
+      "planned": 50
+    },
+    {
+      "model_id": "C",
+      "task": "fabrica_beam",
+      "suite": "Speed0.5",
+      "n": 0,
+      "correct": null,
+      "planned": 25
+    },
+    {
+      "model_id": "C",
+      "task": "fabrica_beam",
+      "suite": "Speed1.5",
+      "n": 0,
+      "correct": null,
+      "planned": 25
+    },
+    {
+      "model_id": "C",
+      "task": "fabrica_plumbers_block",
+      "suite": "Demo",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "C",
+      "task": "fabrica_plumbers_block",
+      "suite": "Pause-ID",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "C",
+      "task": "fabrica_plumbers_block",
+      "suite": "Pause-OOD",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "C",
+      "task": "fabrica_plumbers_block",
+      "suite": "Speed0.5",
+      "n": 0,
+      "correct": null,
+      "planned": 25
+    },
+    {
+      "model_id": "C",
+      "task": "fabrica_plumbers_block",
+      "suite": "Speed1.5",
+      "n": 0,
+      "correct": null,
+      "planned": 25
+    },
+    {
+      "model_id": "C",
+      "task": "fabrica_stool",
+      "suite": "Demo",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "C",
+      "task": "fabrica_stool",
+      "suite": "Pause-ID",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "C",
+      "task": "fabrica_stool",
+      "suite": "Pause-OOD",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "C",
+      "task": "fabrica_stool",
+      "suite": "Speed0.5",
+      "n": 0,
+      "correct": null,
+      "planned": 25
+    },
+    {
+      "model_id": "C",
+      "task": "fabrica_stool",
+      "suite": "Speed1.5",
+      "n": 0,
+      "correct": null,
+      "planned": 25
+    },
+    {
+      "model_id": "C",
+      "task": "grab_roller",
+      "suite": "Demo",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "C",
+      "task": "grab_roller",
+      "suite": "Pause-ID",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "C",
+      "task": "grab_roller",
+      "suite": "Pause-OOD",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "C",
+      "task": "grab_roller",
+      "suite": "Speed0.5",
+      "n": 0,
+      "correct": null,
+      "planned": 25
+    },
+    {
+      "model_id": "C",
+      "task": "grab_roller",
+      "suite": "Speed1.5",
+      "n": 0,
+      "correct": null,
+      "planned": 25
+    },
+    {
+      "model_id": "C",
+      "task": "handover_block",
+      "suite": "Demo",
+      "n": 50,
+      "correct": 4,
+      "planned": 50
+    },
+    {
+      "model_id": "C",
+      "task": "handover_block",
+      "suite": "Pause-ID",
+      "n": 50,
+      "correct": 0,
+      "planned": 50
+    },
+    {
+      "model_id": "C",
+      "task": "handover_block",
+      "suite": "Pause-OOD",
+      "n": 50,
+      "correct": 0,
+      "planned": 50
+    },
+    {
+      "model_id": "C",
+      "task": "handover_block",
+      "suite": "Speed0.5",
+      "n": 25,
+      "correct": 0,
+      "planned": 25
+    },
+    {
+      "model_id": "C",
+      "task": "handover_block",
+      "suite": "Speed1.5",
+      "n": 25,
+      "correct": 1,
+      "planned": 25
+    },
+    {
+      "model_id": "C",
+      "task": "handover_mic",
+      "suite": "Demo",
+      "n": 50,
+      "correct": 49,
+      "planned": 50
+    },
+    {
+      "model_id": "C",
+      "task": "handover_mic",
+      "suite": "Pause-ID",
+      "n": 50,
+      "correct": 9,
+      "planned": 50
+    },
+    {
+      "model_id": "C",
+      "task": "handover_mic",
+      "suite": "Pause-OOD",
+      "n": 50,
+      "correct": 0,
+      "planned": 50
+    },
+    {
+      "model_id": "C",
+      "task": "handover_mic",
+      "suite": "Speed0.5",
+      "n": 25,
+      "correct": 1,
+      "planned": 25
+    },
+    {
+      "model_id": "C",
+      "task": "handover_mic",
+      "suite": "Speed1.5",
+      "n": 25,
+      "correct": 25,
+      "planned": 25
+    },
+    {
+      "model_id": "C",
+      "task": "hanging_mug",
+      "suite": "Demo",
+      "n": 50,
+      "correct": 2,
+      "planned": 50
+    },
+    {
+      "model_id": "C",
+      "task": "hanging_mug",
+      "suite": "Pause-ID",
+      "n": 50,
+      "correct": 0,
+      "planned": 50
+    },
+    {
+      "model_id": "C",
+      "task": "hanging_mug",
+      "suite": "Pause-OOD",
+      "n": 50,
+      "correct": 2,
+      "planned": 50
+    },
+    {
+      "model_id": "C",
+      "task": "hanging_mug",
+      "suite": "Speed0.5",
+      "n": 25,
+      "correct": 1,
+      "planned": 25
+    },
+    {
+      "model_id": "C",
+      "task": "hanging_mug",
+      "suite": "Speed1.5",
+      "n": 25,
+      "correct": 0,
+      "planned": 25
+    },
+    {
+      "model_id": "C",
+      "task": "lift_pot",
+      "suite": "Demo",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "C",
+      "task": "lift_pot",
+      "suite": "Pause-ID",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "C",
+      "task": "lift_pot",
+      "suite": "Pause-OOD",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "C",
+      "task": "lift_pot",
+      "suite": "Speed0.5",
+      "n": 0,
+      "correct": null,
+      "planned": 25
+    },
+    {
+      "model_id": "C",
+      "task": "lift_pot",
+      "suite": "Speed1.5",
+      "n": 0,
+      "correct": null,
+      "planned": 25
+    },
+    {
+      "model_id": "C",
+      "task": "place_object_basket",
+      "suite": "Demo",
+      "n": 50,
+      "correct": 25,
+      "planned": 50
+    },
+    {
+      "model_id": "C",
+      "task": "place_object_basket",
+      "suite": "Pause-ID",
+      "n": 50,
+      "correct": 11,
+      "planned": 50
+    },
+    {
+      "model_id": "C",
+      "task": "place_object_basket",
+      "suite": "Pause-OOD",
+      "n": 50,
+      "correct": 2,
+      "planned": 50
+    },
+    {
+      "model_id": "C",
+      "task": "place_object_basket",
+      "suite": "Speed0.5",
+      "n": 25,
+      "correct": 0,
+      "planned": 25
+    },
+    {
+      "model_id": "C",
+      "task": "place_object_basket",
+      "suite": "Speed1.5",
+      "n": 25,
+      "correct": 16,
+      "planned": 25
+    },
+    {
+      "model_id": "C",
+      "task": "put_bottles_dustbin",
+      "suite": "Demo",
+      "n": 50,
+      "correct": 19,
+      "planned": 50
+    },
+    {
+      "model_id": "C",
+      "task": "put_bottles_dustbin",
+      "suite": "Pause-ID",
+      "n": 50,
+      "correct": 17,
+      "planned": 50
+    },
+    {
+      "model_id": "C",
+      "task": "put_bottles_dustbin",
+      "suite": "Pause-OOD",
+      "n": 50,
+      "correct": 2,
+      "planned": 50
+    },
+    {
+      "model_id": "C",
+      "task": "put_bottles_dustbin",
+      "suite": "Speed0.5",
+      "n": 25,
+      "correct": 4,
+      "planned": 25
+    },
+    {
+      "model_id": "C",
+      "task": "put_bottles_dustbin",
+      "suite": "Speed1.5",
+      "n": 25,
+      "correct": 7,
+      "planned": 25
+    },
+    {
+      "model_id": "C",
+      "task": "stack_blocks_three",
+      "suite": "Demo",
+      "n": 50,
+      "correct": 50,
+      "planned": 50
+    },
+    {
+      "model_id": "C",
+      "task": "stack_blocks_three",
+      "suite": "Pause-ID",
+      "n": 50,
+      "correct": 50,
+      "planned": 50
+    },
+    {
+      "model_id": "C",
+      "task": "stack_blocks_three",
+      "suite": "Pause-OOD",
+      "n": 50,
+      "correct": 0,
+      "planned": 50
+    },
+    {
+      "model_id": "C",
+      "task": "stack_blocks_three",
+      "suite": "Speed0.5",
+      "n": 25,
+      "correct": 5,
+      "planned": 25
+    },
+    {
+      "model_id": "C",
+      "task": "stack_blocks_three",
+      "suite": "Speed1.5",
+      "n": 25,
+      "correct": 25,
+      "planned": 25
+    },
+    {
+      "model_id": "m1",
+      "task": "fabrica_beam",
+      "suite": "Demo",
+      "n": 50,
+      "correct": 0,
+      "planned": 50
+    },
+    {
+      "model_id": "m1",
+      "task": "fabrica_beam",
+      "suite": "Pause-ID",
+      "n": 50,
+      "correct": 0,
+      "planned": 50
+    },
+    {
+      "model_id": "m1",
+      "task": "fabrica_beam",
+      "suite": "Pause-OOD",
+      "n": 25,
+      "correct": 0,
+      "planned": 50
+    },
+    {
+      "model_id": "m1",
+      "task": "fabrica_beam",
+      "suite": "Speed0.5",
+      "n": 0,
+      "correct": null,
+      "planned": 25
+    },
+    {
+      "model_id": "m1",
+      "task": "fabrica_beam",
+      "suite": "Speed1.5",
+      "n": 0,
+      "correct": null,
+      "planned": 25
+    },
+    {
+      "model_id": "m1",
+      "task": "fabrica_plumbers_block",
+      "suite": "Demo",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "m1",
+      "task": "fabrica_plumbers_block",
+      "suite": "Pause-ID",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "m1",
+      "task": "fabrica_plumbers_block",
+      "suite": "Pause-OOD",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "m1",
+      "task": "fabrica_plumbers_block",
+      "suite": "Speed0.5",
+      "n": 0,
+      "correct": null,
+      "planned": 25
+    },
+    {
+      "model_id": "m1",
+      "task": "fabrica_plumbers_block",
+      "suite": "Speed1.5",
+      "n": 0,
+      "correct": null,
+      "planned": 25
+    },
+    {
+      "model_id": "m1",
+      "task": "fabrica_stool",
+      "suite": "Demo",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "m1",
+      "task": "fabrica_stool",
+      "suite": "Pause-ID",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "m1",
+      "task": "fabrica_stool",
+      "suite": "Pause-OOD",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "m1",
+      "task": "fabrica_stool",
+      "suite": "Speed0.5",
+      "n": 0,
+      "correct": null,
+      "planned": 25
+    },
+    {
+      "model_id": "m1",
+      "task": "fabrica_stool",
+      "suite": "Speed1.5",
+      "n": 0,
+      "correct": null,
+      "planned": 25
+    },
+    {
+      "model_id": "m1",
+      "task": "grab_roller",
+      "suite": "Demo",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "m1",
+      "task": "grab_roller",
+      "suite": "Pause-ID",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "m1",
+      "task": "grab_roller",
+      "suite": "Pause-OOD",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "m1",
+      "task": "grab_roller",
+      "suite": "Speed0.5",
+      "n": 0,
+      "correct": null,
+      "planned": 25
+    },
+    {
+      "model_id": "m1",
+      "task": "grab_roller",
+      "suite": "Speed1.5",
+      "n": 0,
+      "correct": null,
+      "planned": 25
+    },
+    {
+      "model_id": "m1",
+      "task": "handover_block",
+      "suite": "Demo",
+      "n": 50,
+      "correct": 6,
+      "planned": 50
+    },
+    {
+      "model_id": "m1",
+      "task": "handover_block",
+      "suite": "Pause-ID",
+      "n": 50,
+      "correct": 6,
+      "planned": 50
+    },
+    {
+      "model_id": "m1",
+      "task": "handover_block",
+      "suite": "Pause-OOD",
+      "n": 50,
+      "correct": 4,
+      "planned": 50
+    },
+    {
+      "model_id": "m1",
+      "task": "handover_block",
+      "suite": "Speed0.5",
+      "n": 25,
+      "correct": 6,
+      "planned": 25
+    },
+    {
+      "model_id": "m1",
+      "task": "handover_block",
+      "suite": "Speed1.5",
+      "n": 25,
+      "correct": 3,
+      "planned": 25
+    },
+    {
+      "model_id": "m1",
+      "task": "handover_mic",
+      "suite": "Demo",
+      "n": 50,
+      "correct": 13,
+      "planned": 50
+    },
+    {
+      "model_id": "m1",
+      "task": "handover_mic",
+      "suite": "Pause-ID",
+      "n": 50,
+      "correct": 0,
+      "planned": 50
+    },
+    {
+      "model_id": "m1",
+      "task": "handover_mic",
+      "suite": "Pause-OOD",
+      "n": 50,
+      "correct": 11,
+      "planned": 50
+    },
+    {
+      "model_id": "m1",
+      "task": "handover_mic",
+      "suite": "Speed0.5",
+      "n": 25,
+      "correct": 11,
+      "planned": 25
+    },
+    {
+      "model_id": "m1",
+      "task": "handover_mic",
+      "suite": "Speed1.5",
+      "n": 25,
+      "correct": 0,
+      "planned": 25
+    },
+    {
+      "model_id": "m1",
+      "task": "hanging_mug",
+      "suite": "Demo",
+      "n": 50,
+      "correct": 4,
+      "planned": 50
+    },
+    {
+      "model_id": "m1",
+      "task": "hanging_mug",
+      "suite": "Pause-ID",
+      "n": 50,
+      "correct": 2,
+      "planned": 50
+    },
+    {
+      "model_id": "m1",
+      "task": "hanging_mug",
+      "suite": "Pause-OOD",
+      "n": 50,
+      "correct": 4,
+      "planned": 50
+    },
+    {
+      "model_id": "m1",
+      "task": "hanging_mug",
+      "suite": "Speed0.5",
+      "n": 25,
+      "correct": 1,
+      "planned": 25
+    },
+    {
+      "model_id": "m1",
+      "task": "hanging_mug",
+      "suite": "Speed1.5",
+      "n": 25,
+      "correct": 0,
+      "planned": 25
+    },
+    {
+      "model_id": "m1",
+      "task": "lift_pot",
+      "suite": "Demo",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "m1",
+      "task": "lift_pot",
+      "suite": "Pause-ID",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "m1",
+      "task": "lift_pot",
+      "suite": "Pause-OOD",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "m1",
+      "task": "lift_pot",
+      "suite": "Speed0.5",
+      "n": 0,
+      "correct": null,
+      "planned": 25
+    },
+    {
+      "model_id": "m1",
+      "task": "lift_pot",
+      "suite": "Speed1.5",
+      "n": 0,
+      "correct": null,
+      "planned": 25
+    },
+    {
+      "model_id": "m1",
+      "task": "place_object_basket",
+      "suite": "Demo",
+      "n": 50,
+      "correct": 23,
+      "planned": 50
+    },
+    {
+      "model_id": "m1",
+      "task": "place_object_basket",
+      "suite": "Pause-ID",
+      "n": 50,
+      "correct": 25,
+      "planned": 50
+    },
+    {
+      "model_id": "m1",
+      "task": "place_object_basket",
+      "suite": "Pause-OOD",
+      "n": 50,
+      "correct": 29,
+      "planned": 50
+    },
+    {
+      "model_id": "m1",
+      "task": "place_object_basket",
+      "suite": "Speed0.5",
+      "n": 25,
+      "correct": 11,
+      "planned": 25
+    },
+    {
+      "model_id": "m1",
+      "task": "place_object_basket",
+      "suite": "Speed1.5",
+      "n": 25,
+      "correct": 11,
+      "planned": 25
+    },
+    {
+      "model_id": "m1",
+      "task": "put_bottles_dustbin",
+      "suite": "Demo",
+      "n": 50,
+      "correct": 14,
+      "planned": 50
+    },
+    {
+      "model_id": "m1",
+      "task": "put_bottles_dustbin",
+      "suite": "Pause-ID",
+      "n": 50,
+      "correct": 13,
+      "planned": 50
+    },
+    {
+      "model_id": "m1",
+      "task": "put_bottles_dustbin",
+      "suite": "Pause-OOD",
+      "n": 50,
+      "correct": 17,
+      "planned": 50
+    },
+    {
+      "model_id": "m1",
+      "task": "put_bottles_dustbin",
+      "suite": "Speed0.5",
+      "n": 25,
+      "correct": 4,
+      "planned": 25
+    },
+    {
+      "model_id": "m1",
+      "task": "put_bottles_dustbin",
+      "suite": "Speed1.5",
+      "n": 25,
+      "correct": 5,
+      "planned": 25
+    },
+    {
+      "model_id": "m1",
+      "task": "stack_blocks_three",
+      "suite": "Demo",
+      "n": 50,
+      "correct": 45,
+      "planned": 50
+    },
+    {
+      "model_id": "m1",
+      "task": "stack_blocks_three",
+      "suite": "Pause-ID",
+      "n": 50,
+      "correct": 49,
+      "planned": 50
+    },
+    {
+      "model_id": "m1",
+      "task": "stack_blocks_three",
+      "suite": "Pause-OOD",
+      "n": 50,
+      "correct": 16,
+      "planned": 50
+    },
+    {
+      "model_id": "m1",
+      "task": "stack_blocks_three",
+      "suite": "Speed0.5",
+      "n": 25,
+      "correct": 22,
+      "planned": 25
+    },
+    {
+      "model_id": "m1",
+      "task": "stack_blocks_three",
+      "suite": "Speed1.5",
+      "n": 25,
+      "correct": 23,
+      "planned": 25
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "fabrica_beam",
+      "suite": "Demo",
+      "n": 50,
+      "correct": 0,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "fabrica_beam",
+      "suite": "Pause-ID",
+      "n": 50,
+      "correct": 0,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "fabrica_beam",
+      "suite": "Pause-OOD",
+      "n": 25,
+      "correct": 0,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "fabrica_beam",
+      "suite": "Speed0.5",
+      "n": 0,
+      "correct": null,
+      "planned": 25
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "fabrica_beam",
+      "suite": "Speed1.5",
+      "n": 0,
+      "correct": null,
+      "planned": 25
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "fabrica_plumbers_block",
+      "suite": "Demo",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "fabrica_plumbers_block",
+      "suite": "Pause-ID",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "fabrica_plumbers_block",
+      "suite": "Pause-OOD",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "fabrica_plumbers_block",
+      "suite": "Speed0.5",
+      "n": 0,
+      "correct": null,
+      "planned": 25
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "fabrica_plumbers_block",
+      "suite": "Speed1.5",
+      "n": 0,
+      "correct": null,
+      "planned": 25
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "fabrica_stool",
+      "suite": "Demo",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "fabrica_stool",
+      "suite": "Pause-ID",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "fabrica_stool",
+      "suite": "Pause-OOD",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "fabrica_stool",
+      "suite": "Speed0.5",
+      "n": 0,
+      "correct": null,
+      "planned": 25
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "fabrica_stool",
+      "suite": "Speed1.5",
+      "n": 0,
+      "correct": null,
+      "planned": 25
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "grab_roller",
+      "suite": "Demo",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "grab_roller",
+      "suite": "Pause-ID",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "grab_roller",
+      "suite": "Pause-OOD",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "grab_roller",
+      "suite": "Speed0.5",
+      "n": 0,
+      "correct": null,
+      "planned": 25
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "grab_roller",
+      "suite": "Speed1.5",
+      "n": 0,
+      "correct": null,
+      "planned": 25
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "handover_block",
+      "suite": "Demo",
+      "n": 50,
+      "correct": 3,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "handover_block",
+      "suite": "Pause-ID",
+      "n": 50,
+      "correct": 4,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "handover_block",
+      "suite": "Pause-OOD",
+      "n": 50,
+      "correct": 5,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "handover_block",
+      "suite": "Speed0.5",
+      "n": 25,
+      "correct": 4,
+      "planned": 25
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "handover_block",
+      "suite": "Speed1.5",
+      "n": 25,
+      "correct": 1,
+      "planned": 25
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "handover_mic",
+      "suite": "Demo",
+      "n": 50,
+      "correct": 0,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "handover_mic",
+      "suite": "Pause-ID",
+      "n": 50,
+      "correct": 0,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "handover_mic",
+      "suite": "Pause-OOD",
+      "n": 50,
+      "correct": 0,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "handover_mic",
+      "suite": "Speed0.5",
+      "n": 25,
+      "correct": 0,
+      "planned": 25
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "handover_mic",
+      "suite": "Speed1.5",
+      "n": 25,
+      "correct": 0,
+      "planned": 25
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "hanging_mug",
+      "suite": "Demo",
+      "n": 50,
+      "correct": 0,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "hanging_mug",
+      "suite": "Pause-ID",
+      "n": 50,
+      "correct": 0,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "hanging_mug",
+      "suite": "Pause-OOD",
+      "n": 50,
+      "correct": 1,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "hanging_mug",
+      "suite": "Speed0.5",
+      "n": 25,
+      "correct": 0,
+      "planned": 25
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "hanging_mug",
+      "suite": "Speed1.5",
+      "n": 25,
+      "correct": 0,
+      "planned": 25
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "lift_pot",
+      "suite": "Demo",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "lift_pot",
+      "suite": "Pause-ID",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "lift_pot",
+      "suite": "Pause-OOD",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "lift_pot",
+      "suite": "Speed0.5",
+      "n": 0,
+      "correct": null,
+      "planned": 25
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "lift_pot",
+      "suite": "Speed1.5",
+      "n": 0,
+      "correct": null,
+      "planned": 25
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "place_object_basket",
+      "suite": "Demo",
+      "n": 50,
+      "correct": 27,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "place_object_basket",
+      "suite": "Pause-ID",
+      "n": 50,
+      "correct": 27,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "place_object_basket",
+      "suite": "Pause-OOD",
+      "n": 50,
+      "correct": 18,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "place_object_basket",
+      "suite": "Speed0.5",
+      "n": 25,
+      "correct": 10,
+      "planned": 25
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "place_object_basket",
+      "suite": "Speed1.5",
+      "n": 25,
+      "correct": 10,
+      "planned": 25
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "put_bottles_dustbin",
+      "suite": "Demo",
+      "n": 50,
+      "correct": 13,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "put_bottles_dustbin",
+      "suite": "Pause-ID",
+      "n": 50,
+      "correct": 14,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "put_bottles_dustbin",
+      "suite": "Pause-OOD",
+      "n": 50,
+      "correct": 15,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "put_bottles_dustbin",
+      "suite": "Speed0.5",
+      "n": 25,
+      "correct": 7,
+      "planned": 25
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "put_bottles_dustbin",
+      "suite": "Speed1.5",
+      "n": 25,
+      "correct": 6,
+      "planned": 25
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "stack_blocks_three",
+      "suite": "Demo",
+      "n": 50,
+      "correct": 46,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "stack_blocks_three",
+      "suite": "Pause-ID",
+      "n": 50,
+      "correct": 50,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "stack_blocks_three",
+      "suite": "Pause-OOD",
+      "n": 50,
+      "correct": 5,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "stack_blocks_three",
+      "suite": "Speed0.5",
+      "n": 25,
+      "correct": 16,
+      "planned": 25
+    },
+    {
+      "model_id": "m1-m2",
+      "task": "stack_blocks_three",
+      "suite": "Speed1.5",
+      "n": 25,
+      "correct": 24,
+      "planned": 25
+    },
+    {
+      "model_id": "m1-15k",
+      "task": "fabrica_beam",
+      "suite": "Demo",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-15k",
+      "task": "fabrica_beam",
+      "suite": "Pause-ID",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-15k",
+      "task": "fabrica_beam",
+      "suite": "Pause-OOD",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-15k",
+      "task": "fabrica_beam",
+      "suite": "Speed0.5",
+      "n": 0,
+      "correct": null,
+      "planned": 25
+    },
+    {
+      "model_id": "m1-15k",
+      "task": "fabrica_beam",
+      "suite": "Speed1.5",
+      "n": 0,
+      "correct": null,
+      "planned": 25
+    },
+    {
+      "model_id": "m1-15k",
+      "task": "fabrica_plumbers_block",
+      "suite": "Demo",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-15k",
+      "task": "fabrica_plumbers_block",
+      "suite": "Pause-ID",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-15k",
+      "task": "fabrica_plumbers_block",
+      "suite": "Pause-OOD",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-15k",
+      "task": "fabrica_plumbers_block",
+      "suite": "Speed0.5",
+      "n": 0,
+      "correct": null,
+      "planned": 25
+    },
+    {
+      "model_id": "m1-15k",
+      "task": "fabrica_plumbers_block",
+      "suite": "Speed1.5",
+      "n": 0,
+      "correct": null,
+      "planned": 25
+    },
+    {
+      "model_id": "m1-15k",
+      "task": "fabrica_stool",
+      "suite": "Demo",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-15k",
+      "task": "fabrica_stool",
+      "suite": "Pause-ID",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-15k",
+      "task": "fabrica_stool",
+      "suite": "Pause-OOD",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-15k",
+      "task": "fabrica_stool",
+      "suite": "Speed0.5",
+      "n": 0,
+      "correct": null,
+      "planned": 25
+    },
+    {
+      "model_id": "m1-15k",
+      "task": "fabrica_stool",
+      "suite": "Speed1.5",
+      "n": 0,
+      "correct": null,
+      "planned": 25
+    },
+    {
+      "model_id": "m1-15k",
+      "task": "grab_roller",
+      "suite": "Demo",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-15k",
+      "task": "grab_roller",
+      "suite": "Pause-ID",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-15k",
+      "task": "grab_roller",
+      "suite": "Pause-OOD",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-15k",
+      "task": "grab_roller",
+      "suite": "Speed0.5",
+      "n": 0,
+      "correct": null,
+      "planned": 25
+    },
+    {
+      "model_id": "m1-15k",
+      "task": "grab_roller",
+      "suite": "Speed1.5",
+      "n": 0,
+      "correct": null,
+      "planned": 25
+    },
+    {
+      "model_id": "m1-15k",
+      "task": "handover_block",
+      "suite": "Demo",
+      "n": 50,
+      "correct": 4,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-15k",
+      "task": "handover_block",
+      "suite": "Pause-ID",
+      "n": 50,
+      "correct": 4,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-15k",
+      "task": "handover_block",
+      "suite": "Pause-OOD",
+      "n": 50,
+      "correct": 5,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-15k",
+      "task": "handover_block",
+      "suite": "Speed0.5",
+      "n": 25,
+      "correct": 5,
+      "planned": 25
+    },
+    {
+      "model_id": "m1-15k",
+      "task": "handover_block",
+      "suite": "Speed1.5",
+      "n": 25,
+      "correct": 1,
+      "planned": 25
+    },
+    {
+      "model_id": "m1-15k",
+      "task": "handover_mic",
+      "suite": "Demo",
+      "n": 50,
+      "correct": 0,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-15k",
+      "task": "handover_mic",
+      "suite": "Pause-ID",
+      "n": 50,
+      "correct": 0,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-15k",
+      "task": "handover_mic",
+      "suite": "Pause-OOD",
+      "n": 45,
+      "correct": 5,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-15k",
+      "task": "handover_mic",
+      "suite": "Speed0.5",
+      "n": 0,
+      "correct": null,
+      "planned": 25
+    },
+    {
+      "model_id": "m1-15k",
+      "task": "handover_mic",
+      "suite": "Speed1.5",
+      "n": 0,
+      "correct": null,
+      "planned": 25
+    },
+    {
+      "model_id": "m1-15k",
+      "task": "hanging_mug",
+      "suite": "Demo",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-15k",
+      "task": "hanging_mug",
+      "suite": "Pause-ID",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-15k",
+      "task": "hanging_mug",
+      "suite": "Pause-OOD",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-15k",
+      "task": "hanging_mug",
+      "suite": "Speed0.5",
+      "n": 0,
+      "correct": null,
+      "planned": 25
+    },
+    {
+      "model_id": "m1-15k",
+      "task": "hanging_mug",
+      "suite": "Speed1.5",
+      "n": 0,
+      "correct": null,
+      "planned": 25
+    },
+    {
+      "model_id": "m1-15k",
+      "task": "lift_pot",
+      "suite": "Demo",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-15k",
+      "task": "lift_pot",
+      "suite": "Pause-ID",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-15k",
+      "task": "lift_pot",
+      "suite": "Pause-OOD",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-15k",
+      "task": "lift_pot",
+      "suite": "Speed0.5",
+      "n": 0,
+      "correct": null,
+      "planned": 25
+    },
+    {
+      "model_id": "m1-15k",
+      "task": "lift_pot",
+      "suite": "Speed1.5",
+      "n": 0,
+      "correct": null,
+      "planned": 25
+    },
+    {
+      "model_id": "m1-15k",
+      "task": "place_object_basket",
+      "suite": "Demo",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-15k",
+      "task": "place_object_basket",
+      "suite": "Pause-ID",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-15k",
+      "task": "place_object_basket",
+      "suite": "Pause-OOD",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-15k",
+      "task": "place_object_basket",
+      "suite": "Speed0.5",
+      "n": 0,
+      "correct": null,
+      "planned": 25
+    },
+    {
+      "model_id": "m1-15k",
+      "task": "place_object_basket",
+      "suite": "Speed1.5",
+      "n": 0,
+      "correct": null,
+      "planned": 25
+    },
+    {
+      "model_id": "m1-15k",
+      "task": "put_bottles_dustbin",
+      "suite": "Demo",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-15k",
+      "task": "put_bottles_dustbin",
+      "suite": "Pause-ID",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-15k",
+      "task": "put_bottles_dustbin",
+      "suite": "Pause-OOD",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-15k",
+      "task": "put_bottles_dustbin",
+      "suite": "Speed0.5",
+      "n": 0,
+      "correct": null,
+      "planned": 25
+    },
+    {
+      "model_id": "m1-15k",
+      "task": "put_bottles_dustbin",
+      "suite": "Speed1.5",
+      "n": 0,
+      "correct": null,
+      "planned": 25
+    },
+    {
+      "model_id": "m1-15k",
+      "task": "stack_blocks_three",
+      "suite": "Demo",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-15k",
+      "task": "stack_blocks_three",
+      "suite": "Pause-ID",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-15k",
+      "task": "stack_blocks_three",
+      "suite": "Pause-OOD",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-15k",
+      "task": "stack_blocks_three",
+      "suite": "Speed0.5",
+      "n": 0,
+      "correct": null,
+      "planned": 25
+    },
+    {
+      "model_id": "m1-15k",
+      "task": "stack_blocks_three",
+      "suite": "Speed1.5",
+      "n": 0,
+      "correct": null,
+      "planned": 25
+    },
+    {
+      "model_id": "m1-m2-15k",
+      "task": "fabrica_beam",
+      "suite": "Demo",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-m2-15k",
+      "task": "fabrica_beam",
+      "suite": "Pause-ID",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-m2-15k",
+      "task": "fabrica_beam",
+      "suite": "Pause-OOD",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-m2-15k",
+      "task": "fabrica_beam",
+      "suite": "Speed0.5",
+      "n": 0,
+      "correct": null,
+      "planned": 25
+    },
+    {
+      "model_id": "m1-m2-15k",
+      "task": "fabrica_beam",
+      "suite": "Speed1.5",
+      "n": 0,
+      "correct": null,
+      "planned": 25
+    },
+    {
+      "model_id": "m1-m2-15k",
+      "task": "fabrica_plumbers_block",
+      "suite": "Demo",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-m2-15k",
+      "task": "fabrica_plumbers_block",
+      "suite": "Pause-ID",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-m2-15k",
+      "task": "fabrica_plumbers_block",
+      "suite": "Pause-OOD",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-m2-15k",
+      "task": "fabrica_plumbers_block",
+      "suite": "Speed0.5",
+      "n": 0,
+      "correct": null,
+      "planned": 25
+    },
+    {
+      "model_id": "m1-m2-15k",
+      "task": "fabrica_plumbers_block",
+      "suite": "Speed1.5",
+      "n": 0,
+      "correct": null,
+      "planned": 25
+    },
+    {
+      "model_id": "m1-m2-15k",
+      "task": "fabrica_stool",
+      "suite": "Demo",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-m2-15k",
+      "task": "fabrica_stool",
+      "suite": "Pause-ID",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-m2-15k",
+      "task": "fabrica_stool",
+      "suite": "Pause-OOD",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-m2-15k",
+      "task": "fabrica_stool",
+      "suite": "Speed0.5",
+      "n": 0,
+      "correct": null,
+      "planned": 25
+    },
+    {
+      "model_id": "m1-m2-15k",
+      "task": "fabrica_stool",
+      "suite": "Speed1.5",
+      "n": 0,
+      "correct": null,
+      "planned": 25
+    },
+    {
+      "model_id": "m1-m2-15k",
+      "task": "grab_roller",
+      "suite": "Demo",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-m2-15k",
+      "task": "grab_roller",
+      "suite": "Pause-ID",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-m2-15k",
+      "task": "grab_roller",
+      "suite": "Pause-OOD",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-m2-15k",
+      "task": "grab_roller",
+      "suite": "Speed0.5",
+      "n": 0,
+      "correct": null,
+      "planned": 25
+    },
+    {
+      "model_id": "m1-m2-15k",
+      "task": "grab_roller",
+      "suite": "Speed1.5",
+      "n": 0,
+      "correct": null,
+      "planned": 25
+    },
+    {
+      "model_id": "m1-m2-15k",
+      "task": "handover_block",
+      "suite": "Demo",
+      "n": 50,
+      "correct": 5,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-m2-15k",
+      "task": "handover_block",
+      "suite": "Pause-ID",
+      "n": 50,
+      "correct": 5,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-m2-15k",
+      "task": "handover_block",
+      "suite": "Pause-OOD",
+      "n": 50,
+      "correct": 7,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-m2-15k",
+      "task": "handover_block",
+      "suite": "Speed0.5",
+      "n": 25,
+      "correct": 5,
+      "planned": 25
+    },
+    {
+      "model_id": "m1-m2-15k",
+      "task": "handover_block",
+      "suite": "Speed1.5",
+      "n": 25,
+      "correct": 1,
+      "planned": 25
+    },
+    {
+      "model_id": "m1-m2-15k",
+      "task": "handover_mic",
+      "suite": "Demo",
+      "n": 50,
+      "correct": 0,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-m2-15k",
+      "task": "handover_mic",
+      "suite": "Pause-ID",
+      "n": 50,
+      "correct": 0,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-m2-15k",
+      "task": "handover_mic",
+      "suite": "Pause-OOD",
+      "n": 31,
+      "correct": 0,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-m2-15k",
+      "task": "handover_mic",
+      "suite": "Speed0.5",
+      "n": 0,
+      "correct": null,
+      "planned": 25
+    },
+    {
+      "model_id": "m1-m2-15k",
+      "task": "handover_mic",
+      "suite": "Speed1.5",
+      "n": 0,
+      "correct": null,
+      "planned": 25
+    },
+    {
+      "model_id": "m1-m2-15k",
+      "task": "hanging_mug",
+      "suite": "Demo",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-m2-15k",
+      "task": "hanging_mug",
+      "suite": "Pause-ID",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-m2-15k",
+      "task": "hanging_mug",
+      "suite": "Pause-OOD",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-m2-15k",
+      "task": "hanging_mug",
+      "suite": "Speed0.5",
+      "n": 0,
+      "correct": null,
+      "planned": 25
+    },
+    {
+      "model_id": "m1-m2-15k",
+      "task": "hanging_mug",
+      "suite": "Speed1.5",
+      "n": 0,
+      "correct": null,
+      "planned": 25
+    },
+    {
+      "model_id": "m1-m2-15k",
+      "task": "lift_pot",
+      "suite": "Demo",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-m2-15k",
+      "task": "lift_pot",
+      "suite": "Pause-ID",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-m2-15k",
+      "task": "lift_pot",
+      "suite": "Pause-OOD",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-m2-15k",
+      "task": "lift_pot",
+      "suite": "Speed0.5",
+      "n": 0,
+      "correct": null,
+      "planned": 25
+    },
+    {
+      "model_id": "m1-m2-15k",
+      "task": "lift_pot",
+      "suite": "Speed1.5",
+      "n": 0,
+      "correct": null,
+      "planned": 25
+    },
+    {
+      "model_id": "m1-m2-15k",
+      "task": "place_object_basket",
+      "suite": "Demo",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-m2-15k",
+      "task": "place_object_basket",
+      "suite": "Pause-ID",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-m2-15k",
+      "task": "place_object_basket",
+      "suite": "Pause-OOD",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-m2-15k",
+      "task": "place_object_basket",
+      "suite": "Speed0.5",
+      "n": 0,
+      "correct": null,
+      "planned": 25
+    },
+    {
+      "model_id": "m1-m2-15k",
+      "task": "place_object_basket",
+      "suite": "Speed1.5",
+      "n": 0,
+      "correct": null,
+      "planned": 25
+    },
+    {
+      "model_id": "m1-m2-15k",
+      "task": "put_bottles_dustbin",
+      "suite": "Demo",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-m2-15k",
+      "task": "put_bottles_dustbin",
+      "suite": "Pause-ID",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-m2-15k",
+      "task": "put_bottles_dustbin",
+      "suite": "Pause-OOD",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-m2-15k",
+      "task": "put_bottles_dustbin",
+      "suite": "Speed0.5",
+      "n": 0,
+      "correct": null,
+      "planned": 25
+    },
+    {
+      "model_id": "m1-m2-15k",
+      "task": "put_bottles_dustbin",
+      "suite": "Speed1.5",
+      "n": 0,
+      "correct": null,
+      "planned": 25
+    },
+    {
+      "model_id": "m1-m2-15k",
+      "task": "stack_blocks_three",
+      "suite": "Demo",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-m2-15k",
+      "task": "stack_blocks_three",
+      "suite": "Pause-ID",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-m2-15k",
+      "task": "stack_blocks_three",
+      "suite": "Pause-OOD",
+      "n": 0,
+      "correct": null,
+      "planned": 50
+    },
+    {
+      "model_id": "m1-m2-15k",
+      "task": "stack_blocks_three",
+      "suite": "Speed0.5",
+      "n": 0,
+      "correct": null,
+      "planned": 25
+    },
+    {
+      "model_id": "m1-m2-15k",
+      "task": "stack_blocks_three",
+      "suite": "Speed1.5",
+      "n": 0,
+      "correct": null,
+      "planned": 25
+    }
+  ],
+  "B_additional_completed_outside_common1000": 716,
+  "adaptive_experiment_is_separate": true,
+  "progress_snapshot_utc": "2026-11-13T04:15:30.267528+00:00",
+  "B_preserved_extra_Roller_Plumber": 400,
+  "gallery_models": [
+    {
+      "id": "A",
+      "label": "π0.5 A 20k",
+      "selected_update": 20000,
+      "job": {
+        "id": "359298",
+        "state": "RUNNING"
+      },
+      "progress": {
+        "n": 1300,
+        "correct": 425
+      }
+    },
+    {
+      "id": "B",
+      "label": "π0.5 B 20k",
+      "selected_update": 20000,
+      "job": {
+        "id": "359299",
+        "state": "RUNNING"
+      },
+      "progress": {
+        "n": 1716,
+        "correct": 471
+      }
+    },
+    {
+      "id": "C",
+      "label": "π0.5 C 20k",
+      "selected_update": 20000,
+      "job": {
+        "id": "359300",
+        "state": "RUNNING"
+      },
+      "progress": {
+        "n": 1300,
+        "correct": 327
+      }
+    },
+    {
+      "id": "m1",
+      "label": "π0.5 C + M1 10k",
+      "selected_update": 10000,
+      "job": {
+        "id": "359303",
+        "state": "RUNNING"
+      },
+      "progress": {
+        "n": 1325,
+        "correct": 378
+      }
+    },
+    {
+      "id": "m1-m2",
+      "label": "π0.5 C + M1+M2 10k",
+      "selected_update": 10000,
+      "job": {
+        "id": "359304",
+        "state": "RUNNING"
+      },
+      "progress": {
+        "n": 1325,
+        "correct": 306
+      }
+    },
+    {
+      "id": "m1-15k",
+      "label": "π0.5 C + M1 15k",
+      "selected_update": 15000,
+      "job": {
+        "id": "359305",
+        "state": "RUNNING"
+      },
+      "progress": {
+        "n": 345,
+        "correct": 24
+      }
+    },
+    {
+      "id": "m1-m2-15k",
+      "label": "π0.5 C + M1+M2 15k",
+      "selected_update": 15000,
+      "job": {
+        "id": "359309",
+        "state": "RUNNING"
+      },
+      "progress": {
+        "n": 331,
+        "correct": 23
+      }
+    }
+  ]
+}

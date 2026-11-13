@@ -1,0 +1,145 @@
+{
+  "updated_utc": "2026-11-13T03:38:02.364161+00:00",
+  "scope": "ABC20k exact shared1000/5completedtasks, Bextra400excluded",
+  "pause_correct_500": {
+    "A": 136,
+    "B": 98,
+    "C": 91
+  },
+  "A_advantage_not_universal": true,
+  "primary_gap_tasks": [
+    "put_bottles_dustbin",
+    "place_object_basket"
+  ],
+  "matched_steps": 20000,
+  "normalization_equal": true,
+  "training_scene_counts_per_completed_task": {
+    "A": 52,
+    "B": 26,
+    "C": 26
+  },
+  "C_pause_old_new_per_task": [
+    13,
+    13
+  ],
+  "actual_waiting_or_ready_latency_certified": false,
+  "causal_contribution_of_training_diversity_established": false,
+  "cases": [
+    {
+      "paired_key": "put_bottles_dustbin/8090002/Pause1",
+      "source_SR": {
+        "A": true,
+        "B": false,
+        "C": false
+      },
+      "pause_seconds": [
+        15.708,
+        16.708
+      ],
+      "visually_observed": [
+        "pause보다 앞선12.7–15.5초부터 B/C의 노란 병이 왼손 주변에 보인다. A에서는 같은 위치에 노란 병이 보이지 않아 물체 상태가 pause 이전부터 다르다.",
+        "B/C 종료 프레임에 병이 테이블 쪽에 남아 보인다. A의 종료 화면에는 병이 보이지 않는다."
+      ],
+      "log_evidence": [
+        "A의 최종 physical completion에는 bottles_contact_path_to_bin=True와 bottles_released_from_robot=True가 기록됐다. B/C는 native goal에 도달하지 못하고 시간 제한으로 끝났다.",
+        "pause 동안 LEFT target 관절 최대범위는 A0.362rad/B0.026rad/C0.081rad, 유효 gripper 범위는 A0.0022/B1.000/C0.808이다."
+      ],
+      "not_determined": [
+        "bin이 head-camera 화면 밖이므로 A가 병을 언제 bin으로 운반했는지 이 프레임만으로 확정할 수 없다.",
+        "B/C의 gripper 변화만으로 실패한 파지나 조기 release를 판정할 수 없다. A의 이동도 독립 작업이나 checkpoint 전 접근일 수 있다."
+      ],
+      "storyboards": [
+        "storyboards/put_bottles_dustbin-8090002-pause.jpg",
+        "storyboards/put_bottles_dustbin-8090002-later.jpg"
+      ]
+    },
+    {
+      "paired_key": "place_object_basket/8080011/Pause1",
+      "source_SR": {
+        "A": true,
+        "B": false,
+        "C": false
+      },
+      "pause_seconds": [
+        9.08,
+        10.08
+      ],
+      "visually_observed": [
+        "pause 전후에는 세 모델의 물체/손 위치가 비슷하고 약12.08초 프레임에서 세 모델 모두 파란 물체가 basket 안에 보인다.",
+        "이후 A는17.104초에 성공 종료한다. B는30초와42.9초에도 basket을 초기 위치 부근에 둔 채 손이 basket을 가리고 있으며, C는30초와42.9초에 basket을 크게 돌린 모습이다."
+      ],
+      "log_evidence": [
+        "A의 최종 성공 evidence는 object_basket_contact, object_released_from_robot, basket_grasp, basket_no_external_support가 모두True다.",
+        "B/C는 native goal을 만족하지 못해 시간 제한으로 종료했으며, 어느 개별 접촉 요건이 실패했는지는 마지막 성공 evidence로 확인할 수 없다."
+      ],
+      "not_determined": [
+        "이 사례에서 관찰한 차이는 물체가 basket에 들어간 뒤 basket을 잡고 들어올리는 후반 동작이다. pause 중 정지 능력만의 차이로 해석하지 않는다.",
+        "손이 물체/손잡이를 가려 파지력과 실제 지지 접촉의 시계열은 영상만으로 확인하지 못했다."
+      ],
+      "storyboards": [
+        "storyboards/place_object_basket-8080011-pause.jpg",
+        "storyboards/place_object_basket-8080011-later.jpg"
+      ]
+    },
+    {
+      "paired_key": "put_bottles_dustbin/8091330/Pause2",
+      "source_SR": {
+        "A": false,
+        "B": true,
+        "C": true
+      },
+      "pause_seconds": [
+        17.524,
+        19.524
+      ],
+      "visually_observed": [
+        "세 모델 모두 pause 뒤 빨간 병에 접근한다. A의39.5초 프레임에는 빨간 병이 왼그리퍼 주변에 수평으로 보이지만, B/C의 같은 시각에는 병이 같은 화면 위치에 보이지 않는다.",
+        "B/C는약43.8초에 성공하고 A는104.04초의 시간 제한으로 끝난다."
+      ],
+      "log_evidence": [
+        "B/C의 성공 evidence는 모든 병의 bin contact path와 robot release를 확인한다.",
+        "pause 동안 세 모델의 LEFT target 관절 범위는 A1.134/B1.170/C1.123rad로 모두 변한다. RIGHT drive는 pause 구간에서 정지한다."
+      ],
+      "not_determined": [
+        "화면 밖 운반 경로와 연속 파지 접촉은 확인하지 못했다. A의 실패를 기다림 실패로 분류하지 않는다."
+      ],
+      "storyboards": [
+        "storyboards/put_bottles_dustbin-8091330-pause.jpg",
+        "storyboards/put_bottles_dustbin-8091330-later.jpg"
+      ]
+    },
+    {
+      "paired_key": "stack_blocks_three/8100026/Pause16",
+      "source_SR": {
+        "A": true,
+        "B": false,
+        "C": false
+      },
+      "pause_seconds": [
+        23.016,
+        39.016
+      ],
+      "visually_observed": [
+        "pause 초반24.016초에는 세 모델 모두 오른손의 녹색 블록이 빨간 블록 위에 있고, 파란 블록은 왼쪽 테이블에 보인다. pause 중 왼손은 모델마다 다르게 접근하므로 전체 구간의 움직임을 기다림 실패로 판정하지 않는다.",
+        "재개 뒤43.016초에는 A/B의 녹색 블록이 빨간 블록 위에 남아 있지만 C에서는 녹색 블록이 옆 테이블로 벗어난다. C의 세 블록은 이후49초와 종료 프레임에서 분리되어 보인다.",
+        "A의 파란 블록은43초에 테이블에 있고49초에는 왼그리퍼 부근에 보이며,51.228초에 세 블록 스택으로 성공 종료한다. B는43–49초 파란 블록을 움직이지만87.9초 종료 프레임에서 완성된 세 블록 스택이 확인되지 않고 원결과도 실패다."
+      ],
+      "log_evidence": [
+        "세 모델의 기록된 RIGHT pause는23.016–39.016초다. A는51.228초에성공, B/C는88.020초 시간제한으로실패했다.",
+        "A의 성공 evidence는 bottom_block_table_contact, middle_bottom_contact, top_middle_contact, blocks_released_from_robot가모두True이며 physics_tick12807이다. B/C는 native goal에 도달하지 않아 개별성공요건 기록이없다."
+      ],
+      "not_determined": [
+        "C에서 녹색 블록이 벗어난 최초접촉이나 B의 마지막 파란 블록 조작 실패원인은 손의 가림과 정적프레임만으로확정하지못했다.",
+        "독립적인 접근, checkpoint이후기다림, 의존단계우회를영상 몇 장만으로 분류하지 않았다. 같은예제의후속조작차이이며 A의전체OOD우위나학습scene다양성의인과효과를증명하지않는다."
+      ],
+      "storyboards": [
+        "storyboards/stack_blocks_three-8100026-pause.jpg",
+        "storyboards/stack_blocks_three-8100026-handoff.jpg",
+        "storyboards/stack_blocks_three-8100026-later.jpg"
+      ],
+      "reviewed_utc": "2026-11-13T03:38:02.218880+00:00",
+      "storyboard_job": "359405"
+    }
+  ],
+  "publication_status": "prepared_not_uploaded"
+}

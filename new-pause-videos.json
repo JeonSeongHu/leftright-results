@@ -1,0 +1,3924 @@
+{
+  "updated_utc": "2026-11-10T02:17:41.068659+00:00",
+  "available": 111,
+  "selected": 111,
+  "clips": [
+    {
+      "model": "pi05",
+      "task": "place_object_basket",
+      "group": "P0",
+      "success": true,
+      "status": "available",
+      "n": 48,
+      "correct": 28,
+      "key": "place_object_basket__clean__s197013__e000",
+      "name": "newpause-pi05--place_object_basket--P0--success",
+      "diagnostic_only": false,
+      "assembly_goal": "full",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 3562,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-pi05--place_object_basket--P0--success.mp4"
+    },
+    {
+      "model": "pi05",
+      "task": "place_object_basket",
+      "group": "P0",
+      "success": false,
+      "status": "available",
+      "n": 48,
+      "correct": 28,
+      "key": "place_object_basket__clean__s197020__e000",
+      "name": "newpause-pi05--place_object_basket--P0--failure",
+      "diagnostic_only": false,
+      "assembly_goal": "full",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 10500,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-pi05--place_object_basket--P0--failure.mp4"
+    },
+    {
+      "model": "pi05",
+      "task": "place_object_basket",
+      "group": "P1-OOD",
+      "success": true,
+      "status": "available",
+      "n": 48,
+      "correct": 6,
+      "key": "place_object_basket__T_pause__s197145__e008",
+      "name": "newpause-pi05--place_object_basket--P1-OOD--success",
+      "diagnostic_only": false,
+      "assembly_goal": "full",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 6177,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-pi05--place_object_basket--P1-OOD--success.mp4"
+    },
+    {
+      "model": "pi05",
+      "task": "place_object_basket",
+      "group": "P1-OOD",
+      "success": false,
+      "status": "available",
+      "n": 48,
+      "correct": 6,
+      "key": "place_object_basket__T_pause__s197013__e016",
+      "name": "newpause-pi05--place_object_basket--P1-OOD--failure",
+      "diagnostic_only": false,
+      "assembly_goal": "full",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 14505,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-pi05--place_object_basket--P1-OOD--failure.mp4"
+    },
+    {
+      "model": "pi05",
+      "task": "stack_blocks_three",
+      "group": "P0",
+      "success": true,
+      "status": "available",
+      "n": 50,
+      "correct": 50,
+      "key": "stack_blocks_three__clean__s117020__e000",
+      "name": "newpause-pi05--stack_blocks_three--P0--success",
+      "diagnostic_only": false,
+      "assembly_goal": "full",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 6345,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-pi05--stack_blocks_three--P0--success.mp4"
+    },
+    {
+      "model": "pi05",
+      "task": "stack_blocks_three",
+      "group": "P0",
+      "success": false,
+      "status": "no_outcome",
+      "n": 50,
+      "correct": 50,
+      "name": "newpause-pi05--stack_blocks_three--P0--failure",
+      "diagnostic_only": false
+    },
+    {
+      "model": "pi05",
+      "task": "stack_blocks_three",
+      "group": "P1-OOD",
+      "success": true,
+      "status": "available",
+      "n": 50,
+      "correct": 12,
+      "key": "stack_blocks_three__T_pause__s182275__e008",
+      "name": "newpause-pi05--stack_blocks_three--P1-OOD--success",
+      "diagnostic_only": false,
+      "assembly_goal": "full",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 8398,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-pi05--stack_blocks_three--P1-OOD--success.mp4"
+    },
+    {
+      "model": "pi05",
+      "task": "stack_blocks_three",
+      "group": "P1-OOD",
+      "success": false,
+      "status": "available",
+      "n": 50,
+      "correct": 12,
+      "key": "stack_blocks_three__T_pause__s117020__e008",
+      "name": "newpause-pi05--stack_blocks_three--P1-OOD--failure",
+      "diagnostic_only": false,
+      "assembly_goal": "full",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 20010,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-pi05--stack_blocks_three--P1-OOD--failure.mp4"
+    },
+    {
+      "model": "pi05",
+      "task": "handover_block",
+      "group": "P0",
+      "success": true,
+      "status": "available",
+      "n": 50,
+      "correct": 35,
+      "key": "handover_block__clean__s090002__e000",
+      "name": "newpause-pi05--handover_block--P0--success",
+      "diagnostic_only": false,
+      "assembly_goal": "full",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 3396,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-pi05--handover_block--P0--success.mp4"
+    },
+    {
+      "model": "pi05",
+      "task": "handover_block",
+      "group": "P0",
+      "success": false,
+      "status": "available",
+      "n": 50,
+      "correct": 35,
+      "key": "handover_block__clean__s090007__e000",
+      "name": "newpause-pi05--handover_block--P0--failure",
+      "diagnostic_only": false,
+      "assembly_goal": "full",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 12000,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-pi05--handover_block--P0--failure.mp4"
+    },
+    {
+      "model": "pi05",
+      "task": "handover_block",
+      "group": "P1-OOD",
+      "success": true,
+      "status": "no_outcome",
+      "n": 50,
+      "correct": 0,
+      "name": "newpause-pi05--handover_block--P1-OOD--success",
+      "diagnostic_only": false
+    },
+    {
+      "model": "pi05",
+      "task": "handover_block",
+      "group": "P1-OOD",
+      "success": false,
+      "status": "available",
+      "n": 50,
+      "correct": 0,
+      "key": "handover_block__T_pause__s090002__e008",
+      "name": "newpause-pi05--handover_block--P1-OOD--failure",
+      "diagnostic_only": false,
+      "assembly_goal": "full",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 14010,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-pi05--handover_block--P1-OOD--failure.mp4"
+    },
+    {
+      "model": "pi05",
+      "task": "hanging_mug",
+      "group": "P0",
+      "success": true,
+      "status": "available",
+      "n": 37,
+      "correct": 11,
+      "key": "hanging_mug__clean__s630123__e000",
+      "name": "newpause-pi05--hanging_mug--P0--success",
+      "diagnostic_only": true,
+      "assembly_goal": "full",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 8364,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-pi05--hanging_mug--P0--success.mp4"
+    },
+    {
+      "model": "pi05",
+      "task": "hanging_mug",
+      "group": "P0",
+      "success": false,
+      "status": "available",
+      "n": 37,
+      "correct": 11,
+      "key": "hanging_mug__clean__s630094__e000",
+      "name": "newpause-pi05--hanging_mug--P0--failure",
+      "diagnostic_only": true,
+      "assembly_goal": "full",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 12990,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-pi05--hanging_mug--P0--failure.mp4"
+    },
+    {
+      "model": "pi05",
+      "task": "hanging_mug",
+      "group": "P1-OOD",
+      "success": true,
+      "status": "available",
+      "n": 37,
+      "correct": 8,
+      "key": "hanging_mug__T_pause__s650591__e008",
+      "name": "newpause-pi05--hanging_mug--P1-OOD--success",
+      "diagnostic_only": true,
+      "assembly_goal": "full",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 10829,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-pi05--hanging_mug--P1-OOD--success.mp4"
+    },
+    {
+      "model": "pi05",
+      "task": "hanging_mug",
+      "group": "P1-OOD",
+      "success": false,
+      "status": "available",
+      "n": 37,
+      "correct": 8,
+      "key": "hanging_mug__T_pause__s630094__e008",
+      "name": "newpause-pi05--hanging_mug--P1-OOD--failure",
+      "diagnostic_only": true,
+      "assembly_goal": "full",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 15000,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-pi05--hanging_mug--P1-OOD--failure.mp4"
+    },
+    {
+      "model": "pi05",
+      "task": "handover_mic",
+      "group": "P0",
+      "success": true,
+      "status": "available",
+      "n": 50,
+      "correct": 50,
+      "key": "handover_mic__clean__s090000__e000",
+      "name": "newpause-pi05--handover_mic--P0--success",
+      "diagnostic_only": false,
+      "assembly_goal": "full",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 2867,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-pi05--handover_mic--P0--success.mp4"
+    },
+    {
+      "model": "pi05",
+      "task": "handover_mic",
+      "group": "P0",
+      "success": false,
+      "status": "no_outcome",
+      "n": 50,
+      "correct": 50,
+      "name": "newpause-pi05--handover_mic--P0--failure",
+      "diagnostic_only": false
+    },
+    {
+      "model": "pi05",
+      "task": "handover_mic",
+      "group": "P1-OOD",
+      "success": true,
+      "status": "no_outcome",
+      "n": 50,
+      "correct": 0,
+      "name": "newpause-pi05--handover_mic--P1-OOD--success",
+      "diagnostic_only": false
+    },
+    {
+      "model": "pi05",
+      "task": "handover_mic",
+      "group": "P1-OOD",
+      "success": false,
+      "status": "available",
+      "n": 50,
+      "correct": 0,
+      "key": "handover_mic__T_pause__s090000__e016",
+      "name": "newpause-pi05--handover_mic--P1-OOD--failure",
+      "diagnostic_only": false,
+      "assembly_goal": "full",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 13005,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-pi05--handover_mic--P1-OOD--failure.mp4"
+    },
+    {
+      "model": "pi05",
+      "task": "fabrica_beam",
+      "group": "P0",
+      "success": true,
+      "status": "no_outcome",
+      "n": 50,
+      "correct": 0,
+      "name": "newpause-pi05--fabrica_beam--P0--success",
+      "diagnostic_only": false
+    },
+    {
+      "model": "pi05",
+      "task": "fabrica_beam",
+      "group": "P0",
+      "success": false,
+      "status": "available",
+      "n": 50,
+      "correct": 0,
+      "key": "fabrica_beam__clean__s011000__e000",
+      "name": "newpause-pi05--fabrica_beam--P0--failure",
+      "diagnostic_only": false,
+      "assembly_goal": "beam-column-cap-v1",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 15150,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-pi05--fabrica_beam--P0--failure.mp4"
+    },
+    {
+      "model": "pi05",
+      "task": "fabrica_beam",
+      "group": "P1-OOD",
+      "success": true,
+      "status": "no_outcome",
+      "n": 50,
+      "correct": 0,
+      "name": "newpause-pi05--fabrica_beam--P1-OOD--success",
+      "diagnostic_only": false
+    },
+    {
+      "model": "pi05",
+      "task": "fabrica_beam",
+      "group": "P1-OOD",
+      "success": false,
+      "status": "available",
+      "n": 50,
+      "correct": 0,
+      "key": "fabrica_beam__T_pause__s011000__e008",
+      "name": "newpause-pi05--fabrica_beam--P1-OOD--failure",
+      "diagnostic_only": false,
+      "assembly_goal": "beam-column-cap-v1",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 17010,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-pi05--fabrica_beam--P1-OOD--failure.mp4"
+    },
+    {
+      "model": "pi05",
+      "task": "fabrica_plumbers_block",
+      "group": "P0",
+      "success": true,
+      "status": "available",
+      "n": 32,
+      "correct": 1,
+      "key": "fabrica_plumbers_block__clean__s411637__e000",
+      "name": "newpause-pi05--fabrica_plumbers_block--P0--success",
+      "diagnostic_only": false,
+      "assembly_goal": "plumber-first-tube-v1",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 5450,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-pi05--fabrica_plumbers_block--P0--success.mp4"
+    },
+    {
+      "model": "pi05",
+      "task": "fabrica_plumbers_block",
+      "group": "P0",
+      "success": false,
+      "status": "available",
+      "n": 32,
+      "correct": 1,
+      "key": "fabrica_plumbers_block__clean__s011000__e000",
+      "name": "newpause-pi05--fabrica_plumbers_block--P0--failure",
+      "diagnostic_only": false,
+      "assembly_goal": "plumber-first-tube-v1",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 18720,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-pi05--fabrica_plumbers_block--P0--failure.mp4"
+    },
+    {
+      "model": "pi05",
+      "task": "fabrica_plumbers_block",
+      "group": "P1-OOD",
+      "success": true,
+      "status": "no_outcome",
+      "n": 32,
+      "correct": 0,
+      "name": "newpause-pi05--fabrica_plumbers_block--P1-OOD--success",
+      "diagnostic_only": false
+    },
+    {
+      "model": "pi05",
+      "task": "fabrica_plumbers_block",
+      "group": "P1-OOD",
+      "success": false,
+      "status": "available",
+      "n": 32,
+      "correct": 0,
+      "key": "fabrica_plumbers_block__T_pause__s011000__e008",
+      "name": "newpause-pi05--fabrica_plumbers_block--P1-OOD--failure",
+      "diagnostic_only": false,
+      "assembly_goal": "plumber-first-tube-v1",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 20085,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-pi05--fabrica_plumbers_block--P1-OOD--failure.mp4"
+    },
+    {
+      "model": "pi05",
+      "task": "fabrica_stool",
+      "group": "P0",
+      "success": true,
+      "status": "available",
+      "n": 39,
+      "correct": 5,
+      "key": "fabrica_stool__clean__s211567__e000",
+      "name": "newpause-pi05--fabrica_stool--P0--success",
+      "diagnostic_only": false,
+      "assembly_goal": "stool-first-leg-v1",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 3475,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-pi05--fabrica_stool--P0--success.mp4"
+    },
+    {
+      "model": "pi05",
+      "task": "fabrica_stool",
+      "group": "P0",
+      "success": false,
+      "status": "available",
+      "n": 39,
+      "correct": 5,
+      "key": "fabrica_stool__clean__s011000__e000",
+      "name": "newpause-pi05--fabrica_stool--P0--failure",
+      "diagnostic_only": false,
+      "assembly_goal": "stool-first-leg-v1",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 24600,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-pi05--fabrica_stool--P0--failure.mp4"
+    },
+    {
+      "model": "pi05",
+      "task": "fabrica_stool",
+      "group": "P1-OOD",
+      "success": true,
+      "status": "available",
+      "n": 34,
+      "correct": 1,
+      "key": "fabrica_stool__T_pause__s211590__e016",
+      "name": "newpause-pi05--fabrica_stool--P1-OOD--success",
+      "diagnostic_only": false,
+      "assembly_goal": "stool-first-leg-v1",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 4000,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-pi05--fabrica_stool--P1-OOD--success.mp4"
+    },
+    {
+      "model": "pi05",
+      "task": "fabrica_stool",
+      "group": "P1-OOD",
+      "success": false,
+      "status": "available",
+      "n": 34,
+      "correct": 1,
+      "key": "fabrica_stool__T_pause__s011000__e008",
+      "name": "newpause-pi05--fabrica_stool--P1-OOD--failure",
+      "diagnostic_only": false,
+      "assembly_goal": "stool-first-leg-v1",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 26820,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-pi05--fabrica_stool--P1-OOD--failure.mp4"
+    },
+    {
+      "model": "oracle",
+      "task": "place_object_basket",
+      "group": "P0",
+      "success": true,
+      "status": "available",
+      "n": 48,
+      "correct": 23,
+      "key": "place_object_basket__clean__s197030__e000",
+      "name": "newpause-oracle--place_object_basket--P0--success",
+      "diagnostic_only": false,
+      "assembly_goal": "full",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 3739,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-oracle--place_object_basket--P0--success.mp4",
+      "commands": [
+        {
+          "seconds": 0.0,
+          "stage": "wait_object_placement",
+          "text": "keep the left hand clear until the right hand releases the object inside the basket."
+        },
+        {
+          "seconds": 7.92,
+          "stage": "approach_basket",
+          "text": "move the left gripper toward the basket handle."
+        },
+        {
+          "seconds": 9.0,
+          "stage": "wait_clearance",
+          "text": "keep the left arm still until the other arm clears its path."
+        },
+        {
+          "seconds": 9.9,
+          "stage": "approach_basket",
+          "text": "move the left gripper toward the basket handle."
+        },
+        {
+          "seconds": 12.12,
+          "stage": "grasp_basket",
+          "text": "grasp the basket with the left gripper."
+        },
+        {
+          "seconds": 14.64,
+          "stage": "lift_basket",
+          "text": "lift the basket containing the object."
+        }
+      ]
+    },
+    {
+      "model": "oracle",
+      "task": "place_object_basket",
+      "group": "P0",
+      "success": false,
+      "status": "available",
+      "n": 48,
+      "correct": 23,
+      "key": "place_object_basket__clean__s197013__e000",
+      "name": "newpause-oracle--place_object_basket--P0--failure",
+      "diagnostic_only": false,
+      "assembly_goal": "full",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 10500,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-oracle--place_object_basket--P0--failure.mp4",
+      "commands": [
+        {
+          "seconds": 0.0,
+          "stage": "wait_object_placement",
+          "text": "keep the left hand clear until the right hand releases the object inside the basket."
+        },
+        {
+          "seconds": 8.1,
+          "stage": "approach_basket",
+          "text": "move the left gripper toward the basket handle."
+        },
+        {
+          "seconds": 9.24,
+          "stage": "wait_clearance",
+          "text": "keep the left arm still until the other arm clears its path."
+        },
+        {
+          "seconds": 9.6,
+          "stage": "approach_basket",
+          "text": "move the left gripper toward the basket handle."
+        },
+        {
+          "seconds": 11.82,
+          "stage": "grasp_basket",
+          "text": "grasp the basket with the left gripper."
+        },
+        {
+          "seconds": 13.8,
+          "stage": "lift_basket",
+          "text": "lift the basket containing the object."
+        }
+      ]
+    },
+    {
+      "model": "oracle",
+      "task": "place_object_basket",
+      "group": "P1-OOD",
+      "success": true,
+      "status": "available",
+      "n": 48,
+      "correct": 19,
+      "key": "place_object_basket__T_pause__s197022__e008",
+      "name": "newpause-oracle--place_object_basket--P1-OOD--success",
+      "diagnostic_only": false,
+      "assembly_goal": "full",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 6003,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-oracle--place_object_basket--P1-OOD--success.mp4",
+      "commands": [
+        {
+          "seconds": 0.0,
+          "stage": "wait_object_placement",
+          "text": "keep the left hand clear until the right hand releases the object inside the basket."
+        },
+        {
+          "seconds": 17.16,
+          "stage": "approach_basket",
+          "text": "move the left gripper toward the basket handle."
+        },
+        {
+          "seconds": 18.24,
+          "stage": "wait_clearance",
+          "text": "keep the left arm still until the other arm clears its path."
+        },
+        {
+          "seconds": 19.08,
+          "stage": "approach_basket",
+          "text": "move the left gripper toward the basket handle."
+        },
+        {
+          "seconds": 21.66,
+          "stage": "grasp_basket",
+          "text": "grasp the basket with the left gripper."
+        },
+        {
+          "seconds": 23.7,
+          "stage": "lift_basket",
+          "text": "lift the basket containing the object."
+        }
+      ]
+    },
+    {
+      "model": "oracle",
+      "task": "place_object_basket",
+      "group": "P1-OOD",
+      "success": false,
+      "status": "available",
+      "n": 48,
+      "correct": 19,
+      "key": "place_object_basket__T_pause__s197013__e016",
+      "name": "newpause-oracle--place_object_basket--P1-OOD--failure",
+      "diagnostic_only": false,
+      "assembly_goal": "full",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 14505,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-oracle--place_object_basket--P1-OOD--failure.mp4",
+      "commands": [
+        {
+          "seconds": 0.0,
+          "stage": "wait_object_placement",
+          "text": "keep the left hand clear until the right hand releases the object inside the basket."
+        },
+        {
+          "seconds": 24.12,
+          "stage": "approach_basket",
+          "text": "move the left gripper toward the basket handle."
+        },
+        {
+          "seconds": 25.26,
+          "stage": "wait_clearance",
+          "text": "keep the left arm still until the other arm clears its path."
+        },
+        {
+          "seconds": 25.62,
+          "stage": "approach_basket",
+          "text": "move the left gripper toward the basket handle."
+        },
+        {
+          "seconds": 27.84,
+          "stage": "grasp_basket",
+          "text": "grasp the basket with the left gripper."
+        },
+        {
+          "seconds": 29.82,
+          "stage": "lift_basket",
+          "text": "lift the basket containing the object."
+        }
+      ]
+    },
+    {
+      "model": "oracle",
+      "task": "stack_blocks_three",
+      "group": "P0",
+      "success": true,
+      "status": "available",
+      "n": 50,
+      "correct": 49,
+      "key": "stack_blocks_three__clean__s117020__e000",
+      "name": "newpause-oracle--stack_blocks_three--P0--success",
+      "diagnostic_only": false,
+      "assembly_goal": "full",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 6417,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-oracle--stack_blocks_three--P0--success.mp4",
+      "commands": [
+        {
+          "seconds": 0.0,
+          "stage": "approach_block",
+          "text": "move the left gripper toward the red block."
+        },
+        {
+          "seconds": 1.92,
+          "stage": "grasp_block",
+          "text": "grasp the red block with the left gripper."
+        },
+        {
+          "seconds": 3.9,
+          "stage": "raise_block",
+          "text": "raise the red block clear of the table."
+        },
+        {
+          "seconds": 4.8,
+          "stage": "place_base",
+          "text": "place the red block at the base of the stack."
+        },
+        {
+          "seconds": 6.6,
+          "stage": "release_block",
+          "text": "release the red block onto its support."
+        },
+        {
+          "seconds": 7.8,
+          "stage": "withdraw",
+          "text": "withdraw the left hand from the stack."
+        },
+        {
+          "seconds": 10.56,
+          "stage": "wait",
+          "text": "keep the left hand steady and wait for the other hand to finish placing the supporting block."
+        },
+        {
+          "seconds": 17.52,
+          "stage": "approach_block",
+          "text": "move the left gripper toward the blue block."
+        },
+        {
+          "seconds": 19.68,
+          "stage": "grasp_block",
+          "text": "grasp the blue block with the left gripper."
+        },
+        {
+          "seconds": 21.72,
+          "stage": "raise_block",
+          "text": "raise the blue block clear of the table."
+        },
+        {
+          "seconds": 23.28,
+          "stage": "stack_block",
+          "text": "place the blue block on top of the existing stack."
+        },
+        {
+          "seconds": 25.02,
+          "stage": "release_block",
+          "text": "release the blue block onto its support."
+        }
+      ]
+    },
+    {
+      "model": "oracle",
+      "task": "stack_blocks_three",
+      "group": "P0",
+      "success": false,
+      "status": "available",
+      "n": 50,
+      "correct": 49,
+      "key": "stack_blocks_three__clean__s182138__e000",
+      "name": "newpause-oracle--stack_blocks_three--P0--failure",
+      "diagnostic_only": false,
+      "assembly_goal": "full",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 18000,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-oracle--stack_blocks_three--P0--failure.mp4",
+      "commands": [
+        {
+          "seconds": 0.0,
+          "stage": "approach_block",
+          "text": "move the left gripper toward the red block."
+        },
+        {
+          "seconds": 2.04,
+          "stage": "grasp_block",
+          "text": "grasp the red block with the left gripper."
+        },
+        {
+          "seconds": 4.02,
+          "stage": "raise_block",
+          "text": "raise the red block clear of the table."
+        },
+        {
+          "seconds": 5.04,
+          "stage": "place_base",
+          "text": "place the red block at the base of the stack."
+        },
+        {
+          "seconds": 7.08,
+          "stage": "release_block",
+          "text": "release the red block onto its support."
+        },
+        {
+          "seconds": 8.28,
+          "stage": "withdraw",
+          "text": "withdraw the left hand from the stack."
+        },
+        {
+          "seconds": 11.04,
+          "stage": "wait",
+          "text": "keep the left hand steady and wait for the other hand to finish placing the supporting block."
+        },
+        {
+          "seconds": 18.12,
+          "stage": "approach_block",
+          "text": "move the left gripper toward the blue block."
+        },
+        {
+          "seconds": 20.28,
+          "stage": "grasp_block",
+          "text": "grasp the blue block with the left gripper."
+        },
+        {
+          "seconds": 22.32,
+          "stage": "raise_block",
+          "text": "raise the blue block clear of the table."
+        },
+        {
+          "seconds": 23.94,
+          "stage": "stack_block",
+          "text": "place the blue block on top of the existing stack."
+        },
+        {
+          "seconds": 25.8,
+          "stage": "release_block",
+          "text": "release the blue block onto its support."
+        }
+      ]
+    },
+    {
+      "model": "oracle",
+      "task": "stack_blocks_three",
+      "group": "P1-OOD",
+      "success": true,
+      "status": "available",
+      "n": 50,
+      "correct": 48,
+      "key": "stack_blocks_three__T_pause__s117020__e008",
+      "name": "newpause-oracle--stack_blocks_three--P1-OOD--success",
+      "diagnostic_only": false,
+      "assembly_goal": "full",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 8421,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-oracle--stack_blocks_three--P1-OOD--success.mp4",
+      "commands": [
+        {
+          "seconds": 0.0,
+          "stage": "approach_block",
+          "text": "move the left gripper toward the red block."
+        },
+        {
+          "seconds": 1.92,
+          "stage": "grasp_block",
+          "text": "grasp the red block with the left gripper."
+        },
+        {
+          "seconds": 3.9,
+          "stage": "raise_block",
+          "text": "raise the red block clear of the table."
+        },
+        {
+          "seconds": 4.8,
+          "stage": "place_base",
+          "text": "place the red block at the base of the stack."
+        },
+        {
+          "seconds": 6.6,
+          "stage": "release_block",
+          "text": "release the red block onto its support."
+        },
+        {
+          "seconds": 7.8,
+          "stage": "withdraw",
+          "text": "withdraw the left hand from the stack."
+        },
+        {
+          "seconds": 10.56,
+          "stage": "wait",
+          "text": "keep the left hand steady and wait for the other hand to finish placing the supporting block."
+        },
+        {
+          "seconds": 25.56,
+          "stage": "approach_block",
+          "text": "move the left gripper toward the blue block."
+        },
+        {
+          "seconds": 27.72,
+          "stage": "grasp_block",
+          "text": "grasp the blue block with the left gripper."
+        },
+        {
+          "seconds": 29.76,
+          "stage": "raise_block",
+          "text": "raise the blue block clear of the table."
+        },
+        {
+          "seconds": 31.32,
+          "stage": "stack_block",
+          "text": "place the blue block on top of the existing stack."
+        },
+        {
+          "seconds": 33.06,
+          "stage": "release_block",
+          "text": "release the blue block onto its support."
+        }
+      ]
+    },
+    {
+      "model": "oracle",
+      "task": "stack_blocks_three",
+      "group": "P1-OOD",
+      "success": false,
+      "status": "available",
+      "n": 50,
+      "correct": 48,
+      "key": "stack_blocks_three__T_pause__s180002__e016",
+      "name": "newpause-oracle--stack_blocks_three--P1-OOD--failure",
+      "diagnostic_only": false,
+      "assembly_goal": "full",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 22005,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-oracle--stack_blocks_three--P1-OOD--failure.mp4",
+      "commands": [
+        {
+          "seconds": 0.0,
+          "stage": "approach_block",
+          "text": "move the left gripper toward the red block."
+        },
+        {
+          "seconds": 1.92,
+          "stage": "grasp_block",
+          "text": "grasp the red block with the left gripper."
+        },
+        {
+          "seconds": 3.9,
+          "stage": "raise_block",
+          "text": "raise the red block clear of the table."
+        },
+        {
+          "seconds": 4.74,
+          "stage": "place_base",
+          "text": "place the red block at the base of the stack."
+        },
+        {
+          "seconds": 6.72,
+          "stage": "release_block",
+          "text": "release the red block onto its support."
+        },
+        {
+          "seconds": 7.92,
+          "stage": "withdraw",
+          "text": "withdraw the left hand from the stack."
+        },
+        {
+          "seconds": 10.68,
+          "stage": "wait",
+          "text": "keep the left hand steady and wait for the other hand to finish placing the supporting block."
+        },
+        {
+          "seconds": 33.66,
+          "stage": "approach_block",
+          "text": "move the left gripper toward the blue block."
+        },
+        {
+          "seconds": 35.7,
+          "stage": "wait_clearance",
+          "text": "keep the left arm still until the other arm clears its path."
+        },
+        {
+          "seconds": 36.06,
+          "stage": "grasp_block",
+          "text": "grasp the blue block with the left gripper."
+        },
+        {
+          "seconds": 38.1,
+          "stage": "raise_block",
+          "text": "raise the blue block clear of the table."
+        },
+        {
+          "seconds": 39.36,
+          "stage": "stack_block",
+          "text": "place the blue block on top of the existing stack."
+        },
+        {
+          "seconds": 40.86,
+          "stage": "release_block",
+          "text": "release the blue block onto its support."
+        }
+      ]
+    },
+    {
+      "model": "oracle",
+      "task": "handover_block",
+      "group": "P0",
+      "success": true,
+      "status": "available",
+      "n": 50,
+      "correct": 36,
+      "key": "handover_block__clean__s090002__e000",
+      "name": "newpause-oracle--handover_block--P0--success",
+      "diagnostic_only": false,
+      "assembly_goal": "full",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 3396,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-oracle--handover_block--P0--success.mp4",
+      "commands": [
+        {
+          "seconds": 0.0,
+          "stage": "approach_block",
+          "text": "move the left gripper toward the block."
+        },
+        {
+          "seconds": 1.62,
+          "stage": "grasp_block",
+          "text": "grasp the block with the left gripper."
+        },
+        {
+          "seconds": 3.66,
+          "stage": "raise_block",
+          "text": "raise the block clear of the table."
+        },
+        {
+          "seconds": 4.5,
+          "stage": "present_block",
+          "text": "present the free end of the block to the other hand."
+        },
+        {
+          "seconds": 5.7,
+          "stage": "wait",
+          "text": "hold the block steady and wait for the other hand to grasp it."
+        },
+        {
+          "seconds": 8.52,
+          "stage": "release_block",
+          "text": "release the block to the other hand."
+        },
+        {
+          "seconds": 9.72,
+          "stage": "withdraw",
+          "text": "withdraw the left hand from the transferred block."
+        },
+        {
+          "seconds": 11.7,
+          "stage": "hold",
+          "text": "keep the left arm in its current position."
+        }
+      ]
+    },
+    {
+      "model": "oracle",
+      "task": "handover_block",
+      "group": "P0",
+      "success": false,
+      "status": "available",
+      "n": 50,
+      "correct": 36,
+      "key": "handover_block__clean__s090003__e000",
+      "name": "newpause-oracle--handover_block--P0--failure",
+      "diagnostic_only": false,
+      "assembly_goal": "full",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 12000,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-oracle--handover_block--P0--failure.mp4",
+      "commands": [
+        {
+          "seconds": 0.0,
+          "stage": "approach_block",
+          "text": "move the left gripper toward the block."
+        },
+        {
+          "seconds": 2.34,
+          "stage": "grasp_block",
+          "text": "grasp the block with the left gripper."
+        },
+        {
+          "seconds": 4.98,
+          "stage": "raise_block",
+          "text": "raise the block clear of the table."
+        },
+        {
+          "seconds": 5.76,
+          "stage": "present_block",
+          "text": "present the free end of the block to the other hand."
+        },
+        {
+          "seconds": 6.96,
+          "stage": "hold",
+          "text": "keep the left arm in its current position."
+        },
+        {
+          "seconds": 7.02,
+          "stage": "wait",
+          "text": "hold the block steady and wait for the other hand to grasp it."
+        },
+        {
+          "seconds": 9.84,
+          "stage": "release_block",
+          "text": "release the block to the other hand."
+        },
+        {
+          "seconds": 11.04,
+          "stage": "withdraw",
+          "text": "withdraw the left hand from the transferred block."
+        },
+        {
+          "seconds": 12.96,
+          "stage": "hold",
+          "text": "keep the left arm in its current position."
+        }
+      ]
+    },
+    {
+      "model": "oracle",
+      "task": "handover_block",
+      "group": "P1-OOD",
+      "success": true,
+      "status": "available",
+      "n": 50,
+      "correct": 36,
+      "key": "handover_block__T_pause__s090002__e008",
+      "name": "newpause-oracle--handover_block--P1-OOD--success",
+      "diagnostic_only": false,
+      "assembly_goal": "full",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 5396,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-oracle--handover_block--P1-OOD--success.mp4",
+      "commands": [
+        {
+          "seconds": 0.0,
+          "stage": "approach_block",
+          "text": "move the left gripper toward the block."
+        },
+        {
+          "seconds": 1.62,
+          "stage": "grasp_block",
+          "text": "grasp the block with the left gripper."
+        },
+        {
+          "seconds": 3.66,
+          "stage": "raise_block",
+          "text": "raise the block clear of the table."
+        },
+        {
+          "seconds": 4.5,
+          "stage": "present_block",
+          "text": "present the free end of the block to the other hand."
+        },
+        {
+          "seconds": 5.7,
+          "stage": "wait",
+          "text": "hold the block steady and wait for the other hand to grasp it."
+        },
+        {
+          "seconds": 16.56,
+          "stage": "release_block",
+          "text": "release the block to the other hand."
+        },
+        {
+          "seconds": 17.76,
+          "stage": "withdraw",
+          "text": "withdraw the left hand from the transferred block."
+        },
+        {
+          "seconds": 19.74,
+          "stage": "hold",
+          "text": "keep the left arm in its current position."
+        }
+      ]
+    },
+    {
+      "model": "oracle",
+      "task": "handover_block",
+      "group": "P1-OOD",
+      "success": false,
+      "status": "available",
+      "n": 50,
+      "correct": 36,
+      "key": "handover_block__T_pause__s090003__e008",
+      "name": "newpause-oracle--handover_block--P1-OOD--failure",
+      "diagnostic_only": false,
+      "assembly_goal": "full",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 14010,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-oracle--handover_block--P1-OOD--failure.mp4",
+      "commands": [
+        {
+          "seconds": 0.0,
+          "stage": "approach_block",
+          "text": "move the left gripper toward the block."
+        },
+        {
+          "seconds": 2.34,
+          "stage": "grasp_block",
+          "text": "grasp the block with the left gripper."
+        },
+        {
+          "seconds": 4.98,
+          "stage": "raise_block",
+          "text": "raise the block clear of the table."
+        },
+        {
+          "seconds": 5.76,
+          "stage": "present_block",
+          "text": "present the free end of the block to the other hand."
+        },
+        {
+          "seconds": 6.96,
+          "stage": "hold",
+          "text": "keep the left arm in its current position."
+        },
+        {
+          "seconds": 7.02,
+          "stage": "wait",
+          "text": "hold the block steady and wait for the other hand to grasp it."
+        },
+        {
+          "seconds": 17.88,
+          "stage": "release_block",
+          "text": "release the block to the other hand."
+        },
+        {
+          "seconds": 19.08,
+          "stage": "withdraw",
+          "text": "withdraw the left hand from the transferred block."
+        },
+        {
+          "seconds": 21.0,
+          "stage": "hold",
+          "text": "keep the left arm in its current position."
+        }
+      ]
+    },
+    {
+      "model": "oracle",
+      "task": "hanging_mug",
+      "group": "P0",
+      "success": true,
+      "status": "available",
+      "n": 37,
+      "correct": 6,
+      "key": "hanging_mug__clean__s650192__e000",
+      "name": "newpause-oracle--hanging_mug--P0--success",
+      "diagnostic_only": true,
+      "assembly_goal": "full",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 8302,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-oracle--hanging_mug--P0--success.mp4",
+      "commands": [
+        {
+          "seconds": 0.0,
+          "stage": "wait",
+          "text": "keep the left hand clear and wait for the right hand to present the mug."
+        },
+        {
+          "seconds": 10.26,
+          "stage": "receive_mug",
+          "text": "grasp the exposed surface of the mug while the right hand still supports it."
+        },
+        {
+          "seconds": 15.96,
+          "stage": "wait_giver_release",
+          "text": "maintain the left mug grasp and wait for the right hand to release and withdraw."
+        },
+        {
+          "seconds": 21.96,
+          "stage": "carry_mug",
+          "text": "carry the received mug toward the rack while retaining the grasp."
+        },
+        {
+          "seconds": 30.3,
+          "stage": "hang_mug",
+          "text": "place the mug onto the rack hook."
+        },
+        {
+          "seconds": 31.08,
+          "stage": "release_mug",
+          "text": "release the mug after the rack supports it."
+        }
+      ]
+    },
+    {
+      "model": "oracle",
+      "task": "hanging_mug",
+      "group": "P0",
+      "success": false,
+      "status": "available",
+      "n": 37,
+      "correct": 6,
+      "key": "hanging_mug__clean__s630094__e000",
+      "name": "newpause-oracle--hanging_mug--P0--failure",
+      "diagnostic_only": true,
+      "assembly_goal": "full",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 8507,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-oracle--hanging_mug--P0--failure.mp4",
+      "commands": [
+        {
+          "seconds": 0.0,
+          "stage": "wait",
+          "text": "keep the left hand clear and wait for the right hand to present the mug."
+        },
+        {
+          "seconds": 11.04,
+          "stage": "receive_mug",
+          "text": "grasp the exposed surface of the mug while the right hand still supports it."
+        },
+        {
+          "seconds": 16.8,
+          "stage": "wait_giver_release",
+          "text": "maintain the left mug grasp and wait for the right hand to release and withdraw."
+        },
+        {
+          "seconds": 22.74,
+          "stage": "carry_mug",
+          "text": "carry the received mug toward the rack while retaining the grasp."
+        },
+        {
+          "seconds": 31.38,
+          "stage": "hang_mug",
+          "text": "place the mug onto the rack hook."
+        }
+      ]
+    },
+    {
+      "model": "oracle",
+      "task": "hanging_mug",
+      "group": "P1-OOD",
+      "success": true,
+      "status": "available",
+      "n": 37,
+      "correct": 6,
+      "key": "hanging_mug__T_pause__s630166__e008",
+      "name": "newpause-oracle--hanging_mug--P1-OOD--success",
+      "diagnostic_only": true,
+      "assembly_goal": "full",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 10249,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-oracle--hanging_mug--P1-OOD--success.mp4",
+      "commands": [
+        {
+          "seconds": 0.0,
+          "stage": "wait",
+          "text": "keep the left hand clear and wait for the right hand to present the mug."
+        },
+        {
+          "seconds": 10.8,
+          "stage": "receive_mug",
+          "text": "grasp the exposed surface of the mug while the right hand still supports it."
+        },
+        {
+          "seconds": 16.44,
+          "stage": "wait_giver_release",
+          "text": "maintain the left mug grasp and wait for the right hand to release and withdraw."
+        },
+        {
+          "seconds": 30.48,
+          "stage": "carry_mug",
+          "text": "carry the received mug toward the rack while retaining the grasp."
+        }
+      ]
+    },
+    {
+      "model": "oracle",
+      "task": "hanging_mug",
+      "group": "P1-OOD",
+      "success": false,
+      "status": "available",
+      "n": 37,
+      "correct": 6,
+      "key": "hanging_mug__T_pause__s630094__e008",
+      "name": "newpause-oracle--hanging_mug--P1-OOD--failure",
+      "diagnostic_only": true,
+      "assembly_goal": "full",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 10111,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-oracle--hanging_mug--P1-OOD--failure.mp4",
+      "commands": [
+        {
+          "seconds": 0.0,
+          "stage": "wait",
+          "text": "keep the left hand clear and wait for the right hand to present the mug."
+        },
+        {
+          "seconds": 11.04,
+          "stage": "receive_mug",
+          "text": "grasp the exposed surface of the mug while the right hand still supports it."
+        },
+        {
+          "seconds": 16.8,
+          "stage": "wait_giver_release",
+          "text": "maintain the left mug grasp and wait for the right hand to release and withdraw."
+        },
+        {
+          "seconds": 30.78,
+          "stage": "carry_mug",
+          "text": "carry the received mug toward the rack while retaining the grasp."
+        }
+      ]
+    },
+    {
+      "model": "oracle",
+      "task": "handover_mic",
+      "group": "P0",
+      "success": true,
+      "status": "available",
+      "n": 50,
+      "correct": 47,
+      "key": "handover_mic__clean__s090000__e000",
+      "name": "newpause-oracle--handover_mic--P0--success",
+      "diagnostic_only": false,
+      "assembly_goal": "full",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 2871,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-oracle--handover_mic--P0--success.mp4",
+      "commands": [
+        {
+          "seconds": 0.0,
+          "stage": "approach_microphone",
+          "text": "move the left gripper toward the microphone."
+        },
+        {
+          "seconds": 1.68,
+          "stage": "grasp_microphone",
+          "text": "grasp the microphone with the left gripper."
+        },
+        {
+          "seconds": 3.66,
+          "stage": "present_microphone",
+          "text": "present the microphone for the other hand to grasp."
+        },
+        {
+          "seconds": 6.96,
+          "stage": "hold",
+          "text": "keep the left arm in its current position."
+        },
+        {
+          "seconds": 7.02,
+          "stage": "wait",
+          "text": "keep the left hand steady and wait for the other hand to complete its handover step."
+        },
+        {
+          "seconds": 9.84,
+          "stage": "release_microphone",
+          "text": "release the microphone to the other hand."
+        },
+        {
+          "seconds": 11.04,
+          "stage": "withdraw",
+          "text": "withdraw the left hand from the transferred microphone."
+        }
+      ]
+    },
+    {
+      "model": "oracle",
+      "task": "handover_mic",
+      "group": "P0",
+      "success": false,
+      "status": "available",
+      "n": 50,
+      "correct": 47,
+      "key": "handover_mic__clean__s111004__e000",
+      "name": "newpause-oracle--handover_mic--P0--failure",
+      "diagnostic_only": false,
+      "assembly_goal": "full",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 9000,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-oracle--handover_mic--P0--failure.mp4",
+      "commands": [
+        {
+          "seconds": 0.0,
+          "stage": "approach_microphone",
+          "text": "move the left gripper toward the microphone."
+        },
+        {
+          "seconds": 1.68,
+          "stage": "grasp_microphone",
+          "text": "grasp the microphone with the left gripper."
+        },
+        {
+          "seconds": 3.66,
+          "stage": "present_microphone",
+          "text": "present the microphone for the other hand to grasp."
+        },
+        {
+          "seconds": 6.96,
+          "stage": "hold",
+          "text": "keep the left arm in its current position."
+        },
+        {
+          "seconds": 7.02,
+          "stage": "wait",
+          "text": "keep the left hand steady and wait for the other hand to complete its handover step."
+        },
+        {
+          "seconds": 9.6,
+          "stage": "release_microphone",
+          "text": "release the microphone to the other hand."
+        },
+        {
+          "seconds": 10.8,
+          "stage": "withdraw",
+          "text": "withdraw the left hand from the transferred microphone."
+        }
+      ]
+    },
+    {
+      "model": "oracle",
+      "task": "handover_mic",
+      "group": "P1-OOD",
+      "success": true,
+      "status": "available",
+      "n": 50,
+      "correct": 48,
+      "key": "handover_mic__T_pause__s090000__e016",
+      "name": "newpause-oracle--handover_mic--P1-OOD--success",
+      "diagnostic_only": false,
+      "assembly_goal": "full",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 6869,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-oracle--handover_mic--P1-OOD--success.mp4",
+      "commands": [
+        {
+          "seconds": 0.0,
+          "stage": "approach_microphone",
+          "text": "move the left gripper toward the microphone."
+        },
+        {
+          "seconds": 1.68,
+          "stage": "grasp_microphone",
+          "text": "grasp the microphone with the left gripper."
+        },
+        {
+          "seconds": 3.66,
+          "stage": "present_microphone",
+          "text": "present the microphone for the other hand to grasp."
+        },
+        {
+          "seconds": 6.96,
+          "stage": "hold",
+          "text": "keep the left arm in its current position."
+        },
+        {
+          "seconds": 7.02,
+          "stage": "wait",
+          "text": "keep the left hand steady and wait for the other hand to complete its handover step."
+        },
+        {
+          "seconds": 25.86,
+          "stage": "release_microphone",
+          "text": "release the microphone to the other hand."
+        },
+        {
+          "seconds": 27.06,
+          "stage": "withdraw",
+          "text": "withdraw the left hand from the transferred microphone."
+        }
+      ]
+    },
+    {
+      "model": "oracle",
+      "task": "handover_mic",
+      "group": "P1-OOD",
+      "success": false,
+      "status": "available",
+      "n": 50,
+      "correct": 48,
+      "key": "handover_mic__T_pause__s182279__e016",
+      "name": "newpause-oracle--handover_mic--P1-OOD--failure",
+      "diagnostic_only": false,
+      "assembly_goal": "full",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 13005,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-oracle--handover_mic--P1-OOD--failure.mp4",
+      "commands": [
+        {
+          "seconds": 0.0,
+          "stage": "approach_microphone",
+          "text": "move the left gripper toward the microphone."
+        },
+        {
+          "seconds": 1.68,
+          "stage": "grasp_microphone",
+          "text": "grasp the microphone with the left gripper."
+        },
+        {
+          "seconds": 3.66,
+          "stage": "present_microphone",
+          "text": "present the microphone for the other hand to grasp."
+        },
+        {
+          "seconds": 6.96,
+          "stage": "hold",
+          "text": "keep the left arm in its current position."
+        },
+        {
+          "seconds": 7.02,
+          "stage": "wait",
+          "text": "keep the left hand steady and wait for the other hand to complete its handover step."
+        },
+        {
+          "seconds": 25.86,
+          "stage": "release_microphone",
+          "text": "release the microphone to the other hand."
+        },
+        {
+          "seconds": 27.06,
+          "stage": "withdraw",
+          "text": "withdraw the left hand from the transferred microphone."
+        }
+      ]
+    },
+    {
+      "model": "oracle",
+      "task": "fabrica_beam",
+      "group": "P0",
+      "success": true,
+      "status": "no_outcome",
+      "n": 50,
+      "correct": 0,
+      "name": "newpause-oracle--fabrica_beam--P0--success",
+      "diagnostic_only": false
+    },
+    {
+      "model": "oracle",
+      "task": "fabrica_beam",
+      "group": "P0",
+      "success": false,
+      "status": "available",
+      "n": 50,
+      "correct": 0,
+      "key": "fabrica_beam__clean__s011000__e000",
+      "name": "newpause-oracle--fabrica_beam--P0--failure",
+      "diagnostic_only": false,
+      "assembly_goal": "beam-column-cap-v1",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 15150,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-oracle--fabrica_beam--P0--failure.mp4",
+      "commands": [
+        {
+          "seconds": 0.0,
+          "stage": "approach_part6",
+          "text": "move the left gripper toward the base."
+        },
+        {
+          "seconds": 1.38,
+          "stage": "grasp_part6",
+          "text": "grasp the base with the left gripper."
+        },
+        {
+          "seconds": 3.42,
+          "stage": "support_part6",
+          "text": "grasp and stabilize the base with the left gripper."
+        },
+        {
+          "seconds": 3.54,
+          "stage": "wait",
+          "text": "maintain the current support grasp and wait for the other hand to complete its assembly step."
+        },
+        {
+          "seconds": 26.22,
+          "stage": "release_support_part6",
+          "text": "release the base support after the other hand completes the dependent step, then withdraw."
+        },
+        {
+          "seconds": 26.58,
+          "stage": "withdraw_part6",
+          "text": "withdraw the left hand from the base."
+        },
+        {
+          "seconds": 27.06,
+          "stage": "hold",
+          "text": "keep the left arm in its current position."
+        },
+        {
+          "seconds": 32.22,
+          "stage": "approach_part2",
+          "text": "move the left gripper toward the left post."
+        },
+        {
+          "seconds": 34.08,
+          "stage": "grasp_part2",
+          "text": "grasp the left post with the left gripper."
+        },
+        {
+          "seconds": 35.52,
+          "stage": "lift_part2",
+          "text": "lift the left post clear of the table while retaining the grasp."
+        },
+        {
+          "seconds": 36.48,
+          "stage": "hold",
+          "text": "keep the left arm in its current position."
+        },
+        {
+          "seconds": 36.6,
+          "stage": "carry_part2",
+          "text": "carry the left post toward its mating part while retaining the grasp."
+        },
+        {
+          "seconds": 40.02,
+          "stage": "insert_part2",
+          "text": "insert the left post into its mating part while retaining alignment."
+        },
+        {
+          "seconds": 45.18,
+          "stage": "release_part2",
+          "text": "release the left post and withdraw the left hand."
+        },
+        {
+          "seconds": 45.54,
+          "stage": "withdraw_part2",
+          "text": "withdraw the left hand from the left post."
+        },
+        {
+          "seconds": 46.14,
+          "stage": "approach_part0",
+          "text": "move the left gripper toward the left post cap."
+        },
+        {
+          "seconds": 47.58,
+          "stage": "grasp_part0",
+          "text": "grasp the left post cap with the left gripper."
+        },
+        {
+          "seconds": 49.5,
+          "stage": "lift_part0",
+          "text": "lift the left post cap clear of the table while retaining the grasp."
+        },
+        {
+          "seconds": 50.58,
+          "stage": "hold",
+          "text": "keep the left arm in its current position."
+        },
+        {
+          "seconds": 50.7,
+          "stage": "carry_part0",
+          "text": "carry the left post cap toward its mating part while retaining the grasp."
+        },
+        {
+          "seconds": 52.8,
+          "stage": "insert_part0",
+          "text": "insert the left post cap into its mating part while retaining alignment."
+        },
+        {
+          "seconds": 54.54,
+          "stage": "wait",
+          "text": "maintain the current support grasp and wait for the other hand to complete its assembly step."
+        },
+        {
+          "seconds": 55.38,
+          "stage": "release_part0",
+          "text": "release the left post cap and withdraw the left hand."
+        },
+        {
+          "seconds": 55.74,
+          "stage": "withdraw_part0",
+          "text": "withdraw the left hand from the left post cap."
+        },
+        {
+          "seconds": 56.16,
+          "stage": "hold",
+          "text": "keep the left arm in its current position."
+        }
+      ]
+    },
+    {
+      "model": "oracle",
+      "task": "fabrica_beam",
+      "group": "P1-OOD",
+      "success": true,
+      "status": "no_outcome",
+      "n": 50,
+      "correct": 0,
+      "name": "newpause-oracle--fabrica_beam--P1-OOD--success",
+      "diagnostic_only": false
+    },
+    {
+      "model": "oracle",
+      "task": "fabrica_beam",
+      "group": "P1-OOD",
+      "success": false,
+      "status": "available",
+      "n": 50,
+      "correct": 0,
+      "key": "fabrica_beam__T_pause__s011000__e008",
+      "name": "newpause-oracle--fabrica_beam--P1-OOD--failure",
+      "diagnostic_only": false,
+      "assembly_goal": "beam-column-cap-v1",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 17010,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-oracle--fabrica_beam--P1-OOD--failure.mp4",
+      "commands": [
+        {
+          "seconds": 0.0,
+          "stage": "approach_part6",
+          "text": "move the left gripper toward the base."
+        },
+        {
+          "seconds": 1.38,
+          "stage": "grasp_part6",
+          "text": "grasp the base with the left gripper."
+        },
+        {
+          "seconds": 3.42,
+          "stage": "support_part6",
+          "text": "grasp and stabilize the base with the left gripper."
+        },
+        {
+          "seconds": 3.54,
+          "stage": "wait",
+          "text": "maintain the current support grasp and wait for the other hand to complete its assembly step."
+        },
+        {
+          "seconds": 34.32,
+          "stage": "release_support_part6",
+          "text": "release the base support after the other hand completes the dependent step, then withdraw."
+        },
+        {
+          "seconds": 34.68,
+          "stage": "withdraw_part6",
+          "text": "withdraw the left hand from the base."
+        },
+        {
+          "seconds": 35.16,
+          "stage": "hold",
+          "text": "keep the left arm in its current position."
+        },
+        {
+          "seconds": 40.32,
+          "stage": "approach_part2",
+          "text": "move the left gripper toward the left post."
+        },
+        {
+          "seconds": 42.18,
+          "stage": "grasp_part2",
+          "text": "grasp the left post with the left gripper."
+        },
+        {
+          "seconds": 43.62,
+          "stage": "lift_part2",
+          "text": "lift the left post clear of the table while retaining the grasp."
+        },
+        {
+          "seconds": 44.64,
+          "stage": "hold",
+          "text": "keep the left arm in its current position."
+        },
+        {
+          "seconds": 44.7,
+          "stage": "carry_part2",
+          "text": "carry the left post toward its mating part while retaining the grasp."
+        },
+        {
+          "seconds": 47.94,
+          "stage": "insert_part2",
+          "text": "insert the left post into its mating part while retaining alignment."
+        },
+        {
+          "seconds": 52.32,
+          "stage": "release_part2",
+          "text": "release the left post and withdraw the left hand."
+        },
+        {
+          "seconds": 52.74,
+          "stage": "withdraw_part2",
+          "text": "withdraw the left hand from the left post."
+        },
+        {
+          "seconds": 53.28,
+          "stage": "approach_part0",
+          "text": "move the left gripper toward the left post cap."
+        },
+        {
+          "seconds": 54.72,
+          "stage": "grasp_part0",
+          "text": "grasp the left post cap with the left gripper."
+        },
+        {
+          "seconds": 56.7,
+          "stage": "lift_part0",
+          "text": "lift the left post cap clear of the table while retaining the grasp."
+        },
+        {
+          "seconds": 57.78,
+          "stage": "hold",
+          "text": "keep the left arm in its current position."
+        },
+        {
+          "seconds": 57.84,
+          "stage": "carry_part0",
+          "text": "carry the left post cap toward its mating part while retaining the grasp."
+        },
+        {
+          "seconds": 59.94,
+          "stage": "insert_part0",
+          "text": "insert the left post cap into its mating part while retaining alignment."
+        },
+        {
+          "seconds": 61.68,
+          "stage": "wait",
+          "text": "maintain the current support grasp and wait for the other hand to complete its assembly step."
+        },
+        {
+          "seconds": 62.52,
+          "stage": "release_part0",
+          "text": "release the left post cap and withdraw the left hand."
+        },
+        {
+          "seconds": 62.88,
+          "stage": "withdraw_part0",
+          "text": "withdraw the left hand from the left post cap."
+        },
+        {
+          "seconds": 63.3,
+          "stage": "hold",
+          "text": "keep the left arm in its current position."
+        }
+      ]
+    },
+    {
+      "model": "oracle",
+      "task": "fabrica_plumbers_block",
+      "group": "P0",
+      "success": true,
+      "status": "no_outcome",
+      "n": 32,
+      "correct": 0,
+      "name": "newpause-oracle--fabrica_plumbers_block--P0--success",
+      "diagnostic_only": false
+    },
+    {
+      "model": "oracle",
+      "task": "fabrica_plumbers_block",
+      "group": "P0",
+      "success": false,
+      "status": "available",
+      "n": 32,
+      "correct": 0,
+      "key": "fabrica_plumbers_block__clean__s011000__e000",
+      "name": "newpause-oracle--fabrica_plumbers_block--P0--failure",
+      "diagnostic_only": false,
+      "assembly_goal": "plumber-first-tube-v1",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 18720,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-oracle--fabrica_plumbers_block--P0--failure.mp4",
+      "commands": [
+        {
+          "seconds": 0.0,
+          "stage": "hold",
+          "text": "keep the left arm in its current position."
+        },
+        {
+          "seconds": 5.52,
+          "stage": "approach_tube0",
+          "text": "move the left gripper toward the tube."
+        },
+        {
+          "seconds": 7.56,
+          "stage": "grasp_tube0",
+          "text": "grasp the tube with the left gripper."
+        },
+        {
+          "seconds": 9.06,
+          "stage": "carry_tube0",
+          "text": "carry the tube toward its mating part while retaining the grasp."
+        },
+        {
+          "seconds": 12.84,
+          "stage": "insert_tube0",
+          "text": "insert the tube into its mating part while retaining alignment."
+        },
+        {
+          "seconds": 18.3,
+          "stage": "release_tube0",
+          "text": "release the tube and withdraw the left hand."
+        },
+        {
+          "seconds": 18.6,
+          "stage": "withdraw_tube0",
+          "text": "withdraw the left hand from the tube."
+        },
+        {
+          "seconds": 20.28,
+          "stage": "hold",
+          "text": "keep the left arm in its current position."
+        },
+        {
+          "seconds": 20.4,
+          "stage": "approach_cap3",
+          "text": "move the left gripper toward the cap."
+        },
+        {
+          "seconds": 22.98,
+          "stage": "grasp_cap3",
+          "text": "grasp the cap with the left gripper."
+        },
+        {
+          "seconds": 24.06,
+          "stage": "carry_cap3",
+          "text": "carry the cap toward its mating part while retaining the grasp."
+        },
+        {
+          "seconds": 28.08,
+          "stage": "insert_cap3",
+          "text": "insert the cap into its mating part while retaining alignment."
+        },
+        {
+          "seconds": 30.6,
+          "stage": "release_cap3",
+          "text": "release the cap and withdraw the left hand."
+        },
+        {
+          "seconds": 30.72,
+          "stage": "withdraw_cap3",
+          "text": "withdraw the left hand from the cap."
+        },
+        {
+          "seconds": 33.0,
+          "stage": "hold",
+          "text": "keep the left arm in its current position."
+        },
+        {
+          "seconds": 33.12,
+          "stage": "approach_base2",
+          "text": "move the left gripper toward the base."
+        },
+        {
+          "seconds": 36.24,
+          "stage": "grasp_base2",
+          "text": "grasp the base with the left gripper."
+        },
+        {
+          "seconds": 37.92,
+          "stage": "wait",
+          "text": "maintain the current support grasp and wait for the other hand to complete its assembly step."
+        },
+        {
+          "seconds": 68.52,
+          "stage": "release_support_base2",
+          "text": "release the base support after the other hand completes the dependent step, then withdraw."
+        }
+      ]
+    },
+    {
+      "model": "oracle",
+      "task": "fabrica_plumbers_block",
+      "group": "P1-OOD",
+      "success": true,
+      "status": "no_outcome",
+      "n": 32,
+      "correct": 0,
+      "name": "newpause-oracle--fabrica_plumbers_block--P1-OOD--success",
+      "diagnostic_only": false
+    },
+    {
+      "model": "oracle",
+      "task": "fabrica_plumbers_block",
+      "group": "P1-OOD",
+      "success": false,
+      "status": "available",
+      "n": 32,
+      "correct": 0,
+      "key": "fabrica_plumbers_block__T_pause__s011000__e008",
+      "name": "newpause-oracle--fabrica_plumbers_block--P1-OOD--failure",
+      "diagnostic_only": false,
+      "assembly_goal": "plumber-first-tube-v1",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 20085,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-oracle--fabrica_plumbers_block--P1-OOD--failure.mp4",
+      "commands": [
+        {
+          "seconds": 0.0,
+          "stage": "hold",
+          "text": "keep the left arm in its current position."
+        },
+        {
+          "seconds": 13.5,
+          "stage": "approach_tube0",
+          "text": "move the left gripper toward the tube."
+        },
+        {
+          "seconds": 15.6,
+          "stage": "grasp_tube0",
+          "text": "grasp the tube with the left gripper."
+        },
+        {
+          "seconds": 17.1,
+          "stage": "carry_tube0",
+          "text": "carry the tube toward its mating part while retaining the grasp."
+        },
+        {
+          "seconds": 23.52,
+          "stage": "insert_tube0",
+          "text": "insert the tube into its mating part while retaining alignment."
+        },
+        {
+          "seconds": 28.92,
+          "stage": "release_tube0",
+          "text": "release the tube and withdraw the left hand."
+        },
+        {
+          "seconds": 29.22,
+          "stage": "withdraw_tube0",
+          "text": "withdraw the left hand from the tube."
+        },
+        {
+          "seconds": 30.9,
+          "stage": "hold",
+          "text": "keep the left arm in its current position."
+        },
+        {
+          "seconds": 31.02,
+          "stage": "approach_cap3",
+          "text": "move the left gripper toward the cap."
+        },
+        {
+          "seconds": 33.54,
+          "stage": "grasp_cap3",
+          "text": "grasp the cap with the left gripper."
+        },
+        {
+          "seconds": 34.68,
+          "stage": "carry_cap3",
+          "text": "carry the cap toward its mating part while retaining the grasp."
+        },
+        {
+          "seconds": 38.64,
+          "stage": "insert_cap3",
+          "text": "insert the cap into its mating part while retaining alignment."
+        },
+        {
+          "seconds": 41.16,
+          "stage": "release_cap3",
+          "text": "release the cap and withdraw the left hand."
+        },
+        {
+          "seconds": 41.28,
+          "stage": "withdraw_cap3",
+          "text": "withdraw the left hand from the cap."
+        },
+        {
+          "seconds": 43.38,
+          "stage": "hold",
+          "text": "keep the left arm in its current position."
+        },
+        {
+          "seconds": 43.5,
+          "stage": "approach_base2",
+          "text": "move the left gripper toward the base."
+        },
+        {
+          "seconds": 46.62,
+          "stage": "grasp_base2",
+          "text": "grasp the base with the left gripper."
+        },
+        {
+          "seconds": 48.36,
+          "stage": "wait",
+          "text": "maintain the current support grasp and wait for the other hand to complete its assembly step."
+        },
+        {
+          "seconds": 73.98,
+          "stage": "release_support_base2",
+          "text": "release the base support after the other hand completes the dependent step, then withdraw."
+        }
+      ]
+    },
+    {
+      "model": "oracle",
+      "task": "fabrica_stool",
+      "group": "P0",
+      "success": true,
+      "status": "pending",
+      "n": 29,
+      "correct": 0,
+      "name": "newpause-oracle--fabrica_stool--P0--success",
+      "diagnostic_only": false
+    },
+    {
+      "model": "oracle",
+      "task": "fabrica_stool",
+      "group": "P0",
+      "success": false,
+      "status": "available",
+      "n": 29,
+      "correct": 0,
+      "key": "fabrica_stool__clean__s011000__e000",
+      "name": "newpause-oracle--fabrica_stool--P0--failure",
+      "diagnostic_only": false,
+      "assembly_goal": "stool-first-leg-v1",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 24600,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-oracle--fabrica_stool--P0--failure.mp4",
+      "commands": [
+        {
+          "seconds": 0.0,
+          "stage": "hold",
+          "text": "keep the left arm in its current position."
+        },
+        {
+          "seconds": 4.98,
+          "stage": "approach_1",
+          "text": "move the left gripper toward the part 1."
+        },
+        {
+          "seconds": 8.28,
+          "stage": "grasp_1",
+          "text": "grasp the part 1 with the left gripper."
+        },
+        {
+          "seconds": 9.0,
+          "stage": "carry_1",
+          "text": "carry the part 1 toward its mating part while retaining the grasp."
+        },
+        {
+          "seconds": 11.64,
+          "stage": "insert_1",
+          "text": "insert the part 1 into its mating part while retaining alignment."
+        },
+        {
+          "seconds": 13.44,
+          "stage": "release_1",
+          "text": "release the part 1 and withdraw the left hand."
+        },
+        {
+          "seconds": 13.68,
+          "stage": "withdraw_1",
+          "text": "withdraw the left hand from the part 1."
+        },
+        {
+          "seconds": 14.46,
+          "stage": "hold",
+          "text": "keep the left arm in its current position."
+        },
+        {
+          "seconds": 14.7,
+          "stage": "approach_5",
+          "text": "move the left gripper toward the part 5."
+        },
+        {
+          "seconds": 16.74,
+          "stage": "grasp_5",
+          "text": "grasp the part 5 with the left gripper."
+        },
+        {
+          "seconds": 17.4,
+          "stage": "carry_5",
+          "text": "carry the part 5 toward its mating part while retaining the grasp."
+        },
+        {
+          "seconds": 20.16,
+          "stage": "insert_5",
+          "text": "insert the part 5 into its mating part while retaining alignment."
+        },
+        {
+          "seconds": 21.9,
+          "stage": "release_5",
+          "text": "release the part 5 and withdraw the left hand."
+        },
+        {
+          "seconds": 22.14,
+          "stage": "withdraw_5",
+          "text": "withdraw the left hand from the part 5."
+        },
+        {
+          "seconds": 24.12,
+          "stage": "hold",
+          "text": "keep the left arm in its current position."
+        },
+        {
+          "seconds": 24.36,
+          "stage": "approach_0",
+          "text": "move the left gripper toward the part 0."
+        },
+        {
+          "seconds": 26.94,
+          "stage": "grasp_0",
+          "text": "grasp the part 0 with the left gripper."
+        },
+        {
+          "seconds": 27.66,
+          "stage": "carry_0",
+          "text": "carry the part 0 toward its mating part while retaining the grasp."
+        },
+        {
+          "seconds": 30.6,
+          "stage": "insert_0",
+          "text": "insert the part 0 into its mating part while retaining alignment."
+        },
+        {
+          "seconds": 31.68,
+          "stage": "release_0",
+          "text": "release the part 0 and withdraw the left hand."
+        },
+        {
+          "seconds": 31.92,
+          "stage": "withdraw_0",
+          "text": "withdraw the left hand from the part 0."
+        },
+        {
+          "seconds": 32.46,
+          "stage": "hold",
+          "text": "keep the left arm in its current position."
+        },
+        {
+          "seconds": 32.7,
+          "stage": "approach_8",
+          "text": "move the left gripper toward the part 8."
+        },
+        {
+          "seconds": 35.52,
+          "stage": "grasp_8",
+          "text": "grasp the part 8 with the left gripper."
+        },
+        {
+          "seconds": 36.18,
+          "stage": "carry_8",
+          "text": "carry the part 8 toward its mating part while retaining the grasp."
+        },
+        {
+          "seconds": 39.3,
+          "stage": "insert_8",
+          "text": "insert the part 8 into its mating part while retaining alignment."
+        },
+        {
+          "seconds": 40.38,
+          "stage": "release_8",
+          "text": "release the part 8 and withdraw the left hand."
+        },
+        {
+          "seconds": 40.62,
+          "stage": "withdraw_8",
+          "text": "withdraw the left hand from the part 8."
+        },
+        {
+          "seconds": 42.78,
+          "stage": "hold",
+          "text": "keep the left arm in its current position."
+        },
+        {
+          "seconds": 47.1,
+          "stage": "approach_2",
+          "text": "move the left gripper toward the seat."
+        },
+        {
+          "seconds": 49.86,
+          "stage": "grasp_2",
+          "text": "grasp the seat with the left gripper."
+        },
+        {
+          "seconds": 51.0,
+          "stage": "wait",
+          "text": "maintain the current support grasp and wait for the other hand to complete its assembly step."
+        },
+        {
+          "seconds": 92.1,
+          "stage": "release_support_part2",
+          "text": "release the seat support after the other hand completes the dependent step, then withdraw."
+        },
+        {
+          "seconds": 93.42,
+          "stage": "hold",
+          "text": "keep the left arm in its current position."
+        }
+      ]
+    },
+    {
+      "model": "oracle",
+      "task": "fabrica_stool",
+      "group": "P1-OOD",
+      "success": true,
+      "status": "pending",
+      "n": 25,
+      "correct": 0,
+      "name": "newpause-oracle--fabrica_stool--P1-OOD--success",
+      "diagnostic_only": false
+    },
+    {
+      "model": "oracle",
+      "task": "fabrica_stool",
+      "group": "P1-OOD",
+      "success": false,
+      "status": "available",
+      "n": 25,
+      "correct": 0,
+      "key": "fabrica_stool__T_pause__s011000__e008",
+      "name": "newpause-oracle--fabrica_stool--P1-OOD--failure",
+      "diagnostic_only": false,
+      "assembly_goal": "stool-first-leg-v1",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 26820,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-oracle--fabrica_stool--P1-OOD--failure.mp4",
+      "commands": [
+        {
+          "seconds": 0.0,
+          "stage": "hold",
+          "text": "keep the left arm in its current position."
+        },
+        {
+          "seconds": 12.96,
+          "stage": "approach_1",
+          "text": "move the left gripper toward the part 1."
+        },
+        {
+          "seconds": 16.32,
+          "stage": "grasp_1",
+          "text": "grasp the part 1 with the left gripper."
+        },
+        {
+          "seconds": 17.04,
+          "stage": "carry_1",
+          "text": "carry the part 1 toward its mating part while retaining the grasp."
+        },
+        {
+          "seconds": 19.68,
+          "stage": "insert_1",
+          "text": "insert the part 1 into its mating part while retaining alignment."
+        },
+        {
+          "seconds": 21.48,
+          "stage": "release_1",
+          "text": "release the part 1 and withdraw the left hand."
+        },
+        {
+          "seconds": 21.72,
+          "stage": "withdraw_1",
+          "text": "withdraw the left hand from the part 1."
+        },
+        {
+          "seconds": 22.44,
+          "stage": "hold",
+          "text": "keep the left arm in its current position."
+        },
+        {
+          "seconds": 22.68,
+          "stage": "approach_5",
+          "text": "move the left gripper toward the part 5."
+        },
+        {
+          "seconds": 24.72,
+          "stage": "grasp_5",
+          "text": "grasp the part 5 with the left gripper."
+        },
+        {
+          "seconds": 25.44,
+          "stage": "carry_5",
+          "text": "carry the part 5 toward its mating part while retaining the grasp."
+        },
+        {
+          "seconds": 28.14,
+          "stage": "insert_5",
+          "text": "insert the part 5 into its mating part while retaining alignment."
+        },
+        {
+          "seconds": 29.94,
+          "stage": "release_5",
+          "text": "release the part 5 and withdraw the left hand."
+        },
+        {
+          "seconds": 30.18,
+          "stage": "withdraw_5",
+          "text": "withdraw the left hand from the part 5."
+        },
+        {
+          "seconds": 32.16,
+          "stage": "hold",
+          "text": "keep the left arm in its current position."
+        },
+        {
+          "seconds": 32.4,
+          "stage": "approach_0",
+          "text": "move the left gripper toward the part 0."
+        },
+        {
+          "seconds": 34.92,
+          "stage": "grasp_0",
+          "text": "grasp the part 0 with the left gripper."
+        },
+        {
+          "seconds": 35.64,
+          "stage": "carry_0",
+          "text": "carry the part 0 toward its mating part while retaining the grasp."
+        },
+        {
+          "seconds": 38.64,
+          "stage": "insert_0",
+          "text": "insert the part 0 into its mating part while retaining alignment."
+        },
+        {
+          "seconds": 39.72,
+          "stage": "release_0",
+          "text": "release the part 0 and withdraw the left hand."
+        },
+        {
+          "seconds": 39.96,
+          "stage": "withdraw_0",
+          "text": "withdraw the left hand from the part 0."
+        },
+        {
+          "seconds": 40.5,
+          "stage": "hold",
+          "text": "keep the left arm in its current position."
+        },
+        {
+          "seconds": 40.74,
+          "stage": "approach_8",
+          "text": "move the left gripper toward the part 8."
+        },
+        {
+          "seconds": 43.56,
+          "stage": "grasp_8",
+          "text": "grasp the part 8 with the left gripper."
+        },
+        {
+          "seconds": 44.28,
+          "stage": "carry_8",
+          "text": "carry the part 8 toward its mating part while retaining the grasp."
+        },
+        {
+          "seconds": 47.4,
+          "stage": "insert_8",
+          "text": "insert the part 8 into its mating part while retaining alignment."
+        },
+        {
+          "seconds": 48.42,
+          "stage": "release_8",
+          "text": "release the part 8 and withdraw the left hand."
+        },
+        {
+          "seconds": 48.66,
+          "stage": "withdraw_8",
+          "text": "withdraw the left hand from the part 8."
+        },
+        {
+          "seconds": 50.82,
+          "stage": "hold",
+          "text": "keep the left arm in its current position."
+        },
+        {
+          "seconds": 55.32,
+          "stage": "approach_2",
+          "text": "move the left gripper toward the seat."
+        },
+        {
+          "seconds": 58.08,
+          "stage": "grasp_2",
+          "text": "grasp the seat with the left gripper."
+        },
+        {
+          "seconds": 59.16,
+          "stage": "wait",
+          "text": "maintain the current support grasp and wait for the other hand to complete its assembly step."
+        },
+        {
+          "seconds": 100.98,
+          "stage": "release_support_part2",
+          "text": "release the seat support after the other hand completes the dependent step, then withdraw."
+        },
+        {
+          "seconds": 102.24,
+          "stage": "hold",
+          "text": "keep the left arm in its current position."
+        }
+      ]
+    },
+    {
+      "model": "vpp2",
+      "task": "place_object_basket",
+      "group": "P0",
+      "success": true,
+      "status": "available",
+      "n": 48,
+      "correct": 33,
+      "key": "place_object_basket__clean__s197020__e000",
+      "name": "newpause-vpp2--place_object_basket--P0--success",
+      "diagnostic_only": false,
+      "assembly_goal": "full",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 3868,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-vpp2--place_object_basket--P0--success.mp4"
+    },
+    {
+      "model": "vpp2",
+      "task": "place_object_basket",
+      "group": "P0",
+      "success": false,
+      "status": "available",
+      "n": 48,
+      "correct": 33,
+      "key": "place_object_basket__clean__s197013__e000",
+      "name": "newpause-vpp2--place_object_basket--P0--failure",
+      "diagnostic_only": false,
+      "assembly_goal": "full",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 10500,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-vpp2--place_object_basket--P0--failure.mp4"
+    },
+    {
+      "model": "vpp2",
+      "task": "place_object_basket",
+      "group": "P1-OOD",
+      "success": true,
+      "status": "available",
+      "n": 48,
+      "correct": 1,
+      "key": "place_object_basket__T_pause__s197053__e008",
+      "name": "newpause-vpp2--place_object_basket--P1-OOD--success",
+      "diagnostic_only": false,
+      "assembly_goal": "full",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 4318,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-vpp2--place_object_basket--P1-OOD--success.mp4"
+    },
+    {
+      "model": "vpp2",
+      "task": "place_object_basket",
+      "group": "P1-OOD",
+      "success": false,
+      "status": "available",
+      "n": 48,
+      "correct": 1,
+      "key": "place_object_basket__T_pause__s197013__e016",
+      "name": "newpause-vpp2--place_object_basket--P1-OOD--failure",
+      "diagnostic_only": false,
+      "assembly_goal": "full",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 14505,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-vpp2--place_object_basket--P1-OOD--failure.mp4"
+    },
+    {
+      "model": "vpp2",
+      "task": "stack_blocks_three",
+      "group": "P0",
+      "success": true,
+      "status": "available",
+      "n": 50,
+      "correct": 26,
+      "key": "stack_blocks_three__clean__s117020__e000",
+      "name": "newpause-vpp2--stack_blocks_three--P0--success",
+      "diagnostic_only": false,
+      "assembly_goal": "full",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 6495,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-vpp2--stack_blocks_three--P0--success.mp4"
+    },
+    {
+      "model": "vpp2",
+      "task": "stack_blocks_three",
+      "group": "P0",
+      "success": false,
+      "status": "available",
+      "n": 50,
+      "correct": 26,
+      "key": "stack_blocks_three__clean__s180002__e000",
+      "name": "newpause-vpp2--stack_blocks_three--P0--failure",
+      "diagnostic_only": false,
+      "assembly_goal": "full",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 18000,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-vpp2--stack_blocks_three--P0--failure.mp4"
+    },
+    {
+      "model": "vpp2",
+      "task": "stack_blocks_three",
+      "group": "P1-OOD",
+      "success": true,
+      "status": "no_outcome",
+      "n": 50,
+      "correct": 0,
+      "name": "newpause-vpp2--stack_blocks_three--P1-OOD--success",
+      "diagnostic_only": false
+    },
+    {
+      "model": "vpp2",
+      "task": "stack_blocks_three",
+      "group": "P1-OOD",
+      "success": false,
+      "status": "available",
+      "n": 50,
+      "correct": 0,
+      "key": "stack_blocks_three__T_pause__s117020__e008",
+      "name": "newpause-vpp2--stack_blocks_three--P1-OOD--failure",
+      "diagnostic_only": false,
+      "assembly_goal": "full",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 20010,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-vpp2--stack_blocks_three--P1-OOD--failure.mp4"
+    },
+    {
+      "model": "vpp2",
+      "task": "handover_block",
+      "group": "P0",
+      "success": true,
+      "status": "available",
+      "n": 50,
+      "correct": 40,
+      "key": "handover_block__clean__s090002__e000",
+      "name": "newpause-vpp2--handover_block--P0--success",
+      "diagnostic_only": false,
+      "assembly_goal": "full",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 3396,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-vpp2--handover_block--P0--success.mp4"
+    },
+    {
+      "model": "vpp2",
+      "task": "handover_block",
+      "group": "P0",
+      "success": false,
+      "status": "available",
+      "n": 50,
+      "correct": 40,
+      "key": "handover_block__clean__s090003__e000",
+      "name": "newpause-vpp2--handover_block--P0--failure",
+      "diagnostic_only": false,
+      "assembly_goal": "full",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 12000,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-vpp2--handover_block--P0--failure.mp4"
+    },
+    {
+      "model": "vpp2",
+      "task": "handover_block",
+      "group": "P1-OOD",
+      "success": true,
+      "status": "no_outcome",
+      "n": 50,
+      "correct": 0,
+      "name": "newpause-vpp2--handover_block--P1-OOD--success",
+      "diagnostic_only": false
+    },
+    {
+      "model": "vpp2",
+      "task": "handover_block",
+      "group": "P1-OOD",
+      "success": false,
+      "status": "available",
+      "n": 50,
+      "correct": 0,
+      "key": "handover_block__T_pause__s090002__e008",
+      "name": "newpause-vpp2--handover_block--P1-OOD--failure",
+      "diagnostic_only": false,
+      "assembly_goal": "full",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 14010,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-vpp2--handover_block--P1-OOD--failure.mp4"
+    },
+    {
+      "model": "vpp2",
+      "task": "hanging_mug",
+      "group": "P0",
+      "success": true,
+      "status": "available",
+      "n": 37,
+      "correct": 10,
+      "key": "hanging_mug__clean__s630123__e000",
+      "name": "newpause-vpp2--hanging_mug--P0--success",
+      "diagnostic_only": true,
+      "assembly_goal": "full",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 7550,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-vpp2--hanging_mug--P0--success.mp4"
+    },
+    {
+      "model": "vpp2",
+      "task": "hanging_mug",
+      "group": "P0",
+      "success": false,
+      "status": "available",
+      "n": 37,
+      "correct": 10,
+      "key": "hanging_mug__clean__s630094__e000",
+      "name": "newpause-vpp2--hanging_mug--P0--failure",
+      "diagnostic_only": true,
+      "assembly_goal": "full",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 12990,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-vpp2--hanging_mug--P0--failure.mp4"
+    },
+    {
+      "model": "vpp2",
+      "task": "hanging_mug",
+      "group": "P1-OOD",
+      "success": true,
+      "status": "available",
+      "n": 37,
+      "correct": 8,
+      "key": "hanging_mug__T_pause__s650173__e008",
+      "name": "newpause-vpp2--hanging_mug--P1-OOD--success",
+      "diagnostic_only": true,
+      "assembly_goal": "full",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 10335,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-vpp2--hanging_mug--P1-OOD--success.mp4"
+    },
+    {
+      "model": "vpp2",
+      "task": "hanging_mug",
+      "group": "P1-OOD",
+      "success": false,
+      "status": "available",
+      "n": 37,
+      "correct": 8,
+      "key": "hanging_mug__T_pause__s630094__e008",
+      "name": "newpause-vpp2--hanging_mug--P1-OOD--failure",
+      "diagnostic_only": true,
+      "assembly_goal": "full",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 15000,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-vpp2--hanging_mug--P1-OOD--failure.mp4"
+    },
+    {
+      "model": "vpp2",
+      "task": "handover_mic",
+      "group": "P0",
+      "success": true,
+      "status": "pending",
+      "n": 0,
+      "correct": 0,
+      "name": "newpause-vpp2--handover_mic--P0--success",
+      "diagnostic_only": false
+    },
+    {
+      "model": "vpp2",
+      "task": "handover_mic",
+      "group": "P0",
+      "success": false,
+      "status": "pending",
+      "n": 0,
+      "correct": 0,
+      "name": "newpause-vpp2--handover_mic--P0--failure",
+      "diagnostic_only": false
+    },
+    {
+      "model": "vpp2",
+      "task": "handover_mic",
+      "group": "P1-OOD",
+      "success": true,
+      "status": "pending",
+      "n": 0,
+      "correct": 0,
+      "name": "newpause-vpp2--handover_mic--P1-OOD--success",
+      "diagnostic_only": false
+    },
+    {
+      "model": "vpp2",
+      "task": "handover_mic",
+      "group": "P1-OOD",
+      "success": false,
+      "status": "pending",
+      "n": 0,
+      "correct": 0,
+      "name": "newpause-vpp2--handover_mic--P1-OOD--failure",
+      "diagnostic_only": false
+    },
+    {
+      "model": "vpp2",
+      "task": "fabrica_beam",
+      "group": "P0",
+      "success": true,
+      "status": "pending",
+      "n": 0,
+      "correct": 0,
+      "name": "newpause-vpp2--fabrica_beam--P0--success",
+      "diagnostic_only": false
+    },
+    {
+      "model": "vpp2",
+      "task": "fabrica_beam",
+      "group": "P0",
+      "success": false,
+      "status": "pending",
+      "n": 0,
+      "correct": 0,
+      "name": "newpause-vpp2--fabrica_beam--P0--failure",
+      "diagnostic_only": false
+    },
+    {
+      "model": "vpp2",
+      "task": "fabrica_beam",
+      "group": "P1-OOD",
+      "success": true,
+      "status": "pending",
+      "n": 0,
+      "correct": 0,
+      "name": "newpause-vpp2--fabrica_beam--P1-OOD--success",
+      "diagnostic_only": false
+    },
+    {
+      "model": "vpp2",
+      "task": "fabrica_beam",
+      "group": "P1-OOD",
+      "success": false,
+      "status": "pending",
+      "n": 0,
+      "correct": 0,
+      "name": "newpause-vpp2--fabrica_beam--P1-OOD--failure",
+      "diagnostic_only": false
+    },
+    {
+      "model": "vpp2",
+      "task": "fabrica_plumbers_block",
+      "group": "P0",
+      "success": true,
+      "status": "pending",
+      "n": 0,
+      "correct": 0,
+      "name": "newpause-vpp2--fabrica_plumbers_block--P0--success",
+      "diagnostic_only": false
+    },
+    {
+      "model": "vpp2",
+      "task": "fabrica_plumbers_block",
+      "group": "P0",
+      "success": false,
+      "status": "pending",
+      "n": 0,
+      "correct": 0,
+      "name": "newpause-vpp2--fabrica_plumbers_block--P0--failure",
+      "diagnostic_only": false
+    },
+    {
+      "model": "vpp2",
+      "task": "fabrica_plumbers_block",
+      "group": "P1-OOD",
+      "success": true,
+      "status": "pending",
+      "n": 0,
+      "correct": 0,
+      "name": "newpause-vpp2--fabrica_plumbers_block--P1-OOD--success",
+      "diagnostic_only": false
+    },
+    {
+      "model": "vpp2",
+      "task": "fabrica_plumbers_block",
+      "group": "P1-OOD",
+      "success": false,
+      "status": "pending",
+      "n": 0,
+      "correct": 0,
+      "name": "newpause-vpp2--fabrica_plumbers_block--P1-OOD--failure",
+      "diagnostic_only": false
+    },
+    {
+      "model": "vpp2",
+      "task": "fabrica_stool",
+      "group": "P0",
+      "success": true,
+      "status": "pending",
+      "n": 0,
+      "correct": 0,
+      "name": "newpause-vpp2--fabrica_stool--P0--success",
+      "diagnostic_only": false
+    },
+    {
+      "model": "vpp2",
+      "task": "fabrica_stool",
+      "group": "P0",
+      "success": false,
+      "status": "pending",
+      "n": 0,
+      "correct": 0,
+      "name": "newpause-vpp2--fabrica_stool--P0--failure",
+      "diagnostic_only": false
+    },
+    {
+      "model": "vpp2",
+      "task": "fabrica_stool",
+      "group": "P1-OOD",
+      "success": true,
+      "status": "pending",
+      "n": 0,
+      "correct": 0,
+      "name": "newpause-vpp2--fabrica_stool--P1-OOD--success",
+      "diagnostic_only": false
+    },
+    {
+      "model": "vpp2",
+      "task": "fabrica_stool",
+      "group": "P1-OOD",
+      "success": false,
+      "status": "pending",
+      "n": 0,
+      "correct": 0,
+      "name": "newpause-vpp2--fabrica_stool--P1-OOD--failure",
+      "diagnostic_only": false
+    },
+    {
+      "model": "fastwam",
+      "task": "place_object_basket",
+      "group": "P0",
+      "success": true,
+      "status": "available",
+      "n": 48,
+      "correct": 36,
+      "key": "place_object_basket__clean__s197013__e000",
+      "name": "newpause-fastwam--place_object_basket--P0--success",
+      "diagnostic_only": false,
+      "assembly_goal": "full",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 3554,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-fastwam--place_object_basket--P0--success.mp4"
+    },
+    {
+      "model": "fastwam",
+      "task": "place_object_basket",
+      "group": "P0",
+      "success": false,
+      "status": "available",
+      "n": 48,
+      "correct": 36,
+      "key": "place_object_basket__clean__s197020__e000",
+      "name": "newpause-fastwam--place_object_basket--P0--failure",
+      "diagnostic_only": false,
+      "assembly_goal": "full",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 10500,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-fastwam--place_object_basket--P0--failure.mp4"
+    },
+    {
+      "model": "fastwam",
+      "task": "place_object_basket",
+      "group": "P1-OOD",
+      "success": true,
+      "status": "available",
+      "n": 48,
+      "correct": 5,
+      "key": "place_object_basket__T_pause__s197022__e008",
+      "name": "newpause-fastwam--place_object_basket--P1-OOD--success",
+      "diagnostic_only": false,
+      "assembly_goal": "full",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 4272,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-fastwam--place_object_basket--P1-OOD--success.mp4"
+    },
+    {
+      "model": "fastwam",
+      "task": "place_object_basket",
+      "group": "P1-OOD",
+      "success": false,
+      "status": "available",
+      "n": 48,
+      "correct": 5,
+      "key": "place_object_basket__T_pause__s197013__e016",
+      "name": "newpause-fastwam--place_object_basket--P1-OOD--failure",
+      "diagnostic_only": false,
+      "assembly_goal": "full",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 14505,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-fastwam--place_object_basket--P1-OOD--failure.mp4"
+    },
+    {
+      "model": "fastwam",
+      "task": "stack_blocks_three",
+      "group": "P0",
+      "success": true,
+      "status": "available",
+      "n": 50,
+      "correct": 17,
+      "key": "stack_blocks_three__clean__s117020__e000",
+      "name": "newpause-fastwam--stack_blocks_three--P0--success",
+      "diagnostic_only": false,
+      "assembly_goal": "full",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 6376,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-fastwam--stack_blocks_three--P0--success.mp4"
+    },
+    {
+      "model": "fastwam",
+      "task": "stack_blocks_three",
+      "group": "P0",
+      "success": false,
+      "status": "available",
+      "n": 50,
+      "correct": 17,
+      "key": "stack_blocks_three__clean__s117024__e000",
+      "name": "newpause-fastwam--stack_blocks_three--P0--failure",
+      "diagnostic_only": false,
+      "assembly_goal": "full",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 18000,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-fastwam--stack_blocks_three--P0--failure.mp4"
+    },
+    {
+      "model": "fastwam",
+      "task": "stack_blocks_three",
+      "group": "P1-OOD",
+      "success": true,
+      "status": "no_outcome",
+      "n": 50,
+      "correct": 0,
+      "name": "newpause-fastwam--stack_blocks_three--P1-OOD--success",
+      "diagnostic_only": false
+    },
+    {
+      "model": "fastwam",
+      "task": "stack_blocks_three",
+      "group": "P1-OOD",
+      "success": false,
+      "status": "available",
+      "n": 50,
+      "correct": 0,
+      "key": "stack_blocks_three__T_pause__s117020__e008",
+      "name": "newpause-fastwam--stack_blocks_three--P1-OOD--failure",
+      "diagnostic_only": false,
+      "assembly_goal": "full",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 20010,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-fastwam--stack_blocks_three--P1-OOD--failure.mp4"
+    },
+    {
+      "model": "fastwam",
+      "task": "handover_block",
+      "group": "P0",
+      "success": true,
+      "status": "available",
+      "n": 50,
+      "correct": 25,
+      "key": "handover_block__clean__s090002__e000",
+      "name": "newpause-fastwam--handover_block--P0--success",
+      "diagnostic_only": false,
+      "assembly_goal": "full",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 3396,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-fastwam--handover_block--P0--success.mp4"
+    },
+    {
+      "model": "fastwam",
+      "task": "handover_block",
+      "group": "P0",
+      "success": false,
+      "status": "available",
+      "n": 50,
+      "correct": 25,
+      "key": "handover_block__clean__s090003__e000",
+      "name": "newpause-fastwam--handover_block--P0--failure",
+      "diagnostic_only": false,
+      "assembly_goal": "full",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 12000,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-fastwam--handover_block--P0--failure.mp4"
+    },
+    {
+      "model": "fastwam",
+      "task": "handover_block",
+      "group": "P1-OOD",
+      "success": true,
+      "status": "no_outcome",
+      "n": 50,
+      "correct": 0,
+      "name": "newpause-fastwam--handover_block--P1-OOD--success",
+      "diagnostic_only": false
+    },
+    {
+      "model": "fastwam",
+      "task": "handover_block",
+      "group": "P1-OOD",
+      "success": false,
+      "status": "available",
+      "n": 50,
+      "correct": 0,
+      "key": "handover_block__T_pause__s090002__e008",
+      "name": "newpause-fastwam--handover_block--P1-OOD--failure",
+      "diagnostic_only": false,
+      "assembly_goal": "full",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 14010,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-fastwam--handover_block--P1-OOD--failure.mp4"
+    },
+    {
+      "model": "fastwam",
+      "task": "hanging_mug",
+      "group": "P0",
+      "success": true,
+      "status": "available",
+      "n": 37,
+      "correct": 8,
+      "key": "hanging_mug__clean__s630123__e000",
+      "name": "newpause-fastwam--hanging_mug--P0--success",
+      "diagnostic_only": true,
+      "assembly_goal": "full",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 7248,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-fastwam--hanging_mug--P0--success.mp4"
+    },
+    {
+      "model": "fastwam",
+      "task": "hanging_mug",
+      "group": "P0",
+      "success": false,
+      "status": "available",
+      "n": 37,
+      "correct": 8,
+      "key": "hanging_mug__clean__s630094__e000",
+      "name": "newpause-fastwam--hanging_mug--P0--failure",
+      "diagnostic_only": true,
+      "assembly_goal": "full",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 12990,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-fastwam--hanging_mug--P0--failure.mp4"
+    },
+    {
+      "model": "fastwam",
+      "task": "hanging_mug",
+      "group": "P1-OOD",
+      "success": true,
+      "status": "available",
+      "n": 37,
+      "correct": 3,
+      "key": "hanging_mug__T_pause__s650600__e008",
+      "name": "newpause-fastwam--hanging_mug--P1-OOD--success",
+      "diagnostic_only": true,
+      "assembly_goal": "full",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 10283,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-fastwam--hanging_mug--P1-OOD--success.mp4"
+    },
+    {
+      "model": "fastwam",
+      "task": "hanging_mug",
+      "group": "P1-OOD",
+      "success": false,
+      "status": "available",
+      "n": 37,
+      "correct": 3,
+      "key": "hanging_mug__T_pause__s630094__e008",
+      "name": "newpause-fastwam--hanging_mug--P1-OOD--failure",
+      "diagnostic_only": true,
+      "assembly_goal": "full",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 15000,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-fastwam--hanging_mug--P1-OOD--failure.mp4"
+    },
+    {
+      "model": "fastwam",
+      "task": "handover_mic",
+      "group": "P0",
+      "success": true,
+      "status": "available",
+      "n": 50,
+      "correct": 46,
+      "key": "handover_mic__clean__s090000__e000",
+      "name": "newpause-fastwam--handover_mic--P0--success",
+      "diagnostic_only": false,
+      "assembly_goal": "full",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 2864,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-fastwam--handover_mic--P0--success.mp4"
+    },
+    {
+      "model": "fastwam",
+      "task": "handover_mic",
+      "group": "P0",
+      "success": false,
+      "status": "available",
+      "n": 50,
+      "correct": 46,
+      "key": "handover_mic__clean__s182017__e000",
+      "name": "newpause-fastwam--handover_mic--P0--failure",
+      "diagnostic_only": false,
+      "assembly_goal": "full",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 9000,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-fastwam--handover_mic--P0--failure.mp4"
+    },
+    {
+      "model": "fastwam",
+      "task": "handover_mic",
+      "group": "P1-OOD",
+      "success": true,
+      "status": "no_outcome",
+      "n": 50,
+      "correct": 0,
+      "name": "newpause-fastwam--handover_mic--P1-OOD--success",
+      "diagnostic_only": false
+    },
+    {
+      "model": "fastwam",
+      "task": "handover_mic",
+      "group": "P1-OOD",
+      "success": false,
+      "status": "available",
+      "n": 50,
+      "correct": 0,
+      "key": "handover_mic__T_pause__s090000__e016",
+      "name": "newpause-fastwam--handover_mic--P1-OOD--failure",
+      "diagnostic_only": false,
+      "assembly_goal": "full",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 13005,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-fastwam--handover_mic--P1-OOD--failure.mp4"
+    },
+    {
+      "model": "fastwam",
+      "task": "fabrica_beam",
+      "group": "P0",
+      "success": true,
+      "status": "no_outcome",
+      "n": 50,
+      "correct": 0,
+      "name": "newpause-fastwam--fabrica_beam--P0--success",
+      "diagnostic_only": false
+    },
+    {
+      "model": "fastwam",
+      "task": "fabrica_beam",
+      "group": "P0",
+      "success": false,
+      "status": "available",
+      "n": 50,
+      "correct": 0,
+      "key": "fabrica_beam__clean__s011000__e000",
+      "name": "newpause-fastwam--fabrica_beam--P0--failure",
+      "diagnostic_only": false,
+      "assembly_goal": "beam-column-cap-v1",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 15150,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-fastwam--fabrica_beam--P0--failure.mp4"
+    },
+    {
+      "model": "fastwam",
+      "task": "fabrica_beam",
+      "group": "P1-OOD",
+      "success": true,
+      "status": "no_outcome",
+      "n": 50,
+      "correct": 0,
+      "name": "newpause-fastwam--fabrica_beam--P1-OOD--success",
+      "diagnostic_only": false
+    },
+    {
+      "model": "fastwam",
+      "task": "fabrica_beam",
+      "group": "P1-OOD",
+      "success": false,
+      "status": "available",
+      "n": 50,
+      "correct": 0,
+      "key": "fabrica_beam__T_pause__s011000__e008",
+      "name": "newpause-fastwam--fabrica_beam--P1-OOD--failure",
+      "diagnostic_only": false,
+      "assembly_goal": "beam-column-cap-v1",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 17010,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-fastwam--fabrica_beam--P1-OOD--failure.mp4"
+    },
+    {
+      "model": "fastwam",
+      "task": "fabrica_plumbers_block",
+      "group": "P0",
+      "success": true,
+      "status": "no_outcome",
+      "n": 32,
+      "correct": 0,
+      "name": "newpause-fastwam--fabrica_plumbers_block--P0--success",
+      "diagnostic_only": false
+    },
+    {
+      "model": "fastwam",
+      "task": "fabrica_plumbers_block",
+      "group": "P0",
+      "success": false,
+      "status": "available",
+      "n": 32,
+      "correct": 0,
+      "key": "fabrica_plumbers_block__clean__s011000__e000",
+      "name": "newpause-fastwam--fabrica_plumbers_block--P0--failure",
+      "diagnostic_only": false,
+      "assembly_goal": "plumber-first-tube-v1",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 18720,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-fastwam--fabrica_plumbers_block--P0--failure.mp4"
+    },
+    {
+      "model": "fastwam",
+      "task": "fabrica_plumbers_block",
+      "group": "P1-OOD",
+      "success": true,
+      "status": "no_outcome",
+      "n": 32,
+      "correct": 0,
+      "name": "newpause-fastwam--fabrica_plumbers_block--P1-OOD--success",
+      "diagnostic_only": false
+    },
+    {
+      "model": "fastwam",
+      "task": "fabrica_plumbers_block",
+      "group": "P1-OOD",
+      "success": false,
+      "status": "available",
+      "n": 32,
+      "correct": 0,
+      "key": "fabrica_plumbers_block__T_pause__s011000__e008",
+      "name": "newpause-fastwam--fabrica_plumbers_block--P1-OOD--failure",
+      "diagnostic_only": false,
+      "assembly_goal": "plumber-first-tube-v1",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 20085,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-fastwam--fabrica_plumbers_block--P1-OOD--failure.mp4"
+    },
+    {
+      "model": "fastwam",
+      "task": "fabrica_stool",
+      "group": "P0",
+      "success": true,
+      "status": "available",
+      "n": 39,
+      "correct": 4,
+      "key": "fabrica_stool__clean__s211561__e000",
+      "name": "newpause-fastwam--fabrica_stool--P0--success",
+      "diagnostic_only": false,
+      "assembly_goal": "stool-first-leg-v1",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 3550,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-fastwam--fabrica_stool--P0--success.mp4"
+    },
+    {
+      "model": "fastwam",
+      "task": "fabrica_stool",
+      "group": "P0",
+      "success": false,
+      "status": "available",
+      "n": 39,
+      "correct": 4,
+      "key": "fabrica_stool__clean__s011000__e000",
+      "name": "newpause-fastwam--fabrica_stool--P0--failure",
+      "diagnostic_only": false,
+      "assembly_goal": "stool-first-leg-v1",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 24600,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-fastwam--fabrica_stool--P0--failure.mp4"
+    },
+    {
+      "model": "fastwam",
+      "task": "fabrica_stool",
+      "group": "P1-OOD",
+      "success": true,
+      "status": "available",
+      "n": 32,
+      "correct": 1,
+      "key": "fabrica_stool__T_pause__s211560__e008",
+      "name": "newpause-fastwam--fabrica_stool--P1-OOD--success",
+      "diagnostic_only": false,
+      "assembly_goal": "stool-first-leg-v1",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 5850,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-fastwam--fabrica_stool--P1-OOD--success.mp4"
+    },
+    {
+      "model": "fastwam",
+      "task": "fabrica_stool",
+      "group": "P1-OOD",
+      "success": false,
+      "status": "available",
+      "n": 32,
+      "correct": 1,
+      "key": "fabrica_stool__T_pause__s011000__e008",
+      "name": "newpause-fastwam--fabrica_stool--P1-OOD--failure",
+      "diagnostic_only": false,
+      "assembly_goal": "stool-first-leg-v1",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 26820,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-fastwam--fabrica_stool--P1-OOD--failure.mp4"
+    },
+    {
+      "model": "dp",
+      "task": "place_object_basket",
+      "group": "P0",
+      "success": true,
+      "status": "available",
+      "n": 48,
+      "correct": 21,
+      "key": "place_object_basket__clean__s197013__e000",
+      "name": "newpause-dp--place_object_basket--P0--success",
+      "diagnostic_only": false,
+      "assembly_goal": "full",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 3747,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-dp--place_object_basket--P0--success.mp4"
+    },
+    {
+      "model": "dp",
+      "task": "place_object_basket",
+      "group": "P0",
+      "success": false,
+      "status": "available",
+      "n": 48,
+      "correct": 21,
+      "key": "place_object_basket__clean__s197022__e000",
+      "name": "newpause-dp--place_object_basket--P0--failure",
+      "diagnostic_only": false,
+      "assembly_goal": "full",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 10500,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-dp--place_object_basket--P0--failure.mp4"
+    },
+    {
+      "model": "dp",
+      "task": "place_object_basket",
+      "group": "P1-OOD",
+      "success": true,
+      "status": "available",
+      "n": 48,
+      "correct": 4,
+      "key": "place_object_basket__T_pause__s197073__e008",
+      "name": "newpause-dp--place_object_basket--P1-OOD--success",
+      "diagnostic_only": false,
+      "assembly_goal": "full",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 5768,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-dp--place_object_basket--P1-OOD--success.mp4"
+    },
+    {
+      "model": "dp",
+      "task": "place_object_basket",
+      "group": "P1-OOD",
+      "success": false,
+      "status": "available",
+      "n": 48,
+      "correct": 4,
+      "key": "place_object_basket__T_pause__s197013__e016",
+      "name": "newpause-dp--place_object_basket--P1-OOD--failure",
+      "diagnostic_only": false,
+      "assembly_goal": "full",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 14505,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-dp--place_object_basket--P1-OOD--failure.mp4"
+    },
+    {
+      "model": "dp",
+      "task": "stack_blocks_three",
+      "group": "P0",
+      "success": true,
+      "status": "no_outcome",
+      "n": 50,
+      "correct": 0,
+      "name": "newpause-dp--stack_blocks_three--P0--success",
+      "diagnostic_only": false
+    },
+    {
+      "model": "dp",
+      "task": "stack_blocks_three",
+      "group": "P0",
+      "success": false,
+      "status": "available",
+      "n": 50,
+      "correct": 0,
+      "key": "stack_blocks_three__clean__s117020__e000",
+      "name": "newpause-dp--stack_blocks_three--P0--failure",
+      "diagnostic_only": false,
+      "assembly_goal": "full",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 18000,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-dp--stack_blocks_three--P0--failure.mp4"
+    },
+    {
+      "model": "dp",
+      "task": "stack_blocks_three",
+      "group": "P1-OOD",
+      "success": true,
+      "status": "no_outcome",
+      "n": 50,
+      "correct": 0,
+      "name": "newpause-dp--stack_blocks_three--P1-OOD--success",
+      "diagnostic_only": false
+    },
+    {
+      "model": "dp",
+      "task": "stack_blocks_three",
+      "group": "P1-OOD",
+      "success": false,
+      "status": "available",
+      "n": 50,
+      "correct": 0,
+      "key": "stack_blocks_three__T_pause__s117020__e008",
+      "name": "newpause-dp--stack_blocks_three--P1-OOD--failure",
+      "diagnostic_only": false,
+      "assembly_goal": "full",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 20010,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-dp--stack_blocks_three--P1-OOD--failure.mp4"
+    },
+    {
+      "model": "dp",
+      "task": "handover_block",
+      "group": "P0",
+      "success": true,
+      "status": "available",
+      "n": 50,
+      "correct": 10,
+      "key": "handover_block__clean__s090003__e000",
+      "name": "newpause-dp--handover_block--P0--success",
+      "diagnostic_only": false,
+      "assembly_goal": "full",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 3706,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-dp--handover_block--P0--success.mp4"
+    },
+    {
+      "model": "dp",
+      "task": "handover_block",
+      "group": "P0",
+      "success": false,
+      "status": "available",
+      "n": 50,
+      "correct": 10,
+      "key": "handover_block__clean__s090002__e000",
+      "name": "newpause-dp--handover_block--P0--failure",
+      "diagnostic_only": false,
+      "assembly_goal": "full",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 12000,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-dp--handover_block--P0--failure.mp4"
+    },
+    {
+      "model": "dp",
+      "task": "handover_block",
+      "group": "P1-OOD",
+      "success": true,
+      "status": "no_outcome",
+      "n": 50,
+      "correct": 0,
+      "name": "newpause-dp--handover_block--P1-OOD--success",
+      "diagnostic_only": false
+    },
+    {
+      "model": "dp",
+      "task": "handover_block",
+      "group": "P1-OOD",
+      "success": false,
+      "status": "available",
+      "n": 50,
+      "correct": 0,
+      "key": "handover_block__T_pause__s090002__e008",
+      "name": "newpause-dp--handover_block--P1-OOD--failure",
+      "diagnostic_only": false,
+      "assembly_goal": "full",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 14010,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-dp--handover_block--P1-OOD--failure.mp4"
+    },
+    {
+      "model": "dp",
+      "task": "hanging_mug",
+      "group": "P0",
+      "success": true,
+      "status": "no_outcome",
+      "n": 37,
+      "correct": 0,
+      "name": "newpause-dp--hanging_mug--P0--success",
+      "diagnostic_only": true
+    },
+    {
+      "model": "dp",
+      "task": "hanging_mug",
+      "group": "P0",
+      "success": false,
+      "status": "available",
+      "n": 37,
+      "correct": 0,
+      "key": "hanging_mug__clean__s630094__e000",
+      "name": "newpause-dp--hanging_mug--P0--failure",
+      "diagnostic_only": true,
+      "assembly_goal": "full",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 12990,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-dp--hanging_mug--P0--failure.mp4"
+    },
+    {
+      "model": "dp",
+      "task": "hanging_mug",
+      "group": "P1-OOD",
+      "success": true,
+      "status": "no_outcome",
+      "n": 37,
+      "correct": 0,
+      "name": "newpause-dp--hanging_mug--P1-OOD--success",
+      "diagnostic_only": true
+    },
+    {
+      "model": "dp",
+      "task": "hanging_mug",
+      "group": "P1-OOD",
+      "success": false,
+      "status": "available",
+      "n": 37,
+      "correct": 0,
+      "key": "hanging_mug__T_pause__s630094__e008",
+      "name": "newpause-dp--hanging_mug--P1-OOD--failure",
+      "diagnostic_only": true,
+      "assembly_goal": "full",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 15000,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-dp--hanging_mug--P1-OOD--failure.mp4"
+    },
+    {
+      "model": "dp",
+      "task": "handover_mic",
+      "group": "P0",
+      "success": true,
+      "status": "available",
+      "n": 50,
+      "correct": 20,
+      "key": "handover_mic__clean__s182003__e000",
+      "name": "newpause-dp--handover_mic--P0--success",
+      "diagnostic_only": false,
+      "assembly_goal": "full",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 2686,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-dp--handover_mic--P0--success.mp4"
+    },
+    {
+      "model": "dp",
+      "task": "handover_mic",
+      "group": "P0",
+      "success": false,
+      "status": "available",
+      "n": 50,
+      "correct": 20,
+      "key": "handover_mic__clean__s090000__e000",
+      "name": "newpause-dp--handover_mic--P0--failure",
+      "diagnostic_only": false,
+      "assembly_goal": "full",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 9000,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-dp--handover_mic--P0--failure.mp4"
+    },
+    {
+      "model": "dp",
+      "task": "handover_mic",
+      "group": "P1-OOD",
+      "success": true,
+      "status": "no_outcome",
+      "n": 50,
+      "correct": 0,
+      "name": "newpause-dp--handover_mic--P1-OOD--success",
+      "diagnostic_only": false
+    },
+    {
+      "model": "dp",
+      "task": "handover_mic",
+      "group": "P1-OOD",
+      "success": false,
+      "status": "available",
+      "n": 50,
+      "correct": 0,
+      "key": "handover_mic__T_pause__s090000__e016",
+      "name": "newpause-dp--handover_mic--P1-OOD--failure",
+      "diagnostic_only": false,
+      "assembly_goal": "full",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 13005,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-dp--handover_mic--P1-OOD--failure.mp4"
+    },
+    {
+      "model": "dp",
+      "task": "fabrica_beam",
+      "group": "P0",
+      "success": true,
+      "status": "available",
+      "n": 50,
+      "correct": 3,
+      "key": "fabrica_beam__clean__s012319__e000",
+      "name": "newpause-dp--fabrica_beam--P0--success",
+      "diagnostic_only": false,
+      "assembly_goal": "beam-column-cap-v1",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 6800,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-dp--fabrica_beam--P0--success.mp4"
+    },
+    {
+      "model": "dp",
+      "task": "fabrica_beam",
+      "group": "P0",
+      "success": false,
+      "status": "available",
+      "n": 50,
+      "correct": 3,
+      "key": "fabrica_beam__clean__s011000__e000",
+      "name": "newpause-dp--fabrica_beam--P0--failure",
+      "diagnostic_only": false,
+      "assembly_goal": "beam-column-cap-v1",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 15150,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-dp--fabrica_beam--P0--failure.mp4"
+    },
+    {
+      "model": "dp",
+      "task": "fabrica_beam",
+      "group": "P1-OOD",
+      "success": true,
+      "status": "no_outcome",
+      "n": 50,
+      "correct": 0,
+      "name": "newpause-dp--fabrica_beam--P1-OOD--success",
+      "diagnostic_only": false
+    },
+    {
+      "model": "dp",
+      "task": "fabrica_beam",
+      "group": "P1-OOD",
+      "success": false,
+      "status": "available",
+      "n": 50,
+      "correct": 0,
+      "key": "fabrica_beam__T_pause__s011000__e008",
+      "name": "newpause-dp--fabrica_beam--P1-OOD--failure",
+      "diagnostic_only": false,
+      "assembly_goal": "beam-column-cap-v1",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 17010,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-dp--fabrica_beam--P1-OOD--failure.mp4"
+    },
+    {
+      "model": "dp",
+      "task": "fabrica_plumbers_block",
+      "group": "P0",
+      "success": true,
+      "status": "no_outcome",
+      "n": 32,
+      "correct": 0,
+      "name": "newpause-dp--fabrica_plumbers_block--P0--success",
+      "diagnostic_only": false
+    },
+    {
+      "model": "dp",
+      "task": "fabrica_plumbers_block",
+      "group": "P0",
+      "success": false,
+      "status": "available",
+      "n": 32,
+      "correct": 0,
+      "key": "fabrica_plumbers_block__clean__s011000__e000",
+      "name": "newpause-dp--fabrica_plumbers_block--P0--failure",
+      "diagnostic_only": false,
+      "assembly_goal": "plumber-first-tube-v1",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 18720,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-dp--fabrica_plumbers_block--P0--failure.mp4"
+    },
+    {
+      "model": "dp",
+      "task": "fabrica_plumbers_block",
+      "group": "P1-OOD",
+      "success": true,
+      "status": "no_outcome",
+      "n": 32,
+      "correct": 0,
+      "name": "newpause-dp--fabrica_plumbers_block--P1-OOD--success",
+      "diagnostic_only": false
+    },
+    {
+      "model": "dp",
+      "task": "fabrica_plumbers_block",
+      "group": "P1-OOD",
+      "success": false,
+      "status": "available",
+      "n": 32,
+      "correct": 0,
+      "key": "fabrica_plumbers_block__T_pause__s011000__e008",
+      "name": "newpause-dp--fabrica_plumbers_block--P1-OOD--failure",
+      "diagnostic_only": false,
+      "assembly_goal": "plumber-first-tube-v1",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 20085,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-dp--fabrica_plumbers_block--P1-OOD--failure.mp4"
+    },
+    {
+      "model": "dp",
+      "task": "fabrica_stool",
+      "group": "P0",
+      "success": true,
+      "status": "pending",
+      "n": 36,
+      "correct": 0,
+      "name": "newpause-dp--fabrica_stool--P0--success",
+      "diagnostic_only": false
+    },
+    {
+      "model": "dp",
+      "task": "fabrica_stool",
+      "group": "P0",
+      "success": false,
+      "status": "available",
+      "n": 36,
+      "correct": 0,
+      "key": "fabrica_stool__clean__s011000__e000",
+      "name": "newpause-dp--fabrica_stool--P0--failure",
+      "diagnostic_only": false,
+      "assembly_goal": "stool-first-leg-v1",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 24600,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-dp--fabrica_stool--P0--failure.mp4"
+    },
+    {
+      "model": "dp",
+      "task": "fabrica_stool",
+      "group": "P1-OOD",
+      "success": true,
+      "status": "pending",
+      "n": 34,
+      "correct": 0,
+      "name": "newpause-dp--fabrica_stool--P1-OOD--success",
+      "diagnostic_only": false
+    },
+    {
+      "model": "dp",
+      "task": "fabrica_stool",
+      "group": "P1-OOD",
+      "success": false,
+      "status": "available",
+      "n": 34,
+      "correct": 0,
+      "key": "fabrica_stool__T_pause__s011000__e008",
+      "name": "newpause-dp--fabrica_stool--P1-OOD--failure",
+      "diagnostic_only": false,
+      "assembly_goal": "stool-first-leg-v1",
+      "physical_completion": "physical-completion-v1",
+      "phys_steps": 26820,
+      "url": "https://leftright-condition-videos.aurorabongo2.chatgpt.site/videos/newpause-dp--fabrica_stool--P1-OOD--failure.mp4"
+    }
+  ]
+}

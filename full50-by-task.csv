@@ -1,0 +1,985 @@
+﻿model,kind,task,group,success,completed,sr_percent,planned_total,evaluation_complete,snapshot_utc
+π0.5 Main 10k,baseline,fabrica_beam,P0,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k,baseline,fabrica_beam,P1-ID,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k,baseline,fabrica_beam,P1-OOD,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k,baseline,fabrica_beam,P1-speed0.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k,baseline,fabrica_beam,P1-speed1.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k,baseline,fabrica_beam,P2,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k,baseline,fabrica_plumbers_block,P0,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k,baseline,fabrica_plumbers_block,P1-ID,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k,baseline,fabrica_plumbers_block,P1-OOD,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k,baseline,fabrica_plumbers_block,P1-speed0.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k,baseline,fabrica_plumbers_block,P1-speed1.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k,baseline,fabrica_plumbers_block,P2,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k,baseline,fabrica_stool,P0,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k,baseline,fabrica_stool,P1-ID,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k,baseline,fabrica_stool,P1-OOD,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k,baseline,fabrica_stool,P1-speed0.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k,baseline,fabrica_stool,P1-speed1.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k,baseline,fabrica_stool,P2,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k,baseline,grab_roller,P0,43,50,86.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k,baseline,grab_roller,P1-ID,40,50,80.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k,baseline,grab_roller,P1-OOD,26,50,52.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k,baseline,grab_roller,P1-speed0.5,16,25,64.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k,baseline,grab_roller,P1-speed1.5,11,25,44.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k,baseline,grab_roller,P2,0,0,,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k,baseline,handover_block,P0,32,50,64.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k,baseline,handover_block,P1-ID,32,50,64.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k,baseline,handover_block,P1-OOD,31,50,62.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k,baseline,handover_block,P1-speed0.5,1,25,4.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k,baseline,handover_block,P1-speed1.5,18,25,72.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k,baseline,handover_block,P2,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k,baseline,handover_mic,P0,49,50,98.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k,baseline,handover_mic,P1-ID,50,50,100.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k,baseline,handover_mic,P1-OOD,48,50,96.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k,baseline,handover_mic,P1-speed0.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k,baseline,handover_mic,P1-speed1.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k,baseline,handover_mic,P2,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k,baseline,hanging_mug,P0,10,50,20.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k,baseline,hanging_mug,P1-ID,15,50,30.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k,baseline,hanging_mug,P1-OOD,14,50,28.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k,baseline,hanging_mug,P1-speed0.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k,baseline,hanging_mug,P1-speed1.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k,baseline,hanging_mug,P2,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k,baseline,lift_pot,P0,29,50,58.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k,baseline,lift_pot,P1-ID,32,50,64.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k,baseline,lift_pot,P1-OOD,6,50,12.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k,baseline,lift_pot,P1-speed0.5,3,25,12.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k,baseline,lift_pot,P1-speed1.5,2,25,8.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k,baseline,lift_pot,P2,0,0,,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k,baseline,place_object_basket,P0,41,50,82.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k,baseline,place_object_basket,P1-ID,37,50,74.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k,baseline,place_object_basket,P1-OOD,33,50,66.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k,baseline,place_object_basket,P1-speed0.5,6,25,24.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k,baseline,place_object_basket,P1-speed1.5,18,25,72.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k,baseline,place_object_basket,P2,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k,baseline,put_bottles_dustbin,P0,21,50,42.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k,baseline,put_bottles_dustbin,P1-ID,22,50,44.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k,baseline,put_bottles_dustbin,P1-OOD,9,50,18.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k,baseline,put_bottles_dustbin,P1-speed0.5,8,25,32.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k,baseline,put_bottles_dustbin,P1-speed1.5,5,25,20.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k,baseline,put_bottles_dustbin,P2,6,50,12.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k,baseline,stack_blocks_three,P0,50,50,100.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k,baseline,stack_blocks_three,P1-ID,50,50,100.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k,baseline,stack_blocks_three,P1-OOD,28,50,56.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k,baseline,stack_blocks_three,P1-speed0.5,5,25,20.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k,baseline,stack_blocks_three,P1-speed1.5,25,25,100.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k,baseline,stack_blocks_three,P2,12,50,24.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 20k,baseline,fabrica_beam,P0,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 20k,baseline,fabrica_beam,P1-ID,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 20k,baseline,fabrica_beam,P1-OOD,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 20k,baseline,fabrica_beam,P1-speed0.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 20k,baseline,fabrica_beam,P1-speed1.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 20k,baseline,fabrica_beam,P2,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 20k,baseline,fabrica_plumbers_block,P0,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 20k,baseline,fabrica_plumbers_block,P1-ID,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 20k,baseline,fabrica_plumbers_block,P1-OOD,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 20k,baseline,fabrica_plumbers_block,P1-speed0.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 20k,baseline,fabrica_plumbers_block,P1-speed1.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 20k,baseline,fabrica_plumbers_block,P2,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 20k,baseline,fabrica_stool,P0,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 20k,baseline,fabrica_stool,P1-ID,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 20k,baseline,fabrica_stool,P1-OOD,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 20k,baseline,fabrica_stool,P1-speed0.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 20k,baseline,fabrica_stool,P1-speed1.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 20k,baseline,fabrica_stool,P2,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 20k,baseline,grab_roller,P0,44,50,88.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 20k,baseline,grab_roller,P1-ID,40,50,80.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 20k,baseline,grab_roller,P1-OOD,25,50,50.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 20k,baseline,grab_roller,P1-speed0.5,11,25,44.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 20k,baseline,grab_roller,P1-speed1.5,11,25,44.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 20k,baseline,grab_roller,P2,0,0,,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 20k,baseline,handover_block,P0,37,50,74.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 20k,baseline,handover_block,P1-ID,35,50,70.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 20k,baseline,handover_block,P1-OOD,28,50,56.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 20k,baseline,handover_block,P1-speed0.5,1,25,4.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 20k,baseline,handover_block,P1-speed1.5,16,25,64.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 20k,baseline,handover_block,P2,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 20k,baseline,handover_mic,P0,50,50,100.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 20k,baseline,handover_mic,P1-ID,49,50,98.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 20k,baseline,handover_mic,P1-OOD,48,50,96.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 20k,baseline,handover_mic,P1-speed0.5,1,25,4.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 20k,baseline,handover_mic,P1-speed1.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 20k,baseline,handover_mic,P2,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 20k,baseline,hanging_mug,P0,11,50,22.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 20k,baseline,hanging_mug,P1-ID,13,50,26.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 20k,baseline,hanging_mug,P1-OOD,21,50,42.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 20k,baseline,hanging_mug,P1-speed0.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 20k,baseline,hanging_mug,P1-speed1.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 20k,baseline,hanging_mug,P2,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 20k,baseline,lift_pot,P0,30,50,60.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 20k,baseline,lift_pot,P1-ID,32,50,64.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 20k,baseline,lift_pot,P1-OOD,11,50,22.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 20k,baseline,lift_pot,P1-speed0.5,2,25,8.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 20k,baseline,lift_pot,P1-speed1.5,2,25,8.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 20k,baseline,lift_pot,P2,0,0,,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 20k,baseline,place_object_basket,P0,26,50,52.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 20k,baseline,place_object_basket,P1-ID,36,50,72.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 20k,baseline,place_object_basket,P1-OOD,26,50,52.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 20k,baseline,place_object_basket,P1-speed0.5,7,25,28.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 20k,baseline,place_object_basket,P1-speed1.5,13,25,52.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 20k,baseline,place_object_basket,P2,3,50,6.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 20k,baseline,put_bottles_dustbin,P0,21,50,42.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 20k,baseline,put_bottles_dustbin,P1-ID,19,50,38.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 20k,baseline,put_bottles_dustbin,P1-OOD,9,50,18.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 20k,baseline,put_bottles_dustbin,P1-speed0.5,10,25,40.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 20k,baseline,put_bottles_dustbin,P1-speed1.5,4,25,16.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 20k,baseline,put_bottles_dustbin,P2,8,50,16.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 20k,baseline,stack_blocks_three,P0,50,50,100.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 20k,baseline,stack_blocks_three,P1-ID,50,50,100.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 20k,baseline,stack_blocks_three,P1-OOD,35,50,70.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 20k,baseline,stack_blocks_three,P1-speed0.5,7,25,28.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 20k,baseline,stack_blocks_three,P1-speed1.5,25,25,100.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 20k,baseline,stack_blocks_three,P2,8,50,16.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 상태 입력,ablation,fabrica_beam,P0,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 상태 입력,ablation,fabrica_beam,P1-ID,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 상태 입력,ablation,fabrica_beam,P1-OOD,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 상태 입력,ablation,fabrica_beam,P1-speed0.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 상태 입력,ablation,fabrica_beam,P1-speed1.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 상태 입력,ablation,fabrica_beam,P2,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 상태 입력,ablation,fabrica_plumbers_block,P0,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 상태 입력,ablation,fabrica_plumbers_block,P1-ID,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 상태 입력,ablation,fabrica_plumbers_block,P1-OOD,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 상태 입력,ablation,fabrica_plumbers_block,P1-speed0.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 상태 입력,ablation,fabrica_plumbers_block,P1-speed1.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 상태 입력,ablation,fabrica_plumbers_block,P2,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 상태 입력,ablation,fabrica_stool,P0,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 상태 입력,ablation,fabrica_stool,P1-ID,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 상태 입력,ablation,fabrica_stool,P1-OOD,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 상태 입력,ablation,fabrica_stool,P1-speed0.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 상태 입력,ablation,fabrica_stool,P1-speed1.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 상태 입력,ablation,fabrica_stool,P2,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 상태 입력,ablation,grab_roller,P0,45,50,90.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 상태 입력,ablation,grab_roller,P1-ID,45,50,90.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 상태 입력,ablation,grab_roller,P1-OOD,34,50,68.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 상태 입력,ablation,grab_roller,P1-speed0.5,19,25,76.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 상태 입력,ablation,grab_roller,P1-speed1.5,12,25,48.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 상태 입력,ablation,grab_roller,P2,0,0,,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 상태 입력,ablation,handover_block,P0,35,50,70.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 상태 입력,ablation,handover_block,P1-ID,29,50,58.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 상태 입력,ablation,handover_block,P1-OOD,27,50,54.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 상태 입력,ablation,handover_block,P1-speed0.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 상태 입력,ablation,handover_block,P1-speed1.5,18,25,72.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 상태 입력,ablation,handover_block,P2,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 상태 입력,ablation,handover_mic,P0,49,50,98.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 상태 입력,ablation,handover_mic,P1-ID,49,50,98.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 상태 입력,ablation,handover_mic,P1-OOD,50,50,100.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 상태 입력,ablation,handover_mic,P1-speed0.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 상태 입력,ablation,handover_mic,P1-speed1.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 상태 입력,ablation,handover_mic,P2,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 상태 입력,ablation,hanging_mug,P0,6,50,12.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 상태 입력,ablation,hanging_mug,P1-ID,8,50,16.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 상태 입력,ablation,hanging_mug,P1-OOD,7,50,14.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 상태 입력,ablation,hanging_mug,P1-speed0.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 상태 입력,ablation,hanging_mug,P1-speed1.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 상태 입력,ablation,hanging_mug,P2,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 상태 입력,ablation,lift_pot,P0,33,50,66.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 상태 입력,ablation,lift_pot,P1-ID,33,50,66.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 상태 입력,ablation,lift_pot,P1-OOD,11,50,22.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 상태 입력,ablation,lift_pot,P1-speed0.5,5,25,20.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 상태 입력,ablation,lift_pot,P1-speed1.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 상태 입력,ablation,lift_pot,P2,0,0,,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 상태 입력,ablation,place_object_basket,P0,26,50,52.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 상태 입력,ablation,place_object_basket,P1-ID,29,50,58.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 상태 입력,ablation,place_object_basket,P1-OOD,23,50,46.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 상태 입력,ablation,place_object_basket,P1-speed0.5,5,25,20.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 상태 입력,ablation,place_object_basket,P1-speed1.5,6,25,24.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 상태 입력,ablation,place_object_basket,P2,3,50,6.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 상태 입력,ablation,put_bottles_dustbin,P0,20,50,40.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 상태 입력,ablation,put_bottles_dustbin,P1-ID,18,50,36.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 상태 입력,ablation,put_bottles_dustbin,P1-OOD,13,50,26.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 상태 입력,ablation,put_bottles_dustbin,P1-speed0.5,9,25,36.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 상태 입력,ablation,put_bottles_dustbin,P1-speed1.5,4,25,16.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 상태 입력,ablation,put_bottles_dustbin,P2,9,50,18.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 상태 입력,ablation,stack_blocks_three,P0,50,50,100.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 상태 입력,ablation,stack_blocks_three,P1-ID,50,50,100.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 상태 입력,ablation,stack_blocks_three,P1-OOD,8,50,16.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 상태 입력,ablation,stack_blocks_three,P1-speed0.5,4,25,16.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 상태 입력,ablation,stack_blocks_three,P1-speed1.5,25,25,100.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 상태 입력,ablation,stack_blocks_three,P2,9,50,18.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 50k + oracle v2,oracle,fabrica_beam,P0,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 50k + oracle v2,oracle,fabrica_beam,P1-ID,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 50k + oracle v2,oracle,fabrica_beam,P1-OOD,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 50k + oracle v2,oracle,fabrica_beam,P1-speed0.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 50k + oracle v2,oracle,fabrica_beam,P1-speed1.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 50k + oracle v2,oracle,fabrica_beam,P2,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 50k + oracle v2,oracle,fabrica_plumbers_block,P0,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 50k + oracle v2,oracle,fabrica_plumbers_block,P1-ID,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 50k + oracle v2,oracle,fabrica_plumbers_block,P1-OOD,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 50k + oracle v2,oracle,fabrica_plumbers_block,P1-speed0.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 50k + oracle v2,oracle,fabrica_plumbers_block,P1-speed1.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 50k + oracle v2,oracle,fabrica_plumbers_block,P2,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 50k + oracle v2,oracle,fabrica_stool,P0,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 50k + oracle v2,oracle,fabrica_stool,P1-ID,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 50k + oracle v2,oracle,fabrica_stool,P1-OOD,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 50k + oracle v2,oracle,fabrica_stool,P1-speed0.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 50k + oracle v2,oracle,fabrica_stool,P1-speed1.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 50k + oracle v2,oracle,fabrica_stool,P2,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 50k + oracle v2,oracle,grab_roller,P0,32,50,64.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 50k + oracle v2,oracle,grab_roller,P1-ID,32,50,64.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 50k + oracle v2,oracle,grab_roller,P1-OOD,17,50,34.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 50k + oracle v2,oracle,grab_roller,P1-speed0.5,12,25,48.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 50k + oracle v2,oracle,grab_roller,P1-speed1.5,11,25,44.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 50k + oracle v2,oracle,grab_roller,P2,0,0,,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 50k + oracle v2,oracle,handover_block,P0,36,50,72.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 50k + oracle v2,oracle,handover_block,P1-ID,36,50,72.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 50k + oracle v2,oracle,handover_block,P1-OOD,31,50,62.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 50k + oracle v2,oracle,handover_block,P1-speed0.5,10,25,40.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 50k + oracle v2,oracle,handover_block,P1-speed1.5,15,25,60.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 50k + oracle v2,oracle,handover_block,P2,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 50k + oracle v2,oracle,handover_mic,P0,47,50,94.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 50k + oracle v2,oracle,handover_mic,P1-ID,42,50,84.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 50k + oracle v2,oracle,handover_mic,P1-OOD,44,50,88.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 50k + oracle v2,oracle,handover_mic,P1-speed0.5,13,25,52.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 50k + oracle v2,oracle,handover_mic,P1-speed1.5,4,25,16.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 50k + oracle v2,oracle,handover_mic,P2,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 50k + oracle v2,oracle,hanging_mug,P0,9,50,18.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 50k + oracle v2,oracle,hanging_mug,P1-ID,8,50,16.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 50k + oracle v2,oracle,hanging_mug,P1-OOD,10,50,20.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 50k + oracle v2,oracle,hanging_mug,P1-speed0.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 50k + oracle v2,oracle,hanging_mug,P1-speed1.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 50k + oracle v2,oracle,hanging_mug,P2,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 50k + oracle v2,oracle,lift_pot,P0,21,50,42.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 50k + oracle v2,oracle,lift_pot,P1-ID,18,50,36.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 50k + oracle v2,oracle,lift_pot,P1-OOD,5,50,10.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 50k + oracle v2,oracle,lift_pot,P1-speed0.5,7,25,28.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 50k + oracle v2,oracle,lift_pot,P1-speed1.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 50k + oracle v2,oracle,lift_pot,P2,0,0,,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 50k + oracle v2,oracle,place_object_basket,P0,23,50,46.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 50k + oracle v2,oracle,place_object_basket,P1-ID,15,50,30.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 50k + oracle v2,oracle,place_object_basket,P1-OOD,18,50,36.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 50k + oracle v2,oracle,place_object_basket,P1-speed0.5,6,25,24.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 50k + oracle v2,oracle,place_object_basket,P1-speed1.5,8,25,32.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 50k + oracle v2,oracle,place_object_basket,P2,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 50k + oracle v2,oracle,put_bottles_dustbin,P0,8,50,16.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 50k + oracle v2,oracle,put_bottles_dustbin,P1-ID,14,50,28.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 50k + oracle v2,oracle,put_bottles_dustbin,P1-OOD,12,50,24.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 50k + oracle v2,oracle,put_bottles_dustbin,P1-speed0.5,4,25,16.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 50k + oracle v2,oracle,put_bottles_dustbin,P1-speed1.5,1,25,4.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 50k + oracle v2,oracle,put_bottles_dustbin,P2,2,50,4.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 50k + oracle v2,oracle,stack_blocks_three,P0,49,50,98.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 50k + oracle v2,oracle,stack_blocks_three,P1-ID,48,50,96.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 50k + oracle v2,oracle,stack_blocks_three,P1-OOD,48,50,96.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 50k + oracle v2,oracle,stack_blocks_three,P1-speed0.5,5,25,20.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 50k + oracle v2,oracle,stack_blocks_three,P1-speed1.5,23,25,92.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 50k + oracle v2,oracle,stack_blocks_three,P2,41,50,82.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"VPP2 10,400",hangang,fabrica_beam,P0,1,50,2.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"VPP2 10,400",hangang,fabrica_beam,P1-ID,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"VPP2 10,400",hangang,fabrica_beam,P1-OOD,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"VPP2 10,400",hangang,fabrica_beam,P1-speed0.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"VPP2 10,400",hangang,fabrica_beam,P1-speed1.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"VPP2 10,400",hangang,fabrica_beam,P2,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"VPP2 10,400",hangang,fabrica_plumbers_block,P0,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"VPP2 10,400",hangang,fabrica_plumbers_block,P1-ID,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"VPP2 10,400",hangang,fabrica_plumbers_block,P1-OOD,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"VPP2 10,400",hangang,fabrica_plumbers_block,P1-speed0.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"VPP2 10,400",hangang,fabrica_plumbers_block,P1-speed1.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"VPP2 10,400",hangang,fabrica_plumbers_block,P2,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"VPP2 10,400",hangang,fabrica_stool,P0,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"VPP2 10,400",hangang,fabrica_stool,P1-ID,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"VPP2 10,400",hangang,fabrica_stool,P1-OOD,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"VPP2 10,400",hangang,fabrica_stool,P1-speed0.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"VPP2 10,400",hangang,fabrica_stool,P1-speed1.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"VPP2 10,400",hangang,fabrica_stool,P2,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"VPP2 10,400",hangang,grab_roller,P0,37,50,74.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"VPP2 10,400",hangang,grab_roller,P1-ID,35,50,70.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"VPP2 10,400",hangang,grab_roller,P1-OOD,28,50,56.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"VPP2 10,400",hangang,grab_roller,P1-speed0.5,16,25,64.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"VPP2 10,400",hangang,grab_roller,P1-speed1.5,9,25,36.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"VPP2 10,400",hangang,grab_roller,P2,0,0,,2650,True,2026-11-09T04:47:22.714205+00:00
+"VPP2 10,400",hangang,handover_block,P0,40,50,80.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"VPP2 10,400",hangang,handover_block,P1-ID,37,50,74.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"VPP2 10,400",hangang,handover_block,P1-OOD,34,50,68.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"VPP2 10,400",hangang,handover_block,P1-speed0.5,5,25,20.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"VPP2 10,400",hangang,handover_block,P1-speed1.5,17,25,68.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"VPP2 10,400",hangang,handover_block,P2,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"VPP2 10,400",hangang,handover_mic,P0,47,50,94.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"VPP2 10,400",hangang,handover_mic,P1-ID,45,50,90.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"VPP2 10,400",hangang,handover_mic,P1-OOD,38,50,76.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"VPP2 10,400",hangang,handover_mic,P1-speed0.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"VPP2 10,400",hangang,handover_mic,P1-speed1.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"VPP2 10,400",hangang,handover_mic,P2,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"VPP2 10,400",hangang,hanging_mug,P0,13,50,26.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"VPP2 10,400",hangang,hanging_mug,P1-ID,8,50,16.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"VPP2 10,400",hangang,hanging_mug,P1-OOD,18,50,36.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"VPP2 10,400",hangang,hanging_mug,P1-speed0.5,1,25,4.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"VPP2 10,400",hangang,hanging_mug,P1-speed1.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"VPP2 10,400",hangang,hanging_mug,P2,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"VPP2 10,400",hangang,lift_pot,P0,45,50,90.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"VPP2 10,400",hangang,lift_pot,P1-ID,42,50,84.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"VPP2 10,400",hangang,lift_pot,P1-OOD,14,50,28.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"VPP2 10,400",hangang,lift_pot,P1-speed0.5,8,25,32.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"VPP2 10,400",hangang,lift_pot,P1-speed1.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"VPP2 10,400",hangang,lift_pot,P2,0,0,,2650,True,2026-11-09T04:47:22.714205+00:00
+"VPP2 10,400",hangang,place_object_basket,P0,35,50,70.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"VPP2 10,400",hangang,place_object_basket,P1-ID,40,50,80.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"VPP2 10,400",hangang,place_object_basket,P1-OOD,39,50,78.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"VPP2 10,400",hangang,place_object_basket,P1-speed0.5,14,25,56.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"VPP2 10,400",hangang,place_object_basket,P1-speed1.5,14,25,56.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"VPP2 10,400",hangang,place_object_basket,P2,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"VPP2 10,400",hangang,put_bottles_dustbin,P0,12,50,24.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"VPP2 10,400",hangang,put_bottles_dustbin,P1-ID,10,50,20.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"VPP2 10,400",hangang,put_bottles_dustbin,P1-OOD,4,50,8.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"VPP2 10,400",hangang,put_bottles_dustbin,P1-speed0.5,4,25,16.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"VPP2 10,400",hangang,put_bottles_dustbin,P1-speed1.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"VPP2 10,400",hangang,put_bottles_dustbin,P2,8,50,16.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"VPP2 10,400",hangang,stack_blocks_three,P0,26,50,52.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"VPP2 10,400",hangang,stack_blocks_three,P1-ID,18,50,36.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"VPP2 10,400",hangang,stack_blocks_three,P1-OOD,6,50,12.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"VPP2 10,400",hangang,stack_blocks_three,P1-speed0.5,8,25,32.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"VPP2 10,400",hangang,stack_blocks_three,P1-speed1.5,8,25,32.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"VPP2 10,400",hangang,stack_blocks_three,P2,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 행동 예측,ablation,fabrica_beam,P0,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 행동 예측,ablation,fabrica_beam,P1-ID,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 행동 예측,ablation,fabrica_beam,P1-OOD,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 행동 예측,ablation,fabrica_beam,P1-speed0.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 행동 예측,ablation,fabrica_beam,P1-speed1.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 행동 예측,ablation,fabrica_beam,P2,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 행동 예측,ablation,fabrica_plumbers_block,P0,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 행동 예측,ablation,fabrica_plumbers_block,P1-ID,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 행동 예측,ablation,fabrica_plumbers_block,P1-OOD,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 행동 예측,ablation,fabrica_plumbers_block,P1-speed0.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 행동 예측,ablation,fabrica_plumbers_block,P1-speed1.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 행동 예측,ablation,fabrica_plumbers_block,P2,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 행동 예측,ablation,fabrica_stool,P0,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 행동 예측,ablation,fabrica_stool,P1-ID,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 행동 예측,ablation,fabrica_stool,P1-OOD,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 행동 예측,ablation,fabrica_stool,P1-speed0.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 행동 예측,ablation,fabrica_stool,P1-speed1.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 행동 예측,ablation,fabrica_stool,P2,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 행동 예측,ablation,grab_roller,P0,39,50,78.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 행동 예측,ablation,grab_roller,P1-ID,37,50,74.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 행동 예측,ablation,grab_roller,P1-OOD,25,50,50.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 행동 예측,ablation,grab_roller,P1-speed0.5,5,25,20.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 행동 예측,ablation,grab_roller,P1-speed1.5,10,25,40.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 행동 예측,ablation,grab_roller,P2,0,0,,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 행동 예측,ablation,handover_block,P0,33,50,66.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 행동 예측,ablation,handover_block,P1-ID,31,50,62.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 행동 예측,ablation,handover_block,P1-OOD,29,50,58.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 행동 예측,ablation,handover_block,P1-speed0.5,4,25,16.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 행동 예측,ablation,handover_block,P1-speed1.5,18,25,72.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 행동 예측,ablation,handover_block,P2,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 행동 예측,ablation,handover_mic,P0,48,50,96.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 행동 예측,ablation,handover_mic,P1-ID,49,50,98.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 행동 예측,ablation,handover_mic,P1-OOD,48,50,96.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 행동 예측,ablation,handover_mic,P1-speed0.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 행동 예측,ablation,handover_mic,P1-speed1.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 행동 예측,ablation,handover_mic,P2,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 행동 예측,ablation,hanging_mug,P0,5,50,10.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 행동 예측,ablation,hanging_mug,P1-ID,8,50,16.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 행동 예측,ablation,hanging_mug,P1-OOD,8,50,16.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 행동 예측,ablation,hanging_mug,P1-speed0.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 행동 예측,ablation,hanging_mug,P1-speed1.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 행동 예측,ablation,hanging_mug,P2,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 행동 예측,ablation,lift_pot,P0,38,50,76.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 행동 예측,ablation,lift_pot,P1-ID,36,50,72.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 행동 예측,ablation,lift_pot,P1-OOD,9,50,18.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 행동 예측,ablation,lift_pot,P1-speed0.5,7,25,28.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 행동 예측,ablation,lift_pot,P1-speed1.5,1,25,4.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 행동 예측,ablation,lift_pot,P2,0,0,,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 행동 예측,ablation,place_object_basket,P0,19,50,38.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 행동 예측,ablation,place_object_basket,P1-ID,22,50,44.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 행동 예측,ablation,place_object_basket,P1-OOD,17,50,34.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 행동 예측,ablation,place_object_basket,P1-speed0.5,3,25,12.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 행동 예측,ablation,place_object_basket,P1-speed1.5,5,25,20.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 행동 예측,ablation,place_object_basket,P2,4,50,8.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 행동 예측,ablation,put_bottles_dustbin,P0,12,50,24.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 행동 예측,ablation,put_bottles_dustbin,P1-ID,9,50,18.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 행동 예측,ablation,put_bottles_dustbin,P1-OOD,7,50,14.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 행동 예측,ablation,put_bottles_dustbin,P1-speed0.5,5,25,20.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 행동 예측,ablation,put_bottles_dustbin,P1-speed1.5,3,25,12.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 행동 예측,ablation,put_bottles_dustbin,P2,5,50,10.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 행동 예측,ablation,stack_blocks_three,P0,42,50,84.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 행동 예측,ablation,stack_blocks_three,P1-ID,45,50,90.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 행동 예측,ablation,stack_blocks_three,P1-OOD,25,50,50.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 행동 예측,ablation,stack_blocks_three,P1-speed0.5,4,25,16.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 행동 예측,ablation,stack_blocks_three,P1-speed1.5,22,25,88.0,2650,True,2026-11-09T04:47:22.714205+00:00
+π0.5 10k / 양팔 행동 예측,ablation,stack_blocks_three,P2,21,50,42.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 20k + oracle v2,oracle,fabrica_beam,P0,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 20k + oracle v2,oracle,fabrica_beam,P1-ID,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 20k + oracle v2,oracle,fabrica_beam,P1-OOD,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 20k + oracle v2,oracle,fabrica_beam,P1-speed0.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 20k + oracle v2,oracle,fabrica_beam,P1-speed1.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 20k + oracle v2,oracle,fabrica_beam,P2,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 20k + oracle v2,oracle,fabrica_plumbers_block,P0,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 20k + oracle v2,oracle,fabrica_plumbers_block,P1-ID,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 20k + oracle v2,oracle,fabrica_plumbers_block,P1-OOD,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 20k + oracle v2,oracle,fabrica_plumbers_block,P1-speed0.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 20k + oracle v2,oracle,fabrica_plumbers_block,P1-speed1.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 20k + oracle v2,oracle,fabrica_plumbers_block,P2,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 20k + oracle v2,oracle,fabrica_stool,P0,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 20k + oracle v2,oracle,fabrica_stool,P1-ID,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 20k + oracle v2,oracle,fabrica_stool,P1-OOD,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 20k + oracle v2,oracle,fabrica_stool,P1-speed0.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 20k + oracle v2,oracle,fabrica_stool,P1-speed1.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 20k + oracle v2,oracle,fabrica_stool,P2,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 20k + oracle v2,oracle,grab_roller,P0,38,50,76.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 20k + oracle v2,oracle,grab_roller,P1-ID,34,50,68.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 20k + oracle v2,oracle,grab_roller,P1-OOD,23,50,46.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 20k + oracle v2,oracle,grab_roller,P1-speed0.5,12,25,48.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 20k + oracle v2,oracle,grab_roller,P1-speed1.5,11,25,44.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 20k + oracle v2,oracle,grab_roller,P2,0,0,,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 20k + oracle v2,oracle,handover_block,P0,36,50,72.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 20k + oracle v2,oracle,handover_block,P1-ID,35,50,70.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 20k + oracle v2,oracle,handover_block,P1-OOD,33,50,66.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 20k + oracle v2,oracle,handover_block,P1-speed0.5,9,25,36.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 20k + oracle v2,oracle,handover_block,P1-speed1.5,11,25,44.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 20k + oracle v2,oracle,handover_block,P2,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 20k + oracle v2,oracle,handover_mic,P0,42,50,84.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 20k + oracle v2,oracle,handover_mic,P1-ID,41,50,82.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 20k + oracle v2,oracle,handover_mic,P1-OOD,40,50,80.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 20k + oracle v2,oracle,handover_mic,P1-speed0.5,11,25,44.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 20k + oracle v2,oracle,handover_mic,P1-speed1.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 20k + oracle v2,oracle,handover_mic,P2,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 20k + oracle v2,oracle,hanging_mug,P0,6,50,12.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 20k + oracle v2,oracle,hanging_mug,P1-ID,5,50,10.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 20k + oracle v2,oracle,hanging_mug,P1-OOD,3,50,6.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 20k + oracle v2,oracle,hanging_mug,P1-speed0.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 20k + oracle v2,oracle,hanging_mug,P1-speed1.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 20k + oracle v2,oracle,hanging_mug,P2,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 20k + oracle v2,oracle,lift_pot,P0,11,50,22.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 20k + oracle v2,oracle,lift_pot,P1-ID,10,50,20.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 20k + oracle v2,oracle,lift_pot,P1-OOD,3,50,6.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 20k + oracle v2,oracle,lift_pot,P1-speed0.5,2,25,8.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 20k + oracle v2,oracle,lift_pot,P1-speed1.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 20k + oracle v2,oracle,lift_pot,P2,0,0,,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 20k + oracle v2,oracle,place_object_basket,P0,16,50,32.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 20k + oracle v2,oracle,place_object_basket,P1-ID,19,50,38.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 20k + oracle v2,oracle,place_object_basket,P1-OOD,17,50,34.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 20k + oracle v2,oracle,place_object_basket,P1-speed0.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 20k + oracle v2,oracle,place_object_basket,P1-speed1.5,5,25,20.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 20k + oracle v2,oracle,place_object_basket,P2,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 20k + oracle v2,oracle,put_bottles_dustbin,P0,4,50,8.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 20k + oracle v2,oracle,put_bottles_dustbin,P1-ID,2,50,4.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 20k + oracle v2,oracle,put_bottles_dustbin,P1-OOD,2,50,4.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 20k + oracle v2,oracle,put_bottles_dustbin,P1-speed0.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 20k + oracle v2,oracle,put_bottles_dustbin,P1-speed1.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 20k + oracle v2,oracle,put_bottles_dustbin,P2,2,50,4.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 20k + oracle v2,oracle,stack_blocks_three,P0,47,50,94.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 20k + oracle v2,oracle,stack_blocks_three,P1-ID,45,50,90.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 20k + oracle v2,oracle,stack_blocks_three,P1-OOD,46,50,92.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 20k + oracle v2,oracle,stack_blocks_three,P1-speed0.5,7,25,28.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 20k + oracle v2,oracle,stack_blocks_three,P1-speed1.5,21,25,84.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 20k + oracle v2,oracle,stack_blocks_three,P2,35,50,70.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 10k + oracle v2,oracle,fabrica_beam,P0,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 10k + oracle v2,oracle,fabrica_beam,P1-ID,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 10k + oracle v2,oracle,fabrica_beam,P1-OOD,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 10k + oracle v2,oracle,fabrica_beam,P1-speed0.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 10k + oracle v2,oracle,fabrica_beam,P1-speed1.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 10k + oracle v2,oracle,fabrica_beam,P2,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 10k + oracle v2,oracle,fabrica_plumbers_block,P0,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 10k + oracle v2,oracle,fabrica_plumbers_block,P1-ID,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 10k + oracle v2,oracle,fabrica_plumbers_block,P1-OOD,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 10k + oracle v2,oracle,fabrica_plumbers_block,P1-speed0.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 10k + oracle v2,oracle,fabrica_plumbers_block,P1-speed1.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 10k + oracle v2,oracle,fabrica_plumbers_block,P2,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 10k + oracle v2,oracle,fabrica_stool,P0,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 10k + oracle v2,oracle,fabrica_stool,P1-ID,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 10k + oracle v2,oracle,fabrica_stool,P1-OOD,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 10k + oracle v2,oracle,fabrica_stool,P1-speed0.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 10k + oracle v2,oracle,fabrica_stool,P1-speed1.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 10k + oracle v2,oracle,fabrica_stool,P2,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 10k + oracle v2,oracle,grab_roller,P0,35,50,70.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 10k + oracle v2,oracle,grab_roller,P1-ID,35,50,70.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 10k + oracle v2,oracle,grab_roller,P1-OOD,16,50,32.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 10k + oracle v2,oracle,grab_roller,P1-speed0.5,13,25,52.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 10k + oracle v2,oracle,grab_roller,P1-speed1.5,10,25,40.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 10k + oracle v2,oracle,grab_roller,P2,0,0,,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 10k + oracle v2,oracle,handover_block,P0,33,50,66.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 10k + oracle v2,oracle,handover_block,P1-ID,32,50,64.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 10k + oracle v2,oracle,handover_block,P1-OOD,33,50,66.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 10k + oracle v2,oracle,handover_block,P1-speed0.5,7,25,28.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 10k + oracle v2,oracle,handover_block,P1-speed1.5,11,25,44.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 10k + oracle v2,oracle,handover_block,P2,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 10k + oracle v2,oracle,handover_mic,P0,44,50,88.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 10k + oracle v2,oracle,handover_mic,P1-ID,41,50,82.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 10k + oracle v2,oracle,handover_mic,P1-OOD,35,50,70.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 10k + oracle v2,oracle,handover_mic,P1-speed0.5,12,25,48.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 10k + oracle v2,oracle,handover_mic,P1-speed1.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 10k + oracle v2,oracle,handover_mic,P2,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 10k + oracle v2,oracle,hanging_mug,P0,5,50,10.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 10k + oracle v2,oracle,hanging_mug,P1-ID,4,50,8.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 10k + oracle v2,oracle,hanging_mug,P1-OOD,3,50,6.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 10k + oracle v2,oracle,hanging_mug,P1-speed0.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 10k + oracle v2,oracle,hanging_mug,P1-speed1.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 10k + oracle v2,oracle,hanging_mug,P2,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 10k + oracle v2,oracle,lift_pot,P0,10,50,20.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 10k + oracle v2,oracle,lift_pot,P1-ID,6,50,12.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 10k + oracle v2,oracle,lift_pot,P1-OOD,2,50,4.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 10k + oracle v2,oracle,lift_pot,P1-speed0.5,3,25,12.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 10k + oracle v2,oracle,lift_pot,P1-speed1.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 10k + oracle v2,oracle,lift_pot,P2,0,0,,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 10k + oracle v2,oracle,place_object_basket,P0,10,50,20.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 10k + oracle v2,oracle,place_object_basket,P1-ID,13,50,26.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 10k + oracle v2,oracle,place_object_basket,P1-OOD,12,50,24.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 10k + oracle v2,oracle,place_object_basket,P1-speed0.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 10k + oracle v2,oracle,place_object_basket,P1-speed1.5,6,25,24.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 10k + oracle v2,oracle,place_object_basket,P2,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 10k + oracle v2,oracle,put_bottles_dustbin,P0,8,50,16.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 10k + oracle v2,oracle,put_bottles_dustbin,P1-ID,6,50,12.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 10k + oracle v2,oracle,put_bottles_dustbin,P1-OOD,5,50,10.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 10k + oracle v2,oracle,put_bottles_dustbin,P1-speed0.5,1,25,4.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 10k + oracle v2,oracle,put_bottles_dustbin,P1-speed1.5,1,25,4.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 10k + oracle v2,oracle,put_bottles_dustbin,P2,1,50,2.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 10k + oracle v2,oracle,stack_blocks_three,P0,46,50,92.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 10k + oracle v2,oracle,stack_blocks_three,P1-ID,47,50,94.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 10k + oracle v2,oracle,stack_blocks_three,P1-OOD,47,50,94.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 10k + oracle v2,oracle,stack_blocks_three,P1-speed0.5,8,25,32.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 10k + oracle v2,oracle,stack_blocks_three,P1-speed1.5,20,25,80.0,2650,True,2026-11-09T04:47:22.714205+00:00
+Main S1 10k + oracle v2,oracle,stack_blocks_three,P2,34,50,68.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 20,800",hangang,fabrica_beam,P0,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 20,800",hangang,fabrica_beam,P1-ID,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 20,800",hangang,fabrica_beam,P1-OOD,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 20,800",hangang,fabrica_beam,P1-speed0.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 20,800",hangang,fabrica_beam,P1-speed1.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 20,800",hangang,fabrica_beam,P2,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 20,800",hangang,fabrica_plumbers_block,P0,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 20,800",hangang,fabrica_plumbers_block,P1-ID,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 20,800",hangang,fabrica_plumbers_block,P1-OOD,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 20,800",hangang,fabrica_plumbers_block,P1-speed0.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 20,800",hangang,fabrica_plumbers_block,P1-speed1.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 20,800",hangang,fabrica_plumbers_block,P2,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 20,800",hangang,fabrica_stool,P0,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 20,800",hangang,fabrica_stool,P1-ID,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 20,800",hangang,fabrica_stool,P1-OOD,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 20,800",hangang,fabrica_stool,P1-speed0.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 20,800",hangang,fabrica_stool,P1-speed1.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 20,800",hangang,fabrica_stool,P2,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 20,800",hangang,grab_roller,P0,24,50,48.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 20,800",hangang,grab_roller,P1-ID,23,50,46.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 20,800",hangang,grab_roller,P1-OOD,17,50,34.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 20,800",hangang,grab_roller,P1-speed0.5,9,25,36.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 20,800",hangang,grab_roller,P1-speed1.5,7,25,28.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 20,800",hangang,grab_roller,P2,0,0,,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 20,800",hangang,handover_block,P0,25,50,50.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 20,800",hangang,handover_block,P1-ID,21,50,42.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 20,800",hangang,handover_block,P1-OOD,13,50,26.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 20,800",hangang,handover_block,P1-speed0.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 20,800",hangang,handover_block,P1-speed1.5,11,25,44.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 20,800",hangang,handover_block,P2,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 20,800",hangang,handover_mic,P0,45,50,90.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 20,800",hangang,handover_mic,P1-ID,44,50,88.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 20,800",hangang,handover_mic,P1-OOD,43,50,86.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 20,800",hangang,handover_mic,P1-speed0.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 20,800",hangang,handover_mic,P1-speed1.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 20,800",hangang,handover_mic,P2,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 20,800",hangang,hanging_mug,P0,14,50,28.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 20,800",hangang,hanging_mug,P1-ID,14,50,28.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 20,800",hangang,hanging_mug,P1-OOD,9,50,18.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 20,800",hangang,hanging_mug,P1-speed0.5,1,25,4.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 20,800",hangang,hanging_mug,P1-speed1.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 20,800",hangang,hanging_mug,P2,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 20,800",hangang,lift_pot,P0,23,50,46.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 20,800",hangang,lift_pot,P1-ID,19,50,38.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 20,800",hangang,lift_pot,P1-OOD,8,50,16.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 20,800",hangang,lift_pot,P1-speed0.5,5,25,20.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 20,800",hangang,lift_pot,P1-speed1.5,2,25,8.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 20,800",hangang,lift_pot,P2,0,0,,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 20,800",hangang,place_object_basket,P0,38,50,76.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 20,800",hangang,place_object_basket,P1-ID,37,50,74.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 20,800",hangang,place_object_basket,P1-OOD,35,50,70.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 20,800",hangang,place_object_basket,P1-speed0.5,15,25,60.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 20,800",hangang,place_object_basket,P1-speed1.5,15,25,60.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 20,800",hangang,place_object_basket,P2,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 20,800",hangang,put_bottles_dustbin,P0,10,50,20.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 20,800",hangang,put_bottles_dustbin,P1-ID,15,50,30.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 20,800",hangang,put_bottles_dustbin,P1-OOD,8,50,16.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 20,800",hangang,put_bottles_dustbin,P1-speed0.5,9,25,36.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 20,800",hangang,put_bottles_dustbin,P1-speed1.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 20,800",hangang,put_bottles_dustbin,P2,5,50,10.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 20,800",hangang,stack_blocks_three,P0,18,50,36.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 20,800",hangang,stack_blocks_three,P1-ID,16,50,32.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 20,800",hangang,stack_blocks_three,P1-OOD,5,50,10.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 20,800",hangang,stack_blocks_three,P1-speed0.5,2,25,8.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 20,800",hangang,stack_blocks_three,P1-speed1.5,9,25,36.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 20,800",hangang,stack_blocks_three,P2,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+DP Main 10k,baseline,fabrica_beam,P0,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+DP Main 10k,baseline,fabrica_beam,P1-ID,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+DP Main 10k,baseline,fabrica_beam,P1-OOD,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+DP Main 10k,baseline,fabrica_beam,P1-speed0.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+DP Main 10k,baseline,fabrica_beam,P1-speed1.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+DP Main 10k,baseline,fabrica_beam,P2,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+DP Main 10k,baseline,fabrica_plumbers_block,P0,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+DP Main 10k,baseline,fabrica_plumbers_block,P1-ID,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+DP Main 10k,baseline,fabrica_plumbers_block,P1-OOD,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+DP Main 10k,baseline,fabrica_plumbers_block,P1-speed0.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+DP Main 10k,baseline,fabrica_plumbers_block,P1-speed1.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+DP Main 10k,baseline,fabrica_plumbers_block,P2,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+DP Main 10k,baseline,fabrica_stool,P0,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+DP Main 10k,baseline,fabrica_stool,P1-ID,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+DP Main 10k,baseline,fabrica_stool,P1-OOD,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+DP Main 10k,baseline,fabrica_stool,P1-speed0.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+DP Main 10k,baseline,fabrica_stool,P1-speed1.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+DP Main 10k,baseline,fabrica_stool,P2,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+DP Main 10k,baseline,grab_roller,P0,9,50,18.0,2650,True,2026-11-09T04:47:22.714205+00:00
+DP Main 10k,baseline,grab_roller,P1-ID,9,50,18.0,2650,True,2026-11-09T04:47:22.714205+00:00
+DP Main 10k,baseline,grab_roller,P1-OOD,2,50,4.0,2650,True,2026-11-09T04:47:22.714205+00:00
+DP Main 10k,baseline,grab_roller,P1-speed0.5,3,25,12.0,2650,True,2026-11-09T04:47:22.714205+00:00
+DP Main 10k,baseline,grab_roller,P1-speed1.5,4,25,16.0,2650,True,2026-11-09T04:47:22.714205+00:00
+DP Main 10k,baseline,grab_roller,P2,0,0,,2650,True,2026-11-09T04:47:22.714205+00:00
+DP Main 10k,baseline,handover_block,P0,13,50,26.0,2650,True,2026-11-09T04:47:22.714205+00:00
+DP Main 10k,baseline,handover_block,P1-ID,11,50,22.0,2650,True,2026-11-09T04:47:22.714205+00:00
+DP Main 10k,baseline,handover_block,P1-OOD,8,50,16.0,2650,True,2026-11-09T04:47:22.714205+00:00
+DP Main 10k,baseline,handover_block,P1-speed0.5,2,25,8.0,2650,True,2026-11-09T04:47:22.714205+00:00
+DP Main 10k,baseline,handover_block,P1-speed1.5,3,25,12.0,2650,True,2026-11-09T04:47:22.714205+00:00
+DP Main 10k,baseline,handover_block,P2,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+DP Main 10k,baseline,handover_mic,P0,16,50,32.0,2650,True,2026-11-09T04:47:22.714205+00:00
+DP Main 10k,baseline,handover_mic,P1-ID,20,50,40.0,2650,True,2026-11-09T04:47:22.714205+00:00
+DP Main 10k,baseline,handover_mic,P1-OOD,19,50,38.0,2650,True,2026-11-09T04:47:22.714205+00:00
+DP Main 10k,baseline,handover_mic,P1-speed0.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+DP Main 10k,baseline,handover_mic,P1-speed1.5,1,25,4.0,2650,True,2026-11-09T04:47:22.714205+00:00
+DP Main 10k,baseline,handover_mic,P2,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+DP Main 10k,baseline,hanging_mug,P0,1,50,2.0,2650,True,2026-11-09T04:47:22.714205+00:00
+DP Main 10k,baseline,hanging_mug,P1-ID,1,50,2.0,2650,True,2026-11-09T04:47:22.714205+00:00
+DP Main 10k,baseline,hanging_mug,P1-OOD,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+DP Main 10k,baseline,hanging_mug,P1-speed0.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+DP Main 10k,baseline,hanging_mug,P1-speed1.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+DP Main 10k,baseline,hanging_mug,P2,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+DP Main 10k,baseline,lift_pot,P0,18,50,36.0,2650,True,2026-11-09T04:47:22.714205+00:00
+DP Main 10k,baseline,lift_pot,P1-ID,5,50,10.0,2650,True,2026-11-09T04:47:22.714205+00:00
+DP Main 10k,baseline,lift_pot,P1-OOD,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+DP Main 10k,baseline,lift_pot,P1-speed0.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+DP Main 10k,baseline,lift_pot,P1-speed1.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+DP Main 10k,baseline,lift_pot,P2,0,0,,2650,True,2026-11-09T04:47:22.714205+00:00
+DP Main 10k,baseline,place_object_basket,P0,25,50,50.0,2650,True,2026-11-09T04:47:22.714205+00:00
+DP Main 10k,baseline,place_object_basket,P1-ID,30,50,60.0,2650,True,2026-11-09T04:47:22.714205+00:00
+DP Main 10k,baseline,place_object_basket,P1-OOD,32,50,64.0,2650,True,2026-11-09T04:47:22.714205+00:00
+DP Main 10k,baseline,place_object_basket,P1-speed0.5,12,25,48.0,2650,True,2026-11-09T04:47:22.714205+00:00
+DP Main 10k,baseline,place_object_basket,P1-speed1.5,9,25,36.0,2650,True,2026-11-09T04:47:22.714205+00:00
+DP Main 10k,baseline,place_object_basket,P2,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+DP Main 10k,baseline,put_bottles_dustbin,P0,5,50,10.0,2650,True,2026-11-09T04:47:22.714205+00:00
+DP Main 10k,baseline,put_bottles_dustbin,P1-ID,6,50,12.0,2650,True,2026-11-09T04:47:22.714205+00:00
+DP Main 10k,baseline,put_bottles_dustbin,P1-OOD,7,50,14.0,2650,True,2026-11-09T04:47:22.714205+00:00
+DP Main 10k,baseline,put_bottles_dustbin,P1-speed0.5,2,25,8.0,2650,True,2026-11-09T04:47:22.714205+00:00
+DP Main 10k,baseline,put_bottles_dustbin,P1-speed1.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+DP Main 10k,baseline,put_bottles_dustbin,P2,3,50,6.0,2650,True,2026-11-09T04:47:22.714205+00:00
+DP Main 10k,baseline,stack_blocks_three,P0,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+DP Main 10k,baseline,stack_blocks_three,P1-ID,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+DP Main 10k,baseline,stack_blocks_three,P1-OOD,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+DP Main 10k,baseline,stack_blocks_three,P1-speed0.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+DP Main 10k,baseline,stack_blocks_three,P1-speed1.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+DP Main 10k,baseline,stack_blocks_three,P2,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 7,500",hangang,fabrica_beam,P0,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 7,500",hangang,fabrica_beam,P1-ID,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 7,500",hangang,fabrica_beam,P1-OOD,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 7,500",hangang,fabrica_beam,P1-speed0.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 7,500",hangang,fabrica_beam,P1-speed1.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 7,500",hangang,fabrica_beam,P2,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 7,500",hangang,fabrica_plumbers_block,P0,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 7,500",hangang,fabrica_plumbers_block,P1-ID,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 7,500",hangang,fabrica_plumbers_block,P1-OOD,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 7,500",hangang,fabrica_plumbers_block,P1-speed0.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 7,500",hangang,fabrica_plumbers_block,P1-speed1.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 7,500",hangang,fabrica_plumbers_block,P2,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 7,500",hangang,fabrica_stool,P0,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 7,500",hangang,fabrica_stool,P1-ID,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 7,500",hangang,fabrica_stool,P1-OOD,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 7,500",hangang,fabrica_stool,P1-speed0.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 7,500",hangang,fabrica_stool,P1-speed1.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 7,500",hangang,fabrica_stool,P2,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 7,500",hangang,grab_roller,P0,15,50,30.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 7,500",hangang,grab_roller,P1-ID,15,50,30.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 7,500",hangang,grab_roller,P1-OOD,12,50,24.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 7,500",hangang,grab_roller,P1-speed0.5,6,25,24.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 7,500",hangang,grab_roller,P1-speed1.5,6,25,24.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 7,500",hangang,grab_roller,P2,0,0,,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 7,500",hangang,handover_block,P0,14,50,28.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 7,500",hangang,handover_block,P1-ID,14,50,28.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 7,500",hangang,handover_block,P1-OOD,9,50,18.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 7,500",hangang,handover_block,P1-speed0.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 7,500",hangang,handover_block,P1-speed1.5,2,25,8.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 7,500",hangang,handover_block,P2,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 7,500",hangang,handover_mic,P0,19,50,38.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 7,500",hangang,handover_mic,P1-ID,16,50,32.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 7,500",hangang,handover_mic,P1-OOD,17,50,34.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 7,500",hangang,handover_mic,P1-speed0.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 7,500",hangang,handover_mic,P1-speed1.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 7,500",hangang,handover_mic,P2,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 7,500",hangang,hanging_mug,P0,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 7,500",hangang,hanging_mug,P1-ID,1,50,2.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 7,500",hangang,hanging_mug,P1-OOD,1,50,2.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 7,500",hangang,hanging_mug,P1-speed0.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 7,500",hangang,hanging_mug,P1-speed1.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 7,500",hangang,hanging_mug,P2,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 7,500",hangang,lift_pot,P0,15,50,30.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 7,500",hangang,lift_pot,P1-ID,7,50,14.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 7,500",hangang,lift_pot,P1-OOD,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 7,500",hangang,lift_pot,P1-speed0.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 7,500",hangang,lift_pot,P1-speed1.5,1,25,4.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 7,500",hangang,lift_pot,P2,0,0,,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 7,500",hangang,place_object_basket,P0,9,50,18.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 7,500",hangang,place_object_basket,P1-ID,13,50,26.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 7,500",hangang,place_object_basket,P1-OOD,10,50,20.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 7,500",hangang,place_object_basket,P1-speed0.5,8,25,32.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 7,500",hangang,place_object_basket,P1-speed1.5,2,25,8.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 7,500",hangang,place_object_basket,P2,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 7,500",hangang,put_bottles_dustbin,P0,7,50,14.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 7,500",hangang,put_bottles_dustbin,P1-ID,11,50,22.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 7,500",hangang,put_bottles_dustbin,P1-OOD,5,50,10.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 7,500",hangang,put_bottles_dustbin,P1-speed0.5,5,25,20.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 7,500",hangang,put_bottles_dustbin,P1-speed1.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 7,500",hangang,put_bottles_dustbin,P2,10,50,20.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 7,500",hangang,stack_blocks_three,P0,6,50,12.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 7,500",hangang,stack_blocks_three,P1-ID,7,50,14.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 7,500",hangang,stack_blocks_three,P1-OOD,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 7,500",hangang,stack_blocks_three,P1-speed0.5,0,25,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 7,500",hangang,stack_blocks_three,P1-speed1.5,4,25,16.0,2650,True,2026-11-09T04:47:22.714205+00:00
+"FastWAM 7,500",hangang,stack_blocks_three,P2,0,50,0.0,2650,True,2026-11-09T04:47:22.714205+00:00
+양역할 S1 10k + oracle v2,bothroles,fabrica_beam,P0,0,50,0.0,2650,False,2026-11-09T04:47:22.714205+00:00
+양역할 S1 10k + oracle v2,bothroles,fabrica_beam,P1-ID,0,50,0.0,2650,False,2026-11-09T04:47:22.714205+00:00
+양역할 S1 10k + oracle v2,bothroles,fabrica_beam,P1-OOD,0,50,0.0,2650,False,2026-11-09T04:47:22.714205+00:00
+양역할 S1 10k + oracle v2,bothroles,fabrica_beam,P1-speed0.5,0,25,0.0,2650,False,2026-11-09T04:47:22.714205+00:00
+양역할 S1 10k + oracle v2,bothroles,fabrica_beam,P1-speed1.5,0,25,0.0,2650,False,2026-11-09T04:47:22.714205+00:00
+양역할 S1 10k + oracle v2,bothroles,fabrica_beam,P2,0,50,0.0,2650,False,2026-11-09T04:47:22.714205+00:00
+양역할 S1 10k + oracle v2,bothroles,fabrica_plumbers_block,P0,0,28,0.0,2650,False,2026-11-09T04:47:22.714205+00:00
+양역할 S1 10k + oracle v2,bothroles,fabrica_plumbers_block,P1-ID,0,28,0.0,2650,False,2026-11-09T04:47:22.714205+00:00
+양역할 S1 10k + oracle v2,bothroles,fabrica_plumbers_block,P1-OOD,0,28,0.0,2650,False,2026-11-09T04:47:22.714205+00:00
+양역할 S1 10k + oracle v2,bothroles,fabrica_plumbers_block,P1-speed0.5,0,25,0.0,2650,False,2026-11-09T04:47:22.714205+00:00
+양역할 S1 10k + oracle v2,bothroles,fabrica_plumbers_block,P1-speed1.5,0,25,0.0,2650,False,2026-11-09T04:47:22.714205+00:00
+양역할 S1 10k + oracle v2,bothroles,fabrica_plumbers_block,P2,0,50,0.0,2650,False,2026-11-09T04:47:22.714205+00:00
+양역할 S1 10k + oracle v2,bothroles,fabrica_stool,P0,0,43,0.0,2650,False,2026-11-09T04:47:22.714205+00:00
+양역할 S1 10k + oracle v2,bothroles,fabrica_stool,P1-ID,0,43,0.0,2650,False,2026-11-09T04:47:22.714205+00:00
+양역할 S1 10k + oracle v2,bothroles,fabrica_stool,P1-OOD,0,43,0.0,2650,False,2026-11-09T04:47:22.714205+00:00
+양역할 S1 10k + oracle v2,bothroles,fabrica_stool,P1-speed0.5,0,25,0.0,2650,False,2026-11-09T04:47:22.714205+00:00
+양역할 S1 10k + oracle v2,bothroles,fabrica_stool,P1-speed1.5,0,25,0.0,2650,False,2026-11-09T04:47:22.714205+00:00
+양역할 S1 10k + oracle v2,bothroles,fabrica_stool,P2,0,44,0.0,2650,False,2026-11-09T04:47:22.714205+00:00
+양역할 S1 10k + oracle v2,bothroles,grab_roller,P0,36,50,72.0,2650,False,2026-11-09T04:47:22.714205+00:00
+양역할 S1 10k + oracle v2,bothroles,grab_roller,P1-ID,34,50,68.0,2650,False,2026-11-09T04:47:22.714205+00:00
+양역할 S1 10k + oracle v2,bothroles,grab_roller,P1-OOD,20,50,40.0,2650,False,2026-11-09T04:47:22.714205+00:00
+양역할 S1 10k + oracle v2,bothroles,grab_roller,P1-speed0.5,12,25,48.0,2650,False,2026-11-09T04:47:22.714205+00:00
+양역할 S1 10k + oracle v2,bothroles,grab_roller,P1-speed1.5,10,25,40.0,2650,False,2026-11-09T04:47:22.714205+00:00
+양역할 S1 10k + oracle v2,bothroles,grab_roller,P2,0,0,,2650,False,2026-11-09T04:47:22.714205+00:00
+양역할 S1 10k + oracle v2,bothroles,handover_block,P0,21,50,42.0,2650,False,2026-11-09T04:47:22.714205+00:00
+양역할 S1 10k + oracle v2,bothroles,handover_block,P1-ID,22,50,44.0,2650,False,2026-11-09T04:47:22.714205+00:00
+양역할 S1 10k + oracle v2,bothroles,handover_block,P1-OOD,21,50,42.0,2650,False,2026-11-09T04:47:22.714205+00:00
+양역할 S1 10k + oracle v2,bothroles,handover_block,P1-speed0.5,8,25,32.0,2650,False,2026-11-09T04:47:22.714205+00:00
+양역할 S1 10k + oracle v2,bothroles,handover_block,P1-speed1.5,9,25,36.0,2650,False,2026-11-09T04:47:22.714205+00:00
+양역할 S1 10k + oracle v2,bothroles,handover_block,P2,46,50,92.0,2650,False,2026-11-09T04:47:22.714205+00:00
+양역할 S1 10k + oracle v2,bothroles,handover_mic,P0,44,50,88.0,2650,False,2026-11-09T04:47:22.714205+00:00
+양역할 S1 10k + oracle v2,bothroles,handover_mic,P1-ID,45,50,90.0,2650,False,2026-11-09T04:47:22.714205+00:00
+양역할 S1 10k + oracle v2,bothroles,handover_mic,P1-OOD,38,50,76.0,2650,False,2026-11-09T04:47:22.714205+00:00
+양역할 S1 10k + oracle v2,bothroles,handover_mic,P1-speed0.5,12,25,48.0,2650,False,2026-11-09T04:47:22.714205+00:00
+양역할 S1 10k + oracle v2,bothroles,handover_mic,P1-speed1.5,8,25,32.0,2650,False,2026-11-09T04:47:22.714205+00:00
+양역할 S1 10k + oracle v2,bothroles,handover_mic,P2,16,50,32.0,2650,False,2026-11-09T04:47:22.714205+00:00
+양역할 S1 10k + oracle v2,bothroles,hanging_mug,P0,3,50,6.0,2650,False,2026-11-09T04:47:22.714205+00:00
+양역할 S1 10k + oracle v2,bothroles,hanging_mug,P1-ID,3,50,6.0,2650,False,2026-11-09T04:47:22.714205+00:00
+양역할 S1 10k + oracle v2,bothroles,hanging_mug,P1-OOD,2,50,4.0,2650,False,2026-11-09T04:47:22.714205+00:00
+양역할 S1 10k + oracle v2,bothroles,hanging_mug,P1-speed0.5,1,25,4.0,2650,False,2026-11-09T04:47:22.714205+00:00
+양역할 S1 10k + oracle v2,bothroles,hanging_mug,P1-speed1.5,0,25,0.0,2650,False,2026-11-09T04:47:22.714205+00:00
+양역할 S1 10k + oracle v2,bothroles,hanging_mug,P2,2,50,4.0,2650,False,2026-11-09T04:47:22.714205+00:00
+양역할 S1 10k + oracle v2,bothroles,lift_pot,P0,23,50,46.0,2650,False,2026-11-09T04:47:22.714205+00:00
+양역할 S1 10k + oracle v2,bothroles,lift_pot,P1-ID,20,50,40.0,2650,False,2026-11-09T04:47:22.714205+00:00
+양역할 S1 10k + oracle v2,bothroles,lift_pot,P1-OOD,0,50,0.0,2650,False,2026-11-09T04:47:22.714205+00:00
+양역할 S1 10k + oracle v2,bothroles,lift_pot,P1-speed0.5,3,25,12.0,2650,False,2026-11-09T04:47:22.714205+00:00
+양역할 S1 10k + oracle v2,bothroles,lift_pot,P1-speed1.5,0,25,0.0,2650,False,2026-11-09T04:47:22.714205+00:00
+양역할 S1 10k + oracle v2,bothroles,lift_pot,P2,0,0,,2650,False,2026-11-09T04:47:22.714205+00:00
+양역할 S1 10k + oracle v2,bothroles,place_object_basket,P0,9,50,18.0,2650,False,2026-11-09T04:47:22.714205+00:00
+양역할 S1 10k + oracle v2,bothroles,place_object_basket,P1-ID,13,50,26.0,2650,False,2026-11-09T04:47:22.714205+00:00
+양역할 S1 10k + oracle v2,bothroles,place_object_basket,P1-OOD,13,50,26.0,2650,False,2026-11-09T04:47:22.714205+00:00
+양역할 S1 10k + oracle v2,bothroles,place_object_basket,P1-speed0.5,0,25,0.0,2650,False,2026-11-09T04:47:22.714205+00:00
+양역할 S1 10k + oracle v2,bothroles,place_object_basket,P1-speed1.5,5,25,20.0,2650,False,2026-11-09T04:47:22.714205+00:00
+양역할 S1 10k + oracle v2,bothroles,place_object_basket,P2,22,50,44.0,2650,False,2026-11-09T04:47:22.714205+00:00
+양역할 S1 10k + oracle v2,bothroles,put_bottles_dustbin,P0,1,50,2.0,2650,False,2026-11-09T04:47:22.714205+00:00
+양역할 S1 10k + oracle v2,bothroles,put_bottles_dustbin,P1-ID,5,50,10.0,2650,False,2026-11-09T04:47:22.714205+00:00
+양역할 S1 10k + oracle v2,bothroles,put_bottles_dustbin,P1-OOD,2,50,4.0,2650,False,2026-11-09T04:47:22.714205+00:00
+양역할 S1 10k + oracle v2,bothroles,put_bottles_dustbin,P1-speed0.5,0,25,0.0,2650,False,2026-11-09T04:47:22.714205+00:00
+양역할 S1 10k + oracle v2,bothroles,put_bottles_dustbin,P1-speed1.5,0,25,0.0,2650,False,2026-11-09T04:47:22.714205+00:00
+양역할 S1 10k + oracle v2,bothroles,put_bottles_dustbin,P2,15,50,30.0,2650,False,2026-11-09T04:47:22.714205+00:00
+양역할 S1 10k + oracle v2,bothroles,stack_blocks_three,P0,48,50,96.0,2650,False,2026-11-09T04:47:22.714205+00:00
+양역할 S1 10k + oracle v2,bothroles,stack_blocks_three,P1-ID,47,50,94.0,2650,False,2026-11-09T04:47:22.714205+00:00
+양역할 S1 10k + oracle v2,bothroles,stack_blocks_three,P1-OOD,47,50,94.0,2650,False,2026-11-09T04:47:22.714205+00:00
+양역할 S1 10k + oracle v2,bothroles,stack_blocks_three,P1-speed0.5,5,25,20.0,2650,False,2026-11-09T04:47:22.714205+00:00
+양역할 S1 10k + oracle v2,bothroles,stack_blocks_three,P1-speed1.5,24,25,96.0,2650,False,2026-11-09T04:47:22.714205+00:00
+양역할 S1 10k + oracle v2,bothroles,stack_blocks_three,P2,47,50,94.0,2650,False,2026-11-09T04:47:22.714205+00:00
+SimpleSG Qwen3.5-9B + π0.5 S1 10k,learned_s2,handover_block,P0,33,50,66.0,2650,False,2026-11-09T04:47:22.714205+00:00
+SimpleSG Qwen3.5-9B + π0.5 S1 10k,learned_s2,handover_block,P1-ID,28,50,56.0,2650,False,2026-11-09T04:47:22.714205+00:00
+SimpleSG Qwen3.5-9B + π0.5 S1 10k,learned_s2,handover_block,P1-OOD,31,50,62.0,2650,False,2026-11-09T04:47:22.714205+00:00
+SimpleSG Qwen3.5-9B + π0.5 S1 10k,learned_s2,handover_block,P1-speed0.5,0,0,,2650,False,2026-11-09T04:47:22.714205+00:00
+SimpleSG Qwen3.5-9B + π0.5 S1 10k,learned_s2,handover_block,P1-speed1.5,0,0,,2650,False,2026-11-09T04:47:22.714205+00:00
+SimpleSG Qwen3.5-9B + π0.5 S1 10k,learned_s2,handover_block,P2,0,0,,2650,False,2026-11-09T04:47:22.714205+00:00
+SimpleSG Qwen3.5-9B + π0.5 S1 10k,learned_s2,handover_mic,P0,0,0,,2650,False,2026-11-09T04:47:22.714205+00:00
+SimpleSG Qwen3.5-9B + π0.5 S1 10k,learned_s2,handover_mic,P1-ID,0,0,,2650,False,2026-11-09T04:47:22.714205+00:00
+SimpleSG Qwen3.5-9B + π0.5 S1 10k,learned_s2,handover_mic,P1-OOD,0,0,,2650,False,2026-11-09T04:47:22.714205+00:00
+SimpleSG Qwen3.5-9B + π0.5 S1 10k,learned_s2,handover_mic,P1-speed0.5,0,0,,2650,False,2026-11-09T04:47:22.714205+00:00
+SimpleSG Qwen3.5-9B + π0.5 S1 10k,learned_s2,handover_mic,P1-speed1.5,0,0,,2650,False,2026-11-09T04:47:22.714205+00:00
+SimpleSG Qwen3.5-9B + π0.5 S1 10k,learned_s2,handover_mic,P2,0,50,0.0,2650,False,2026-11-09T04:47:22.714205+00:00
+SimpleSG Qwen3.5-9B + π0.5 S1 10k,learned_s2,hanging_mug,P0,1,50,2.0,2650,False,2026-11-09T04:47:22.714205+00:00
+SimpleSG Qwen3.5-9B + π0.5 S1 10k,learned_s2,hanging_mug,P1-ID,0,50,0.0,2650,False,2026-11-09T04:47:22.714205+00:00
+SimpleSG Qwen3.5-9B + π0.5 S1 10k,learned_s2,hanging_mug,P1-OOD,0,50,0.0,2650,False,2026-11-09T04:47:22.714205+00:00
+SimpleSG Qwen3.5-9B + π0.5 S1 10k,learned_s2,hanging_mug,P1-speed0.5,0,0,,2650,False,2026-11-09T04:47:22.714205+00:00
+SimpleSG Qwen3.5-9B + π0.5 S1 10k,learned_s2,hanging_mug,P1-speed1.5,0,0,,2650,False,2026-11-09T04:47:22.714205+00:00
+SimpleSG Qwen3.5-9B + π0.5 S1 10k,learned_s2,hanging_mug,P2,0,50,0.0,2650,False,2026-11-09T04:47:22.714205+00:00
+SimpleSG Qwen3.5-9B + π0.5 S1 10k,learned_s2,lift_pot,P0,16,50,32.0,2650,False,2026-11-09T04:47:22.714205+00:00
+SimpleSG Qwen3.5-9B + π0.5 S1 10k,learned_s2,lift_pot,P1-ID,2,50,4.0,2650,False,2026-11-09T04:47:22.714205+00:00
+SimpleSG Qwen3.5-9B + π0.5 S1 10k,learned_s2,lift_pot,P1-OOD,5,50,10.0,2650,False,2026-11-09T04:47:22.714205+00:00
+SimpleSG Qwen3.5-9B + π0.5 S1 10k,learned_s2,lift_pot,P1-speed0.5,0,0,,2650,False,2026-11-09T04:47:22.714205+00:00
+SimpleSG Qwen3.5-9B + π0.5 S1 10k,learned_s2,lift_pot,P1-speed1.5,0,0,,2650,False,2026-11-09T04:47:22.714205+00:00
+SimpleSG Qwen3.5-9B + π0.5 S1 10k,learned_s2,lift_pot,P2,0,0,,2650,False,2026-11-09T04:47:22.714205+00:00
+SimpleSG Qwen3.5-9B + π0.5 S1 10k,learned_s2,place_object_basket,P0,2,50,4.0,2650,False,2026-11-09T04:47:22.714205+00:00
+SimpleSG Qwen3.5-9B + π0.5 S1 10k,learned_s2,place_object_basket,P1-ID,0,50,0.0,2650,False,2026-11-09T04:47:22.714205+00:00
+SimpleSG Qwen3.5-9B + π0.5 S1 10k,learned_s2,place_object_basket,P1-OOD,1,50,2.0,2650,False,2026-11-09T04:47:22.714205+00:00
+SimpleSG Qwen3.5-9B + π0.5 S1 10k,learned_s2,place_object_basket,P1-speed0.5,0,0,,2650,False,2026-11-09T04:47:22.714205+00:00
+SimpleSG Qwen3.5-9B + π0.5 S1 10k,learned_s2,place_object_basket,P1-speed1.5,0,0,,2650,False,2026-11-09T04:47:22.714205+00:00
+SimpleSG Qwen3.5-9B + π0.5 S1 10k,learned_s2,place_object_basket,P2,0,0,,2650,False,2026-11-09T04:47:22.714205+00:00
+SimpleSG Qwen3.5-9B + π0.5 S1 10k,learned_s2,put_bottles_dustbin,P0,0,32,0.0,2650,False,2026-11-09T04:47:22.714205+00:00
+SimpleSG Qwen3.5-9B + π0.5 S1 10k,learned_s2,put_bottles_dustbin,P1-ID,0,32,0.0,2650,False,2026-11-09T04:47:22.714205+00:00
+SimpleSG Qwen3.5-9B + π0.5 S1 10k,learned_s2,put_bottles_dustbin,P1-OOD,4,33,12.121212121212121,2650,False,2026-11-09T04:47:22.714205+00:00
+SimpleSG Qwen3.5-9B + π0.5 S1 10k,learned_s2,put_bottles_dustbin,P1-speed0.5,0,0,,2650,False,2026-11-09T04:47:22.714205+00:00
+SimpleSG Qwen3.5-9B + π0.5 S1 10k,learned_s2,put_bottles_dustbin,P1-speed1.5,0,0,,2650,False,2026-11-09T04:47:22.714205+00:00
+SimpleSG Qwen3.5-9B + π0.5 S1 10k,learned_s2,put_bottles_dustbin,P2,5,50,10.0,2650,False,2026-11-09T04:47:22.714205+00:00
+SimpleSG Qwen3.5-9B + π0.5 S1 10k,learned_s2,stack_blocks_three,P0,22,50,44.0,2650,False,2026-11-09T04:47:22.714205+00:00
+SimpleSG Qwen3.5-9B + π0.5 S1 10k,learned_s2,stack_blocks_three,P1-ID,25,50,50.0,2650,False,2026-11-09T04:47:22.714205+00:00
+SimpleSG Qwen3.5-9B + π0.5 S1 10k,learned_s2,stack_blocks_three,P1-OOD,26,50,52.0,2650,False,2026-11-09T04:47:22.714205+00:00
+SimpleSG Qwen3.5-9B + π0.5 S1 10k,learned_s2,stack_blocks_three,P1-speed0.5,0,0,,2650,False,2026-11-09T04:47:22.714205+00:00
+SimpleSG Qwen3.5-9B + π0.5 S1 10k,learned_s2,stack_blocks_three,P1-speed1.5,0,0,,2650,False,2026-11-09T04:47:22.714205+00:00
+SimpleSG Qwen3.5-9B + π0.5 S1 10k,learned_s2,stack_blocks_three,P2,0,50,0.0,2650,False,2026-11-09T04:47:22.714205+00:00
+recent-4-call Qwen3.5-27B all-both + π0.5 S1 10k,learned_s2,handover_block,P0,0,44,0.0,2650,False,2026-11-09T04:47:22.714205+00:00
+recent-4-call Qwen3.5-27B all-both + π0.5 S1 10k,learned_s2,handover_block,P1-ID,0,38,0.0,2650,False,2026-11-09T04:47:22.714205+00:00
+recent-4-call Qwen3.5-27B all-both + π0.5 S1 10k,learned_s2,handover_block,P1-OOD,2,39,5.128205128205129,2650,False,2026-11-09T04:47:22.714205+00:00
+recent-4-call Qwen3.5-27B all-both + π0.5 S1 10k,learned_s2,handover_block,P1-speed0.5,0,0,,2650,False,2026-11-09T04:47:22.714205+00:00
+recent-4-call Qwen3.5-27B all-both + π0.5 S1 10k,learned_s2,handover_block,P1-speed1.5,0,0,,2650,False,2026-11-09T04:47:22.714205+00:00
+recent-4-call Qwen3.5-27B all-both + π0.5 S1 10k,learned_s2,handover_block,P2,0,0,,2650,False,2026-11-09T04:47:22.714205+00:00
+recent-4-call Qwen3.5-27B all-both + π0.5 S1 10k,learned_s2,hanging_mug,P0,0,33,0.0,2650,False,2026-11-09T04:47:22.714205+00:00
+recent-4-call Qwen3.5-27B all-both + π0.5 S1 10k,learned_s2,hanging_mug,P1-ID,1,33,3.0303030303030303,2650,False,2026-11-09T04:47:22.714205+00:00
+recent-4-call Qwen3.5-27B all-both + π0.5 S1 10k,learned_s2,hanging_mug,P1-OOD,1,33,3.0303030303030303,2650,False,2026-11-09T04:47:22.714205+00:00
+recent-4-call Qwen3.5-27B all-both + π0.5 S1 10k,learned_s2,hanging_mug,P1-speed0.5,0,0,,2650,False,2026-11-09T04:47:22.714205+00:00
+recent-4-call Qwen3.5-27B all-both + π0.5 S1 10k,learned_s2,hanging_mug,P1-speed1.5,0,0,,2650,False,2026-11-09T04:47:22.714205+00:00
+recent-4-call Qwen3.5-27B all-both + π0.5 S1 10k,learned_s2,hanging_mug,P2,0,0,,2650,False,2026-11-09T04:47:22.714205+00:00
+recent-4-call Qwen3.5-27B all-both + π0.5 S1 10k,learned_s2,place_object_basket,P0,5,49,10.204081632653061,2650,False,2026-11-09T04:47:22.714205+00:00
+recent-4-call Qwen3.5-27B all-both + π0.5 S1 10k,learned_s2,place_object_basket,P1-ID,3,44,6.818181818181818,2650,False,2026-11-09T04:47:22.714205+00:00
+recent-4-call Qwen3.5-27B all-both + π0.5 S1 10k,learned_s2,place_object_basket,P1-OOD,7,43,16.27906976744186,2650,False,2026-11-09T04:47:22.714205+00:00
+recent-4-call Qwen3.5-27B all-both + π0.5 S1 10k,learned_s2,place_object_basket,P1-speed0.5,0,0,,2650,False,2026-11-09T04:47:22.714205+00:00
+recent-4-call Qwen3.5-27B all-both + π0.5 S1 10k,learned_s2,place_object_basket,P1-speed1.5,0,0,,2650,False,2026-11-09T04:47:22.714205+00:00
+recent-4-call Qwen3.5-27B all-both + π0.5 S1 10k,learned_s2,place_object_basket,P2,0,0,,2650,False,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k + Partner B,partnerB,fabrica_beam,P0,0,40,0.0,2600,False,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k + Partner B,partnerB,fabrica_beam,P1-ID,0,40,0.0,2600,False,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k + Partner B,partnerB,fabrica_beam,P1-OOD,0,40,0.0,2600,False,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k + Partner B,partnerB,fabrica_beam,P1-speed0.5,0,25,0.0,2600,False,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k + Partner B,partnerB,fabrica_beam,P1-speed1.5,0,25,0.0,2600,False,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k + Partner B,partnerB,fabrica_beam,P2,0,50,0.0,2600,False,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k + Partner B,partnerB,fabrica_plumbers_block,P0,0,28,0.0,2600,False,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k + Partner B,partnerB,fabrica_plumbers_block,P1-ID,0,28,0.0,2600,False,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k + Partner B,partnerB,fabrica_plumbers_block,P1-OOD,0,28,0.0,2600,False,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k + Partner B,partnerB,fabrica_plumbers_block,P1-speed0.5,0,25,0.0,2600,False,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k + Partner B,partnerB,fabrica_plumbers_block,P1-speed1.5,0,25,0.0,2600,False,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k + Partner B,partnerB,fabrica_plumbers_block,P2,0,50,0.0,2600,False,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k + Partner B,partnerB,fabrica_stool,P0,0,34,0.0,2600,False,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k + Partner B,partnerB,fabrica_stool,P1-ID,0,34,0.0,2600,False,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k + Partner B,partnerB,fabrica_stool,P1-OOD,0,34,0.0,2600,False,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k + Partner B,partnerB,fabrica_stool,P1-speed0.5,0,19,0.0,2600,False,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k + Partner B,partnerB,fabrica_stool,P1-speed1.5,0,16,0.0,2600,False,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k + Partner B,partnerB,fabrica_stool,P2,0,31,0.0,2600,False,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k + Partner B,partnerB,grab_roller,P0,33,50,66.0,2600,False,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k + Partner B,partnerB,grab_roller,P1-ID,35,50,70.0,2600,False,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k + Partner B,partnerB,grab_roller,P1-OOD,29,50,58.0,2600,False,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k + Partner B,partnerB,grab_roller,P1-speed0.5,0,0,,2600,False,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k + Partner B,partnerB,grab_roller,P1-speed1.5,0,0,,2600,False,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k + Partner B,partnerB,grab_roller,P2,0,0,,2600,False,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k + Partner B,partnerB,handover_block,P0,25,50,50.0,2600,False,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k + Partner B,partnerB,handover_block,P1-ID,29,50,58.0,2600,False,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k + Partner B,partnerB,handover_block,P1-OOD,38,50,76.0,2600,False,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k + Partner B,partnerB,handover_block,P1-speed0.5,0,25,0.0,2600,False,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k + Partner B,partnerB,handover_block,P1-speed1.5,21,25,84.0,2600,False,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k + Partner B,partnerB,handover_block,P2,0,50,0.0,2600,False,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k + Partner B,partnerB,handover_mic,P0,0,0,,2600,False,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k + Partner B,partnerB,handover_mic,P1-ID,0,0,,2600,False,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k + Partner B,partnerB,handover_mic,P1-OOD,0,0,,2600,False,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k + Partner B,partnerB,handover_mic,P1-speed0.5,0,25,0.0,2600,False,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k + Partner B,partnerB,handover_mic,P1-speed1.5,25,25,100.0,2600,False,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k + Partner B,partnerB,handover_mic,P2,0,0,,2600,False,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k + Partner B,partnerB,hanging_mug,P0,10,50,20.0,2600,False,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k + Partner B,partnerB,hanging_mug,P1-ID,11,50,22.0,2600,False,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k + Partner B,partnerB,hanging_mug,P1-OOD,8,50,16.0,2600,False,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k + Partner B,partnerB,hanging_mug,P1-speed0.5,0,0,,2600,False,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k + Partner B,partnerB,hanging_mug,P1-speed1.5,12,25,48.0,2600,False,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k + Partner B,partnerB,hanging_mug,P2,0,0,,2600,False,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k + Partner B,partnerB,lift_pot,P0,9,50,18.0,2600,False,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k + Partner B,partnerB,lift_pot,P1-ID,7,50,14.0,2600,False,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k + Partner B,partnerB,lift_pot,P1-OOD,0,50,0.0,2600,False,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k + Partner B,partnerB,lift_pot,P1-speed0.5,3,25,12.0,2600,False,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k + Partner B,partnerB,lift_pot,P1-speed1.5,12,25,48.0,2600,False,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k + Partner B,partnerB,lift_pot,P2,0,0,,2600,False,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k + Partner B,partnerB,place_object_basket,P0,34,50,68.0,2600,False,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k + Partner B,partnerB,place_object_basket,P1-ID,29,50,58.0,2600,False,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k + Partner B,partnerB,place_object_basket,P1-OOD,33,50,66.0,2600,False,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k + Partner B,partnerB,place_object_basket,P1-speed0.5,4,25,16.0,2600,False,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k + Partner B,partnerB,place_object_basket,P1-speed1.5,15,25,60.0,2600,False,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k + Partner B,partnerB,place_object_basket,P2,8,50,16.0,2600,False,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k + Partner B,partnerB,put_bottles_dustbin,P0,30,50,60.0,2600,False,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k + Partner B,partnerB,put_bottles_dustbin,P1-ID,26,50,52.0,2600,False,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k + Partner B,partnerB,put_bottles_dustbin,P1-OOD,23,50,46.0,2600,False,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k + Partner B,partnerB,put_bottles_dustbin,P1-speed0.5,0,0,,2600,False,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k + Partner B,partnerB,put_bottles_dustbin,P1-speed1.5,0,0,,2600,False,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k + Partner B,partnerB,put_bottles_dustbin,P2,7,50,14.0,2600,False,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k + Partner B,partnerB,stack_blocks_three,P0,0,0,,2600,False,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k + Partner B,partnerB,stack_blocks_three,P1-ID,0,0,,2600,False,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k + Partner B,partnerB,stack_blocks_three,P1-OOD,0,0,,2600,False,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k + Partner B,partnerB,stack_blocks_three,P1-speed0.5,5,25,20.0,2600,False,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k + Partner B,partnerB,stack_blocks_three,P1-speed1.5,24,25,96.0,2600,False,2026-11-09T04:47:22.714205+00:00
+π0.5 Main 10k + Partner B,partnerB,stack_blocks_three,P2,10,50,20.0,2600,False,2026-11-09T04:47:22.714205+00:00
+DP Main 10k + Partner B,partnerB,fabrica_beam,P0,0,40,0.0,2600,False,2026-11-09T04:47:22.714205+00:00
+DP Main 10k + Partner B,partnerB,fabrica_beam,P1-ID,0,40,0.0,2600,False,2026-11-09T04:47:22.714205+00:00
+DP Main 10k + Partner B,partnerB,fabrica_beam,P1-OOD,0,40,0.0,2600,False,2026-11-09T04:47:22.714205+00:00
+DP Main 10k + Partner B,partnerB,fabrica_beam,P1-speed0.5,0,25,0.0,2600,False,2026-11-09T04:47:22.714205+00:00
+DP Main 10k + Partner B,partnerB,fabrica_beam,P1-speed1.5,0,25,0.0,2600,False,2026-11-09T04:47:22.714205+00:00
+DP Main 10k + Partner B,partnerB,fabrica_beam,P2,0,50,0.0,2600,False,2026-11-09T04:47:22.714205+00:00
+DP Main 10k + Partner B,partnerB,fabrica_plumbers_block,P0,0,28,0.0,2600,False,2026-11-09T04:47:22.714205+00:00
+DP Main 10k + Partner B,partnerB,fabrica_plumbers_block,P1-ID,0,28,0.0,2600,False,2026-11-09T04:47:22.714205+00:00
+DP Main 10k + Partner B,partnerB,fabrica_plumbers_block,P1-OOD,0,28,0.0,2600,False,2026-11-09T04:47:22.714205+00:00
+DP Main 10k + Partner B,partnerB,fabrica_plumbers_block,P1-speed0.5,0,25,0.0,2600,False,2026-11-09T04:47:22.714205+00:00
+DP Main 10k + Partner B,partnerB,fabrica_plumbers_block,P1-speed1.5,0,25,0.0,2600,False,2026-11-09T04:47:22.714205+00:00
+DP Main 10k + Partner B,partnerB,fabrica_plumbers_block,P2,0,50,0.0,2600,False,2026-11-09T04:47:22.714205+00:00
+DP Main 10k + Partner B,partnerB,fabrica_stool,P0,0,42,0.0,2600,False,2026-11-09T04:47:22.714205+00:00
+DP Main 10k + Partner B,partnerB,fabrica_stool,P1-ID,0,42,0.0,2600,False,2026-11-09T04:47:22.714205+00:00
+DP Main 10k + Partner B,partnerB,fabrica_stool,P1-OOD,0,42,0.0,2600,False,2026-11-09T04:47:22.714205+00:00
+DP Main 10k + Partner B,partnerB,fabrica_stool,P1-speed0.5,0,19,0.0,2600,False,2026-11-09T04:47:22.714205+00:00
+DP Main 10k + Partner B,partnerB,fabrica_stool,P1-speed1.5,0,25,0.0,2600,False,2026-11-09T04:47:22.714205+00:00
+DP Main 10k + Partner B,partnerB,fabrica_stool,P2,0,44,0.0,2600,False,2026-11-09T04:47:22.714205+00:00
+DP Main 10k + Partner B,partnerB,grab_roller,P0,11,50,22.0,2600,False,2026-11-09T04:47:22.714205+00:00
+DP Main 10k + Partner B,partnerB,grab_roller,P1-ID,8,50,16.0,2600,False,2026-11-09T04:47:22.714205+00:00
+DP Main 10k + Partner B,partnerB,grab_roller,P1-OOD,3,50,6.0,2600,False,2026-11-09T04:47:22.714205+00:00
+DP Main 10k + Partner B,partnerB,grab_roller,P1-speed0.5,0,0,,2600,False,2026-11-09T04:47:22.714205+00:00
+DP Main 10k + Partner B,partnerB,grab_roller,P1-speed1.5,7,25,28.0,2600,False,2026-11-09T04:47:22.714205+00:00
+DP Main 10k + Partner B,partnerB,grab_roller,P2,0,0,,2600,False,2026-11-09T04:47:22.714205+00:00
+DP Main 10k + Partner B,partnerB,handover_block,P0,6,50,12.0,2600,False,2026-11-09T04:47:22.714205+00:00
+DP Main 10k + Partner B,partnerB,handover_block,P1-ID,12,50,24.0,2600,False,2026-11-09T04:47:22.714205+00:00
+DP Main 10k + Partner B,partnerB,handover_block,P1-OOD,6,50,12.0,2600,False,2026-11-09T04:47:22.714205+00:00
+DP Main 10k + Partner B,partnerB,handover_block,P1-speed0.5,0,25,0.0,2600,False,2026-11-09T04:47:22.714205+00:00
+DP Main 10k + Partner B,partnerB,handover_block,P1-speed1.5,2,25,8.0,2600,False,2026-11-09T04:47:22.714205+00:00
+DP Main 10k + Partner B,partnerB,handover_block,P2,0,50,0.0,2600,False,2026-11-09T04:47:22.714205+00:00
+DP Main 10k + Partner B,partnerB,handover_mic,P0,0,0,,2600,False,2026-11-09T04:47:22.714205+00:00
+DP Main 10k + Partner B,partnerB,handover_mic,P1-ID,0,0,,2600,False,2026-11-09T04:47:22.714205+00:00
+DP Main 10k + Partner B,partnerB,handover_mic,P1-OOD,0,0,,2600,False,2026-11-09T04:47:22.714205+00:00
+DP Main 10k + Partner B,partnerB,handover_mic,P1-speed0.5,0,25,0.0,2600,False,2026-11-09T04:47:22.714205+00:00
+DP Main 10k + Partner B,partnerB,handover_mic,P1-speed1.5,7,25,28.0,2600,False,2026-11-09T04:47:22.714205+00:00
+DP Main 10k + Partner B,partnerB,handover_mic,P2,0,0,,2600,False,2026-11-09T04:47:22.714205+00:00
+DP Main 10k + Partner B,partnerB,hanging_mug,P0,1,50,2.0,2600,False,2026-11-09T04:47:22.714205+00:00
+DP Main 10k + Partner B,partnerB,hanging_mug,P1-ID,0,50,0.0,2600,False,2026-11-09T04:47:22.714205+00:00
+DP Main 10k + Partner B,partnerB,hanging_mug,P1-OOD,1,50,2.0,2600,False,2026-11-09T04:47:22.714205+00:00
+DP Main 10k + Partner B,partnerB,hanging_mug,P1-speed0.5,0,0,,2600,False,2026-11-09T04:47:22.714205+00:00
+DP Main 10k + Partner B,partnerB,hanging_mug,P1-speed1.5,0,25,0.0,2600,False,2026-11-09T04:47:22.714205+00:00
+DP Main 10k + Partner B,partnerB,hanging_mug,P2,0,0,,2600,False,2026-11-09T04:47:22.714205+00:00
+DP Main 10k + Partner B,partnerB,lift_pot,P0,18,50,36.0,2600,False,2026-11-09T04:47:22.714205+00:00
+DP Main 10k + Partner B,partnerB,lift_pot,P1-ID,5,50,10.0,2600,False,2026-11-09T04:47:22.714205+00:00
+DP Main 10k + Partner B,partnerB,lift_pot,P1-OOD,3,50,6.0,2600,False,2026-11-09T04:47:22.714205+00:00
+DP Main 10k + Partner B,partnerB,lift_pot,P1-speed0.5,0,25,0.0,2600,False,2026-11-09T04:47:22.714205+00:00
+DP Main 10k + Partner B,partnerB,lift_pot,P1-speed1.5,5,25,20.0,2600,False,2026-11-09T04:47:22.714205+00:00
+DP Main 10k + Partner B,partnerB,lift_pot,P2,0,0,,2600,False,2026-11-09T04:47:22.714205+00:00
+DP Main 10k + Partner B,partnerB,place_object_basket,P0,25,50,50.0,2600,False,2026-11-09T04:47:22.714205+00:00
+DP Main 10k + Partner B,partnerB,place_object_basket,P1-ID,23,50,46.0,2600,False,2026-11-09T04:47:22.714205+00:00
+DP Main 10k + Partner B,partnerB,place_object_basket,P1-OOD,30,50,60.0,2600,False,2026-11-09T04:47:22.714205+00:00
+DP Main 10k + Partner B,partnerB,place_object_basket,P1-speed0.5,9,25,36.0,2600,False,2026-11-09T04:47:22.714205+00:00
+DP Main 10k + Partner B,partnerB,place_object_basket,P1-speed1.5,15,25,60.0,2600,False,2026-11-09T04:47:22.714205+00:00
+DP Main 10k + Partner B,partnerB,place_object_basket,P2,0,50,0.0,2600,False,2026-11-09T04:47:22.714205+00:00
+DP Main 10k + Partner B,partnerB,put_bottles_dustbin,P0,15,50,30.0,2600,False,2026-11-09T04:47:22.714205+00:00
+DP Main 10k + Partner B,partnerB,put_bottles_dustbin,P1-ID,9,50,18.0,2600,False,2026-11-09T04:47:22.714205+00:00
+DP Main 10k + Partner B,partnerB,put_bottles_dustbin,P1-OOD,11,50,22.0,2600,False,2026-11-09T04:47:22.714205+00:00
+DP Main 10k + Partner B,partnerB,put_bottles_dustbin,P1-speed0.5,7,25,28.0,2600,False,2026-11-09T04:47:22.714205+00:00
+DP Main 10k + Partner B,partnerB,put_bottles_dustbin,P1-speed1.5,5,25,20.0,2600,False,2026-11-09T04:47:22.714205+00:00
+DP Main 10k + Partner B,partnerB,put_bottles_dustbin,P2,2,50,4.0,2600,False,2026-11-09T04:47:22.714205+00:00
+DP Main 10k + Partner B,partnerB,stack_blocks_three,P0,1,50,2.0,2600,False,2026-11-09T04:47:22.714205+00:00
+DP Main 10k + Partner B,partnerB,stack_blocks_three,P1-ID,0,50,0.0,2600,False,2026-11-09T04:47:22.714205+00:00
+DP Main 10k + Partner B,partnerB,stack_blocks_three,P1-OOD,1,50,2.0,2600,False,2026-11-09T04:47:22.714205+00:00
+DP Main 10k + Partner B,partnerB,stack_blocks_three,P1-speed0.5,1,25,4.0,2600,False,2026-11-09T04:47:22.714205+00:00
+DP Main 10k + Partner B,partnerB,stack_blocks_three,P1-speed1.5,0,25,0.0,2600,False,2026-11-09T04:47:22.714205+00:00
+DP Main 10k + Partner B,partnerB,stack_blocks_three,P2,0,50,0.0,2600,False,2026-11-09T04:47:22.714205+00:00

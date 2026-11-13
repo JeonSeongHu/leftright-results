@@ -1,0 +1,1169 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Leftright 실험 대시보드</title><link rel="stylesheet" href="theme.css"><script src="assets/d3.min.js"></script><script src="datasets.js"></script><script src="dashboard-runtime.js"></script></head><body><main><meta name="dash-one-writer">
+<style>
+.lr { display: grid; gap: var(--cds-gap-xl); font-family: var(--font-anthropic-sans); }
+.lr b { font-weight: 600; font-variant-numeric: tabular-nums; }
+.lr-head { display: grid; gap: var(--cds-gap-sm); }
+.lr-title { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: var(--cds-font-size-title); margin: 0; }
+.lr-take { margin: 0; color: var(--color-fg-muted); max-width: 76ch; }
+.lr-tabs { display: flex; flex-wrap: wrap; gap: var(--cds-gap-xs); border-bottom: 1px solid var(--color-border-line); }
+.lr-tab { font: inherit; background: none; border: 0; border-bottom: 2px solid transparent; padding: var(--cds-pad-sm) var(--cds-pad-md); color: var(--color-fg-muted); cursor: pointer; }
+.lr-tab[aria-selected=true] { color: var(--color-fg); border-bottom-color: var(--color-fg); font-weight: var(--cds-font-weight-medium); }
+.lr-page { display: grid; gap: var(--cds-gap-lg); }
+.lr-tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr)); gap: var(--cds-gap-md); }
+.lr-tile, .lr-card { background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-lg); min-width: 0; }
+.lr-tile { display: grid; gap: var(--cds-gap-xs); align-content: start; }
+.lr-label { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+.lr-num { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: var(--cds-font-size-title); font-variant-numeric: tabular-nums; }
+.lr-sub { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); font-variant-numeric: tabular-nums; }
+.lr-card { display: grid; gap: var(--cds-gap-sm); align-content: start; }
+.lr-card h2, .lr-page > h2 { font-size: var(--cds-font-size-heading); font-weight: var(--cds-font-weight-medium); margin: 0; }
+.lr-card h3 { font-size: var(--cds-font-size-body); font-weight: var(--cds-font-weight-medium); margin: 0; }
+.lr-note { margin: 0; font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); max-width: 84ch; line-height: 1.55; }
+.lr-scroll { overflow-x: auto; }
+/* booktabs-style tables: top/bottom rule, one rule under the header, no vertical lines */
+.lr table { border-collapse: collapse; width: 100%; font-size: var(--cds-font-size-caption); font-variant-numeric: tabular-nums; border-top: 1.5px solid var(--color-fg); border-bottom: 1.5px solid var(--color-fg); }
+.lr th, .lr td { text-align: left; padding: 5px var(--cds-pad-sm); border: 0; vertical-align: top; }
+.lr thead th { color: var(--color-fg); font-weight: var(--cds-font-weight-medium); white-space: nowrap; border-bottom: 1px solid var(--color-fg); }
+.lr tr.lr-mid > td { border-top: 1px solid var(--color-fg); }
+.lr caption { caption-side: top; text-align: left; font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); padding-bottom: var(--cds-pad-xs); }
+.lr td.best { font-weight: 600; }
+.lr-tag { font-size: 11px; color: var(--color-fg-muted); border: 1px solid var(--color-border-line); border-radius: 999px; padding: 0 6px; margin-left: 6px; white-space: nowrap; }
+.lr-seg { display: inline-flex; border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); overflow: hidden; }
+.lr-seg button { font: inherit; font-size: var(--cds-font-size-caption); border: 0; background: var(--color-panel); color: var(--color-fg-muted); padding: 2px 12px; cursor: pointer; }
+.lr-seg button[aria-pressed=true] { background: var(--color-fg); color: var(--color-bg); }
+.lr-prompt { display: grid; gap: var(--cds-gap-sm); align-content: start; min-width: 0; }
+.lr-msg { border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-sm); display: grid; gap: 6px; min-width: 0; }
+.lr-msg.lr-hist { border-style: dashed; color: var(--color-fg-muted); }
+.lr-role { font-size: 11px; font-weight: 600; color: var(--color-fg-muted); letter-spacing: .04em; }
+.lr-msg pre { margin: 0; white-space: pre-wrap; word-break: break-word; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 11.5px; line-height: 1.5; }
+.lr-msg pre i { font-style: normal; color: var(--color-warn); }
+.lr-imgs { display: flex; gap: 6px; flex-wrap: wrap; }
+.lr-imgs span { font-size: 11px; border: 1px dashed var(--color-border-line); border-radius: 4px; padding: 10px 8px; color: var(--color-fg-muted); }
+.lr-var { margin: 0; padding-left: 1.2em; font-size: var(--cds-font-size-caption); line-height: 1.55; display: grid; gap: 3px; }
+.lr-thumbs { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 15rem), 1fr)); gap: var(--cds-gap-md); }
+.lr-thumbs figure { margin: 0; display: grid; gap: 4px; align-content: start; }
+.lr-thumbs img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--cds-radius); border: 1px solid var(--color-border-line); background: #fff; display: block; }
+.lr-thumbs figcaption { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); line-height: 1.45; }
+.lr-thumbs figcaption b { color: var(--color-fg); }
+.lr-find { margin: 0; padding-left: 1.2em; display: grid; gap: 4px; font-size: var(--cds-font-size-caption); line-height: 1.55; max-width: 84ch; }
+.lr td.num, .lr th.num { text-align: right; white-space: nowrap; }
+.lr td.na { color: var(--color-fg-muted); }
+.lr-grid3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr)); gap: var(--cds-gap-md); }
+.lr-grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 24rem), 1fr)); gap: var(--cds-gap-md); }
+.lr-pill { display: inline-block; font-size: var(--cds-font-size-caption); font-weight: var(--cds-font-weight-medium); padding: 1px 8px; border-radius: 999px; border: 1px solid var(--color-border-line); }
+.lr-p0 { --lr-c: var(--cds-chart-muted); }
+.lr-p1 { --lr-c: var(--color-warn); }
+.lr-p2 { --lr-c: var(--color-bad); }
+.lr-cond { border-top: 4px solid var(--lr-c); }
+.lr-cond .lr-pill { border-color: var(--lr-c); }
+/* condition diagram */
+.lr-arms { display: grid; gap: 6px; font-size: var(--cds-font-size-caption); }
+.lr-armrow { display: grid; grid-template-columns: 5.5rem 1fr; gap: var(--cds-gap-sm); align-items: center; }
+.lr-track { display: flex; height: 18px; border-radius: 4px; overflow: hidden; gap: 2px; }
+.lr-track > i { display: block; height: 100%; font-style: normal; font-size: 10px; line-height: 18px; color: var(--color-bg); padding-left: 4px; white-space: nowrap; overflow: hidden; }
+.lr-a { background: var(--cds-chart-muted); }
+.lr-b { background: color-mix(in srgb, var(--cds-chart-muted) 55%, transparent); }
+.lr-wait { background: color-mix(in srgb, var(--color-warn) 75%, transparent); }
+.lr-stop { background: repeating-linear-gradient(135deg, var(--color-bad) 0 4px, transparent 4px 8px); color: var(--color-fg) !important; }
+.lr-swap { outline: 2px dashed var(--color-bad); outline-offset: 1px; }
+/* players */
+.lr-player { display: grid; gap: var(--cds-gap-xs); min-width: 0; }
+.lr-player video { width: 100%; border-radius: var(--cds-radius); background: #000; border: 1px solid var(--color-border-line); display: block; }
+.lr-bar { display: flex; gap: var(--cds-gap-sm); align-items: center; font-size: var(--cds-font-size-caption); }
+.lr-btn { font: inherit; font-size: var(--cds-font-size-caption); padding: 2px 10px; border-radius: var(--cds-radius); border: 1px solid var(--color-border-line); background: var(--color-panel); color: var(--color-fg); cursor: pointer; }
+.lr-tl { position: relative; cursor: pointer; }
+.lr-now { font-size: var(--cds-font-size-caption); line-height: 1.45; min-height: 3.2em; }
+.lr-now strong { font-weight: 600; }
+.lr-controls { display: flex; flex-wrap: wrap; gap: var(--cds-gap-sm); align-items: center; }
+.lr select { font: inherit; font-size: var(--cds-font-size-caption); padding: 2px 6px; border-radius: var(--cds-radius); border: 1px solid var(--color-border-line); background: var(--color-panel); color: var(--color-fg); max-width: 100%; }
+.lr-arm ol { margin: 0; padding-left: 1.6em; display: grid; gap: 3px; font-size: var(--cds-font-size-caption); line-height: 1.45; }
+.lr-arm h4 { margin: 0 0 var(--cds-gap-xs); font-size: var(--cds-font-size-caption); font-weight: var(--cds-font-weight-medium); color: var(--color-fg-muted); }
+.lr-arm li { padding: 1px 4px; border-radius: 3px; }
+.lr-arm li.lr-s-wait { background: color-mix(in srgb, var(--color-warn) 18%, transparent); font-weight: 600; }
+.lr-arm li.lr-s-pause { color: var(--color-bad); font-weight: 600; }
+.lr-arm li.lr-s-na { list-style: none; color: var(--color-fg-muted); margin-left: -1.6em; }
+.lr-segs { max-height: 22rem; overflow: auto; }
+.lr-segs th { position: sticky; top: 0; background: var(--color-panel); }
+.lr-segs tr { cursor: pointer; }
+.lr-segs tr.lr-on td { background: color-mix(in srgb, var(--color-warn) 14%, transparent); }
+.lr-link { font-size: var(--cds-font-size-caption); word-break: break-all; }
+.lr-tip { position: absolute; pointer-events: none; background: var(--cds-surface-popover); border: 1px solid var(--cds-border); border-radius: var(--cds-radius); box-shadow: var(--cds-shadow-popover); padding: var(--cds-pad-xs) var(--cds-pad-sm); font-size: var(--cds-font-size-caption); z-index: 2; max-width: 22rem; }
+.lr-chart { min-height: 20rem; position: relative; }
+.lr-key { display: flex; flex-wrap: wrap; gap: var(--cds-gap-md); font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+.lr-sw { display: inline-block; width: 0.8rem; height: 0.8rem; border-radius: 2px; margin-right: 4px; vertical-align: -2px; }
+[data-dash-source-state=refreshing] { opacity: .5; transition: opacity var(--cds-dur-slow); }
+[data-dash-source-state=empty] { color: transparent; }
+</style>
+
+<div class="lr">
+  <header class="lr-head">
+    <h1 class="lr-title">Leftright 양손 협업 벤치마크</h1>
+    <p class="lr-take">11개 task · 계획된 장면: Demo <b data-draw="t-p0" data-source="totals" data-field="p0">—</b>개, Pause <b data-draw="t-p1" data-source="totals" data-field="p1">—</b>개, Speed <b data-draw="t-sp" data-source="totals" data-field="speed">—</b>개, Role <b data-draw="t-p2" data-source="totals" data-field="p2">—</b>개. 유효 장면 수는 표의 분모에 표시합니다. <span id="legacy-leader-summary" hidden>기존 평가 · 파트너 A 1위: <b data-draw="lead-name" data-source="boards" data-field="name" data-where="partner=A">—</b> (<b data-draw="lead-rate" data-source="boards" data-field="all" data-where="partner=A">—</b>).</span></p>
+  </header>
+
+  <nav class="lr-tabs" role="tablist">
+    <button class="lr-tab" role="tab" data-tab="overview" aria-selected="true">벤치마크 정의</button>
+    <button class="lr-tab" role="tab" data-tab="partners" aria-selected="false">리더보드</button>
+    <button class="lr-tab" role="tab" data-tab="s2" aria-selected="false">S2 진단 (#224)</button>
+    <button class="lr-tab" role="tab" data-tab="subgoals" aria-selected="false">시뮬 시연 · Subgoal</button>
+    <button class="lr-tab" role="tab" data-tab="real" aria-selected="false">실로봇 데이터</button>
+    <button class="lr-tab" role="tab" data-tab="review" aria-selected="false">실로봇 Subgoal 리뷰</button>
+  </nav>
+
+  <!-- ===================== 개요 ===================== -->
+  <section class="lr-page" id="overview" data-page="overview">
+    <div class="lr-tiles">
+      <div class="lr-tile"><span class="lr-label">Main 시연</span><span class="lr-num" data-draw="tile-main" data-source="totals" data-field="main">—</span><span class="lr-sub">task당 64개 · 학습에 사용</span></div>
+      <div class="lr-tile"><span class="lr-label">역할 반전 시연</span><span class="lr-num" data-draw="tile-mir" data-source="totals" data-field="mirrored">—</span><span class="lr-sub">role ablation용 · Main 학습 제외</span></div>
+      <div class="lr-tile"><span class="lr-label">평가 장면 (Demo + Pause + Speed + Role)</span><span class="lr-num" data-draw="tile-cells" data-source="totals" data-field="cells">—</span><span class="lr-sub">조건별 수는 아래 표</span></div>
+    </div>
+
+    <div class="lr-card" id="tasks">
+      <h2>11개 task</h2>
+      <p class="lr-note">각 task의 성공한 Main 시연을 그대로 재생해, task의 정체성이 드러나는 순간(인계, 협동 인양, 조립 완료 등)을 레이트레이싱으로 렌더했습니다. 모든 task가 같은 방향의 카메라이고 해상도는 2048×1536입니다. 이미지를 누르면 원본 PNG가 열립니다.</p>
+      <div class="lr-thumbs" data-draw="thumbs" data-source="task_thumbnails"></div>
+    </div>
+
+    <h2>평가 조건</h2>
+    <p class="lr-note">평가 대상은 항상 <b>물리적 왼팔(ego)</b> 정책입니다. 조건마다 바뀌는 것은 오른팔(partner)뿐이며, 왼팔은 오른팔이 어떻게 바뀌었는지 듣지 못하고 카메라로만 알아채야 합니다. 오른팔을 움직이는 방식은 아래 파트너 A·B 두 가지입니다.</p>
+    <div class="lr-grid3">
+      <div class="lr-card lr-cond lr-p0">
+        <span class="lr-pill">Demo · 시연 그대로</span>
+        <div class="lr-arms" aria-hidden="true">
+          <div class="lr-armrow"><span>왼팔 (ego)</span><div class="lr-track"><i class="lr-a" style="flex:3">접근·파지</i><i class="lr-wait" style="flex:1">대기</i><i class="lr-a" style="flex:3">협업</i></div></div>
+          <div class="lr-armrow"><span>오른팔</span><div class="lr-track"><i class="lr-b" style="flex:7">정상 속도로 계속 움직임</i></div></div>
+        </div>
+        <p class="lr-note">학습과 같은 역할·배치. 오른팔이 멈추지 않습니다. 기준 성능입니다.</p>
+      </div>
+      <div class="lr-card lr-cond lr-p1">
+        <span class="lr-pill">Pause · 오른팔이 멈춤</span>
+        <div class="lr-arms" aria-hidden="true">
+          <div class="lr-armrow"><span>왼팔 (ego)</span><div class="lr-track"><i class="lr-a" style="flex:3">접근·파지</i><i class="lr-wait" style="flex:2.2">더 오래 기다려야 함</i><i class="lr-a" style="flex:2">협업</i></div></div>
+          <div class="lr-armrow"><span>오른팔</span><div class="lr-track"><i class="lr-b" style="flex:2.6">이동</i><i class="lr-stop" style="flex:1.6">정지</i><i class="lr-b" style="flex:3">재개</i></div></div>
+        </div>
+        <p class="lr-note">같은 장면에서 오른팔만 협업 사건 직전에 멈춥니다. <b>Pause-ID</b>는 1·2초(학습에도 있음), <b>Pause-OOD</b>는 같은 사건에서 8·16초(평가에만 있음). 왼팔이 먼저 진행하지 않고 기다리는지를 봅니다.</p>
+      </div>
+      <div class="lr-card lr-cond lr-p1">
+        <span class="lr-pill">Speed · 오른팔 속도가 바뀜</span>
+        <div class="lr-arms" aria-hidden="true">
+          <div class="lr-armrow"><span>왼팔 (ego)</span><div class="lr-track"><i class="lr-a" style="flex:3">접근·파지</i><i class="lr-wait" style="flex:1.6">오른팔에 맞춰 대기</i><i class="lr-a" style="flex:3">협업</i></div></div>
+          <div class="lr-armrow"><span>오른팔</span><div class="lr-track"><i class="lr-b" style="flex:7.6">0.5× 또는 1.5× 속도로 재생</i></div></div>
+        </div>
+        <p class="lr-note">같은 Demo 장면에서 오른팔 시연 전체를 0.5×(느리게) 또는 1.5×(빠르게) 재생합니다. 학습에는 없는 조건이며, 왼팔이 상대 속도에 맞춰 타이밍을 조절하는지를 봅니다.</p>
+      </div>
+      <div class="lr-card lr-cond lr-p2">
+        <span class="lr-pill">Role · 역할이 바뀜</span>
+        <div class="lr-arms" aria-hidden="true">
+          <div class="lr-armrow"><span>왼팔 (ego)</span><div class="lr-track lr-swap"><i class="lr-b" style="flex:3">상대 역할로 접근</i><i class="lr-a" style="flex:4">반대 역할 수행</i></div></div>
+          <div class="lr-armrow"><span>오른팔</span><div class="lr-track lr-swap"><i class="lr-a" style="flex:4">왼팔 역할을 맡음</i><i class="lr-b" style="flex:3">정지 없음</i></div></div>
+        </div>
+        <p class="lr-note">두 팔의 역할과 물체 배치를 맞바꿉니다. 왼팔은 Main에서 오른팔이 하던 일을 해야 합니다. 대칭 협동 인양인 Lift Pot·Grab Roller는 바꿀 역할이 없어 N/A입니다.</p>
+      </div>
+    </div>
+
+    <h2>파트너 방식</h2>
+    <div class="lr-grid2">
+      <div class="lr-card lr-cond lr-p0">
+        <span class="lr-pill">파트너 A · 녹화된 오른팔을 그대로 재생</span>
+        <div class="lr-arms" aria-hidden="true">
+          <div class="lr-armrow"><span>왼팔 (정책)</span><div class="lr-track"><i class="lr-a" style="flex:3">접근·파지</i><i class="lr-a" style="flex:4">협업 (늦으면 그대로 늦음)</i></div></div>
+          <div class="lr-armrow"><span>오른팔</span><div class="lr-track"><i class="lr-b" style="flex:7">수집 때 녹화한 궤적을 시간대로 재생 · 왼팔을 기다리지 않음</i></div></div>
+        </div>
+        <p class="lr-note">수집 때 녹화한 오른팔 궤적을 같은 시계(250 Hz)로 그대로 재생합니다. 왼팔이 늦거나 다르게 움직여도 오른팔은 기다리거나 맞춰 주지 않습니다. Pause·Speed 조건은 이 녹화를 멈추거나 느리게·빠르게 재생해 만듭니다. 11개 task 전체에 적용되는 <b>공식 벤치마크 방식</b>입니다.</p>
+      </div>
+      <div class="lr-card lr-cond lr-p1">
+        <span class="lr-pill">파트너 B · 수집 전문가가 실시간으로 맞춰 줌</span>
+        <div class="lr-arms" aria-hidden="true">
+          <div class="lr-armrow"><span>왼팔 (정책)</span><div class="lr-track"><i class="lr-a" style="flex:3">접근·받침 잡기</i><i class="lr-a" style="flex:4">받침 유지</i></div></div>
+          <div class="lr-armrow"><span>오른팔</span><div class="lr-track"><i class="lr-wait" style="flex:3">왼팔 받침 확인까지 대기</i><i class="lr-b" style="flex:4">집기·운반·삽입</i></div></div>
+        </div>
+        <p class="lr-note">오른팔을 녹화 재생 대신 전문가 규칙으로 움직여, 각 단계를 시작하기 전에 왼팔이 준비됐는지(받침 지지, 물체 제시, 손잡이 파지 등)를 시뮬레이션 상태로 확인하고 기다립니다. 오른팔은 매 단계 현재 물체와 왼팔 상태에서 경로를 계획합니다. 조건이 끝내 채워지지 않으면 진행하지 않으므로 왼팔 대신 일을 끝내 주지 않습니다. 지금은 Fabrica 3개 task(수집 때의 온라인 전문가)만 구현되어 있고, 나머지 8개 task는 같은 기준으로 다시 구현하고 있습니다.</p>
+      </div>
+    </div>
+
+    <div class="lr-card" id="matrix">
+      <div class="lr-scroll">
+        <table data-source="task_matrix" data-row-key="task">
+          <caption>Task별 수집 시연 수와 평가 장면 수. 수집은 task마다 Main(train + validation, 무정지·1초·2초 정지)과 역할 반전이며, Pause 사건은 오른팔이 멈추는 시점입니다.</caption>
+          <thead><tr>
+            <th data-field="task">Task</th>
+            <th class="num" data-field="main">Main</th>
+            <th class="num" data-field="mirrored">반전</th>
+            <th class="num" data-field="p0">Demo</th>
+            <th class="num" data-field="p1_id">Pause-ID</th>
+            <th class="num" data-field="p1_ood">Pause-OOD</th>
+            <th class="num" data-field="speed">Speed</th>
+            <th class="num" data-field="p2">Role</th>
+            <th data-field="p1_event">Pause: 오른팔이 멈추는 순간</th>
+            <th data-field="p2_left">Role: 왼팔이 맡는 역할</th>
+          </tr></thead>
+          <tbody data-draw="matrix"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 리더보드 ===================== -->
+  <section class="lr-page" id="partners" data-page="partners" hidden><p class="lr-note">평가 갱신: 2026-11-09 04:47:22 UTC · 중간 결과는 순위에서 제외합니다. 기존 등록과 체크포인트가 다른 실험은 별도 행입니다.</p>
+    <p class="lr-note">왼팔 정책의 물리적 완료 성공률(physical-completion-v1)입니다. 파트너 방식과 조건의 정의는 <b>벤치마크 정의</b> 탭에 있습니다. 칸마다 성공률(성공 / 장면 수)이고 열마다 가장 높은 값을 굵게 표시했습니다. 순위는 모든 조건을 합친 전체 성공률 순이며, 아직 결과가 없는 정책은 선 아래에 상태만 적었습니다. Role은 역할을 바꿀 수 없는 Lift Pot·Grab Roller가 빠집니다.</p>
+    <div class="lr-card" id="board-a">
+      <div class="lr-scroll">
+        <table data-source="boards" data-row-key="partner,model">
+          <caption>표 1. 파트너 A (녹화된 오른팔 재생) · 11개 task, 공식 평가 장면 전체</caption>
+          <thead><tr>
+            <th class="num" data-field="rank">#</th>
+            <th data-field="name">정책</th>
+            <th class="num" data-field="all">전체</th>
+            <th class="num" data-field="p0">Demo</th>
+            <th class="num" data-field="p1_id">Pause-ID</th>
+            <th class="num" data-field="p1_ood">Pause-OOD</th>
+            <th class="num" data-field="s05">Speed 0.5×</th>
+            <th class="num" data-field="s15">Speed 1.5×</th>
+            <th class="num" data-field="p2">Role</th>
+          </tr></thead>
+          <tbody data-draw="board" data-partner="A"></tbody>
+        </table>
+      </div>
+      <p class="lr-note"><b>S1 + Oracle S2 줄은 정답 정보를 쓴 참고치라 순위와 굵은 표시에서 뺐습니다.</b> S2 자리에 원래 시연의 왼팔 subtask 일정을 넣었습니다. 왼팔 지시는 왼팔 자신의 원래 속도로 진행하고, 상대를 기다리는 단계에서만 오른팔의 진행 위치를 따라갑니다(schedule oracle v2). 같은 2,650장면 기준입니다. 시연 시간표를 그대로 읽는 열린 루프라 왼팔이 실제로 잡았는지는 확인하지 않습니다. 그래서 Lift Pot처럼 왼팔이 늦게 잡는 task에서는 잡기 전에 "들기" 지시가 나갈 수 있습니다.</p>
+    </div>
+    <div class="lr-card" id="board-b">
+      <div class="lr-scroll">
+        <table data-source="boards" data-row-key="partner,model">
+          <caption>표 2. 파트너 B (온라인 전문가 오른팔) · 진행 중인 full50 결과</caption>
+          <thead><tr>
+            <th class="num" data-field="rank">#</th>
+            <th data-field="name">정책</th>
+            <th class="num" data-field="all">전체</th>
+            <th class="num" data-field="p0">Demo</th>
+            <th class="num" data-field="p1_id">Pause-ID</th>
+            <th class="num" data-field="p1_ood">Pause-OOD</th>
+            <th class="num" data-field="s05">Speed 0.5×</th>
+            <th class="num" data-field="s15">Speed 1.5×</th>
+            <th class="num" data-field="p2">Role</th>
+          </tr></thead>
+          <tbody data-draw="board" data-partner="B"></tbody>
+        </table>
+      </div>
+      <p class="lr-note">파트너 B는 오른팔이 매 단계 현재 장면에서 경로를 계획하고 왼팔 상태를 확인해 진행하는 온라인 전문가입니다. 현재 표는 구현된 task의 완료 장면까지 반영합니다. 반대 역할 Mug 50장면은 미지원이며 평가 실패로 세지 않습니다. 아래 기존 A/B 비교 영상은 이전 기록으로 보존합니다.</p>
+    </div>
+    <div class="lr-card" id="board-task">
+      <div class="lr-controls">
+        <span class="lr-seg" role="group" aria-label="파트너"><button type="button" data-lb-partner="A" aria-pressed="true">파트너 A</button><button type="button" data-lb-partner="B" aria-pressed="false">파트너 B</button></span>
+        <label class="lr-label" for="lr-lb-model">정책</label>
+        <select id="lr-lb-model" data-draw="lb-model" data-source="boards"></select>
+      </div>
+      <div class="lr-scroll">
+        <table data-source="task_board" data-row-key="partner,model,task">
+          <caption>표 3. Task별 성공률 (성공 / 장면 수) · 위에서 고른 파트너와 정책</caption>
+          <thead><tr>
+            <th data-field="task">Task</th>
+            <th class="num" data-field="p0_s">Demo</th>
+            <th class="num" data-field="p1_id_s">Pause-ID</th>
+            <th class="num" data-field="p1_ood_s">Pause-OOD</th>
+            <th class="num" data-field="s05_s">Speed 0.5×</th>
+            <th class="num" data-field="s15_s">Speed 1.5×</th>
+            <th class="num" data-field="p2_s">Role</th><th>성공 영상</th><th>실패 영상</th>
+          </tr></thead>
+          <tbody data-draw="task-board"></tbody>
+        </table>
+      </div>
+    </div>
+    <div id="leaderboard-video-view" data-draw="leaderboard-video-view" class="lr-card"><p class="lr-note">위 표에서 task의 성공·실패 영상을 선택하세요. 녹화 대기와 해당 결과 없음은 구분해 표시합니다.</p><div class="lr-grid2" id="leaderboard-video-pair"></div></div>
+<div class="lr-card" id="loss-curves">
+      <h2>π0.5 학습 곡선</h2>
+      <p class="lr-note">train loss(100 update 평균)와 검증 loss(500 update마다)입니다. 세로 점선은 이어 학습을 시작한 지점(monolithic 5k, S1 7.5k, 둘 다 10k→20k)이고, 이어 학습마다 optimizer를 초기화하고 LR을 다시 올렸습니다. 양팔 역할 S1의 점선은 역할 반전 검증 loss입니다. 진행 중인 학습은 마지막 갱신 시점까지만 그렸고, 세로축은 로그 눈금입니다.</p>
+      <div class="lr-key"><span><i class="lr-sw" data-c="0"></i>π0.5 monolithic</span><span><i class="lr-sw" data-c="1"></i>S1 (Main 학습)</span><span><i class="lr-sw" data-c="2"></i>S1 양팔 역할 (점선: 역할 반전 검증)</span></div>
+      <div class="lr-grid2">
+        <div><h3>Train loss</h3><div class="lr-chart" style="min-height: 16rem" data-draw="loss-chart" data-metric="train_loss" data-source="loss_curves"></div></div>
+        <div><h3>검증 loss</h3><div class="lr-chart" style="min-height: 16rem" data-draw="loss-chart" data-metric="val_loss" data-source="loss_curves"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== S2 진단 (#224) ===================== -->
+  <section class="lr-page" id="s2" data-page="s2" hidden>
+    <p class="lr-note">Dual system의 S2(상위 계획 VLM)만 따로 잰 오프라인 평가입니다(<a href="https://github.com/worv-ai/ego2world-research/issues/224" target="_blank" rel="noopener">#224</a>). Main·Role validation 시연을 closed-loop와 같은 planner 경로로 재생하고, 매 planner 호출(32 action step, 1.92초 간격)마다 S2가 고른 왼팔 명령이 전문가 subtask 라벨과 같은지 셉니다. <b>라벨 일치율이며 작업 성공률이 아닙니다.</b> Role은 학습에서 뺀 반대 역할 시연입니다. 유지는 정답이 직전 호출과 같은 호출, 전환은 정답이 바뀐 호출입니다.</p>
+    <div class="lr-card">
+      <h2>지금까지의 결론</h2>
+      <ol class="lr-find">
+        <li><b>정답 명령 이력은 정확도를 크게 부풀립니다.</b> 실제 closed-loop와 같은 조건은 모델이 앞서 낸 자기 명령을 이력으로 쓰는 것이고, 학습 없는 모델의 비교는 이 조건을 기준으로 합니다(표 4).</li>
+        <li><b>학습 없는 프롬프트 변형은 효과가 작거나 서로 상쇄됩니다.</b> 후보 점수에 시간 필터를 씌워도 argmax를 넘지 못했고, yes/no 재확인은 유지를 살리는 만큼 전환을 막았습니다. 역할을 먼저 인식시키는 role-first가 가장 컸지만, Role 장면에서는 역할 인식 자체가 우연 수준입니다(표 5).</li>
+        <li><b>병목은 자기 역할과 상대 상태의 시각적 인식입니다.</b> 역할이나 정답 상대 행동을 알려 주면 크게 오릅니다(표 5의 선 아래).</li>
+        <li><b>LoRA SFT가 가장 큰 효과를 냅니다.</b> 이력의 모든 호출에 loss를 주고(all), 상대 행동도 함께 맞히게 할수록(both) 좋아지며, 9B와 27B 모두 all-both가 가장 높습니다. 모델 크기를 키운 효과보다 상대 행동 loss를 더한 효과가 더 컸습니다. 다만 loss를 주는 토큰 수가 조건마다 달라 원인을 상대 상태 인식 하나로 단정하지는 않습니다(표 6).</li>
+        <li><b>Role(P2)은 학습에서 뺀 반대 역할 장면입니다.</b> 학습은 Main 시연만 썼고, 체크포인트도 Main 검증으로만 골랐습니다. 그래도 후보 목록에는 두 역할의 명령이 모두 있고, both 조건은 Main 영상에서 상대 행동 라벨을 학습하므로 반대 역할의 행동 내용을 전혀 보지 않은 것은 아닙니다. Role의 처음 호출과 전환은 여전히 약하고, 일부 단계(바구니 넣기, 병 놓기)는 오히려 나빠졌습니다.</li>
+        <li><b>아직 없는 것:</b> 학습한 S2를 S1과 연결한 closed-loop 작업 성공률은 아직 재지 않았습니다. 표 6은 전문가 영상을 재생하며 잰 명령 일치율이라, 잘못된 명령의 결과나 오류 회복은 반영되지 않습니다.</li>
+      </ol>
+    </div>
+    <div class="lr-card" id="s2-prompt">
+      <h2>S2 입력 프롬프트 구조</h2>
+      <p class="lr-note">예시는 Handover Mic의 Main 역할 장면입니다. 매 planner 호출(1.92초 간격)마다 head 카메라 이미지를 256×256으로 줄여 넣고, 후보 목록에는 두 역할의 명령과 대기 문장을 모두 넣습니다. 노란 글씨는 조건마다 바뀌는 부분이고, 답의 내용은 형식을 보여 주는 예시입니다.</p>
+      <div class="lr-grid2">
+        <div class="lr-prompt">
+          <h3>A. 학습 없는 모델 (표 4·5)</h3>
+          <div class="lr-msg"><span class="lr-role">SYSTEM</span><pre>You are a helpful assistant to help guide the robot to complete the task by predicting a sequence of language subgoals</pre></div>
+          <div class="lr-msg"><span class="lr-role">USER · 텍스트 + 이미지 3장</span><pre>The task goal is: Pass the microphone from one hand to the other.
+<i>The history of previous predicted language subgoals are: 1. move the left gripper toward the microphone.; 2. grasp the microphone with the left gripper.</i>
+What's the next language subgoal based on current observation?
+Images are oldest to newest, at 0.6s, 0.3s and now (repeat initial image when unavailable).
+Select exactly one of these executable skills:
+A. bring the received microphone toward the left side.
+B. grasp the exposed part of the microphone held by the other hand.
+C. grasp the microphone with the left gripper.
+D. keep the left arm in its current position.
+E. keep the left hand steady and wait for the other hand to complete its handover step.
+F. move the left gripper toward the microphone.
+G. present the microphone for the other hand to grasp.
+H. release the microphone to the other hand.
+I. withdraw the left hand from the transferred microphone.
+Answer with the letter of exactly one skill from the list above and nothing else.</pre>
+            <div class="lr-imgs"><span>이미지 · 0.6초 전</span><span>이미지 · 0.3초 전</span><span>이미지 · 현재</span></div>
+          </div>
+          <div class="lr-msg"><span class="lr-role">ASSISTANT</span><pre>G</pre></div>
+          <ul class="lr-var">
+            <li><b>명령 이력 줄</b>: 정답 이력은 전문가 라벨, 자기 이력은 모델이 앞서 고른 명령을 넣습니다. 이력 없음은 이 줄 대신 "This is the initial turn for prediction"이 들어갑니다.</li>
+            <li><b>답과 점수</b>: 첫 답 토큰의 logprob으로 모든 후보 글자의 점수를 기록하고, 가장 높은 글자를 답으로 씁니다. 시간 필터(C0)도 이 점수를 씁니다. 자유 문장 답은 후보 글자 없이 문장을 그대로 복사하게 합니다.</li>
+            <li><b>C1 기준 이미지</b>: 이미지 맨 앞에 현재 명령이 시작된 시점의 이미지 1장을 더하고 "The first image shows the scene when the current command started; the others are the recent images."를 붙입니다.</li>
+            <li><b>role-first</b>: 이 호출 전에 "Which role is the LEFT arm playing in this scene?"와 두 역할의 명령 목록(Role A/B, 순서 무작위)을 따로 묻고, 에피소드 안에서 누적 다수결로 정한 역할의 후보만 남깁니다.</li>
+            <li><b>참고: 정답 상대 행동</b>: 후보 목록 아래에 "The right (other) arm is currently doing: …" 한 줄을 정답 라벨로 넣습니다.</li>
+          </ul>
+        </div>
+        <div class="lr-prompt">
+          <h3>B. LoRA SFT (표 6)</h3>
+          <div class="lr-msg"><span class="lr-role">SYSTEM</span><pre>You control the left robot arm. The right arm is your partner. Use only observations up to this call.</pre></div>
+          <div class="lr-msg lr-hist"><span class="lr-role">이전 호출 최대 3회 · USER → ASSISTANT 반복</span><pre>USER: (아래와 같은 형식의 질문 + 그때의 이미지 3장)
+ASSISTANT: <i>Partner: … / Action: …  (평가: 모델 자신의 이전 답, 학습: 정답)</i></pre></div>
+          <div class="lr-msg"><span class="lr-role">USER · 현재 호출, 텍스트 + 이미지 3장</span><pre>Task goal: Pass the microphone from one hand to the other.
+The images show the observation for this S2 call.
+Images are oldest to newest, at 0.6s, 0.3s and now (repeat initial image when unavailable).
+First describe the right arm's CURRENT action, then select the left arm's NEXT command.
+The left-arm command must be copied exactly from this list:
+bring the received microphone toward the left side.
+grasp the exposed part of the microphone held by the other hand.
+grasp the microphone with the left gripper.
+keep the left arm in its current position.
+keep the left hand steady and wait for the other hand to complete its handover step.
+move the left gripper toward the microphone.
+present the microphone for the other hand to grasp.
+release the microphone to the other hand.
+withdraw the left hand from the transferred microphone.
+Output exactly two lines and no other text:
+Partner: &lt;current right-arm action&gt;
+Action: &lt;one left-arm command from the list&gt;</pre>
+            <div class="lr-imgs"><span>이미지 · 0.6초 전</span><span>이미지 · 0.3초 전</span><span>이미지 · 현재</span></div>
+          </div>
+          <div class="lr-msg"><span class="lr-role">ASSISTANT</span><pre>Partner: <i>move the right gripper toward the presented microphone.</i>
+Action: present the microphone for the other hand to grasp.</pre></div>
+          <ul class="lr-var">
+            <li><b>입력 길이</b>: 현재를 포함한 최근 4회 호출, 이미지는 최대 12장입니다. 시작 구간은 있는 이력만 넣습니다.</li>
+            <li><b>학습과 평가의 차이</b>: 학습은 이전 응답과 현재 Partner 줄에 정답을 넣고(teacher forcing), 평가는 이전 응답에 모델 자신의 답을 넣고 Partner와 Action을 한 번에 생성합니다. 정답 명령이나 정답 상대 행동은 평가 입력에 넣지 않습니다.</li>
+            <li><b>loss 조건</b>: ego는 Action 줄만, both는 Partner와 Action 줄 모두에 loss를 줍니다. last는 마지막 ASSISTANT 턴만, all은 입력 이력의 모든 ASSISTANT 턴에 줍니다.</li>
+            <li><b>채점</b>: Action 줄만 채점합니다. 소문자화, 공백 정리, 끝 마침표 제거 뒤 후보 하나와 정확히 같아야 정답입니다.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="lr-card">
+      <div class="lr-scroll">
+        <table data-source="s2_history" data-row-key="answer,history">
+          <caption>표 4. 명령 이력 조건 · 학습 없는 Qwen3.5-27B, 최근 이미지 3장. 정답 이력은 실제 실행에서 쓸 수 없는 조건입니다.</caption>
+          <thead><tr>
+            <th data-field="answer">답 형식</th>
+            <th data-field="history">명령 이력</th>
+            <th class="num" data-field="main">Main</th>
+            <th class="num" data-field="role">Role</th>
+          </tr></thead>
+          <tbody data-draw="s2-history"></tbody>
+        </table>
+      </div>
+    </div>
+    <div class="lr-card">
+      <div class="lr-scroll">
+        <table data-source="s2_prompt" data-row-key="variant">
+          <caption>표 5. 프롬프트 변형 · 학습 없는 27B, 자기 이력. 선 아래는 정답 정보(역할, 상대 행동)를 준 참고치입니다.</caption>
+          <thead><tr>
+            <th data-field="variant">변형</th>
+            <th class="num" data-field="main">Main</th>
+            <th class="num" data-field="role">Role</th>
+            <th class="num" data-field="main_keep">Main 유지</th>
+            <th class="num" data-field="main_switch">Main 전환</th>
+          </tr></thead>
+          <tbody data-draw="s2-prompt"></tbody>
+        </table>
+      </div>
+    </div>
+    <div class="lr-card">
+      <div class="lr-scroll">
+        <table data-source="s2_lora" data-row-key="key">
+          <caption>표 6. LoRA SFT (500 update, 완화 채점). loss를 주는 호출: last = 마지막 호출, all = 입력 이력의 모든 호출. loss 대상: ego = 내 행동, both = 상대 행동 + 내 행동. clean은 정지 없는 시연만이며 Role clean이 P2에 해당합니다.</caption>
+          <thead><tr>
+            <th data-field="model">모델</th>
+            <th data-field="condition">조건</th>
+            <th class="num" data-field="main_c">Main</th>
+            <th class="num" data-field="role_c">Role</th>
+            <th class="num" data-field="mainc_c">Main clean</th>
+            <th class="num" data-field="rolec_c">Role clean (P2)</th>
+            <th class="num" data-field="role_keep">Role 유지</th>
+            <th class="num" data-field="role_switch">Role 전환</th>
+          </tr></thead>
+          <tbody data-draw="s2-lora"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== Subgoal 비교 ===================== -->
+  <section class="lr-page" id="subgoals" data-page="subgoals" hidden>
+    <p class="lr-note">Task를 고르면 <b>같은 장면</b>을 무정지(Demo)와 오른팔 1초 정지(Pause)로 찍은 시연, 다른 장면의 2초 정지 시연, 역할을 바꾼 반전 시연(Role)을 나란히 보여 줍니다. 영상 아래 띠는 왼팔의 subgoal(수집 시연의 프레임 단위 라벨)이고, 빗금은 오른팔이 멈춘 구간입니다. 재생하면 지금 수행 중인 subgoal이 강조되고, 띠를 누르면 그 순간으로 이동합니다.</p>
+    <div class="lr-controls">
+      <label class="lr-label" for="lr-sim-task">Task</label>
+      <select id="lr-sim-task" data-draw="sim-task" data-source="sim_clips"></select>
+      <button class="lr-btn" id="lr-sim-all" type="button">네 영상 함께 재생</button>
+    </div>
+    <div class="lr-grid2">
+      <div class="lr-card lr-cond lr-p0">
+        <h3><span class="lr-pill">Demo</span> 기본, 무정지</h3>
+        <div class="lr-player" data-draw="sim-player" data-cond="P0" data-pause="0" data-source="sim_clips sim_subgoals"></div>
+      </div>
+      <div class="lr-card lr-cond lr-p1">
+        <h3><span class="lr-pill">Pause-ID</span> 같은 장면, 오른팔 1초 정지</h3>
+        <div class="lr-player" data-draw="sim-player" data-cond="P1" data-pause="1" data-source="sim_clips sim_subgoals"></div>
+      </div>
+      <div class="lr-card lr-cond lr-p1">
+        <h3><span class="lr-pill">Pause-ID</span> 다른 장면, 오른팔 2초 정지</h3>
+        <div class="lr-player" data-draw="sim-player" data-cond="P1" data-pause="2" data-source="sim_clips sim_subgoals"></div>
+      </div>
+      <div class="lr-card lr-cond lr-p2">
+        <h3><span class="lr-pill">Role</span> 역할 반전</h3>
+        <div class="lr-player" data-draw="sim-player" data-cond="P2" data-pause="0" data-source="sim_clips sim_subgoals"></div>
+        <p class="lr-note lr-p2-note" data-when="na" hidden>이 task는 대칭 협동 인양이라 Role 평가에서 제외합니다(N/A). 영상은 좌우 대칭 참조입니다.</p>
+        <p class="lr-note lr-p2-note" data-when="ok" hidden>Pause-OOD(8·16초) 시연은 평가 전용이라 영상이 없습니다.</p>
+        <i data-draw="p2-flag" data-source="task_protocol" style="display: none"></i>
+      </div>
+    </div>
+
+    <h2>조건별 팔 역할 단계</h2>
+    <p class="lr-note">왼팔 단계는 수집 시연의 subtask 라벨, 오른팔 단계는 task 정의 문서를 따랐습니다. 강조는 왼팔이 기다리거나 버텨야 하는 단계, 빨간 글씨는 Pause에서 오른팔이 멈추는 단계입니다.</p>
+    <div class="lr-grid3">
+      <div class="lr-card lr-cond lr-p0">
+        <h3>Demo · 시연 그대로</h3>
+        <div class="lr-arm"><h4>왼팔 (ego)</h4><ol data-draw="steps" data-cond="P0" data-arm="left" data-source="role_steps"></ol></div>
+        <div class="lr-arm"><h4>오른팔 (partner)</h4><ol data-draw="steps" data-cond="P0" data-arm="right" data-source="role_steps"></ol></div>
+        <p class="lr-note" data-draw="role-note" data-cond="P0" data-source="role_notes">—</p>
+      </div>
+      <div class="lr-card lr-cond lr-p1">
+        <h3>Pause · 오른팔 정지</h3>
+        <div class="lr-arm"><h4>왼팔 (ego)</h4><ol data-draw="steps" data-cond="P1" data-arm="left" data-source="role_steps"></ol></div>
+        <div class="lr-arm"><h4>오른팔 (partner)</h4><ol data-draw="steps" data-cond="P1" data-arm="right" data-source="role_steps"></ol></div>
+        <p class="lr-note" data-draw="role-note" data-cond="P1" data-source="role_notes">—</p>
+      </div>
+      <div class="lr-card lr-cond lr-p2">
+        <h3>Role · 역할 반전</h3>
+        <div class="lr-arm"><h4>왼팔 (ego)</h4><ol data-draw="steps" data-cond="P2" data-arm="left" data-source="role_steps"></ol></div>
+        <div class="lr-arm"><h4>오른팔 (partner)</h4><ol data-draw="steps" data-cond="P2" data-arm="right" data-source="role_steps"></ol></div>
+        <p class="lr-note" data-draw="role-note" data-cond="P2" data-source="role_notes">—</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 실로봇 subgoal 리뷰 ===================== -->
+  <section class="lr-page" id="review" data-page="review" hidden>
+    <p class="lr-note">실로봇 양팔 subgoal 라벨 리뷰 사이트(revision 20261104-v1)의 에피소드와 구간을 그대로 옮겼습니다. 영상은 위쪽 head 카메라, 아래 왼손목·오른손목 카메라입니다. 노란 구간은 상대 팔을 기다리는 <b>wait</b>, 회색은 대기(idle)입니다. 표의 행을 누르면 그 구간으로 이동합니다. 라벨을 고치려면 원래 리뷰 사이트에서 같은 에피소드를 엽니다.</p>
+    <div class="lr-controls">
+      <label class="lr-label" for="lr-real-task">Task</label>
+      <select id="lr-real-task" data-draw="real-task" data-source="real_review_episodes"></select>
+      <label class="lr-label" for="lr-real-ep">에피소드</label>
+      <select id="lr-real-ep" data-draw="real-ep" data-source="real_review_episodes"></select>
+    </div>
+    <div class="lr-grid2">
+      <div class="lr-card">
+        <div class="lr-player" data-draw="real-player" data-source="real_review_episodes real_review_segments"></div>
+        <a class="lr-link" data-draw="real-link" data-source="real_review_episodes" target="_blank" rel="noopener">—</a>
+      </div>
+      <div class="lr-card">
+        <h3>구간 목록</h3>
+        <div class="lr-segs">
+          <table data-source="real_review_segments" data-row-key="episode_id,arm,index">
+            <thead><tr>
+              <th data-field="arm">팔</th>
+              <th class="num" data-field="start_frame">시작</th>
+              <th class="num" data-field="end_frame">끝</th>
+              <th data-field="stage">단계</th>
+              <th data-field="instruction">지시문</th>
+            </tr></thead>
+            <tbody data-draw="real-segs"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 실로봇 데이터 ===================== -->
+  <section class="lr-page" id="real" data-page="real" hidden>
+    <p class="lr-note">YAM 실로봇으로 세 task(Lift Pot, Stack Blocks Three, Handover Mic)를 50개씩 수집했습니다. Lift Pot과 Stack Blocks Three는 앞뒤 정지 구간을 잘라 낸 합본으로 π0.5 왼팔 정책을 학습하고 있고, 11월 3일 가져온 Handover Mic은 아직 학습용으로 변환하지 않은 원본입니다. 세 task 모두 리뷰 탭에서 양팔 subgoal 라벨을 볼 수 있습니다.</p>
+    <div class="lr-tiles">
+      <div class="lr-tile"><span class="lr-label">수집 에피소드</span><span class="lr-num" data-draw="rr-eps" data-source="real_totals" data-field="episodes">—</span></div>
+      <div class="lr-tile"><span class="lr-label">원본 길이 (분, 30fps)</span><span class="lr-num" data-draw="rr-min" data-source="real_totals" data-field="source_minutes">—</span></div>
+      <div class="lr-tile"><span class="lr-label">학습에 쓰는 프레임 (Pot·Blocks)</span><span class="lr-num" data-draw="rr-kept" data-source="real_totals" data-field="retained_frames">—</span></div>
+      <div class="lr-tile"><span class="lr-label">원본 용량 (GB)</span><span class="lr-num" data-draw="rr-gb" data-source="real_totals" data-field="source_gb">—</span></div>
+    </div>
+    <div class="lr-card">
+      <h2>Task별 수집 데이터</h2>
+      <p class="lr-note">원본은 양팔 관절값(14차원), 카메라 4대, 마이크를 LeRobot v2.1 형식으로 담고, 학습용 변환본은 왼팔 7차원 행동과 head·왼손목 카메라를 224px로 줄여 씁니다.</p>
+      <div class="lr-scroll">
+        <table data-source="real_summary" data-row-key="task">
+          <thead><tr>
+            <th data-field="name">Task</th>
+            <th class="num" data-field="episodes">에피소드</th>
+            <th class="num" data-field="train">Train</th>
+            <th class="num" data-field="validation">Val</th>
+            <th class="num" data-field="source_minutes">원본 (분)</th>
+            <th class="num" data-field="retained_frames">학습 프레임</th>
+            <th class="num" data-field="mean_seconds">평균 길이 (초)</th>
+            <th data-field="cameras_used">학습 입력 카메라</th>
+          </tr></thead>
+          <tbody data-draw="rr-task-table"></tbody>
+        </table>
+      </div>
+    </div>
+    <div class="lr-card">
+      <h2>에피소드별 길이</h2>
+      <p class="lr-note">막대 하나가 에피소드 하나입니다. 색칠된 부분은 학습에 쓰는 구간, 회색은 앞뒤에서 잘라 낸 정지 구간입니다. Handover Mic은 아직 자르지 않아 원본 길이 전체를 연한 색으로 그렸습니다. 세 task는 같은 세로 눈금을 씁니다.</p>
+      <div class="lr-key"><span><i class="lr-sw" data-c="0"></i>학습 구간 (train)</span><span><i class="lr-sw" data-c="1"></i>학습 구간 (validation)</span><span><i class="lr-sw" style="background: var(--cds-chart-muted)"></i>잘라 낸 정지 구간</span><span><i class="lr-sw" data-c="0" style="opacity: .35"></i>학습 변환 전 원본 (Handover Mic)</span></div>
+      <div class="lr-chart" data-draw="rr-ep-chart" data-source="real_episodes"></div>
+    </div>
+    <div class="lr-card">
+      <h2>학습에 쓰는 데이터</h2>
+      <p class="lr-note">두 task를 합친 <b data-draw="rr-tr" data-k="dataset" data-source="real_training" data-field="dataset">—</b>에서 train <b data-draw="rr-tr" data-k="train_episodes" data-source="real_training" data-field="train_episodes">—</b>개(<b data-draw="rr-tr" data-k="train_frames" data-source="real_training" data-field="train_frames">—</b>프레임)와 validation <b data-draw="rr-tr" data-k="validation_episodes" data-source="real_training" data-field="validation_episodes">—</b>개(<b data-draw="rr-tr" data-k="validation_frames" data-source="real_training" data-field="validation_frames">—</b>프레임)를 나눠 <b data-draw="rr-tr" data-k="run" data-source="real_training" data-field="run">—</b> 학습(목표 <b data-draw="rr-tr" data-k="target_steps" data-source="real_training" data-field="target_steps">—</b> step)에 씁니다.</p>
+    </div>
+  </section>
+</div>
+
+<script>
+window.LR = {
+  names: {
+    lift_pot: 'Lift Pot', grab_roller: 'Grab Roller', handover_block: 'Handover Block', handover_mic: 'Handover Mic',
+    put_bottles_dustbin: 'Put Bottles Dustbin', stack_blocks_three: 'Stack Blocks Three', place_object_basket: 'Place Object Basket',
+    hanging_mug: 'Hanging Mug', fabrica_beam: 'Beam', fabrica_plumbers_block: "Plumber's Block", fabrica_stool: 'Stool'
+  },
+  rows: (id) => { const d = dash.data(id); return d.status === 'ok' ? d.data : null; },
+  fmt: d3.format(','),
+  sec: (s) => `${d3.format('.1f')(s)}초`,
+  pretty: (s) => String(s || '').replace(/_/g, ' '),
+};
+LR.order = Object.keys(LR.names);
+dash.setParams({simTask: 'handover_block', realTask: 'handover_mic', realEp: null, lbPartner: 'A', lbModel: 'pi05'});
+LR.pct = d3.format('.1%');
+LR.conds = ['p0', 'p1_id', 'p1_ood', 's05', 's15', 'p2'];
+
+dash.calc('totals', {
+  title: '수집·평가 합계',
+  description: '역할별 시연 수와 조건별 공식 평가 장면 수(파트너 A full50 평가의 첫 정책 기준).',
+  inputs: ['episodes', 'partner_a_cells'],
+  fn: (episodes, cells) => {
+    const m = cells.filter((r) => r.model === cells[0].model);
+    const g = (...ks) => m.filter((r) => ks.includes(r.group)).reduce((s, r) => s + Number(r.total), 0);
+    return [{
+      main: episodes.filter((r) => r.role_variant === 'main').length,
+      mirrored: episodes.filter((r) => r.role_variant === 'mirrored').length,
+      p0: g('P0'), p1: g('P1-ID', 'P1-OOD'), speed: g('P1-speed0.5', 'P1-speed1.5'), p2: g('P2'),
+      cells: g('P0', 'P1-ID', 'P1-OOD', 'P1-speed0.5', 'P1-speed1.5', 'P2')
+    }];
+  }
+});
+
+dash.calc('task_matrix', {
+  title: 'Task별 수집·평가 표',
+  description: 'task마다 Main·반전 시연 수와 조건별 공식 평가 장면 수, Pause 사건과 Role 왼팔 역할을 모읍니다.',
+  inputs: ['episodes', 'partner_a_cells', 'task_protocol'],
+  fn: (episodes, cells, task_protocol) => task_protocol.map((t) => {
+    const m = cells.filter((r) => r.model === cells[0].model && r.task === t.task);
+    const c = (...ks) => m.filter((r) => ks.includes(r.group)).reduce((s, r) => s + Number(r.total), 0);
+    return {
+      task: t.task,
+      main: episodes.filter((r) => r.task === t.task && r.role_variant === 'main').length,
+      mirrored: episodes.filter((r) => r.task === t.task && r.role_variant === 'mirrored').length,
+      p0: c('P0'), p1_id: c('P1-ID'), p1_ood: c('P1-OOD'), speed: c('P1-speed0.5', 'P1-speed1.5'),
+      p2: t.p2_applicable === 'yes' ? c('P2') : null,
+      p1_event: t.p1_event, p2_left: t.p2_applicable === 'yes' ? t.p2_left : 'N/A'
+    };
+  })
+});
+
+dash.calc('boards', {
+  title: '리더보드',
+  description: '파트너(A/B)·정책마다 조건별 성공 수·장면 수·성공률과 모든 조건을 합친 전체 성공률. 결과가 없는 정책은 상태만 남기고, 결과가 있는 정책은 전체 성공률 순으로 순위를 매깁니다.',
+  inputs: ['partner_a_cells', 'partner_b_cells', 'leaderboard_models'],
+  fn: (a, b, models) => {
+    const keys = {P0: 'p0', 'P1-ID': 'p1_id', 'P1-OOD': 'p1_ood', 'P1-speed0.5': 's05', 'P1-speed1.5': 's15', P2: 'p2'};
+    const sum = (xs, f) => xs.reduce((s, r) => s + Number(r[f]), 0);
+    const out = [];
+    [['A', a], ['B', b]].forEach(([partner, cells]) => {
+      const rows = models.map((m) => {
+        const c = cells.filter((r) => r.model === m.model);
+        const o = {partner, model: m.model, name: m.name, order: Number(m.order), evaluated: c.length > 0,
+          status: partner === 'A' ? m.status_a : m.status_b, all_s: sum(c, 'success'), all_n: sum(c, 'total')};
+        o.all = o.all_n ? o.all_s / o.all_n : null;
+        Object.entries(keys).forEach(([g, k]) => {
+          const x = c.filter((r) => r.group === g);
+          o[k + '_s'] = sum(x, 'success'); o[k + '_n'] = sum(x, 'total'); o[k] = o[k + '_n'] ? o[k + '_s'] / o[k + '_n'] : null;
+        });
+        o.provisional = o.evaluated && o.status !== '평가 완료';
+        o.group = !o.evaluated ? 2 : o.provisional ? 1 : 0;
+        return o;
+      });
+      const done = rows.filter((r) => r.group === 0).sort((x, y) => y.all - x.all || x.order - y.order);
+      done.forEach((r) => { r.rank = 1 + done.filter((x) => x.all > r.all).length; });
+      out.push(...done, ...rows.filter((r) => r.group > 0).sort((x, y) => x.group - y.group || x.order - y.order).map((r) => ({...r, rank: null})));
+    });
+    return out;
+  }
+});
+
+dash.calc('task_board', {
+  title: 'Task별 성공',
+  description: '파트너·정책·task마다 조건별 성공 수와 장면 수.',
+  inputs: ['partner_a_cells', 'partner_b_cells'],
+  fn: (a, b) => {
+    const keys = {P0: 'p0', 'P1-ID': 'p1_id', 'P1-OOD': 'p1_ood', 'P1-speed0.5': 's05', 'P1-speed1.5': 's15', P2: 'p2'};
+    const out = [];
+    [['A', a], ['B', b]].forEach(([partner, cells]) => {
+      const seen = new Map();
+      cells.forEach((r) => {
+        const id = r.model + '|' + r.task;
+        if (!seen.has(id)) seen.set(id, {partner, model: r.model, task: r.task});
+        const o = seen.get(id), k = keys[r.group];
+        o[k + '_s'] = (o[k + '_s'] || 0) + Number(r.success);
+        o[k + '_n'] = (o[k + '_n'] || 0) + Number(r.total);
+      });
+      out.push(...seen.values());
+    });
+    return out;
+  }
+});
+
+// tabs
+(() => {
+  const show = (name) => {
+    document.querySelectorAll('[data-page]').forEach((p) => { p.hidden = p.dataset.page !== name; });
+    document.querySelectorAll('.lr-tab').forEach((b) => b.setAttribute('aria-selected', String(b.dataset.tab === name)));
+    document.querySelectorAll('video').forEach((v) => v.pause());
+  };
+  document.querySelectorAll('.lr-tab').forEach((b) => b.addEventListener('click', () => { show(b.dataset.tab); dash.setLink(b.dataset.tab); }));
+  const named = location.hash.slice(1) === 'latest' ? 'partners' : location.hash.slice(1);
+  if (document.querySelector(`[data-page="${named}"]`)) show(named);
+})();
+
+// header + tiles
+const lrTot = (k) => (el) => { const t = LR.rows('totals'); el.textContent = t ? LR.fmt(t[0][k]) : '—'; };
+[['t-p0', 'p0'], ['t-p1', 'p1'], ['t-sp', 'speed'], ['t-p2', 'p2'], ['tile-main', 'main'], ['tile-mir', 'mirrored'],
+  ['tile-cells', 'cells']].forEach(([n, k]) => dash.draw(n, lrTot(k)));
+const lrLead = (k) => (el) => {
+  const r = (LR.rows('boards') || []).find((x) => x.partner === 'A' && x.rank === 1);
+  el.textContent = r ? (k === 'name' ? r.name : LR.pct(r.all)) : '—';
+};
+dash.draw('lead-name', lrLead('name'));
+dash.draw('lead-rate', lrLead('all'));
+
+dash.draw('matrix', (tb) => {
+  const m = LR.rows('task_matrix');
+  tb.replaceChildren();
+  if (!m) return;
+  m.slice().sort((a, b) => LR.order.indexOf(a.task) - LR.order.indexOf(b.task)).forEach((r) => {
+    const tr = document.createElement('tr');
+    tr.dataset.key = r.task;
+    const cell = (v, cls) => { const td = document.createElement('td'); if (cls) td.className = cls; td.textContent = v; tr.append(td); };
+    cell(LR.names[r.task] || r.task);
+    cell(LR.fmt(r.main), 'num'); cell(LR.fmt(r.mirrored), 'num');
+    cell(LR.fmt(r.p0), 'num'); cell(LR.fmt(r.p1_id), 'num'); cell(LR.fmt(r.p1_ood), 'num'); cell(LR.fmt(r.speed), 'num');
+    cell(r.p2 == null ? 'N/A' : LR.fmt(r.p2), r.p2 == null ? 'num na' : 'num');
+    cell(r.p1_event); cell(r.p2_left, r.p2_left === 'N/A' ? 'na' : '');
+    tb.append(tr);
+  });
+});
+
+// ---------- shared segment player ----------
+// opts: {url, start, duration, fps, frames, lanes: [{label, segs: [{a, b, cls, text, title}]}], bands: [{a, b, label}], now(frame) -> [lines]}
+LR.player = (el) => {
+  el.replaceChildren();
+  const v = document.createElement('video');
+  v.muted = true; v.playsInline = true; v.preload = 'metadata';
+  const bar = document.createElement('div'); bar.className = 'lr-bar';
+  const btn = document.createElement('button'); btn.type = 'button'; btn.className = 'lr-btn'; btn.textContent = '▶ 재생';
+  const clock = document.createElement('span'); clock.className = 'lr-sub';
+  bar.append(btn, clock);
+  const tl = document.createElement('div'); tl.className = 'lr-tl';
+  const now = document.createElement('div'); now.className = 'lr-now';
+  el.append(v, bar, tl, now);
+  const st = {v, btn, clock, tl, now, opts: null, raf: 0};
+  const local = () => Math.max(0, Math.min(st.opts ? st.opts.duration : 0, v.currentTime - (st.opts ? st.opts.start : 0)));
+  const tick = () => {
+    if (!st.opts) return;
+    const o = st.opts, t = local();
+    if (!v.paused && t >= o.duration - 0.05) { v.pause(); v.currentTime = o.start + o.duration - 0.06; }
+    const frame = Math.min(o.frames - 1, Math.floor(t * o.fps));
+    clock.textContent = `${d3.format('.1f')(t)} / ${d3.format('.1f')(o.duration)}초 · 프레임 ${frame}`;
+    if (st.head) st.head.attr('x1', st.x(frame)).attr('x2', st.x(frame));
+    const lines = o.now(frame);
+    now.replaceChildren(...lines.map(([k, txt]) => { const d = document.createElement('div'); const s = document.createElement('strong'); s.textContent = k; d.append(s, ' ', txt); return d; }));
+    if (o.onFrame) o.onFrame(frame);
+    if (!v.paused) st.raf = requestAnimationFrame(tick);
+  };
+  st.tick = tick;
+  st.seekFrame = (f) => { if (!st.opts) return; v.currentTime = st.opts.start + Math.max(0, f) / st.opts.fps + 0.001; tick(); };
+  btn.addEventListener('click', () => {
+    if (!st.opts) return;
+    if (v.paused) { if (local() >= st.opts.duration - 0.1) v.currentTime = st.opts.start + 0.001; v.play(); } else v.pause();
+  });
+  v.addEventListener('play', () => { btn.textContent = '❚❚ 멈춤'; cancelAnimationFrame(st.raf); st.raf = requestAnimationFrame(tick); });
+  v.addEventListener('pause', () => { btn.textContent = '▶ 재생'; tick(); });
+  v.addEventListener('seeked', tick);
+  st.set = (o) => {
+    const same = st.opts && st.opts.url === o.url && st.opts.start === o.start;
+    st.opts = o;
+    if (!same) {
+      v.pause();
+      if (v.getAttribute('src') !== o.url) { v.src = o.url; v.addEventListener('loadedmetadata', () => { v.currentTime = o.start + 0.001; }, {once: true}); }
+      else v.currentTime = o.start + 0.001;
+    }
+    // timeline
+    tl.replaceChildren();
+    const W = Math.max(240, tl.clientWidth || el.clientWidth), laneH = 20, labelW = 64, top = 2;
+    const H = top + o.lanes.length * (laneH + 6) + 14;
+    const svg = d3.select(tl).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`);
+    const x = d3.scaleLinear([0, o.frames], [labelW, W - 4]);
+    st.x = x;
+    const tip = d3.select(tl).append('div').attr('class', 'lr-tip').style('display', 'none');
+    o.lanes.forEach((lane, i) => {
+      const y = top + i * (laneH + 6);
+      svg.append('text').attr('x', 0).attr('y', y + laneH / 2).attr('dy', '0.35em').style('font-size', '11px').style('fill', 'var(--color-fg-muted)').text(lane.label);
+      svg.append('rect').attr('x', labelW).attr('y', y).attr('width', W - 4 - labelW).attr('height', laneH).attr('rx', 3).style('fill', 'var(--cds-chart-grid)');
+      svg.append('g').selectAll('rect').data(lane.segs).join('rect')
+        .attr('x', (s) => x(s.a)).attr('y', y).attr('width', (s) => Math.max(1, x(s.b) - x(s.a) - 1)).attr('height', laneH).attr('rx', 2)
+        .style('fill', (s) => s.fill).style('opacity', 0.9)
+        .on('mousemove', (ev, s) => {
+          const [mx, my] = d3.pointer(ev, tl);
+          tip.style('display', null).html('');
+          tip.append('div').style('color', 'var(--cds-text-secondary)').text(`${lane.label} · ${LR.sec(s.a / o.fps)}–${LR.sec(s.b / o.fps)}`);
+          tip.append('div').text(s.title);
+          const tw = tip.node().offsetWidth;
+          tip.style('left', `${Math.max(0, Math.min(mx + 10, tl.clientWidth - tw - 2))}px`).style('top', `${my + 14}px`);
+        })
+        .on('mouseleave', () => tip.style('display', 'none'));
+    });
+    (o.bands || []).forEach((b) => {
+      svg.append('rect').attr('x', x(b.a)).attr('y', 0).attr('width', Math.max(2, x(b.b) - x(b.a))).attr('height', H - 14)
+        .style('fill', 'none').style('stroke', 'var(--color-bad)').style('stroke-width', 1.5).style('stroke-dasharray', '4 3');
+      svg.append('text').attr('x', x(b.a)).attr('y', H - 3).style('font-size', '10px').style('fill', 'var(--color-bad)').text(b.label);
+    });
+    st.head = svg.append('line').attr('y1', 0).attr('y2', H - 14).style('stroke', 'var(--color-fg)').style('stroke-width', 1.5);
+    svg.on('click', (ev) => { const [mx] = d3.pointer(ev); st.seekFrame(Math.round(x.invert(mx))); });
+    tick();
+  };
+  return st;
+};
+LR.fill = (i, wait) => (wait ? 'var(--color-warn)' : dash.colors[i % 2 === 0 ? 0 : 2]);
+LR.players = new Set();
+
+// ---------- simulation subgoal players ----------
+dash.draw('sim-task', (sel) => {
+  const c = LR.rows('sim_clips');
+  const tasks = c ? LR.order.filter((t) => c.some((r) => r.task === t)) : [];
+  sel.replaceChildren(...tasks.map((t) => new Option(LR.names[t], t)));
+  sel.value = dash.params().simTask;
+  sel.onchange = () => dash.setParams({simTask: sel.value});
+});
+
+dash.draw('sim-player', {
+  mount: (el) => { const st = LR.player(el); LR.players.add(st); return st; },
+  update: (el, st) => {
+    const clips = LR.rows('sim_clips'), subs = LR.rows('sim_subgoals');
+    if (!clips || !subs) return;
+    const task = dash.params().simTask;
+    const clip = clips.find((r) => r.task === task && r.condition === el.dataset.cond && Number(r.pause_seconds) === Number(el.dataset.pause));
+    if (!clip) return;
+    const segs = subs.filter((s) => s.clip_id === clip.clip_id).map((s) => ({
+      a: Number(s.start_frame), b: Number(s.end_frame), title: `${LR.pretty(s.subtask)} — ${s.instruction}`,
+      name: LR.pretty(s.subtask), text: s.instruction, wait: /^(wait|hold|support)/.test(s.subtask), i: Number(s.index)
+    }));
+    segs.forEach((s) => { s.fill = LR.fill(s.i, s.wait); });
+    const fps = Number(clip.fps);
+    const pa = clip.pause_start_frame === '' ? null : Number(clip.pause_start_frame), pb = clip.pause_end_frame === '' ? null : Number(clip.pause_end_frame);
+    st.set({
+      url: clip.video_url, start: Number(clip.video_start), duration: Number(clip.video_duration), fps, frames: Number(clip.frames),
+      lanes: [{label: '왼팔', segs}],
+      bands: pa == null ? [] : [{a: pa, b: pb, label: `오른팔 정지 ${clip.pause_seconds}초`}],
+      now: (f) => {
+        const s = segs.find((g) => f >= g.a && f < g.b) || segs[segs.length - 1];
+        const lines = [['왼팔 subgoal:', s ? `${s.name} — ${s.text}` : '—']];
+        if (pa != null) lines.push(['오른팔:', f >= pa && f < pb ? '정지 중 (왼팔은 기다려야 함)' : f < pa ? `${LR.sec(pa / fps)}에 멈춤` : '정지 후 재개']);
+        else lines.push(['장면:', `seed ${clip.scene_seed} · ${clip.role_variant === 'mirrored' ? '역할 반전' : 'Main 역할'} · ${clip.frames}프레임`]);
+        return lines;
+      }
+    });
+  },
+  unmount: (el, st) => { st.v.pause(); LR.players.delete(st); }
+});
+
+document.querySelectorAll('#lr-sim-all').forEach((b) => b.addEventListener('click', () => {
+  LR.players.forEach((st) => { if (st.opts && document.getElementById('subgoals').contains(st.v)) { st.v.currentTime = st.opts.start + 0.001; st.v.play(); } });
+}));
+
+dash.draw('p2-flag', (el) => {
+  const t = LR.rows('task_protocol');
+  const row = t && t.find((r) => r.task === dash.params().simTask);
+  document.querySelectorAll('.lr-p2-note').forEach((p) => { p.hidden = !row || p.dataset.when !== (row.p2_applicable === 'yes' ? 'ok' : 'na'); });
+});
+
+dash.draw('steps', (ol) => {
+  const st = LR.rows('role_steps');
+  ol.replaceChildren();
+  if (!st) return;
+  st.filter((r) => r.task === dash.params().simTask && r.condition === ol.dataset.cond && r.arm === ol.dataset.arm)
+    .sort((a, b) => Number(a.step) - Number(b.step)).forEach((r) => {
+      const li = document.createElement('li');
+      li.textContent = (r.mark === 'pause' ? '⏸ ' : '') + r.action;
+      if (r.mark) li.className = 'lr-s-' + r.mark;
+      ol.append(li);
+    });
+});
+dash.draw('role-note', (el) => {
+  const n = (LR.rows('role_notes') || []).find((r) => r.task === dash.params().simTask && r.condition === el.dataset.cond);
+  el.textContent = n ? n.explanation : '—';
+});
+
+// ---------- leaderboards ----------
+LR.cell = (s, n) => (n ? `${LR.pct(s / n)} (${LR.fmt(s)}/${LR.fmt(n)})` : '—');
+dash.draw('board', (tb) => {
+  const rows = (LR.rows('boards') || []).filter((r) => r.partner === tb.dataset.partner);
+  tb.replaceChildren();
+  const ks = ['all', ...LR.conds];
+  const best = {};
+  ks.forEach((k) => { best[k] = Math.max(0, ...rows.filter((r) => r.group === 0 && r[k + '_n']).map((r) => r[k])); });
+  let prev = null;
+  rows.forEach((r) => {
+    const tr = document.createElement('tr');
+    tr.dataset.key = [r.partner, r.model].map(encodeURIComponent).join(',');
+    if (prev && prev.group !== r.group) tr.className = 'lr-mid';
+    prev = r;
+    const td = (text, cls) => { const c = document.createElement('td'); if (cls) c.className = cls; c.textContent = text; tr.append(c); return c; };
+    td(r.rank == null ? '' : r.rank, 'num');
+    const name = td(r.name);
+    if (r.group > 0) { const tag = document.createElement('span'); tag.className = 'lr-tag'; tag.textContent = r.status; name.append(tag); }
+    ks.forEach((k) => {
+      const has = r.evaluated && r[k + '_n'] > 0;
+      td(has ? LR.cell(r[k + '_s'], r[k + '_n']) : '—', 'num' + (has ? (r.group === 0 && best[k] > 0 && r[k] === best[k] ? ' best' : '') : ' na'));
+    });
+    tb.append(tr);
+  });
+});
+document.querySelectorAll('[data-lb-partner]').forEach((b) => b.addEventListener('click', () => {
+  document.querySelectorAll('[data-lb-partner]').forEach((x) => x.setAttribute('aria-pressed', String(x === b)));
+  dash.setParams({lbPartner: b.dataset.lbPartner});
+}));
+LR.lbModel = (rows) => {
+  const p = dash.params(), models = [...new Set(rows.map((r) => r.model))];
+  return models.includes(p.lbModel) ? p.lbModel : models[0];
+};
+dash.draw('lb-model', (sel) => {
+  const partner = dash.params().lbPartner || 'A';
+  const rows = (LR.rows('boards') || []).filter((r) => r.partner === partner && r.evaluated);
+  sel.replaceChildren(...rows.map((r) => new Option(r.name, r.model)));
+  sel.value = LR.lbModel(rows) || '';
+  sel.onchange = () => dash.setParams({lbModel: sel.value});
+});
+dash.draw('task-board', (tb) => {
+  const partner = dash.params().lbPartner || 'A';
+  const rows = (LR.rows('task_board') || []).filter((r) => r.partner === partner);
+  const model = LR.lbModel(rows);
+  tb.replaceChildren();
+  rows.filter((r) => r.model === model).sort((x, y) => LR.order.indexOf(x.task) - LR.order.indexOf(y.task)).forEach((r) => {
+    const tr = document.createElement('tr');
+    tr.dataset.key = [r.partner, r.model, r.task].map(encodeURIComponent).join(',');
+    [[LR.names[r.task] || r.task], ...LR.conds.map((k) => (r[k + '_n'] ? [LR.cell(r[k + '_s'], r[k + '_n']), 'num'] : ['—', 'num na']))].forEach(([v, c]) => {
+      const td = document.createElement('td'); if (c) td.className = c; td.textContent = v; tr.append(td);
+    });
+    tb.append(tr);
+  });
+});
+
+// ---------- S2 diagnostics (#224) ----------
+LR.td = (tr, v, cls) => { const td = document.createElement('td'); if (cls) td.className = cls; td.textContent = v; tr.append(td); return td; };
+LR.best = (rows, f) => Math.max(0, ...rows.map(f).filter((x) => x != null && !Number.isNaN(x)));
+LR.byOrder = (id) => (LR.rows(id) || []).slice().sort((a, b) => Number(a.order) - Number(b.order));
+LR.num = (v) => (v === '' || v == null ? null : Number(v));
+dash.draw('s2-history', (tb) => {
+  const rows = LR.byOrder('s2_history');
+  tb.replaceChildren();
+  rows.forEach((r, i) => {
+    const tr = document.createElement('tr');
+    tr.dataset.key = [r.answer, r.history].map(encodeURIComponent).join(',');
+    if (i && rows[i - 1].answer !== r.answer) tr.className = 'lr-mid';
+    LR.td(tr, r.answer); LR.td(tr, r.history);
+    LR.td(tr, LR.pct(Number(r.main)), 'num'); LR.td(tr, LR.pct(Number(r.role)), 'num');
+    tb.append(tr);
+  });
+});
+dash.draw('s2-prompt', (tb) => {
+  const rows = LR.byOrder('s2_prompt');
+  const ks = ['main', 'role', 'main_keep', 'main_switch'];
+  const honest = rows.filter((r) => r.kind === '정직');
+  const best = Object.fromEntries(ks.map((k) => [k, LR.best(honest, (r) => Number(r[k]))]));
+  tb.replaceChildren();
+  rows.forEach((r, i) => {
+    const tr = document.createElement('tr');
+    tr.dataset.key = encodeURIComponent(r.variant);
+    if (i && rows[i - 1].kind !== r.kind) tr.className = 'lr-mid';
+    LR.td(tr, r.variant, r.kind === '정직' ? '' : 'na');
+    ks.forEach((k) => LR.td(tr, LR.pct(Number(r[k])), 'num' + (r.kind === '정직' && Number(r[k]) === best[k] ? ' best' : '') + (r.kind === '정직' ? '' : ' na')));
+    tb.append(tr);
+  });
+});
+dash.draw('s2-lora', (tb) => {
+  const rows = LR.byOrder('s2_lora');
+  const rate = (r, k) => (LR.num(r[k + '_n']) ? Number(r[k + '_c']) / Number(r[k + '_n']) : null);
+  const cols = [['main', (r) => rate(r, 'main'), true], ['role', (r) => rate(r, 'role'), true], ['mainc', (r) => rate(r, 'mainc'), true],
+    ['rolec', (r) => rate(r, 'rolec'), true], ['role_keep', (r) => LR.num(r.role_keep), false], ['role_switch', (r) => LR.num(r.role_switch), false]];
+  const done = rows.filter((r) => r.status === '완료');
+  const best = cols.map(([, f]) => LR.best(done, f));
+  tb.replaceChildren();
+  rows.forEach((r, i) => {
+    const tr = document.createElement('tr');
+    tr.dataset.key = encodeURIComponent(r.key);
+    if (i && rows[i - 1].model !== r.model) tr.className = 'lr-mid';
+    LR.td(tr, r.model);
+    const cond = LR.td(tr, r.condition);
+    if (r.status !== '완료') { const tag = document.createElement('span'); tag.className = 'lr-tag'; tag.textContent = r.status; cond.append(tag); }
+    cols.forEach(([k, f, counts], j) => {
+      const v = r.status === '완료' ? f(r) : null;
+      const text = v == null ? '—' : counts ? `${LR.pct(v)} (${LR.fmt(Number(r[k + '_c']))}/${LR.fmt(Number(r[k + '_n']))})` : LR.pct(v);
+      LR.td(tr, text, 'num' + (v == null ? ' na' : v === best[j] && v > 0 ? ' best' : ''));
+    });
+    tb.append(tr);
+  });
+});
+
+// ---------- training curves ----------
+LR.curveModels = [['mono', 0], ['s1', 1], ['s1_bothroles', 2]];
+dash.draw('loss-chart', (el) => {
+  const rows = LR.rows('loss_curves');
+  el.replaceChildren();
+  if (!rows) return;
+  const metric = el.dataset.metric;
+  const has = (v) => v !== '' && v != null && !Number.isNaN(Number(v));
+  const pts = rows.filter((r) => has(r[metric])).map((r) => ({m: r.model, x: Number(r.step), y: Number(r[metric])}));
+  const mir = metric === 'val_loss' ? rows.filter((r) => has(r.val_loss_mirrored)).map((r) => ({m: r.model, x: Number(r.step), y: Number(r.val_loss_mirrored)})) : [];
+  const all = [...pts, ...mir];
+  if (!all.length) return;
+  const W = Math.max(280, el.clientWidth), H = 256, top = 10, bottom = 26;
+  const y = d3.scaleLog(d3.extent(all, (p) => p.y), [H - bottom, top]).nice();
+  const ticks = y.ticks(4).filter((t, i, a) => a.length <= 6 || i % 2 === 0);
+  const fmt = d3.format('.3~f');
+  const svg = d3.select(el).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`);
+  const probe = svg.append('text').style('font-size', '11px').text(fmt(d3.min(ticks)));
+  const left = probe.node().getComputedTextLength() + 10;
+  probe.remove();
+  const x = d3.scaleLinear([0, 20000], [left, W - 8]);
+  svg.append('g').selectAll('line').data(ticks).join('line').attr('x1', left).attr('x2', W - 8).attr('y1', y).attr('y2', y).style('stroke', 'var(--cds-chart-grid)');
+  svg.append('g').selectAll('text').data(ticks).join('text').attr('x', left - 6).attr('y', y).attr('dy', '0.32em').attr('text-anchor', 'end')
+    .style('font-size', '11px').style('fill', 'var(--color-fg-muted)').text(fmt);
+  svg.append('g').selectAll('text').data([0, 5000, 10000, 15000, 20000]).join('text').attr('x', x).attr('y', H - 8).attr('text-anchor', 'middle')
+    .style('font-size', '11px').style('fill', 'var(--color-fg-muted)').text((d) => d3.format('~s')(d));
+  svg.append('line').attr('x1', left).attr('x2', W - 8).attr('y1', H - bottom).attr('y2', H - bottom).style('stroke', 'var(--cds-chart-axis)');
+  [5000, 7500, 10000].forEach((s) => svg.append('line').attr('x1', x(s)).attr('x2', x(s)).attr('y1', top).attr('y2', H - bottom)
+    .style('stroke', 'var(--cds-chart-reference)').style('stroke-dasharray', '4 3'));
+  const line = d3.line().x((p) => x(p.x)).y((p) => y(p.y));
+  LR.curveModels.forEach(([m, c]) => {
+    [[pts, null], [mir, '5 3']].forEach(([src, dashArr]) => {
+      const s = src.filter((p) => p.m === m).sort((a, b) => a.x - b.x);
+      if (!s.length) return;
+      svg.append('path').datum(s).attr('d', line).style('fill', 'none').style('stroke', dash.colors[c]).style('stroke-width', 2)
+        .style('stroke-linejoin', 'round').style('stroke-linecap', dashArr ? 'butt' : 'round').style('stroke-dasharray', dashArr);
+      if (s.length < 3) svg.append('g').selectAll('circle').data(s).join('circle').attr('cx', (p) => x(p.x)).attr('cy', (p) => y(p.y)).attr('r', 3).style('fill', dash.colors[c]);
+    });
+  });
+});
+
+// ---------- task thumbnails ----------
+dash.draw('thumbs', (el) => {
+  const rows = LR.byOrder('task_thumbnails');
+  el.replaceChildren(...rows.map((r) => {
+    const fig = document.createElement('figure');
+    fig.dataset.key = r.task;
+    const a = document.createElement('a');
+    a.href = r.url; a.target = '_blank'; a.rel = 'noopener';
+    const img = document.createElement('img');
+    img.src = r.url; img.loading = 'lazy'; img.alt = `${LR.names[r.task] || r.task}: ${r.caption}`;
+    a.append(img);
+    const cap = document.createElement('figcaption');
+    const b = document.createElement('b');
+    b.textContent = LR.names[r.task] || r.task;
+    cap.append(b, ' · ', r.caption);
+    fig.append(a, cap);
+    return fig;
+  }));
+});
+
+// ---------- real-robot subgoal review ----------
+LR.realEp = () => {
+  const e = LR.rows('real_review_episodes');
+  if (!e) return null;
+  const p = dash.params();
+  return e.find((r) => r.episode_id === p.realEp && r.task === p.realTask) || e.find((r) => r.task === p.realTask) || null;
+};
+dash.draw('real-task', (sel) => {
+  const e = LR.rows('real_review_episodes');
+  const tasks = e ? [...new Set(e.map((r) => r.task))] : [];
+  sel.replaceChildren(...tasks.map((t) => new Option(`${LR.names[t] || t} (${e.filter((r) => r.task === t).length}개)`, t)));
+  sel.value = dash.params().realTask;
+  sel.onchange = () => dash.setParams({realTask: sel.value, realEp: null});
+});
+dash.draw('real-ep', (sel) => {
+  const e = LR.rows('real_review_episodes');
+  const p = dash.params();
+  const list = e ? e.filter((r) => r.task === p.realTask) : [];
+  sel.replaceChildren(...list.map((r) => new Option(
+    `${r.episode_id.split('/')[1]} · ${r.split}${Number(r.excluded) ? ' · 제외' : ''}${r.flags ? ' · ⚑ ' + r.flags.replace(/_/g, ' ') : ''}`, r.episode_id)));
+  const cur = LR.realEp();
+  sel.value = cur ? cur.episode_id : '';
+  sel.onchange = () => dash.setParams({realEp: sel.value});
+});
+dash.draw('real-player', {
+  mount: (el) => { const st = LR.player(el); LR.players.add(st); LR.realPlayer = st; return st; },
+  update: (el, st) => {
+    const ep = LR.realEp(), segs = LR.rows('real_review_segments');
+    if (!ep || !segs) return;
+    const mine = segs.filter((s) => s.episode_id === ep.episode_id);
+    const lane = (arm, label) => ({
+      label,
+      segs: mine.filter((s) => s.arm === arm).map((s) => ({
+        a: Number(s.start_frame), b: Number(s.end_frame), name: LR.pretty(s.stage), text: s.instruction,
+        title: `${LR.pretty(s.stage)}${s.wait_reason ? ' (' + LR.pretty(s.wait_reason) + ')' : ''} — ${s.instruction}`,
+        fill: s.stage === 'wait' ? 'var(--color-warn)' : s.stage === 'idle' ? 'var(--cds-chart-muted)' : dash.colors[Number(s.index) % 2 === 0 ? 0 : 2]
+      }))
+    });
+    const lanes = [lane('left', `왼팔`), lane('right', `오른팔`)];
+    const cur = (l, f) => l.segs.find((g) => f >= g.a && f < g.b);
+    st.set({
+      url: ep.video_url, start: Number(ep.video_start), duration: Number(ep.video_duration), fps: Number(ep.fps), frames: Number(ep.frames), lanes,
+      now: (f) => lanes.map((l, i) => { const s = cur(l, f); return [`${l.label} (${i ? ep.right_role : ep.left_role}):`, s ? `${s.name} — ${s.text}` : '—']; }),
+      onFrame: (f) => document.querySelectorAll('.lr-segs tr[data-a]').forEach((tr) => tr.classList.toggle('lr-on', f >= Number(tr.dataset.a) && f < Number(tr.dataset.b)))
+    });
+  },
+  unmount: (el, st) => { st.v.pause(); LR.players.delete(st); }
+});
+dash.draw('real-link', (a) => {
+  const ep = LR.realEp();
+  if (!ep) { a.textContent = '—'; a.removeAttribute('href'); return; }
+  a.href = ep.review_url;
+  a.textContent = `리뷰 사이트에서 ${ep.episode_id} 열기 ↗`;
+});
+dash.draw('real-segs', (tb) => {
+  const ep = LR.realEp(), segs = LR.rows('real_review_segments');
+  tb.replaceChildren();
+  if (!ep || !segs) return;
+  segs.filter((s) => s.episode_id === ep.episode_id)
+    .sort((a, b) => Number(a.start_frame) - Number(b.start_frame) || (a.arm < b.arm ? -1 : 1))
+    .forEach((s) => {
+      const tr = document.createElement('tr');
+      tr.dataset.key = [s.episode_id, s.arm, s.index].map(encodeURIComponent).join(',');
+      tr.dataset.a = s.start_frame; tr.dataset.b = s.end_frame;
+      [[s.arm === 'left' ? '왼팔' : '오른팔'], [s.start_frame, 'num'], [s.end_frame, 'num'],
+        [LR.pretty(s.stage) + (s.wait_reason ? ` (${LR.pretty(s.wait_reason)})` : '')], [s.instruction]].forEach(([v, c]) => {
+        const td = document.createElement('td'); if (c) td.className = c; td.textContent = v; tr.append(td);
+      });
+      tr.addEventListener('click', () => LR.realPlayer && LR.realPlayer.seekFrame(Number(s.start_frame)));
+      tb.append(tr);
+    });
+});
+
+// ---------- real-robot training data (unchanged content) ----------
+dash.calc('real_summary', {
+  title: '실데이터 task별 요약',
+  description: 'task별 원본 길이(분)와 평균 에피소드 길이(초)를 계산합니다.',
+  inputs: ['real_tasks', 'real_episodes'],
+  fn: (real_tasks, real_episodes) => real_tasks.map((t) => {
+    const e = real_episodes.filter((r) => r.task === t.task);
+    return {
+      task: t.task, name: t.name, episodes: Number(t.episodes), train: Number(t.train), validation: Number(t.validation),
+      source_minutes: Math.round(Number(t.source_frames) / Number(t.fps) / 6) / 10, retained_frames: t.retained_frames === '' ? null : Number(t.retained_frames),
+      mean_seconds: Math.round(e.reduce((s, r) => s + Number(r.source_frames), 0) / e.length / Number(t.fps) * 10) / 10,
+      cameras_used: t.cameras_used
+    };
+  })
+});
+dash.calc('real_totals', {
+  title: '실데이터 합계',
+  description: '두 task의 에피소드 수, 원본 길이(분), 학습 프레임, 원본 용량을 더합니다.',
+  inputs: ['real_tasks'],
+  fn: (real_tasks) => [{
+    episodes: real_tasks.reduce((s, t) => s + Number(t.episodes), 0),
+    source_minutes: Math.round(real_tasks.reduce((s, t) => s + Number(t.source_frames) / Number(t.fps), 0) / 6) / 10,
+    retained_frames: real_tasks.reduce((s, t) => s + Number(t.retained_frames || 0), 0),
+    source_gb: Math.round(real_tasks.reduce((s, t) => s + Number(t.source_gb), 0) * 100) / 100
+  }]
+});
+const rrTot = (k, f) => (el) => { const t = LR.rows('real_totals'); el.textContent = t ? f(t[0][k]) : '—'; };
+dash.draw('rr-eps', rrTot('episodes', LR.fmt));
+dash.draw('rr-min', rrTot('source_minutes', d3.format('.1f')));
+dash.draw('rr-kept', rrTot('retained_frames', LR.fmt));
+dash.draw('rr-gb', rrTot('source_gb', d3.format('.2f')));
+dash.draw('rr-tr', (el) => {
+  const t = LR.rows('real_training'), v = t && t[0] ? t[0][el.dataset.k] : null;
+  el.textContent = v == null ? '—' : /^\d+$/.test(String(v)) ? LR.fmt(Number(v)) : v;
+});
+document.querySelectorAll('.lr-sw[data-c]').forEach((s) => { s.style.background = dash.colors[Number(s.dataset.c)]; });
+dash.draw('rr-task-table', (tb) => {
+  const s = LR.rows('real_summary');
+  tb.replaceChildren();
+  if (!s) return;
+  s.forEach((r) => {
+    const tr = document.createElement('tr');
+    tr.dataset.key = r.task;
+    [[r.name], [LR.fmt(r.episodes), 'num'], [LR.fmt(r.train), 'num'], [LR.fmt(r.validation), 'num'], [d3.format('.1f')(r.source_minutes), 'num'],
+      [r.retained_frames == null ? '—' : LR.fmt(r.retained_frames), 'num'], [d3.format('.1f')(r.mean_seconds), 'num'], [r.cameras_used]].forEach(([v, c]) => {
+      const td = document.createElement('td'); if (c) td.className = c; td.textContent = v; tr.append(td);
+    });
+    tb.append(tr);
+  });
+});
+dash.draw('rr-ep-chart', (el) => {
+  const e = LR.rows('real_episodes');
+  el.replaceChildren();
+  if (!e) return;
+  const fps = 30, names = {leftright_lift_pot: 'Lift Pot', leftright_stack_blocks_three: 'Stack Blocks Three', leftright_handover_mic: 'Handover Mic'};
+  const tasks = [...new Set(e.map((r) => r.task))];
+  const W = Math.max(280, el.clientWidth), panelH = 130, gap = 34, top = 18;
+  const svg = d3.select(el).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${tasks.length * (panelH + gap + top)}`);
+  const y = d3.scaleLinear([0, d3.max(e, (r) => Number(r.source_frames)) / fps * 1.05], [panelH, 0]).nice();
+  const probe = svg.append('text').style('font-size', '11px').text(`${d3.max(y.ticks(4))}초`);
+  const left = probe.node().getComputedTextLength() + 10; probe.remove();
+  const tip = d3.select(el).append('div').attr('class', 'lr-tip').style('display', 'none');
+  tasks.forEach((task, i) => {
+    const rows = e.filter((r) => r.task === task).sort((a, b) => Number(a.episode) - Number(b.episode));
+    const g = svg.append('g').attr('transform', `translate(0,${i * (panelH + gap + top) + top})`);
+    g.append('text').attr('x', left).attr('y', -6).style('font-size', '12px').style('fill', 'var(--color-fg)').text(`${names[task] || task} (${rows.length}개)`);
+    const x = d3.scaleBand(rows.map((r) => r.episode), [left, W - 6]).padding(0.2);
+    g.append('g').selectAll('line').data(y.ticks(4)).join('line').attr('x1', left).attr('x2', W - 6).attr('y1', y).attr('y2', y).style('stroke', 'var(--cds-chart-grid)');
+    g.append('g').selectAll('text').data(y.ticks(4)).join('text').attr('x', left - 6).attr('y', y).attr('dy', '0.32em').attr('text-anchor', 'end')
+      .style('font-size', '11px').style('fill', 'var(--color-fg-muted)').text((d) => `${d}초`);
+    const bars = g.append('g').selectAll('g').data(rows).join('g');
+    bars.append('rect').attr('x', (r) => x(r.episode)).attr('width', x.bandwidth()).attr('y', (r) => y(Number(r.source_frames) / fps))
+      .attr('height', (r) => panelH - y(Number(r.source_frames) / fps)).attr('rx', 1)
+      .style('fill', (r) => (r.frames === '' ? dash.colors[0] : 'var(--cds-chart-muted)')).style('opacity', (r) => (r.frames === '' ? 0.35 : 0.45));
+    bars.filter((r) => r.frames !== '').append('rect').attr('x', (r) => x(r.episode)).attr('width', x.bandwidth()).attr('y', (r) => y(Number(r.frames) / fps))
+      .attr('height', (r) => panelH - y(Number(r.frames) / fps)).attr('rx', 1).style('fill', (r) => dash.colors[r.split === 'validation' ? 1 : 0]);
+    bars.append('rect').attr('x', (r) => x(r.episode) - (x.step() - x.bandwidth()) / 2).attr('width', x.step()).attr('y', 0).attr('height', panelH).style('fill', 'transparent')
+      .on('mousemove', (ev, r) => {
+        const [mx, my] = d3.pointer(ev, el);
+        tip.style('display', null).html('');
+        tip.append('div').style('color', 'var(--cds-text-secondary)').text(`${names[task] || task} #${r.episode} · ${r.split}`);
+        tip.append('div').text(`원본 ${d3.format('.1f')(Number(r.source_frames) / fps)}초 · ` + (r.frames === '' ? '학습 변환 전' : `학습 ${d3.format('.1f')(Number(r.frames) / fps)}초`));
+        const tw = tip.node().offsetWidth;
+        tip.style('left', `${Math.max(0, Math.min(mx + 12, el.clientWidth - tw - 4))}px`).style('top', `${my + 12}px`);
+      })
+      .on('mouseleave', () => tip.style('display', 'none'));
+    g.append('line').attr('x1', left).attr('x2', W - 6).attr('y1', panelH).attr('y2', panelH).style('stroke', 'var(--cds-chart-axis)');
+  });
+});
+</script>
+</main><script src="leaderboard-videos.js"></script><script src="pause-ood.js"></script><script src="all-condition-videos.js"></script><script src="new-pause.js"></script><script src="abc-leaderboard.js"></script><script src="abc-current-results.js"></script><script src="abc-collection-diagnosis.js"></script></body></html>

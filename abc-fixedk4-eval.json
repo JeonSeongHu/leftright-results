@@ -1,0 +1,92 @@
+{
+  "snapshot_utc": "2026-11-13T06:52:47.421425+00:00",
+  "label": "M1 10k fixed K4",
+  "checkpoint_update": 10000,
+  "planned": 2200,
+  "completed": null,
+  "correct": null,
+  "partner": "A",
+  "gpu": 3,
+  "workers_per_gpu": 16,
+  "batch_cap": 16,
+  "model_horizon": 32,
+  "execute_steps": 4,
+  "discard_tail": 28,
+  "adaptive_wait": false,
+  "record_video": false,
+  "status": "실제 추론 실행 중 · 첫 SR 집계 대기",
+  "planned_by_suite": {
+    "Demo": 550,
+    "Pause-ID": 550,
+    "Pause-OOD": 550,
+    "Speed0.5": 275,
+    "Speed1.5": 275
+  },
+  "jobs": [
+    {
+      "id": "360265",
+      "tasks": [
+        "handover_mic",
+        "handover_block",
+        "place_object_basket",
+        "stack_blocks_three"
+      ],
+      "state": "RUNNING",
+      "node": "DGX-H100-3"
+    },
+    {
+      "id": "360266",
+      "tasks": [
+        "put_bottles_dustbin",
+        "hanging_mug",
+        "lift_pot",
+        "grab_roller"
+      ],
+      "state": "RUNNING",
+      "node": "DGX-H100-3"
+    },
+    {
+      "id": "360267",
+      "tasks": [
+        "fabrica_beam",
+        "fabrica_stool",
+        "fabrica_plumbers_block"
+      ],
+      "state": "RUNNING",
+      "node": "DGX-H100-4"
+    }
+  ],
+  "first_query_proof": [
+    {
+      "job_id": "360265",
+      "task": "handover_mic",
+      "scene_seed": 8050001,
+      "control_steps": [
+        0,
+        4,
+        8
+      ],
+      "physics_ticks": [
+        0,
+        60,
+        120
+      ]
+    },
+    {
+      "job_id": "360266",
+      "task": "put_bottles_dustbin",
+      "scene_seed": 8090015,
+      "control_steps": [
+        0,
+        4,
+        8
+      ],
+      "physics_ticks": [
+        0,
+        60,
+        120
+      ]
+    }
+  ],
+  "noise_policy": "기존 fixed10k 기본 설정 유지 · 새 seed override 없음"
+}

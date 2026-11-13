@@ -50,6 +50,17 @@
       note('H32 전체가 현재 명령 근처의 유지 동작이면4개만 실행하고 새 RGB로 다시 예측하며, 그 외에는32개를 실행합니다. 기존 fixed10k 기본 noise 설정을 유지했습니다.',section);
     }
 
+    if(d.fixed_k4_evaluation){
+      const a=d.fixed_k4_evaluation,section=add('section','');section.id='fixedk4-execution-section';
+      add('h3','추가 실행 / 같은 M1 10k의 고정 K4',section);
+      note(`상태 확인 ${stamp(a.snapshot_utc)}. ${a.status}. GPU3장·GPU당16환경·batch상한16이며, 같은 Partner A 고정2,200case를 실행합니다.`,section);
+      note('모델 예측 H32는 유지합니다. 움직임과 대기 모두 앞4개만 실행하고 나머지28개는 버린 뒤 새 RGB로 다시 예측합니다. 유지 동작 여부를 판정하는 adaptive 조건은 적용하지 않습니다.',section);
+      note('Demo·Pause-ID·Pause-OOD·Speed0.5·Speed1.5를 모두 포함합니다. Speed는 각275건입니다. 위 fixed K32·adaptive 결과는 보존하며, 고정K4의 SR은 아직 집계하지 않았습니다.',section);
+      const body=table(section,'고정 K4 실행 lane',['Job','Task','노드','상태']);
+      for(const r of a.jobs){const tr=add('tr','',body);add('td',r.id,tr);add('td',r.tasks.map(id=>d.tasks.find(t=>t.id===id)?.label||id).join(' · '),tr);add('td',r.node,tr);add('td',stateLabel(r.state),tr);}
+      note('실제 서버 기록에서 Mic8050001과 Bottles8090015의 control0→4→8, physics0→60→120 후속 추론을 확인했습니다. 동일10k 가중치·정규화·기존 noise 기본값을 사용합니다.',section);
+    }
+
     add('h3', 'ABC, M1 평가 / 같은 1,000case 중간 비교');
     note(`Partner A, 고정 2,200case 계획 중 다섯 모델이 모두 완료한 같은 ${d.shared_completed.toLocaleString()}case만 비교합니다. 결과 스냅샷 ${stamp(d.snapshot_utc)}. 이 표는 전체 평가의 최종 SR이 아닙니다.`);
     note('Demo는 정지 없음, Pause-ID는 1초와 2초, Pause-OOD는 8초와 16초입니다. Speed는 파트너 재생 속도입니다. 모든 SR에 성공 수와 실제 완료 수를 함께 적었습니다.');
